@@ -1,0 +1,330 @@
+<!DOCTYPE HTML>
+<!--
+Forty by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-805N997DPC');
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<title>ChatGPT's Deep Research - GFMath</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="../assets/css/main.css" />
+<link rel="icon" sizes="180x180" href="images/icon/ads-180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/icon/ads-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/icon/ads-16.png">
+<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+<!-- Wrapper -->
+<div id="wrapper">
+<!-- Header -->
+<header id="header">
+<a href="../index" class="logo"><strong>GFMath</strong> <span>Detailed GFL analysis</span></a>
+<nav></nav>
+<a href="https://www.youtube.com/c/BigStupidJellyfish" class="logo"><strong>Youtube</strong></a>
+</header>
+<div id="main" class="alt">
+<section>
+<div class="inner">
+<header class="major">
+<h1>ChatGPT's Deep Research</h1>
+</header>
+<center><em>By BigStupidJellyfish | 2025-July-26</em></center>
+
+<h2>Contents<sup><small><a href="#">&#35;</a></small></sup></h2>
+<ul>
+	<li><a href="#introduction">Introduction</a></li>
+	<li><a href="#first-turn">Example 1: First-turn bias in gaming</a></li>
+	<li><a href="#euwcq">Example 2: Yugioh tournament prep advice</a></li>
+	<li><a href="#sushi">Example 3: The best deck of Battle Spirits Saga</a></li>
+	<li><a href="#notes">Notes</a></li>
+</ul>
+
+<span class="anchor" id="introduction"></span>
+<h2>Introduction<sup><small><a href="#introduction">&#35;</a></small></sup></h2>
+
+<p>
+	ChatGPT's "Deep Research" feature <a href="https://twitter.com/sama/status/1889679679696806103">could be worth $1000/month to some users</a>.
+	It <a href="https://openai.com/index/introducing-deep-research/">creates a comprehensive report at the level of a research analyst</a> and accomplishes in tens of minutes what would take a human many hours.
+	It "marks a significant step toward [OpenAI's] broader goal of developing AGI."
+	It creates a "well-documented, verified answer that can be usable as a work product."
+</p>
+<p>
+	In reality, it creates garbage in minutes that may take hours to fully disentangle.
+	I <a href="dead-internet#notes">recently mentioned</a> I had another deep research report to review, so let's do that, plus a few more.
+</p>
+
+<span class="anchor" id="first-turn"></span>
+<h2>Example 1: First-turn bias in gaming<sup><small><a href="#first-turn">&#35;</a></small></sup></h2>
+<p>
+	I have a decent background of gaming knowledge, so let's see how ChatGPT fares here on a relatively general question.
+	I asked it to write about first-turn bias in turn-based games: across a wide spectrum of games, we see the player who goes first ends up being somewhat favored.
+	I was curious to see what ChatGPT would make of it.
+</p>
+<p>
+	Additional specifications, based on its follow-up questions: this should be about high-level play.
+	It should take into consideration a reasonably broad spectrum of popular games.
+	I did not specify any particular games, as there may not be good data for every turn-based game out there.
+	It can use academic studies, statistical data, or general analysis&mdash;whatever is available.
+	I don't want to trap it into some overly niche area.
+</p>
+<p>
+	You may review its full report <a href="files/first-turn.pdf">here (PDF)</a>.
+</p>
+<h3>Classic games</h3>
+<p>
+	Claim: in chess, white is favored, with an expected score of 54% (score: \( 1 \times \text{win rate} + 0.5 \times \text{draw rate} \)).
+	That's about right, but it's not an obscure stat.
+	Let's see if it can properly support the claim.
+	ChatGPT gives us two sources, the first: <a href="http://computerchess.org.uk/ccrl/404FRC/opening_report_by_eco.html">opening statistics</a> from the Computer Chess Rating List.
+</p>
+<p>
+	The list seems to have disappeared between when ChatGPT checked and now, but it cataloged a number of chess openings and some stats from them, which could be summarized as described.
+	Except for this little problem hinted at in the website name: this is about computer chess.
+	Not only that, but the statistics appear to cover all of their games, including engines from around 1300 elo to 3600.
+	I would say that analyzing who's favored in high-level play strongly implies <em>human</em> play, and should definitely exclude low-level engines.
+	As another factor, the cited page lists computer games for a certain set of openings.
+	Are those all viable chess openings?
+	Are they representative?
+	Possibly, but this needs extra analysis.
+</p>
+<p>
+	The second source is <a href="https://www.chess.com/forum/view/general/first-move-advantage">this chess.com thread</a> talking about first-move advantage.
+	In particular, ChatGPT seems to be pointing towards the final comment, who links <a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2472783">a paper</a>.
+	This kind of indirect chaining is a bad citation practice, but we can click through to check it out.
+</p>
+<p>
+	Unfortunately, that paper appears to focus on evaluating certain opening sequences using Houdini3 and 4 Pro, 21 plies.
+	A valid topic, but relatively unconvincing when talking about the game as a whole.
+	While it suggests their analysis can be used to estimate a first-turn advantage in an appendix, this is still not a good citation as it's not the major focus of the paper.
+	Would you cite an AP News article about an upcoming solar eclipse, if writing about the science of solar eclipses?
+</p>
+<p>
+	I also don't love some of the soft indicators present in that paper (produced in Word, low quality/basic figures, single author, no proper style configuration).
+	The <a href="https://en.wikipedia.org/wiki/Social_Science_Research_Network">SSRN</a> it's hosted on doesn't appear to perform peer review (as a preprint repository) or have any major controls on publishing.
+	I'd want to keep looking for a source that directly addresses the topic at hand, and that appears to have been through more vetting.
+</p>
+<p>
+	While the final number may not be that off, this is absolutely sub-par research from ChatGPT.
+</p>
+<p>
+	It mentions <a href="https://en.wikipedia.org/wiki/Go_(game)">the game Go</a>, but fails to say anything meaningful.
+	ChatGPT finds us <a href="https://gamedev.stackexchange.com/questions/177257/balance-advantage-of-having-the-first-turn">another indirect citation</a> (a stackexchange post about game balance, where one user mentions Go in passing).
+	All it tells us is that Go has a rule called "<a href="https://en.wikipedia.org/wiki/Komi_(Go)">komi</a>" in which the white player (who goes 2nd) gets some extra points to compensate.
+	What we don't learn: does a 6.5-point komi fully even the expected win rates?
+	Do other komi values unbalance things? By how much?
+</p>
+<p>
+	No particular insight is gained from discussion of a few trivial cases.
+	High-level tic-tac-toe is not a thing, and obviously things depend on the setup for a configuration-dependent game like <a href="https://en.wikipedia.org/wiki/Nim">Nim</a>.
+</p>
+<p>
+	ChatGPT cites, and completely misinterprets, a <a href="https://bsky.app/profile/joeldavidhamkins.bsky.social/post/3lo3c7tx4vc2v">Bluesky post</a> for <a href="https://en.wikipedia.org/wiki/Hex_(board_game)">Hex</a>.
+	ChatGPT says: "First-move wins in perfect play (Hex is balanced by the “pie” swap rule to offset this)."
+	The post says: "So the swap rule has the effect of turning a first-player win in classical Hex to a second-player win in swap-rule Hex."
+	I would call a second-player win game no more balanced than a first-player win game.
+</p>
+<p>
+	While I'm not fully confident on how this generalizes (nor familiar enough with Scrabble to say how well it aligns with skilled players' understandings), its <a href="https://faculty.cc.gatech.edu/~riedl/pubs/tag18.pdf">source for Scrabble</a> seems fine.
+	I wouldn't walk away from this proclaiming the excellent balance of Scrabble, but I don't see the same sorts of errors as above.
+	The discussion on Catan is strange; it's nonsensical to contrast the first-turn advantage with its sale count.
+	This aside seems to purely seep into the report because that stat was mentioned in <a href="https://arxiv.org/pdf/2503.02686v1">the paper it cites</a> (section III).
+</p>
+<p>
+	We have a small break for a figure caption without a figure, and then move on to the next section.
+</p>
+<h3>Card games</h3>
+<p>
+	Its basic description of Magic is alright.
+	However, it then says we have studies about the first-turn advantage, citing <a href="https://boardgames.stackexchange.com/questions/27279/in-magic-is-the-player-going-first-advantaged">a stackexchange post</a>.
+	Believe it or not, that's not a study.
+</p>
+<p>
+	The extra text in its citation link indicates it is pulling this bit from an answer there: "While this does balance the game somewhat, <a href="https://strategy.channelfireball.com/all-strategy/mtg/channelmagic-articles/play-or-draw/">this article</a> by Florian Koch shows that the start player still has a small statistical advantage."
+	An article. Not a study.
+	Not only that, but clicking the link just 404's.
+	Based on the url, it seems to be an article titled "Play or Draw," but after a bit of searching, I'm not having any luck finding the article elsewhere to verify its contents.
+	I would not be surprised one bit if, when it was available, it was an excellent article with great reasoning and/or data.
+	But we cannot call it proper research to cite this as a study, based on one stackexchange user's summary.
+	Another disastrous mistake for an "expert" research tool.
+</p>
+<p>
+	On Pokemon, it claims: "the first player also skips their first draw; second player’s extra draw helps balance turns."
+	<a href="https://www.pokemon.com/static-assets/content-assets/cms2/pdf/trading-card-game/rulebook/dri_rulebook_en.pdf">Rulebook:</a> the starting player cannot play a Supporter card or attack.
+	No mention of drawing being restricted, as far as I can tell.
+	Regardless, the report fails to support any balance impact of these rules.
+</p>
+<p>
+	It manages to properly describe Hearthstone.
+	We don't learn if those methods are sufficient to balance Hearthstone.
+</p>
+<p>
+	In all my years of playing card games, I've never heard of one term it uses here, "draw-ahead."
+	Perhaps it exists in some context or community, but it reads oddly.
+	(And, going back to the first paragraph in the section, I am also truly lost on what a "first-player penalty draw" is supposed to be. You're going to penalize a player by making them draw cards? Sign me up!)
+</p>
+<p>
+	Another small break for a figure caption without a figure.
+</p>
+<h3>Balancing Techniques</h3>
+<p>
+	This section largely restates what it covered in the first two, but gives ChatGPT a great opportunity to double down on its mistakes, or provide more reasonable interpretations.
+</p>
+<p>
+	It chooses the first: on swap rules, "This forces the first player to make a move that’s not too strong, balancing the initiative (common in Hex and other placement games)."
+	This last bullet also caught my eye:
+</p>
+<blockquote>
+	Symmetric Design: Some games randomize initial conditions or make moves symmetric so no
+	inherent initiative exists (e.g. Scrabble’s symmetric board and equal rack draws eliminate turn bias)
+</blockquote>
+<p>
+	All the cited paper claims is that higher-level Scrabble programs showed less of a disparity based on who started.
+	It makes no claims about what specific properties of Scrabble cause this, and ChatGPT's interpretation is simply nonsense.
+	Do Chess or Hex not have symmetric boards?
+	What is "equal rack draws" supposed to mean, and how would that eliminate turn bias?
+</p>
+<p>
+	It finishes off the section with a quote from a "game design expert."
+	By that, it means a poster on <a href="https://gamedev.stackexchange.com/questions/177257/balance-advantage-of-having-the-first-turn">stackexchange</a>.
+	<a href="dead-internet#report">I'm starting to see a trend</a> of ChatGPT inventing expertise to make its quotes sound more authoritative.
+</p>
+<h3>Empirical Findings and High-Level Play</h3>
+<p>
+	ChatGPT reassures us it really didn't check its chess source: "large databases of human play show White’s ~54% score in chess" (linking back to the Computer Chess Rating List).
+</p>
+<h3>What isn't there</h3>
+<p>
+	After poking at the claims and citations that are present in ChatGPT's report, it's also worth thinking about what isn't there, but maybe should be.
+</p>
+<p>
+	For example, we have all these games that appear to favor the first-turn player.
+	Would it not be worth talking about some of the general factors that might cause this to be standard?
+	For example, the fact that at any point in a turn-based game, the starting player has had as many or more turns/actions than the other player?
+</p>
+<p>
+	Nothing came up about games that favor the second player (aside from the fairly trivial case of certain decks in a given trading card game).
+	Do those simply not exist?
+	It seems worth sparing at least a few sentences for this subject.
+</p>
+<h3>In summary</h3>
+<p>
+	Key failings:
+</p>
+<ul>
+	<li>Misinterprets sources (claiming the opposite of what the source says)</li>
+	<li>Misrepresenting sources (calling an article a study, sourcing an "expert quote" from an internet commenter)</li>
+	<li>Factual errors (Pokemon's rules)</li>
+	<li>Questionable inclusions (games like tic-tac-toe or Nim)</li>
+	<li>Unsupported claims (Scrabble being balanced due to its symmetric board, Go's komi balancing the game)</li>
+</ul>
+<span class="anchor" id="euwcq"></span>
+<h2>Example 2: Yugioh tournament prep advice<sup><small><a href="#euwcq">&#35;</a></small></sup></h2>
+<p>
+	I'm extra comfortable with Yugioh-related topics, so let's mostly ignore its sourcing and just tear apart this next report based on content.
+	I asked it to help me prepare for the EUWCQ, a major tournament: providing some mix of archetype recommendations, what to look out for, and what to side.
+	(This prompt was sent on July 23. The <a href="https://ygoprodeck.com/tournament/european-wcq-2025-3209">EUWCQ</a> took place the following weekend.)
+</p>
+<center><div class="figure">
+	<img src="images/deep-research/ygo.png" alt="Compilation of errors in its Yugioh analysis. Multiple per paragraph." width="100%"/>
+</div><em>My comments in blue.</em></center>
+<p>
+	<a href="files/euwcq.pdf">Full report (PDF), for reference</a>.
+	Absolutely disastrous.
+	Most of what it writes here sounds completely absurd to anyone with even a passing understanding of the current metagame.
+	The two images it includes (Assault Synchron and Visas Starfrost) are perhaps the most irrelevant cards it could have chosen.
+</p>
+<p>
+	For once, there's nothing too problematic with its sources, aside from the one OCG tournament report it included.
+</p>
+<p>
+	If you think this test is too difficult or specific, I urge you to reread <a href="https://openai.com/index/introducing-deep-research/">how they advertise this feature</a>.
+	Even setting aside game-specific interactions and details, there are still fundamental logical errors and misinterpretations throughout.
+	Nothing on their page suggests that, if you give it a sufficiently specific (but no PhD-level) topic, you may get a report with about one error per sentence.
+</p>
+<span class="anchor" id="sushi"></span>
+<h2>Example 3: The best deck of Battle Spirits Saga<sup><small><a href="#sushi">&#35;</a></small></sup></h2>
+<p>
+	While it was <a href="https://www.battlespirits-saga.com/news/announcements/004.php">sadly cancelled</a> earlier this year, Battle Spirits Saga was a game I really enjoyed.
+	Acknowledging that this would be an even more challenging prompt, I asked ChatGPT to research the best deck from the final World Championship for that game, held in early January 2025, Orlando.
+	I wanted to know if it could figure out what the deck was, and if it could describe the deck properly (how it worked, any key cards, that sort of thing).
+	We'll go with the image format again:
+</p>
+<center><div class="figure">
+	<img src="images/deep-research/bss.png" alt="Compilation of errors in its Battle Spirits Saga analysis. Multiple per paragraph." width="100%"/>
+</div><em>My comments in blue.</em></center>
+<p>
+	<a href="files/bss-hydra.pdf">Full report (PDF), for reference</a>.
+	Absolutely disastrous, although slightly more understandable.
+</p>
+<p>
+	The game's low popularity means there's little online discussion to draw from.
+	(I might complain a little here that much of the discussion I have found is reserved to Discord channels not searchable or broadly available on the internet, a growing problem in many communities.)
+</p>
+<p>
+	I think it's worth highlighting the sources it does pull from: <a href="https://www.battlespirits-saga.com/news/deck-article/004.php">the one about the Hydra deck, for example</a>.
+	It's obvious from reading the first paragraph or two that this is primarily a marketing piece, and as such is not something that should be taken so seriously.
+	Should a reviewer confidently declare that the RTX 5090 "unlock[s] transformative performance in video editing, 3D rendering, and graphic design?"
+	It says so on <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/">NVIDIA's general page for the card</a>, after all.
+</p>
+<p>
+	It makes other basic research errors, like taking a Youtube video description from May 2024 as being representative of late-2024 events.
+</p>
+<p>
+	The actual top deck, finishing in <a href="https://x.com/BSS_TCG/status/1876946954229363123">first and second place</a>, is the new Blue/Yellow theme introduced in BSS06, typically referred to as Sushi.
+	It uses the Feast keyword to create increasingly powerful Supsprite tokens, can generate advantage quickly off the Sushi Bullet Train nexus, has efficient spirits like Hitgirl Nagi, and the ability to instantly close out games with Giant Angel Magni/Scales Giant Kiffa Libra.
+</p>
+<span class="anchor" id="notes"></span>
+<h2>Notes<sup><small><a href="#notes">&#35;</a></small></sup></h2>
+<p>
+	Between that and the reports <a href="dead-internet">in my other article</a>, this makes my monthly quota of deep research reports.
+	Somehow, I doubt I'll miss having the ability to generate more of these for a little bit.
+	It does not do good research, and it does not produce reliable, accurate information.
+</p>
+<p>
+	This function is likely only worth "$1000 a month" to the people working hard to pollute the internet with lazy AI-generated articles, hoping users will click their ads/affiliate links before they realize it's nonsense.
+</p>
+<p>
+	After submitting a deep research query, ChatGPT has always asked a few clarifying questions.
+	This should allow for some corrective mechanisms, like refusing to generate a report if its understanding of the topic is sufficiently lacking.
+	This also should mean the precise wording of the initial prompt cannot be blamed for its numerous errors.
+	If anything was unclear, it had a chance to resolve those before starting its research.
+	Parameters like "don't misrepresent or lie about your sources" should not have to be spelled out.
+</p>
+<p>
+	These reports were generated before/without their "agent" feature.
+	I have no confidence that would resolve most of the issues observed.
+</p>
+
+<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<ul class="copyright">
+		<li>Content: BigStupidJellyfish</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</footer>
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
