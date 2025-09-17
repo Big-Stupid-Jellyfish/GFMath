@@ -119,7 +119,7 @@ gtag('config', 'G-805N997DPC');
 		I want a consistent evaluation of performance.</li>
 	<li>This re-solving bias could be addressed by not including the question, and giving instructions like "For a question, [answer1] was provided. Does this match the correct [answer2]?"
 		However, this causes larger issues, as certain answer forms require interpretation.</li>
-	<li>Finally, language models are simply trash at subjective evaluations.
+	<li>Language models are simply trash at subjective evaluations.
 		They will praise mediocre writing as revolutionary, crackpot math theories as a major breakthrough, hallucinate non-existent errors, and so on.
 		I might be able to have a language model tell me which response <em>it thinks</em> was the most creative, comprehensive, intelligent, or whatever, but I don't actually end up with useful information to share.
 		See also: <a href="https://www.pnas.org/doi/10.1073/pnas.2415697122">Laurito et al. (2025)</a>.
@@ -168,7 +168,7 @@ gtag('config', 'G-805N997DPC');
 	We see a few models with incredible efficiency around the 4-7B range.
 	24B parameters seems to be a solid range where you get most of the performance (on this test), scoring around ~60% compared to a max score of ~68%.
 	Models larger than this did not consistently score much higher.
-	The most promising model overall here was Google's Gemma3 27B model, with several reasonable quants scoring 65-66%.
+	The most promising model overall here was Google's Gemma3 27B model, with several reasonable quants scoring 65-66% while fitting in a normal GPU.
 </p>
 <span class="anchor" id="prompting"></span>
 <h2>Prompting Test<sup><small><a href="#prompting">&#35;</a></small></sup></h2>
@@ -262,8 +262,8 @@ gtag('config', 'G-805N997DPC');
 	I want to test all the way up to F16, so smaller models are much more reasonable.
 </p>
 <p>
-	I took the 85-question test <a href="llm-basic-tests">used on some earlier tests</a>, and extended it with 15 more questions for a nice round 100.
-	Those extra questions were intended to be a bit on the easier side, as this test concept will focus more on smaller (dumber) models and that might help better distinguish performance.
+	I took the 85-question test used above, and extended it with 15 more questions for a nice round 100.
+	The extra questions were intended to be a bit on the easier side, as this test concept will focus more on smaller (dumber) models and that might help better distinguish performance.
 	These models tended to score ~70-90% on that addition, which I'd call a reasonable success.
 	20 attempts per question, to further reduce variation between tests.
 </p>
@@ -355,6 +355,10 @@ gtag('config', 'G-805N997DPC');
 </div></center>
 <p>
 	Lines of best fit are of the form \( A \exp{(-C x)} + B \).
+	Points towards the top-left represent the most "efficient/ideal" configurations: quantizations with the highest intelligence relative to their file size.
+	For example, aside from model specialties, if we had 8 GB of VRAM available, we might want to use a 3-bit quant of Qwen3-14B (from these options).
+	A 6 GB model would allow for some headroom/context, and it scores better than the similar-size Gemma 3n 6-bit quants &amp; Mistral IQ2_XXS quant.
+	Mistral Small overtakes Qwen3 at ~10 GB model size.
 </p>
 <p>
 	To better see the crossover points/relative performance, we might also hide the scatter points and emphasize the fit lines:
@@ -373,7 +377,7 @@ gtag('config', 'G-805N997DPC');
 	<li>For tests of the type ran here, there appear to be major diminishing returns past Q4.</li>
 	<li>At least in terms of answering factual questions, there do not appear to be wild dynamic behaviors as temperature changes. Lower temperatures are likely better.</li>
 	<li>You cannot unlock secret powers of your model by telling it that it's a super genius.</li>
-	<li>These are exploratory tests. Please be careful not to interpret too broadly. Various other attributes (conversational style, writing quality, creativity, long-form reasoning, long-context performance, etc...) were not particularly tested.</li>
+	<li>These are exploratory tests. Please be careful not to interpret too broadly. Various other attributes (conversational style, writing quality, creativity, tool calling, long-form reasoning, long-context performance, etc...) were not particularly tested.</li>
 </ul>
 <p>
 	I found these tests quite interesting to work on, and to see the relationships come together.
@@ -401,7 +405,7 @@ gtag('config', 'G-805N997DPC');
 </p>
 <p>
 	I will try to test some other angles and properties of LLMs in the future.
-	Note that these tests are all about relative placement and scoring.
+	Note that these tests are all about relative placement and scoring, rather than making some absolute judgment.
 	I'm broadly trying to determine, amongst LLMs I can feasibly run, which are the highest quality or most interesting.
 	If you want my thoughts on their quality on a broader scale, I've previously written <a href="dead-internet">about some of their broader applications/concerns</a> and <a href="deep-research">about their research abilities</a>.
 </p>
