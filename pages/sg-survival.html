@@ -1,143 +1,136 @@
-<!DOCTYPE HTML>
-<!--
-Forty by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-805N997DPC');
-</script>
-<meta name="description" content="Girls Frontline, by the numbers">
-<title>Picking the Tankiest Shotguns - GFMath</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="../assets/css/main.css" />
-<link rel="icon" sizes="180x180" href="images/icon/ads-180.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/icon/ads-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/icon/ads-16.png">
-<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-805N997DPC');
+    </script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    <title>Picking the Tankiest Shotguns - GFMath</title>
+
+<link href="images/icon/ads-180.png" rel="icon" sizes="180x180"/>
+<link href="images/icon/ads-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="images/icon/ads-16.png" rel="icon" sizes="16x16" type="image/png"/>
+
+    <link rel="stylesheet" href="../assets/css/common.css" />
+
+    
 </head>
-<body class="is-preload">
-<!-- Wrapper -->
-<div id="wrapper">
-<!-- Header -->
-<header id="header">
-<a href="../index" class="logo"><strong>GFMath</strong> <span>Detailed GFL analysis</span></a>
-<nav></nav>
-<a href="https://www.youtube.com/c/BigStupidJellyfish" class="logo"><strong>Youtube</strong></a>
-</header>
-<div id="main" class="alt">
-<section>
-<div class="inner">
-<header class="major">
-	<h1>Picking the Tankiest Shotguns</h1>
-</header>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    GFMath
+                </div>
+                <nav>
+                    <a href="../index">Home</a>
+                    <a href="https://www.youtube.com/c/BigStupidJellyfish" target="_blank">YouTube</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-		
-		
-				
-				<center><em>By BigStupidJellyfish | 2020-July-03</em></center>
-
-				<p><em>Note, 2021-August-29:</em> There are enough shotguns in the game with powerful skills that this sort of survivability measure doesn't mean much.
+    <main>
+        <div class="article-container">
+            <header class="article-header">
+                <h1>Picking the Tankiest Shotguns</h1>
+                <div class="meta">By BigStupidJellyfish | 2020-July-03</div>
+            </header>
+            <div class="article-content">
+<p><em>Note, 2021-August-29:</em> There are enough shotguns in the game with powerful skills that this sort of survivability measure doesn't mean much.
 				Shields can dramatically extend your lifetime - we now have SAT8, DP-12, and M500 mod for that.
 				KSG and FP-6 have high base armor and may be useful for armorstacking.
 				There are also upcoming options like LTLX 7000, RMB mod, and Defender that are very powerful in their own ways.
 				Other shotguns (SPAS-12, M1014, AA-12, and so on) only have use as a stopgap until you get these better shotguns and will all do their job decently enough.</p>
-
-				<!-- <p>Note: I originally wrote this leading up to Isomer ranking, but the same ideas here can be useful against other enemies in the 30-60 accuracy range with low damage. For general content, you should also keep in mind how much armor each SG has relative to the enemies' damage.</p> -->
-				<p><a href="https://imgur.com/a/POHBYIl">Album of images</a>.</p>
-				<span class="anchor" id="background"></span>
+<!-- <p>Note: I originally wrote this leading up to Isomer ranking, but the same ideas here can be useful against other enemies in the 30-60 accuracy range with low damage. For general content, you should also keep in mind how much armor each SG has relative to the enemies' damage.</p> -->
+<p><a href="https://imgur.com/a/POHBYIl">Album of images</a>.</p>
+<span class="anchor" id="background"></span>
 <h2>Background</h2>
-				<p>Word on the street is you need a few shotguns for ELID teams in Isomer ranking. Most people say S.A.T.8 is the best, and for the rest just use whatever - after all, the zombies don't have that much damage so any shotgun can tank them. But, even when choosing whatever, is there a slightly better pick?</p>
-				<hr />
-				<p>The zombies we're expecting look something like this:</p>
-				<table>
-				<thead>
-				<tr class="header">
-				<th>Unit</th>
-				<th>ACC</th>
-				<th>DMG</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr class="odd">
-				<td>Smasher (BOSS)</td>
-				<td>60</td>
-				<td>32</td>
-				</tr>
-				<tr class="even">
-				<td>Unarmed</td>
-				<td>60</td>
-				<td>7</td>
-				</tr>
-				<tr class="odd">
-				<td>Armed</td>
-				<td>30</td>
-				<td>26</td>
-				</tr>
-				</tbody>
-				</table>
-				<p>Clearly, the minion zombies have low enough damage for any shotgun to handle it. Different combinations of HP/eva however will let some shotguns perform better than others.</p>
-				<div class="figure">
-				<img src="https://i.imgur.com/Fk0OKni.png" alt="Shotgun survivability" width="100%"/>
-				<p class="caption">Shotgun survivability</p>
-				</div>
-				<p>Here, the number of hits each shotgun can take is plotted by enemy accuracy. More hits tankable = better survivability. In the case of Isomer ranking, the gas damage will greatly accelerate death compared to the listed numbers, but the overall proportion should remain about constant.</p>
-				<p>This plot assumes 100 affection/+10 max calibrated gold armor, and that all hits deal 1 damage. No skills are considered (even ones that buff armor, evasion, or shields), so keep in mind that those will influence matters if the fight lasts long enough to trigger. That said, SG skills usually don't come online until after 10 seconds when hopefully the main enemy force is already dead. Notably, depending on the timing of S.A.T.8's shield, she can take very little to no damage per fight.</p>
-				<p>As a bar graph, sorted by survivability versus 60 accuracy:</p>
-				<div class="figure">
-				<img src="https://i.imgur.com/cZojBzE.png" alt="Shotgun survivability (bar form)" width="100%"/>
-				<p class="caption">Shotgun survivability (bar form)</p>
-				</div>
-				<span class="anchor" id="conclusions"></span>
+<p>Word on the street is you need a few shotguns for ELID teams in Isomer ranking. Most people say S.A.T.8 is the best, and for the rest just use whatever - after all, the zombies don't have that much damage so any shotgun can tank them. But, even when choosing whatever, is there a slightly better pick?</p>
+<hr/>
+<p>The zombies we're expecting look something like this:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Unit</th>
+<th>ACC</th>
+<th>DMG</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Smasher (BOSS)</td>
+<td>60</td>
+<td>32</td>
+</tr>
+<tr class="even">
+<td>Unarmed</td>
+<td>60</td>
+<td>7</td>
+</tr>
+<tr class="odd">
+<td>Armed</td>
+<td>30</td>
+<td>26</td>
+</tr>
+</tbody>
+</table>
+<p>Clearly, the minion zombies have low enough damage for any shotgun to handle it. Different combinations of HP/eva however will let some shotguns perform better than others.</p>
+<div class="figure">
+<img alt="Shotgun survivability" src="https://i.imgur.com/Fk0OKni.png" width="100%"/>
+<p class="caption">Shotgun survivability</p>
+</div>
+<p>Here, the number of hits each shotgun can take is plotted by enemy accuracy. More hits tankable = better survivability. In the case of Isomer ranking, the gas damage will greatly accelerate death compared to the listed numbers, but the overall proportion should remain about constant.</p>
+<p>This plot assumes 100 affection/+10 max calibrated gold armor, and that all hits deal 1 damage. No skills are considered (even ones that buff armor, evasion, or shields), so keep in mind that those will influence matters if the fight lasts long enough to trigger. That said, SG skills usually don't come online until after 10 seconds when hopefully the main enemy force is already dead. Notably, depending on the timing of S.A.T.8's shield, she can take very little to no damage per fight.</p>
+<p>As a bar graph, sorted by survivability versus 60 accuracy:</p>
+<div class="figure">
+<img alt="Shotgun survivability (bar form)" src="https://i.imgur.com/cZojBzE.png" width="100%"/>
+<p class="caption">Shotgun survivability (bar form)</p>
+</div>
+<span class="anchor" id="conclusions"></span>
 <h2>Conclusions</h2>
-				<p>Super-Shorty is actually pretty good versus 30 accuracy due to her high base evasion, but falls to the middle of the pack at 60. S.A.T.8 overall has the best defensive stats. M1887 and Dana are close behind, while Type97S and M1014 appear to be the top 4* picks. SPAS-12 and Elphelt have identical HP/evasion making them harder to make out in this plot. RMB-93, NS2000, and USAS-12 take the bottom 3 overall spots in survivability.</p>
-				<p>S.A.T.8 gets the short end of the stick here (despite still being the overall best) because her shield isn't accounted for. That is incredibly relevant with its insane ICD, so consider her survivability as being far higher in the field.</p>
-				<p>KSG and Super-Shorty have skills that boost their evasion and armor, giving them a further edge 10-16 seconds in. Elphelt has a reasonably useful offensive skill at 10s (not link-dependent), and USAS's offensive skill kicks off immediately (link-dependent).</p>
-				<div class="figure">
-				<img src="https://i.imgur.com/oXxDTfU.png" width="100%"/>
-
-				</div>
-				<p>Before you get too concerned about leveling specific shotguns, see the same plot but with a zero-scaled y-axis. The actual difference in survivability isn't that major between most shotguns. This also all assumes SG armor is sufficient to reduce all damage taken to 1. Stuff like KSG and FP-6 will stack armor better, and Super-Shorty will have a tougher time hitting thresholds in some fights.</p>
-				<p>Perhaps RMB-93 should sit this one out, but otherwise you can probably just use what you have.</p>
-				<span class="anchor" id="variations"></span>
+<p>Super-Shorty is actually pretty good versus 30 accuracy due to her high base evasion, but falls to the middle of the pack at 60. S.A.T.8 overall has the best defensive stats. M1887 and Dana are close behind, while Type97S and M1014 appear to be the top 4* picks. SPAS-12 and Elphelt have identical HP/evasion making them harder to make out in this plot. RMB-93, NS2000, and USAS-12 take the bottom 3 overall spots in survivability.</p>
+<p>S.A.T.8 gets the short end of the stick here (despite still being the overall best) because her shield isn't accounted for. That is incredibly relevant with its insane ICD, so consider her survivability as being far higher in the field.</p>
+<p>KSG and Super-Shorty have skills that boost their evasion and armor, giving them a further edge 10-16 seconds in. Elphelt has a reasonably useful offensive skill at 10s (not link-dependent), and USAS's offensive skill kicks off immediately (link-dependent).</p>
+<div class="figure">
+<img src="https://i.imgur.com/oXxDTfU.png" width="100%"/>
+</div>
+<p>Before you get too concerned about leveling specific shotguns, see the same plot but with a zero-scaled y-axis. The actual difference in survivability isn't that major between most shotguns. This also all assumes SG armor is sufficient to reduce all damage taken to 1. Stuff like KSG and FP-6 will stack armor better, and Super-Shorty will have a tougher time hitting thresholds in some fights.</p>
+<p>Perhaps RMB-93 should sit this one out, but otherwise you can probably just use what you have.</p>
+<span class="anchor" id="variations"></span>
 <h2>Variations</h2>
-				<div class="figure">
-				<img src="https://i.redd.it/4jpr8ibixo851.png" width="100%"/>
+<div class="figure">
+<img src="https://i.redd.it/4jpr8ibixo851.png" width="100%"/>
+</div>
+<p>The original plot, with some images and overlapping lines.</p>
+<div class="figure">
+<img src="https://i.imgur.com/LTxzyKu.png" width="100%"/>
+</div>
+<p>An extended survivability curve for 10-100 enemy accuracy. The y-axis is not zero-scaled and is logarithmic for better visual separation. As before, the absolute difference is pretty small.</p>
+<!-- Footer -->
+            </div> 
+        </div> </main>
 
-				</div>
-				<p>The original plot, with some images and overlapping lines.</p>
-				<div class="figure">
-				<img src="https://i.imgur.com/LTxzyKu.png" width="100%"/>
-
-				</div>
-				<p>An extended survivability curve for 10-100 enemy accuracy. The y-axis is not zero-scaled and is logarithmic for better visual separation. As before, the absolute difference is pretty small.</p>
-
-			<!-- Footer -->
-				<footer id="footer">
-					<div class="inner">
-						<ul class="copyright">
-		<li>Content: BigStupidJellyfish</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</div>
-				</footer>
-			</div>
-			
-			<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			
-			</body>
-			</html>
+    <footer>
+        <div class="container">
+            <p>
+                <a href="../pages/about">About GFMath</a> ·
+                <a href="../pages/spoilers">Explanation of common plot types</a> ·
+                <a href="#" onclick="window.scrollTo(0,0)">Back to top</a>
+            </p>
+            <p style="margin-top: 20px;">
+                Content: BigStupidJellyfish
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

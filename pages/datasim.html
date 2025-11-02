@@ -1,67 +1,71 @@
-<!DOCTYPE HTML>
-<!--
-Forty by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-805N997DPC');
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<title>Data Simulation - GFMath</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="../assets/css/main.css" />
-<link rel="icon" sizes="180x180" href="images/icon/ads-180.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/icon/ads-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/icon/ads-16.png">
-<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-</head>
-<body class="is-preload">
-<!-- Wrapper -->
-<div id="wrapper">
-<!-- Header -->
-<header id="header">
-<a href="../index" class="logo"><strong>GFMath</strong> <span>Detailed GFL analysis</span></a>
-<nav></nav>
-<a href="https://www.youtube.com/c/BigStupidJellyfish" class="logo"><strong>Youtube</strong></a>
-</header>
-<div id="main" class="alt">
-<section>
-<div class="inner">
-<header class="major">
-<h1>Data Simulation</h1>
-</header>
-<center><em>By BigStupidJellyfish | 2022-July-15 | Last updated 2024-August-31</em></center>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-<h2>Contents<sup><small><a href="#">&#35;</a></small></sup></h2>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-805N997DPC');
+    </script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    <title>Data Simulation - GFMath</title>
+
+<link href="images/icon/ads-180.png" rel="icon" sizes="180x180"/>
+<link href="images/icon/ads-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="images/icon/ads-16.png" rel="icon" sizes="16x16" type="image/png"/>
+
+    <link rel="stylesheet" href="../assets/css/common.css" />
+
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    GFMath
+                </div>
+                <nav>
+                    <a href="../index">Home</a>
+                    <a href="https://www.youtube.com/c/BigStupidJellyfish" target="_blank">YouTube</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="article-container">
+            <header class="article-header">
+                <h1>Data Simulation</h1>
+                <div class="meta">By BigStupidJellyfish | 2022-July-15 | Last updated 2024-August-31</div>
+            </header>
+            <div class="article-content">
+<h2>Contents<sup><small><a href="#">#</a></small></sup></h2>
 <ul>
-	<li><a href="#intro">Introduction</a></li>
-	<li><a href="#setup">Setup</a></li>
-	<li><a href="#basic">Basic Training</a></li>
-	<li><a href="#intermediate">Intermediate Training</a></li>
-	<li><a href="#advanced">Advanced Training</a></li>
-	<li><a href="#notes">Notes</a></li>
-	<li><a href="#frames">"Fun" with Frames</a></li>
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#setup">Setup</a></li>
+<li><a href="#basic">Basic Training</a></li>
+<li><a href="#intermediate">Intermediate Training</a></li>
+<li><a href="#advanced">Advanced Training</a></li>
+<li><a href="#notes">Notes</a></li>
+<li><a href="#frames">"Fun" with Frames</a></li>
 </ul>
 <p>
-	<em>(2024-04-23 UPDATE): With the 3.04 client update, that extra frame has been removed. Subtract 0.03 seconds from each time dated before this.</em>
+<em>(2024-04-23 UPDATE): With the 3.04 client update, that extra frame has been removed. Subtract 0.03 seconds from each time dated before this.</em>
 </p>
 <p>
-	<em>(2022-12-15 WARNING): With the 3.0 client update, the game appears to be adding an extra frame to reported times.
+<em>(2022-12-15 WARNING): With the 3.0 client update, the game appears to be adding an extra frame to reported times.
 		You may experience 0.03s slower times than described below, but data rewards shouldn't be significantly affected by this.
 		(<a href="images/misc/j7tdAyL.png">Some tests here, read bottom-to-top.</a>)</em>
 </p>
 <span class="anchor" id="intro"></span>
-<h2>Introduction<sup><small><a href="#intro">&#35;</a></small></sup></h2>
+<h2>Introduction<sup><small><a href="#intro">#</a></small></sup></h2>
 <p>
 	Training data is one of the most vital resources in Girls' Frontline, used to increase <a href="skill-levels">skill levels</a>.
 	It is primarily acquired through Data Mode, in Combat Simulation - a timegated resource.
@@ -72,7 +76,7 @@ gtag('config', 'G-805N997DPC');
 	Here, I'll go over the best formations for each level, and their expected data yields.
 </p>
 <span class="anchor" id="setup"></span>
-<h2>Setup<sup><small><a href="#setup">&#35;</a></small></sup></h2>
+<h2>Setup<sup><small><a href="#setup">#</a></small></sup></h2>
 <h3>Equipment</h3>
 <p>
 	The dummy has 10000/20000/40000 HP for basic/intermediate/advanced training, and 0 armor/evasion across the board.
@@ -80,18 +84,18 @@ gtag('config', 'G-805N997DPC');
 	The best equipment to use is as follows:
 </p>
 <center><div class="figure">
-	<img src="images/datasim/equipment.png" width="100%"/>
+<img src="images/datasim/equipment.png" width="100%"/>
 </div><em></em></center>
 <p>
 	In most cases, prefer SPEQs over these equipment pieces.
 	Notable exceptions:
 </p>
 <ul>
-	<li>Defender prefers buckshot over her SPEQ</li>
-	<li>AP SPEQs that offer &lt;10 FP are worse than Sniper ammo</li>
-	<li>Ammo boxes aren't needed for the fastest times, but are important insurance for slower teams. It sucks to be just barely short on damage and be forced to wait for your MGs to reload. M1918's SPEQ there has a damage penalty and is thus worse for speed.</li>
-	<li>Many MG scope SPEQs are better than an RMR, but worse than a VFL vs 0 evasion.</li>
-	<li>ARs receiving crit rate tiles (e.g., from M4A1), likely prefer a <a href="newerquip#3chip">VFL+HV ammo+Focus chip</a> loadout.</li>
+<li>Defender prefers buckshot over her SPEQ</li>
+<li>AP SPEQs that offer &lt;10 FP are worse than Sniper ammo</li>
+<li>Ammo boxes aren't needed for the fastest times, but are important insurance for slower teams. It sucks to be just barely short on damage and be forced to wait for your MGs to reload. M1918's SPEQ there has a damage penalty and is thus worse for speed.</li>
+<li>Many MG scope SPEQs are better than an RMR, but worse than a VFL vs 0 evasion.</li>
+<li>ARs receiving crit rate tiles (e.g., from M4A1), likely prefer a <a href="newerquip#3chip">VFL+HV ammo+Focus chip</a> loadout.</li>
 </ul>
 <p>
 	It's possible for generic SGs to do more damage with slugs, but you shouldn't be using those for datasim anyways.
@@ -103,18 +107,18 @@ gtag('config', 'G-805N997DPC');
 	You have two priorities:
 </p>
 <ol>
-	<li>Optimize tile coverage and composition for damage output. Basic formations are 3-4 DPS dolls (ARs/MGs/RFs) plus 1-2 HGs.</li>
-	<li>Have your DPS as close as possible to the dummy to reduce bullet travel time:</li>
+<li>Optimize tile coverage and composition for damage output. Basic formations are 3-4 DPS dolls (ARs/MGs/RFs) plus 1-2 HGs.</li>
+<li>Have your DPS as close as possible to the dummy to reduce bullet travel time:</li>
 </ol>
 <center><div class="figure">
-	<img src="images/misc/uLfNytg.png" width="100%"/>
+<img src="images/misc/uLfNytg.png" width="100%"/>
 </div><em>Bullet travel times by grid position</em></center>
 <p>
 	It's sort of like coalition drill formations, but with better doll selection.
 	For example:
 </p>
 <center><div class="figure">
-	<img src="images/datasim/position.png" width="100%"/>
+<img src="images/datasim/position.png" width="100%"/>
 </div><em><strong>Specifically</strong> in data sims. Nowhere else.</em></center>
 <p>
 	Having your ARs in the <em>very</em> front would be even better, but Mk23's tiles are likely to save more than 2 frames. P22 (would be moved to position 3) and Contender can both work, although as neither should get to activate their skills, Contender is generally preferred for her crit tiles.
@@ -131,23 +135,23 @@ gtag('config', 'G-805N997DPC');
 	Some dolls want unusual skill settings:
 </p>
 <ul>
-	<li>While Kord typically wants to be on manual, she should be set to auto for datasim. This immediately puts her into assault (+FP) mode rather than piercing (-FP).</li>
-	<li>RPK-203 should also be set to autoskill, to immediately go into burst mode.</li>
+<li>While Kord typically wants to be on manual, she should be set to auto for datasim. This immediately puts her into assault (+FP) mode rather than piercing (-FP).</li>
+<li>RPK-203 should also be set to autoskill, to immediately go into burst mode.</li>
 </ul>
 <span class="anchor" id="basic"></span>
-<h2>Basic Training<sup><small><a href="#basic">&#35;</a></small></sup></h2>
+<h2>Basic Training<sup><small><a href="#basic">#</a></small></sup></h2>
 <center><div class="figure">
-	<img src="images/datasim/yields-basic.png" width="100%"/>
+<img src="images/datasim/yields-basic.png" width="100%"/>
 </div><em>Data yields by time.</em></center>
 <center><div class="figure">
-	<img src="images/datasim/rhino-basic.png" width="100%"/>
+<img src="images/datasim/rhino-basic.png" width="100%"/>
 </div><em></em></center>
 <p>
 	Released with the Fixed Point boxes, Rhino allows for record times in all sims.
 	Due to the post-3.0 frame delay, her basic time (which would be 0.13s before) only tied the pre-3.0 0.17s rifle time.
 	Now, it can get 0.13.
 	As it's random what multiplier Rhino will start with, expect 1-10 tries to get this time.
-	Try shuffling echelon slots & tile positions (keeping tile buffs optimized and DPS dolls as close as possible) to get a different RNG seed.
+	Try shuffling echelon slots &amp; tile positions (keeping tile buffs optimized and DPS dolls as close as possible) to get a different RNG seed.
 	After getting your leaderboard time, it's best to switch to some other more consistent echelon - if Rhino rolls low, you'll often get below max data.
 	Oath requirements have not been tested. You may want one on Rhino to reduce RNG.
 </p>
@@ -157,58 +161,51 @@ gtag('config', 'G-805N997DPC');
 	Time is 0.17s if your rifles are enough, 0.20s if it's left barely alive and a HG finishes the target - 219 data either way.
 </p>
 <center><div class="figure">
-	<img src="images/datasim/basic-0.17-1.png" width="100%"/>
+<img src="images/datasim/basic-0.17-1.png" width="100%"/>
 </div><em></em></center>
-
 <p>
 	While slightly slower, various Defender comps also easily get 219 data:
 </p>
 <center><div class="figure">
-	<img src="images/datasim/basic-0.27-1.png" width="33%"/>
-	<img src="images/datasim/basic-0.27-2.png" width="33%"/>
-	<img src="images/datasim/basic-0.33-1.png" width="33%"/>
+<img src="images/datasim/basic-0.27-1.png" width="33%"/>
+<img src="images/datasim/basic-0.27-2.png" width="33%"/>
+<img src="images/datasim/basic-0.33-1.png" width="33%"/>
 </div><em></em></center>
-
 <p>
 	Python/Nagant revolver are an excellent combo, and using them plus 3 MGs with solid upfront damage gets you a safe 218:
 </p>
 <center><div class="figure">
-	<img src="images/datasim/basic-0.93-1.png" width="49%"/>
-	<img src="images/datasim/basic-1.07-1.png" width="49%"/>
+<img src="images/datasim/basic-0.93-1.png" width="49%"/>
+<img src="images/datasim/basic-1.07-1.png" width="49%"/>
 </div><em>MGs used left: PK, PKP, M2HB. Right: this will get 218 data with good equips/skill levels, 217 with some parts suboptimal.</em></center>
-
 <p>An older, but still reasonable, echelon takes 4 MGs with first-volley skills and 1 HG (Contender/Python/Jill/P22/K5, ideally).</p>
-
 <span class="anchor" id="intermediate"></span>
-<h2>Intermediate Training<sup><small><a href="#intermediate">&#35;</a></small></sup></h2>
+<h2>Intermediate Training<sup><small><a href="#intermediate">#</a></small></sup></h2>
 <center><div class="figure">
-	<img src="images/datasim/yields-int.png" width="100%"/>
+<img src="images/datasim/yields-int.png" width="100%"/>
 </div><em>Data yields by time.</em></center>
-
 <center><div class="figure">
-	<img src="images/datasim/int1.jpg" width="49%"/>
-	<img src="images/datasim/int2.jpg" width="49%"/>
+<img src="images/datasim/int1.jpg" width="49%"/>
+<img src="images/datasim/int2.jpg" width="49%"/>
 </div>
 <em>From left to right in the equipment menu: TPS, Rhino, Colt Walker, Contender, Type56R mod.</em>
 </center>
-
 <p>
 	Slow Shock brings a new Intermediate meta, with the above team being 0.17s-capable (post-3.04).
 	This is the fastest legitimate time, and yields 99 data.
 	This needs good Rhino RNG, so I'd recommend switching to a more stable defender comp after getting your leaderboard time.
 	Requires oath on Rhino/Type56R.
 </p>
-
 <center><div class="figure">
-	<img src="images/datasim/rhino-int.png" width="100%"/>
+<img src="images/datasim/rhino-int.png" width="100%"/>
 </div><em></em></center>
 <p>
-	<!-- For Intermediate and above, Rhino allows for a time faster than even the pre-3.0 echelons. -->
+<!-- For Intermediate and above, Rhino allows for a time faster than even the pre-3.0 echelons. -->
 	Pre-Slow Shock, the best team leaned on Rhino plus your typical datasim rifles.
 	Oath requirements have not been tested. You may want one on Rhino/HS.50/Type56R to reduce RNG.
 </p>
 <center><div class="figure">
-	<img src="images/datasim/int-0.27.png" width="100%"/>
+<img src="images/datasim/int-0.27.png" width="100%"/>
 </div><em></em></center>
 <p>
 	Released alongside Mirror Stage, Type56R's mod raised the intermediate bar to near-basic levels.
@@ -216,12 +213,12 @@ gtag('config', 'G-805N997DPC');
 	If you don't have some of these dolls oathed, I'd recommend some of the following Defender comps for a safer 99.
 </p>
 <p>
-	<!-- The current fastest legitimate time on EN is 0.27s. -->
-	<!-- Other Defender-based teams also work well for maximum rewards: -->
+<!-- The current fastest legitimate time on EN is 0.27s. -->
+<!-- Other Defender-based teams also work well for maximum rewards: -->
 </p>
 <center><div class="figure">
-	<img src="images/datasim/int-0.90-1.png" width="49%"/>
-	<img src="images/datasim/int-0.93-1.png" width="49%"/>
+<img src="images/datasim/int-0.90-1.png" width="49%"/>
+<img src="images/datasim/int-0.93-1.png" width="49%"/>
 </div><em>Preferred MGs: M1918 mod, RPK-203, Kord, PKP.</em></center>
 <p>
 	0.60s is possible with HS.50, but it needs oaths and is generally not worth the effort.
@@ -229,19 +226,17 @@ gtag('config', 'G-805N997DPC');
 <p>
 	Python/Nagant/3MG safely gets 98 intermediate, as do 1HG4MG echelons:
 </p>
-
 <center><div class="figure">
-	<img src="images/datasim/int-1.43-1.png" width="49%"/>
-	<img src="images/datasim/int-1.67-1.png" width="49%"/>
+<img src="images/datasim/int-1.43-1.png" width="49%"/>
+<img src="images/datasim/int-1.67-1.png" width="49%"/>
 </div><em>MGs used here are PK/PKP/M2HB/MG5.</em></center>
 <p>
 	Python/Nagant echelons even work when using <a href="images/datasim/int-1.90-1.png">nonsensical MGs</a>.
 </p>
-
 <span class="anchor" id="advanced"></span>
-<h2>Advanced Training<sup><small><a href="#advanced">&#35;</a></small></sup></h2>
+<h2>Advanced Training<sup><small><a href="#advanced">#</a></small></sup></h2>
 <center><div class="figure">
-	<img src="images/datasim/yields-adv.png" width="100%"/>
+<img src="images/datasim/yields-adv.png" width="100%"/>
 </div><em>Data yields by time.</em></center>
 <p>
 	An astonishingly fast 0.87s time can be achieved with TPS (as leader), Rhino, Defender, M6 ASW, and Px4 Storm mod.
@@ -254,14 +249,13 @@ Equipment:
 <center><div class="figure">
 	<img src="images/datasim/adv-0.87-equip.png" width="80%"/>
 </div><em>Non-DPS items optional, of course.</em></center> -->
-
 <p>
 	1.33s was the previous top time, enabled by Kar mod (post 3.04).
 	<!-- Before September 5th, 2023, at least - after that, Kar's skill was changed and is one frame slower making 1.37s the fastest <em>obtainable</em> time. -->
 	The team:
 </p>
 <center><div class="figure">
-	<img src="images/datasim/kar-1.33-formation.png" width="100%"/>
+<img src="images/datasim/kar-1.33-formation.png" width="100%"/>
 </div><em>Rhino, M1895 mod, Python, Kar98k mod, and De Lisle</em></center>
 <p>
 	This comp may also output 1.37s/1.40s/1.60/1.87s with worse Rhino/damage variance luck.
@@ -272,14 +266,13 @@ Equipment:
 	All skills on auto, equipment:
 </p>
 <center><div class="figure">
-	<img src="images/datasim/kar-equip.png" width="80%"/>
+<img src="images/datasim/kar-equip.png" width="80%"/>
 </div><em>Python SPEQ optional but preferable if you have it. Kar SPEQ is mandatory. M1895's SPEQ is technically worse than an RMR for damage, but it doesn't really matter either way.</em></center>
-
 <p>
 	The previous Rhino comp:
 </p>
 <center><div class="figure">
-	<img src="images/datasim/rhino-adv.png" width="100%"/>
+<img src="images/datasim/rhino-adv.png" width="100%"/>
 </div><em></em></center>
 <p>
 	Oath requirements have not been tested. You may want one on Rhino/RPK-203 to reduce RNG.
@@ -289,9 +282,9 @@ Equipment:
 	Some previous (and more consistent) comps enabled by Kolibri from Mirror Stage:
 </p>
 <center><div class="figure">
-	<img src="images/datasim/advanced-1.97.png" width="49%"/>
-	<img src="images/datasim/advanced-1.80.png" width="49%"/>
-</div><em>Left: no oaths. Right: with oaths & luck.</em></center>
+<img src="images/datasim/advanced-1.97.png" width="49%"/>
+<img src="images/datasim/advanced-1.80.png" width="49%"/>
+</div><em>Left: no oaths. Right: with oaths &amp; luck.</em></center>
 <p>
 	1.70s is also possible with RPK-203/HS.50/PKP/M1895 mod/Kolibri - see <a href="https://cdn.discordapp.com/attachments/640157367056728133/1001496429107351552/unknown.png">this</a> and <a href="https://cdn.discordapp.com/attachments/640157367056728133/1001517790739582996/unknown.png">this</a>.
 	It seems to require fully oathed DPS dolls, though.
@@ -307,66 +300,65 @@ Equipment:
 	53 is much simpler, as most MG/HG echelons will get you there.
 </p>
 <center><div class="figure">
-	<img src="images/datasim/advanced-223-2.png" width="49%"/>
-	<img src="images/datasim/advanced-223-1.png" width="49%"/>
+<img src="images/datasim/advanced-223-2.png" width="49%"/>
+<img src="images/datasim/advanced-223-1.png" width="49%"/>
 </div><em>The left formation was a previous 54-data capable team, with excessive oaths/RNG.</em></center>
 <p>
 	Reusing intermediate teams works:
 </p>
 <center><div class="figure">
-	<img src="images/datasim/advanced-287-1.png" width="49%"/>
-	<img src="images/datasim/advanced-297-1.png" width="49%"/>
+<img src="images/datasim/advanced-287-1.png" width="49%"/>
+<img src="images/datasim/advanced-297-1.png" width="49%"/>
 </div><em></em></center>
 <p>
 	Some MG/HG "gunboats":
 </p>
 <center><div class="figure">
-	<img src="images/datasim/advanced-3.13-1.png" width="49%"/>
-	<img src="images/datasim/advanced-3.37-1.png" width="49%"/>
+<img src="images/datasim/advanced-3.13-1.png" width="49%"/>
+<img src="images/datasim/advanced-3.37-1.png" width="49%"/>
 </div><em></em></center>
-
 <span class="anchor" id="notes"></span>
-<h2>Notes<sup><small><a href="#notes">&#35;</a></small></sup></h2>
+<h2>Notes<sup><small><a href="#notes">#</a></small></sup></h2>
 <ul>
-	<!-- <li>
+<!-- <li>
 		There appears to be a doll class filter in place for intermediate data - teams not containing an AR or MG will not be counted for leaderboards.
 		This will be an issue when Type56R's mod releases, as she enables a fast comp without MGs/ARs, unless they update the filter in time.
 		(Data is still awarded.)
 	</li> -->
-	<li>
+<li>
 		If I missed any fun/interesting/fast/effective compositions, feel free to shoot me a message and I'll probably add it in.
 	</li>
-	<li>
+<li>
 		These echelons and formations are exclusively for data simulations. Do not use them anywhere else.
 	</li>
-	<li>
+<li>
 		Some cheated times may be removed from the in-game leaderboards every half-decade or so.
 		In other words, there are plenty of cheated times up on the leaderboard.
 		I would not take a team from there unless it is also shown here or has a number (~5+) of high-level players (~lv150+) using it.
 	</li>
-	<li>
+<li>
 		If you use GFAlarm, you can test echelons by adding ids <code>10004,10005,10006</code> to target saving.
 	The customized target is positioned farther back and will report different times.
 	</li>
-	<li>
+<li>
 		Some of the fastest leaderboard times may need oaths, but it's not necessary or even recommended for getting the max or near max amounts of data.
 	</li>
-	<li>
+<li>
 		RNG is somewhat fixed in data sims - try moving dolls around in the formation (if possible) or in echelon order to shake things up if you're just short of a threshold.
 		You may also be able to influence it by equipping exos (in otherwise empty HG slots) with slightly different EVA buffs.
 		It does not change over time, so if you find a setup that works, it should work indefinitely.
 	</li>
-	<li>
+<li>
 		Due to RNG (damage variance, crits), you may not get exactly the same times as in the images above, even if using the same dolls.
 		Most of the 3/4MG echelons did not use sniper ammo in those screenshots to be conservative; the Defender/RF/top-tier ones did.
 	</li>
-	<li>
+<li>
 		See <a href="energy-packages">this page</a> for evaluations of data packages in the store, in case this isn't enough data.
 		Since 2.09, you're typically best off buying extra energy once a day and waiting for a 2x simulation yield event, though.
 	</li>
 </ul>
 <span class="anchor" id="frames"></span>
-<h2>"Fun" with Frames<sup><small><a href="#frames">&#35;</a></small></sup></h2>
+<h2>"Fun" with Frames<sup><small><a href="#frames">#</a></small></sup></h2>
 <p>
 	If you like leaderboards, every fraction of a second matters.
 	Let's cover a few frame-level details you usually don't need to worry about.
@@ -378,7 +370,7 @@ Equipment:
 	We can also observe this in normal encounters, to convince ourselves it's not a bug with the endcard time reporting:
 </p>
 <center><div class="figure">
-	<img src="images/datasim/tkb-timing.png" width="100%"/>
+<img src="images/datasim/tkb-timing.png" width="100%"/>
 </div><em></em></center>
 <p>
 	With 72 ROF (20f), TKB starts an attack at 1.40s (42f).
@@ -392,7 +384,7 @@ Equipment:
 	Keep in mind that tests against "Save target" use the data sampling ids/times listed towards the very top of the page, and tests against "Customized Target" go by these timings.
 </p>
 <center><div class="figure">
-	<img src="images/datasim/dummy-frames-customized.png" width="100%"/>
+<img src="images/datasim/dummy-frames-customized.png" width="100%"/>
 </div><em>Similar, but just different enough to matter. <a href="https://www.youtube.com/watch?v=hTJk4WgiW-A">Video reference.</a></em></center>
 <p>
 	We can also see a 1-frame "startup" here: Mosin-Nagant plus some HGs/fairy can easily oneshot the 5000 HP dummy, and across each position the recorded time is one frame past those measured above.
@@ -404,8 +396,8 @@ Equipment:
 	If you have two rifles that are individually strong enough to oneshot the dummy and are placed equally far, who gets the credit?
 </p>
 <center><div class="figure">
-	<img src="images/datasim/rc-1.png" width="49%"/>
-	<img src="images/datasim/rc-2.png" width="49%"/>
+<img src="images/datasim/rc-1.png" width="49%"/>
+<img src="images/datasim/rc-2.png" width="49%"/>
 </div><em>Crit II para for consistency, Claes to occupy the front, Jill/Nagant to ensure oneshots.</em></center>
 <p>
 	As you may have been able to predict, it's skill bar order.
@@ -419,77 +411,77 @@ Equipment:
 	Let's test the all relevant ones, plus a few more:
 </p>
 <center>
-	<table style="width:auto;">
-	  <tr>
-		<th>MG</th>
-		<th>Frame delay</th>
-		<th>Est. startup</th>
-		<th>Notes</th>
-	  </tr>
-	  <tr>
-		<td>M2HB</td>
-		<td>11 frames</td>
-		<td>3 frames</td>
-		<td></td>
-	  </tr>
-	  <tr>
-		<td>PK</td>
-		<td>11 frames</td>
-		<td>3 frames</td>
-		<td></td>
-	  </tr>
-	  <tr>
-		<td>Gr MG5</td>
-		<td>11 frames</td>
-		<td>3 frames</td>
-		<td></td>
-	  </tr>
-	  <tr>
-		<td>PKP</td>
-		<td>11 frames</td>
-		<td>4 frames</td>
-		<td></td>
-	  </tr>
-	  <tr>
-		<td>Lewis</td>
-		<td>10 frames</td>
-		<td>4 frames</td>
-		<td></td>
-	  </tr>
-	  <tr>
-		<td>Kord</td>
-		<td>10-11 frames</td>
-		<td>5-6 frames</td>
-		<td>Autoskill</td>
-	  </tr>
-	  <tr>
-		<td>RPK-203</td>
-		<td>10 frames</td>
-		<td>4 frames</td>
-		<td>Burst mode</td>
-	  </tr>
-	  <tr>
-		<td>RPK-203</td>
-		<td>11 frames</td>
-		<td>3 frames</td>
-		<td>Continuous mode</td>
-	  </tr>
-	  <tr>
-		<td>LWMMG mod</td>
-		<td>11-12 frames</td>
-		<td>3-4 frames</td>
-		<td></td>
-	  </tr>
-	  <tr>
-		<td>M1918 mod</td>
-		<td>10 frames</td>
-		<td>3 frames</td>
-		<td></td>
-	  </tr>
-	</table>
+<table style="width:auto;">
+<tr>
+<th>MG</th>
+<th>Frame delay</th>
+<th>Est. startup</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td>M2HB</td>
+<td>11 frames</td>
+<td>3 frames</td>
+<td></td>
+</tr>
+<tr>
+<td>PK</td>
+<td>11 frames</td>
+<td>3 frames</td>
+<td></td>
+</tr>
+<tr>
+<td>Gr MG5</td>
+<td>11 frames</td>
+<td>3 frames</td>
+<td></td>
+</tr>
+<tr>
+<td>PKP</td>
+<td>11 frames</td>
+<td>4 frames</td>
+<td></td>
+</tr>
+<tr>
+<td>Lewis</td>
+<td>10 frames</td>
+<td>4 frames</td>
+<td></td>
+</tr>
+<tr>
+<td>Kord</td>
+<td>10-11 frames</td>
+<td>5-6 frames</td>
+<td>Autoskill</td>
+</tr>
+<tr>
+<td>RPK-203</td>
+<td>10 frames</td>
+<td>4 frames</td>
+<td>Burst mode</td>
+</tr>
+<tr>
+<td>RPK-203</td>
+<td>11 frames</td>
+<td>3 frames</td>
+<td>Continuous mode</td>
+</tr>
+<tr>
+<td>LWMMG mod</td>
+<td>11-12 frames</td>
+<td>3-4 frames</td>
+<td></td>
+</tr>
+<tr>
+<td>M1918 mod</td>
+<td>10 frames</td>
+<td>3 frames</td>
+<td></td>
+</tr>
+</table>
 </center>
 <p>
-	There's some weirdness going on with Kord & LWMMG - see <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_H79dh_Ub50ZsThSsvDOMhJE2lPh7kUUzB7DoW1pFNp1BR56APZiwFLK00TUVlZyXwXLcvJJquS27/pubhtml">here for my specific observations</a>.
+	There's some weirdness going on with Kord &amp; LWMMG - see <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_H79dh_Ub50ZsThSsvDOMhJE2lPh7kUUzB7DoW1pFNp1BR56APZiwFLK00TUVlZyXwXLcvJJquS27/pubhtml">here for my specific observations</a>.
 	Different bullet travel speeds <em>could</em> explain the longer startup times, but a brief check with RPK-203 indicates MGs have the same travel times as those tested above.
 </p>
 <h3>NTW</h3>
@@ -497,8 +489,8 @@ Equipment:
 	If you've ever wondered why NTW mod doesn't show up in basic data leaderboards: her mod messes up her first shot, slowing it by 12 frames.
 </p>
 <center><div class="figure">
-	<img src="images/datasim/ntw-delay.png" width="49%"/>
-	<img src="images/datasim/ntw-delay2.png" width="49%"/>
+<img src="images/datasim/ntw-delay.png" width="49%"/>
+<img src="images/datasim/ntw-delay2.png" width="49%"/>
 </div><em>
 	Left: Mosin on pos 1 (8f distance + 1 startup), NTW on pos 7 (8f distance + 1 startup). Clear time is 21f, rather than the expected 9.
 	Right: moving NTW to pos 6 shortens shot distance by 3 frames, and clear time correspondingly decreases to 18f.
@@ -516,7 +508,7 @@ Equipment:
 	This makes placing her on 6, and your other rifle on 3/9, vital for basic data ranking.
 </p>
 <center><div class="figure">
-	<img src="images/datasim/hslow50.png" width="100%"/>
+<img src="images/datasim/hslow50.png" width="100%"/>
 </div><em>Mosin on pos 1 (8f distance + 1 startup), HS.50 on pos 7 (8f distance + 2 startup). Clear time is 10f. Mosin did the bulk of the damage, and HS.50 finished it off.</em></center>
 <p>
 	This also means, even if you didn't need the other rifle, you'd be stuck at <a href="images/datasim/hslow50-2.png">0.17s</a> instead of the theoretical max of <a href="images/datasim/hslow50-3.png">0.13s</a>.
@@ -527,76 +519,81 @@ Equipment:
 	SG bullet travel time is slower than other dolls:
 </p>
 <center><div class="figure">
-	<img src="images/datasim/dummy-frames-sg.png" width="100%"/>
+<img src="images/datasim/dummy-frames-sg.png" width="100%"/>
 </div><em>Times vs data dummy. Doll used: KSG.</em></center>
 <p>
 	Even compared to that, Defender takes a bit longer.
 	Her first shot comes in no sooner than 0.27s (8f). The 5-frame travel time against a data dummy puts her at a 3-frame startup time.
 </p>
 <center><div class="figure">
-	<img src="images/datasim/defender-speed.png" width="100%"/>
+<img src="images/datasim/defender-speed.png" width="100%"/>
 </div><em></em></center>
 <p>
 	She takes 81f to reload, so her second hit would come in at 2.97s.
 </p>
 <h3>Python</h3>
 <center><div class="figure">
-	<img src="images/datasim/python-delay.png" width="100%"/>
+<img src="images/datasim/python-delay.png" width="100%"/>
 </div><em></em></center>
 <p>
 	Python's passive doesn't distribute its first stack until 0.47s (14f), and Kolibri's active is similarly delayed (despite being listed as a "0 second ICD"):
 </p>
 <center><div class="figure">
-	<img src="https://cdn.discordapp.com/attachments/453784246515925003/999142758738559066/kolibri15f.png" width="100%"/>
-</div><em>But by 1 frame more. Test & image from LRP.</em></center>
-
+<img src="https://cdn.discordapp.com/attachments/453784246515925003/999142758738559066/kolibri15f.png" width="100%"/>
+</div><em>But by 1 frame more. Test &amp; image from LRP.</em></center>
 <h3>And many more...</h3>
 <p>
 	The dolls covered here are picked because of their relevance to data sims.
 	There are surely others with similar weird/undocumented timings and behaviors.
 	As always, for best results, test things out.
-	For details on this level, a screen recorder & video player with frame advance is your best friend.
+	For details on this level, a screen recorder &amp; video player with frame advance is your best friend.
 </p>
-<span class="anchor" id="ads"></span>
-<h2>More like this</h2>
-<section class="tiles">
-	<a href="fairy-reviews">
-		<div class="gallery gen fairy">
-		  <div class="gallerypic">
-			<img src="images/icon/fairy-reviews.jpg" width="33%" height="400">
-			<div class="gallerypicdesc"><b>Fairy Reviews</b><br/>General commentary and fairy information</div>
-		  </div>
-		</div>
-	</a>
 
-	<a href="simulation">
-		<div class="gallery gen arsmg rfhg mgsg">
-		  <div class="gallerypic">
-			<img src="images/icon/simulation.jpg" width="33%" height="400">
-			<div class="gallerypicdesc"><b>The Problem with Damage Simulators</b><br/>On real performance and models of it</div>
-		  </div>
-		</div>
-	</a>
-</section>
+
 
 <!-- Footer -->
-	<footer id="footer">
-		<div class="inner">
-			<ul class="copyright">
-		<li>Content: BigStupidJellyfish</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</div>
-	</footer>
-</div>
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+    <div class="more-like-this">
+        <h2>More like this</h2>
+        <div class="mlt-gallery-grid">
 
+                <a href="fairy-reviews" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/fairy-reviews.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">Fairy Reviews</div>
+                            <div class="mlt-gallery-desc">General commentary and fairy information</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="simulation" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/simulation.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">The Problem with Damage Simulators</div>
+                            <div class="mlt-gallery-desc">On real performance and models of it</div>
+                        </div>
+                    </div>
+                </a>
+        </div>
+    </div>
+    
+
+            </div> 
+        </div> </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                <a href="../pages/about">About GFMath</a> ·
+                <a href="../pages/spoilers">Explanation of common plot types</a> ·
+                <a href="#" onclick="window.scrollTo(0,0)">Back to top</a>
+            </p>
+            <p style="margin-top: 20px;">
+                Content: BigStupidJellyfish
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

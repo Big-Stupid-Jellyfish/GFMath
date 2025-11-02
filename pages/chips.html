@@ -1,20 +1,28 @@
-<!DOCTYPE HTML>
-<!--
-Forty by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-805N997DPC');
-</script>
-<script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-805N997DPC');
+    </script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    <title>AR #2 Chip Full Analysis - GFMath</title>
+
+<link href="images/icon/ads-180.png" rel="icon" sizes="180x180"/>
+<link href="images/icon/ads-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="images/icon/ads-16.png" rel="icon" sizes="16x16" type="image/png"/>
+
+    <link rel="stylesheet" href="../assets/css/common.css" />
+
+    <script>
 	function cDPS(base_dmg,crit_rate,crit_dmg,armor,ap,acc,eva,rof) {
 		var crit_rate = Math.min(crit_rate,1),
 			normal_dmg = base_dmg,
@@ -64,72 +72,61 @@ gtag('config', 'G-805N997DPC');
 		document.getElementById("iti_chip").innerHTML = Math.round(iti_chip);
 	}
 </script>
-<meta name="description" content="Girls Frontline, by the numbers">
-<title>AR #2 Chip Full Analysis - GFMath</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="../assets/css/main.css" />
-<link rel="icon" sizes="180x180" href="images/icon/ads-180.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/icon/ads-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/icon/ads-16.png">
-<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
 </head>
-<body class="is-preload">
-<!-- Wrapper -->
-<div id="wrapper">
-<!-- Header -->
-<header id="header">
-<a href="../index" class="logo"><strong>GFMath</strong> <span>Detailed GFL analysis</span></a>
-<nav></nav>
-<a href="https://www.youtube.com/c/BigStupidJellyfish" class="logo"><strong>Youtube</strong></a>
-</header>
-<div id="main" class="alt">
-<section>
-<div class="inner">
-<header class="major">
-	<h1>AR #2 Chip Full Analysis</h1>
-</header>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    GFMath
+                </div>
+                <nav>
+                    <a href="../index">Home</a>
+                    <a href="https://www.youtube.com/c/BigStupidJellyfish" target="_blank">YouTube</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-<center><em>By BigStupidJellyfish | 2021-December-14 | Updated 2022-July-15</em></center>
-
+    <main>
+        <div class="article-container">
+            <header class="article-header">
+                <h1>AR #2 Chip Full Analysis</h1>
+                <div class="meta">By BigStupidJellyfish | 2021-December-14 | Updated 2022-July-15</div>
+            </header>
+            <div class="article-content">
 <p>
 	For a general review of all new equipment types, see <a href="newquip">this page</a>.
 	For a detailed look into the #2 processor chip, read on.
 </p>
-
 <center>
 <div class="figure">
 <img src="images/chips/equip.png" width="15%"/>
 </div>
 </center>
-
-<h2>Contents<sup><small><a href="#">&#35;</a></small></sup></h2>
+<h2>Contents<sup><small><a href="#">#</a></small></sup></h2>
 <ul>
-	<li><a href="#info">Basic information</a></li>
-	<li><a href="#principles">General principles</a></li>
-	<li><a href="#scopes">Scope selection</a></li>
-	<li><a href="#iti">ITIs</a></li>
-	<li><a href="#night">Night</a></li>
-	<li><a href="#low-rarity">Low-rarity</a></li>
-	<li><a href="#calculator">Budget equipment calculator</a></li>
-	<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#info">Basic information</a></li>
+<li><a href="#principles">General principles</a></li>
+<li><a href="#scopes">Scope selection</a></li>
+<li><a href="#iti">ITIs</a></li>
+<li><a href="#night">Night</a></li>
+<li><a href="#low-rarity">Low-rarity</a></li>
+<li><a href="#calculator">Budget equipment calculator</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
 </ul>
-
 <span class="anchor" id="info"></span>
-<h2>Basic information<sup><small><a href="#info">&#35;</a></small></sup></h2>
-
+<h2>Basic information<sup><small><a href="#info">#</a></small></sup></h2>
 <ul>
-	<li>A max calibrated/gold/+10 #2 chip provides +15 FP, +25 ROF, and -50% critical damage. As usual for equipment, these are additive and applied before fairy auras/tiles/skills/etc.</li>
-	<li>Chips use the exo slot, and can be equipped by ARs and SMGs.</li>
-	<li>-50% critical damage puts you at 100% net critical damage, so no increase at all on a crit. Fairy auras, skills, and such can bring this back up (example with Command: (1.5-0.5)*1.36=1.36=136% crit damage, a slight reduction from the baseline).</li>
-	<li>New equipment options do not make anything weaker. Your ST AR-15 can shoot things exactly the same way she could before. They can only make things less strong <em>relative</em> to new options.</li>
-	<li>This page focuses on ARs. For some example numbers on how it works with SMGs, see <a href="shrimp-equip#chips">this bit for Shrimp</a>. As SMGs can make use of an exo's evasion, a comprehensive comparison of their equipment is more challenging.</li>
-	<!-- <li>Some things covered here may be relatively minor optimizations. If you just want something good enough, craft more fairies - getting them to high rarities will let you steamroll most content even with suboptimal teams.</li> -->
+<li>A max calibrated/gold/+10 #2 chip provides +15 FP, +25 ROF, and -50% critical damage. As usual for equipment, these are additive and applied before fairy auras/tiles/skills/etc.</li>
+<li>Chips use the exo slot, and can be equipped by ARs and SMGs.</li>
+<li>-50% critical damage puts you at 100% net critical damage, so no increase at all on a crit. Fairy auras, skills, and such can bring this back up (example with Command: (1.5-0.5)*1.36=1.36=136% crit damage, a slight reduction from the baseline).</li>
+<li>New equipment options do not make anything weaker. Your ST AR-15 can shoot things exactly the same way she could before. They can only make things less strong <em>relative</em> to new options.</li>
+<li>This page focuses on ARs. For some example numbers on how it works with SMGs, see <a href="shrimp-equip#chips">this bit for Shrimp</a>. As SMGs can make use of an exo's evasion, a comprehensive comparison of their equipment is more challenging.</li>
+<!-- <li>Some things covered here may be relatively minor optimizations. If you just want something good enough, craft more fairies - getting them to high rarities will let you steamroll most content even with suboptimal teams.</li> -->
 </ul>
-
 <span class="anchor" id="principles"></span>
-<h2>General principles<sup><small><a href="#principles">&#35;</a></small></sup></h2>
-
+<h2>General principles<sup><small><a href="#principles">#</a></small></sup></h2>
 <p>
 	First question - is the critical damage penalty crippling?
 	Let's compare an EOT+Chip setup to a VFL+Exo, without any tiles or other stuff in play.
@@ -142,38 +139,31 @@ gtag('config', 'G-805N997DPC');
 	AR stats are thus low enough for the additive bonuses (+15 FP, +25 ROF) to be worth more than the 50% crit damage in a vacuum.
 	Dolls with lower base stats benefit more, relatively, than those with higher base stats.
 </p>
-
 <p>
 	There are many complicating factors.
 	As with most things that mess with ROF, frame breakpoints will make things vary. Sometimes an EOT and ITI result in the same effective ROF, other times the EOT will make you slower.
 	<!-- ROF-based ARs will get much less value out of their skills when equipped with chips, as ROF does nothing past 116 points. -->
 </p>
-
 <p>
 	Raw FP buffs help a bit more against armor and are good for grenades.
 	ROF gives better performance against weaker mobs and is particularly strong against Orthrus.
 </p>
-
 <p>
 	ROF is capped at 116, so ARs that buff their own ROF will be often be worse off with chips.
 	As FP and ROF ARs put out similar pre-chip numbers, that means FP ARs should now generally be preferred as they can fully benefit from chips.
 </p>
-
 <p>
-	<!-- Classic ARSMG formations can get a lot of crit rate and damage with M4/UMP45/Command.
+<!-- Classic ARSMG formations can get a lot of crit rate and damage with M4/UMP45/Command.
 	-50% crit damage is a big penalty, and could offset the extra stats in some cases. -->
 	At night, almost all ARs are stuck with PEQs and care much less about crits.
 	Chips are more universally useful there (and, with no scope alternatives, simpler to equip).
 </p>
-
 <p>
 	A number of exo-slot SPEQs were buffed to better compete with chips (<a href="https://media.discordapp.net/attachments/443533099632951306/857458294863953930/2021-06-23_20_12_49.png">full list of changes here</a>).
 	I may add more detailed analyses of those in the future, but you'll generally be fine using them in place of a chip (and as they tend to lack a crit damage penalty, no need to consider an EOT).
 </p>
-
 <span class="anchor" id="scopes"></span>
-<h2>Scope selection<sup><small><a href="#scopes">&#35;</a></small></sup></h2>
-
+<h2>Scope selection<sup><small><a href="#scopes">#</a></small></sup></h2>
 <p>
 	Chips are looking pretty good.
 	Now that we're ready to throw out most ROF-based ARs, let's see if VFLs will be unseated as the go-to AR scope.
@@ -183,33 +173,28 @@ gtag('config', 'G-805N997DPC');
 	Damage simulators have a long list of issues, but you may be best off in many cases just simulating the team and seeing which scope/chip combination gives the best numbers.
 	To help you distinguish between borderline and slam-dunk equipment selection cases, here are a few general charts.
 </p>
-
 <p>
 	A common claim is that you should pair the #2 chip with a VFL if you have 25% or more fairy crit damage, and an EOT otherwise.
 	This is a bit of an oversimplification that is almost always wrong and ignores a number of important factors.
 </p>
-
 <p>
 	If given a specific doll, enemy stats, and buff situation (acc/ROF/crit rate/crit damage), you can plot the DPS difference of a VFL/chip and EOT/chip setup.
 	A basic example:
 </p>
-
 <div class="figure">
 <img src="images/newquip/cdmg-basic.png" width="100%"/>
 </div>
 <p>
-	If your doll & fairy combination falls above the 0% line, use a VFL. If they're below, use an EOT.
-	Three variants: <a href="images/newquip/cdmg-eva.png">with more enemy evasion</a>, <a href="images/newquip/cdmg-m445.png">with M4A1 & UMP45's tiles</a>, <a href="images/newquip/cdmg-cs9.png">with C-MS & JS 9's tiles</a>.
+	If your doll &amp; fairy combination falls above the 0% line, use a VFL. If they're below, use an EOT.
+	Three variants: <a href="images/newquip/cdmg-eva.png">with more enemy evasion</a>, <a href="images/newquip/cdmg-m445.png">with M4A1 &amp; UMP45's tiles</a>, <a href="images/newquip/cdmg-cs9.png">with C-MS &amp; JS 9's tiles</a>.
 	Note that G41 here is not using her SPEQ - consider her entry here to be as a generic FP buffer.
 	25% crit damage is sort of in the middle, but the crossover point can easily get as low as 10% or as high as 40%.
 </p>
-
 <p>
 	Even for a single doll it can vary: <a href="https://imgur.com/a/cx9DuKR">here's some charts with Medusa and her chip-like SPEQ</a> (+3 FP over a normal chip).
 	At level 90, she prefers a VFL much sooner because EOTs drop her down a frame.
 	At level 99+, they no longer do and EOTs work better.
 </p>
-
 <p>
 	With a few more dolls:
 </p>
@@ -234,10 +219,10 @@ gtag('config', 'G-805N997DPC');
 	For more specific ARs/cases:
 </p>
 <ul>
-	<li><a href="https://imgur.com/a/2rtgzRp">OTS-12 (with black market SPEQ)</a></li>
-	<li><a href="https://imgur.com/a/trp3erW">AK-12</a></li>
-	<li><a href="https://imgur.com/a/JIOjJap">S-ACR</a></li>
-	<li><a href="images/misc/9i8oSM3.png">AN-94</a></li>
+<li><a href="https://imgur.com/a/2rtgzRp">OTS-12 (with black market SPEQ)</a></li>
+<li><a href="https://imgur.com/a/trp3erW">AK-12</a></li>
+<li><a href="https://imgur.com/a/JIOjJap">S-ACR</a></li>
+<li><a href="images/misc/9i8oSM3.png">AN-94</a></li>
 </ul>
 <p>
 	Otherwise, the answer is no: a VFL+Chip will scale about as well as a VFL+Exo with crit damage, and it starts off much better.
@@ -248,12 +233,11 @@ gtag('config', 'G-805N997DPC');
 </div>
 <center><em>(This is pre-mod G11. Post-mod, her mod3 SPEQ is far superior to either option here.)</em></center>
 <p>
-	<!-- With the same conditions (15 enemy EVA, no tiles/aura). -->
+<!-- With the same conditions (15 enemy EVA, no tiles/aura). -->
 	"DPS" scaling is rather arbitrary - don't take the numbers there to mean anything.
 	Note that these charts all use in-skill DPS - ROF selfbuffers will benefit similarly from chips while their skills are inactive.
 	Thresholds may change if you are looking at their long-term (uptime-averaged) DPS instead of their short-term (burst) DPS.
 </p>
-
 <p>
 	While none of these line up too well with a supposed 25% threshold, the DPS difference for moderate crit damage auras usually aren't that big.
 	You won't be too far off if you pick your scope based on a process like this:
@@ -279,16 +263,16 @@ gtag('config', 'G-805N997DPC');
 	-It's often carried by pre-skill damage. If you want pre-skill/early damage, don't use a ROF buffer with a 6s ICD.
 -->
 <span class="anchor" id="iti"></span>
-<h2>ITIs<sup><small><a href="#iti">&#35;</a></small></sup></h2>
+<h2>ITIs<sup><small><a href="#iti">#</a></small></sup></h2>
 <p>
 	If EOTs are an option, ITIs should be at least somewhat on the table.
 	Naturally, accuracy and frames become the dominant factors.
 	Considering relatively generic AR stats, here's how they stack up in a few configurations:
 </p>
 <ul>
-	<li><a href="https://imgur.com/a/LJ8QrZi">No special support</a></li>
-	<li><a href="https://imgur.com/a/KIBT3YG">C-MS & JS 9 tiles</a> (+ROF, +Crit rate)</li>
-	<li><a href="https://imgur.com/a/XrFYNHc">Damage II Taunt</a> (+ACC)</li>
+<li><a href="https://imgur.com/a/LJ8QrZi">No special support</a></li>
+<li><a href="https://imgur.com/a/KIBT3YG">C-MS &amp; JS 9 tiles</a> (+ROF, +Crit rate)</li>
+<li><a href="https://imgur.com/a/XrFYNHc">Damage II Taunt</a> (+ACC)</li>
 </ul>
 <p>
 	At 0 enemy evasion, EOTs are always better than ITIs - the FP buff is worth it, even if you lose a frame.
@@ -296,13 +280,11 @@ gtag('config', 'G-805N997DPC');
 	In the 24-50 evasion range, EOTs and ITIs will trade depending on if you lose a frame or not. You should probably check your specific setup in that case.
 	For 80+ EVA, ITIs are best.
 </p>
-
 <span class="anchor" id="night"></span>
-<h2>Night<sup><small><a href="#night">&#35;</a></small></sup></h2>
+<h2>Night<sup><small><a href="#night">#</a></small></sup></h2>
 <p>
 	Most ARs need PEQs to do anything at night, so PEQ+chip is an easy pick.
 </p>
-
 <p>
 	AS Val can use daytime scopes when paired with Python/Fervor, so the logic above applies (use a chip, then an EOT/VFL depending on the frames/fairy/tiles).
 	She gets a little less use out of EOTs due to her perfect accuracy:
@@ -315,9 +297,8 @@ gtag('config', 'G-805N997DPC');
 	<!-- <a href="newquip#rmr">An RMR</a> could be decent on her if you don't have much crit damage and need more accuracy for something weird. -->
 	With a PEQ as priority #1, her <a href="star-buffs">SPEQ rework</a> doesn't boost her mod SPEQ by enough to be worth considering over a VFL as the second slot in almost all cases.
 </p>
-
 <span class="anchor" id="low-rarity"></span>
-<h2>Low-rarity equipment<sup><small><a href="#low-rarity">&#35;</a></small></sup></h2>
+<h2>Low-rarity equipment<sup><small><a href="#low-rarity">#</a></small></sup></h2>
 <p>
 	+10, gold, max calibrated chips are awesome.
 	Picking the right scope for them can be difficult to properly min-max, but they're very much worth using.
@@ -327,15 +308,15 @@ gtag('config', 'G-805N997DPC');
 </p>
 <h3>Case 1: Gold scopes/ammo, bad chips</h3>
 <p>
-	Gold chips have a <a href="https://gf-db.github.io/gfdb/gfdb.html?type=equip&id=234&epoch.equip=22.2&sort.equip=[{%22sort_column%22:%22tier%22,%22dir%22:-1}]">~4.3% rate</a> from their IOP Special recipe.
-	While better than <a href="https://gf-db.github.io/gfdb/gfdb.html?type=equip&id=235&epoch.equip=22.2&sort.equip=[{%22sort_column%22:%22tier%22,%22dir%22:-1}]">some equips</a>, it's entirely possible to get unlucky and not craft any for weeks - crafting all 20/week, some 3% of players will still be without <em>any</em> after a month.
+	Gold chips have a <a href="https://gf-db.github.io/gfdb/gfdb.html?type=equip&amp;id=234&amp;epoch.equip=22.2&amp;sort.equip=[{%22sort_column%22:%22tier%22,%22dir%22:-1}]">~4.3% rate</a> from their IOP Special recipe.
+	While better than <a href="https://gf-db.github.io/gfdb/gfdb.html?type=equip&amp;id=235&amp;epoch.equip=22.2&amp;sort.equip=[{%22sort_column%22:%22tier%22,%22dir%22:-1}]">some equips</a>, it's entirely possible to get unlucky and not craft any for weeks - crafting all 20/week, some 3% of players will still be without <em>any</em> after a month.
 </p>
 <p>
 	To help cover my bases against frame thresholds, here are some gold equipment+low-rarity chip configurations on a two dolls with different ROF stats.
 </p>
 <div class="figure">
-	<img src="images/chips/lt-1-dps-ADS.png" width="49%"/>
-	<img src="images/chips/lt-2-dps-AN-94.png" width="49%"/>
+<img src="images/chips/lt-1-dps-ADS.png" width="49%"/>
+<img src="images/chips/lt-2-dps-AN-94.png" width="49%"/>
 </div>
 <p>
 	ADS is always better off with an enhanced green chip than an empty slot, but AN-94 almost always prefers a VFL+empty slot.
@@ -343,8 +324,8 @@ gtag('config', 'G-805N997DPC');
 	Adding M4A1 and RO mod's tiles:
 </p>
 <div class="figure">
-	<img src="images/chips/lt-3-dps-ADS.png" width="49%"/>
-	<img src="images/chips/lt-4-dps-AN-94.png" width="49%"/>
+<img src="images/chips/lt-3-dps-ADS.png" width="49%"/>
+<img src="images/chips/lt-4-dps-AN-94.png" width="49%"/>
 </div>
 <p>
 	Now, even ADS doesn't like green chips of any kind.
@@ -352,15 +333,14 @@ gtag('config', 'G-805N997DPC');
 <p>
 	(Note: as configured, in-skill DPS scales the same as basic DPS - there's no armor or ROF buffs in play.)
 </p>
-
 <p>
 	Let's say we can figure out the scope later, and just want to know if a green chip is optimal at all for a given doll.
 	The big factors are their base ROF, fairy crit aura, ROF tiles, and crit rate tiles.
 	I'll chart the thresholds for varying ROF and crit auras, with additional charts for a typical ROF and crit tile case.
 </p>
 <center><div class="figure">
-	<img src="images/chips/lt-5-maxgreenchip.png" width="100%"/>
-</div><em>Remember, this is a max-enhanced & calibrated green chip! Under-enhanced ones are pictured below and do much worse.</em></center>
+<img src="images/chips/lt-5-maxgreenchip.png" width="100%"/>
+</div><em>Remember, this is a max-enhanced &amp; calibrated green chip! Under-enhanced ones are pictured below and do much worse.</em></center>
 <p>
 	This is the DPS from your best scope pair on a green chip, divided by your DPS from a VFL+empty slot.
 	If you are in a region warmer than the "1" contour line, a gold VFL/exo paired with this chip is better than just a gold VFL.
@@ -369,8 +349,8 @@ gtag('config', 'G-805N997DPC');
 	Enhancing and calibrating green equipment is rather questionable (especially if you have other types of gold as options), so here's two charts with worse chips:
 </p>
 <div class="figure">
-	<img src="images/chips/lt-6-midgreenchip.png" width="49%"/>
-	<img src="images/chips/lt-7-mingreenchip.png" width="49%"/>
+<img src="images/chips/lt-6-midgreenchip.png" width="49%"/>
+<img src="images/chips/lt-7-mingreenchip.png" width="49%"/>
 </div>
 <p>
 	The worst green chip here is only sometimes a DPS boost, even with no fairy aura.
@@ -401,36 +381,35 @@ gtag('config', 'G-805N997DPC');
 	These will all use a 30% crit rate tile - if you're using blue equipment but not M4A1, you have bigger problems to address.
 </p>
 <p>
-	ADS & AN-94, unenhanced blue:
+	ADS &amp; AN-94, unenhanced blue:
 </p>
 <div class="figure">
-	<img src="images/chips/blue-1-dps-ADS.png" width="49%"/>
-	<img src="images/chips/blue-2-dps-AN-94.png" width="49%"/>
+<img src="images/chips/blue-1-dps-ADS.png" width="49%"/>
+<img src="images/chips/blue-2-dps-AN-94.png" width="49%"/>
 </div>
 <p>
-	
 </p>
 <p>
 	VFL/empty has a solid lead, unless EOTs don't drop you down a frame (where they're then quite close).
 	As the options are nearly identical in AN-94's case, I would recommend a VFL/empty across the board with blue equipment.
 </p>
 <p>
-	ADS & AN-94, unenhanced green:
+	ADS &amp; AN-94, unenhanced green:
 </p>
 <div class="figure">
-	<img src="images/chips/blue-3-dps-ADS.png" width="49%"/>
-	<img src="images/chips/blue-4-dps-AN-94.png" width="49%"/>
+<img src="images/chips/blue-3-dps-ADS.png" width="49%"/>
+<img src="images/chips/blue-4-dps-AN-94.png" width="49%"/>
 </div>
 <p>
 	VFLs on their own officially (slightly) suck once everything is at least green.
 	VFL/chip is a bit below EOT/chip for the sort of fairies you'd have at this point, so I would recommend an EOT/chip setup.
 </p>
 <p>
-	ADS & AN-94, enhanced green:
+	ADS &amp; AN-94, enhanced green:
 </p>
 <div class="figure">
-	<img src="images/chips/blue-5-dps-ADS.png" width="49%"/>
-	<img src="images/chips/blue-6-dps-AN-94.png" width="49%"/>
+<img src="images/chips/blue-5-dps-ADS.png" width="49%"/>
+<img src="images/chips/blue-6-dps-AN-94.png" width="49%"/>
 </div>
 <p>
 	An enhanced green ITI gives plenty of acc, which is more valuable on low-level dolls.
@@ -441,91 +420,85 @@ gtag('config', 'G-805N997DPC');
 	M4A1 can't buff herself, so <a href="https://imgur.com/a/fqsbAZV">here's some charts for her specifically</a>, at lv70, without tiles.
 	If you've put UMP45's tiles on her, refer back (approximately) to the images above.
 </p>
-
 <span class="anchor" id="calculator"></span>
-<h2>Budget calculator<sup><small><a href="#calculator">&#35;</a></small></sup></h2>
-
+<h2>Budget calculator<sup><small><a href="#calculator">#</a></small></sup></h2>
 <p>
 	Alternatively, you can enter the best stats you have available of each equipment type, your doll's base ROF, and relevant tiles below.
 	Enter percentages as whole numbers, without the % sign (so 48% = 48, 25% = 25).
 </p>
 <center>
 <table style="width:auto">
-	<tr>
-		<th style="text-align: center; vertical-align: middle;">Optical Sight Crit chance (%)</th>
-		<th style="text-align: center; vertical-align: middle;">Red Dot Sight ACC</th>
-		<th style="text-align: center; vertical-align: middle;">Red Dot Sight ROF</th>
-	</tr>
-	<tr>
-		<td><input id="vfl_cc" type="text" value=48 style="text-align: center; vertical-align: middle;"></input><br></td>
-		<td><input id="iti_acc" type="text" value=30 style="text-align: center; vertical-align: middle;"></input><br></td>
-		<td><input id="iti_rof" type="text" value=-1 style="text-align: center; vertical-align: middle;"></input><br></td>
-	</tr>
-	<tr>
-		<th style="text-align: center; vertical-align: middle;">Holographic Sight FP</th>
-		<th style="text-align: center; vertical-align: middle;">Holographic Sight ROF</th>
-		<th style="text-align: center; vertical-align: middle;">Holographic Sight ACC</th>
-	</tr>
-	<tr>
-		<td><input id="eot_fp" type="text" value=8 style="text-align: center; vertical-align: middle;"></input><br></td>
-		<td><input id="eot_rof" type="text" value=-4 style="text-align: center; vertical-align: middle;"></input><br></td>
-		<td><input id="eot_acc" type="text" value=14 style="text-align: center; vertical-align: middle;"></input><br></td>
-	</tr>
-	<tr>
-		<th style="text-align: center; vertical-align: middle;">Chip FP</th>
-		<th style="text-align: center; vertical-align: middle;">Chip ROF</th>
-		<th style="text-align: center; vertical-align: middle;">Base ROF</th>
-	</tr>
-	<tr>
-		<td><input id="chip_fp" type="text" value=15 style="text-align: center; vertical-align: middle;"></input><br></td>
-		<td><input id="chip_rof" type="text" value=25 style="text-align: center; vertical-align: middle;"></input><br></td>
-		<td><input id="base_rof" type="text" value=78 style="text-align: center; vertical-align: middle;"></input><br></td>
-	</tr>
-	<tr>
-		<th style="text-align: center; vertical-align: middle;">Crit tiles (%)</th>
-		<th style="text-align: center; vertical-align: middle;">ROF tiles (%)</th>
-		<th style="text-align: center; vertical-align: middle;">Fairy crit damage aura (%)</th>
-	</tr>
-	<tr>
-		<td><input id="tile_cr" type="text" value=32 style="text-align: center; vertical-align: middle;"></input><br></td>
-		<td><input id="tile_rof" type="text" value=15 style="text-align: center; vertical-align: middle;"></input><br></td>
-		<td><input id="fairy_cd" type="text" value=0 style="text-align: center; vertical-align: middle;"></input><br></td>
-	</tr>
+<tr>
+<th style="text-align: center; vertical-align: middle;">Optical Sight Crit chance (%)</th>
+<th style="text-align: center; vertical-align: middle;">Red Dot Sight ACC</th>
+<th style="text-align: center; vertical-align: middle;">Red Dot Sight ROF</th>
+</tr>
+<tr>
+<td><input id="vfl_cc" style="text-align: center; vertical-align: middle;" type="text" value="48"/><br/></td>
+<td><input id="iti_acc" style="text-align: center; vertical-align: middle;" type="text" value="30"/><br/></td>
+<td><input id="iti_rof" style="text-align: center; vertical-align: middle;" type="text" value="-1"/><br/></td>
+</tr>
+<tr>
+<th style="text-align: center; vertical-align: middle;">Holographic Sight FP</th>
+<th style="text-align: center; vertical-align: middle;">Holographic Sight ROF</th>
+<th style="text-align: center; vertical-align: middle;">Holographic Sight ACC</th>
+</tr>
+<tr>
+<td><input id="eot_fp" style="text-align: center; vertical-align: middle;" type="text" value="8"/><br/></td>
+<td><input id="eot_rof" style="text-align: center; vertical-align: middle;" type="text" value="-4"/><br/></td>
+<td><input id="eot_acc" style="text-align: center; vertical-align: middle;" type="text" value="14"/><br/></td>
+</tr>
+<tr>
+<th style="text-align: center; vertical-align: middle;">Chip FP</th>
+<th style="text-align: center; vertical-align: middle;">Chip ROF</th>
+<th style="text-align: center; vertical-align: middle;">Base ROF</th>
+</tr>
+<tr>
+<td><input id="chip_fp" style="text-align: center; vertical-align: middle;" type="text" value="15"/><br/></td>
+<td><input id="chip_rof" style="text-align: center; vertical-align: middle;" type="text" value="25"/><br/></td>
+<td><input id="base_rof" style="text-align: center; vertical-align: middle;" type="text" value="78"/><br/></td>
+</tr>
+<tr>
+<th style="text-align: center; vertical-align: middle;">Crit tiles (%)</th>
+<th style="text-align: center; vertical-align: middle;">ROF tiles (%)</th>
+<th style="text-align: center; vertical-align: middle;">Fairy crit damage aura (%)</th>
+</tr>
+<tr>
+<td><input id="tile_cr" style="text-align: center; vertical-align: middle;" type="text" value="32"/><br/></td>
+<td><input id="tile_rof" style="text-align: center; vertical-align: middle;" type="text" value="15"/><br/></td>
+<td><input id="fairy_cd" style="text-align: center; vertical-align: middle;" type="text" value="0"/><br/></td>
+</tr>
 </table>
-
-	<button type="button small" onclick="calculate()">Calculate</button>
-
-	<h3>DPS results</h3>
-	<table style="width:auto">
-	  <tr>
-		<th>Optical+empty slot</th>
-		<th>Optical+chip</th>
-		<th>Holographic+chip</th>
-		<th>Red dot+chip</th>
-	  </tr>
-	  <tr>
-		<td id="vfl_empty" style="text-align: center; vertical-align: middle;">?</td>
-		<td id="vfl_chip" style="text-align: center; vertical-align: middle;">?</td>
-		<td id="eot_chip" style="text-align: center; vertical-align: middle;">?</td>
-		<td id="iti_chip" style="text-align: center; vertical-align: middle;">?</td>
-	  </tr>
-	</table>
-	<strong><font color="#A0C9E5"><p id="answer"></p></font></strong>
-	<!-- least saturated #C0D6E5 #A0C9E5 #47A6E5 most saturated -->
+<button onclick="calculate()" type="button small">Calculate</button>
+<h3>DPS results</h3>
+<table style="width:auto">
+<tr>
+<th>Optical+empty slot</th>
+<th>Optical+chip</th>
+<th>Holographic+chip</th>
+<th>Red dot+chip</th>
+</tr>
+<tr>
+<td id="vfl_empty" style="text-align: center; vertical-align: middle;">?</td>
+<td id="vfl_chip" style="text-align: center; vertical-align: middle;">?</td>
+<td id="eot_chip" style="text-align: center; vertical-align: middle;">?</td>
+<td id="iti_chip" style="text-align: center; vertical-align: middle;">?</td>
+</tr>
+</table>
+<strong><font color="#A0C9E5"><p id="answer"></p></font></strong>
+<!-- least saturated #C0D6E5 #A0C9E5 #47A6E5 most saturated -->
 </center>
-
-
 <p>
 	For a more exhaustive calculator, <a href="chip-calc">see this page</a>.
 	The above calculator neglects a number of potentially relevant factors to make it more accessible for players without maxed equipment/teams, at the expense of high-end optimization.
 </p>
 <span class="anchor" id="conclusion"></span>
-<h2>Conclusion<sup><small><a href="#conclusion">&#35;</a></small></sup></h2>
+<h2>Conclusion<sup><small><a href="#conclusion">#</a></small></sup></h2>
 <p>
 	The #2 Chip is very strong and will see use in many ARSMG formations.
 	It is not always optimal - high ROF, crit rate, and crit damage may lessen its value.
 	This is only likely to be a problem with pure ROF selfbuffers, so pretty much any other AR will prefer chips.
-	It can reasonably be paired with both VFLs & EOTs, depending on the situation.
+	It can reasonably be paired with both VFLs &amp; EOTs, depending on the situation.
 	FP selfbuffers now do much better than ROF ones.
 </p>
 <p>
@@ -545,74 +518,52 @@ gtag('config', 'G-805N997DPC');
 	While there will be exceptions, one general note - VFL+Chip+Crit damage fairy (Command/Para) setups will usually do better than EOT+Chip+non-crit damage fairy (Artillery) ones.
 	EOT/Chip/Warrior also gives high DPS numbers, but if you're spending fairy commands, this becomes much harder to justify over fairies like Shield and alternate VFL/Chip/Beach or Taunt setups.
 </p>
-<span class="anchor" id="ads"></span>
-<h2>More like this</h2>
-	<section class="tiles">	
-	
-<!-- <a href="evasion">
-	<div class="gallery">
-	  <div class="gallerypic">
-		<img src="images/icon/evasion.jpg" width="33%" height="400">
-		<div class="gallerypicdesc"><b>Accuracy and Evasion</b><br/>A deep dive</div>
-	  </div>
-	</div>
-</a> -->
 
-<a href="chip-calc">
-	<div class="gallery">
-	  <div class="gallerypic">
-		<img src="images/icon/chip-calc.jpg" width="33%" height="400">
-		<div class="gallerypicdesc"><b>AR #2 Chip Calculator</b><br/>Equipment estimator</div>
-	  </div>
-	</div>
-</a>
 
-<a href="g41-standard">
-	<div class="gallery">
-	  <div class="gallerypic">
-		<img src="images/icon/g41-standard.jpg" width="33%" height="400">
-		<div class="gallerypicdesc"><b>AR Damage over time</b><br/>Comparing direct-fire damage output</div>
-	  </div>
-	</div>
-</a>
 
-<!-- <a href="fairy-talents">
-	<div class="gallery">
-	  <div class="gallerypic">
-		<img src="images/icon/fairy-talents.jpg" alt="" width="33%" height="100">
-		<div class="gallerypicdesc"><b>Picking Fairy Talents</b><br/>Fervor versus Damage II</div>
-	  </div>
-	</div>
-</a> -->
+<!-- Footer -->
 
-<!-- <a href="newquip">
-	<div class="gallery">
-	  <div class="gallerypic">
-		<img src="images/icon/newquip.jpg" width="33%" height="400">
-		<div class="gallerypicdesc"><b>New Doll Equipment</b><br/>First thoughts, #2 Chip analysis</div>
-	  </div>
-	</div>
-</a> -->
-</section>
-	
-	<!-- Footer -->
-		<footer id="footer">
-			<div class="inner">
-				<ul class="copyright">
-		<li>Content: BigStupidJellyfish</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</div>
-		</footer>
-	</div>
-	
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-	
-	</body>
-	</html>
+    <div class="more-like-this">
+        <h2>More like this</h2>
+        <div class="mlt-gallery-grid">
+
+                <a href="chip-calc" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/chip-calc.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">AR #2 Chip Calculator</div>
+                            <div class="mlt-gallery-desc"></div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="g41-standard" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/g41-standard.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">AR Damage over time</div>
+                            <div class="mlt-gallery-desc"></div>
+                        </div>
+                    </div>
+                </a>
+        </div>
+    </div>
+    
+
+            </div> 
+        </div> </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                <a href="../pages/about">About GFMath</a> ·
+                <a href="../pages/spoilers">Explanation of common plot types</a> ·
+                <a href="#" onclick="window.scrollTo(0,0)">Back to top</a>
+            </p>
+            <p style="margin-top: 20px;">
+                Content: BigStupidJellyfish
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

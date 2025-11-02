@@ -1,20 +1,28 @@
-<!DOCTYPE HTML>
-<!--
-Forty by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-805N997DPC');
-</script>
-<script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-805N997DPC');
+    </script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    <title>Testing SF I - GFMath</title>
+
+<link href="images/icon/ads-180.png" rel="icon" sizes="180x180"/>
+<link href="images/icon/ads-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="images/icon/ads-16.png" rel="icon" sizes="16x16" type="image/png"/>
+
+    <link rel="stylesheet" href="../assets/css/common.css" />
+
+    <script>
 	function calculate() {
 		var eva1 = parseInt(document.getElementById("eva1").value),
 			acc1 = parseInt(document.getElementById("acc1").value),
@@ -28,36 +36,31 @@ gtag('config', 'G-805N997DPC');
 		document.getElementById("shield_ehp").innerHTML = Math.round(shield_ehp) + " SHP/sec";
 	}
 </script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<title>Testing SF I - GFMath</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="../assets/css/main.css" />
-<link rel="icon" sizes="180x180" href="images/icon/ads-180.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/icon/ads-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/icon/ads-16.png">
-<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
 </head>
-<body class="is-preload">
-<!-- Wrapper -->
-<div id="wrapper">
-<!-- Header -->
-<header id="header">
-<a href="../index" class="logo"><strong>GFMath</strong> <span>Detailed GFL analysis</span></a>
-<nav></nav>
-<a href="https://www.youtube.com/c/BigStupidJellyfish" class="logo"><strong>Youtube</strong></a>
-</header>
-<div id="main" class="alt">
-<section>
-<div class="inner">
-<header class="major">
-<h1>Testing SF I</h1>
-</header>
-<center><em>By BigStupidJellyfish | 2022-April-29</em></center>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    GFMath
+                </div>
+                <nav>
+                    <a href="../index">Home</a>
+                    <a href="https://www.youtube.com/c/BigStupidJellyfish" target="_blank">YouTube</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
+    <main>
+        <div class="article-container">
+            <header class="article-header">
+                <h1>Testing SF I</h1>
+                <div class="meta">By BigStupidJellyfish | 2022-April-29</div>
+            </header>
+            <div class="article-content">
 <p>
-	<em>
+<em>
 		(Note: this originally started out as some sort of Alchemist analysis.
 		Due to the very large scope of such a project, a lack of previous work to build on, and my own PA armory limitations, I've decided to cut that down into some more general topics/tests of interest.
 		So if you're wondering about the Alchemist focus, that'd be why...)
@@ -92,7 +95,7 @@ gtag('config', 'G-805N997DPC');
 	For even more stats and customization, see <a href="https://docs.google.com/spreadsheets/d/1TYKbdjuOdOMsvaaIduWW_8FF0tm27BjwKbC4uggl1wE/edit?usp=sharing">this sheet</a>.
 </p> -->
 <span class="anchor" id="basic-questions"></span>
-<h2>Alchemist: Basic Questions<sup><small><a href="#basic-questions">&#35;</a></small></sup></h2>
+<h2>Alchemist: Basic Questions<sup><small><a href="#basic-questions">#</a></small></sup></h2>
 <h3>Iframes</h3>
 <p>
 	Alchemist's first skill notes that "Alchemist is invincible while the skill is being performed."
@@ -100,7 +103,6 @@ gtag('config', 'G-805N997DPC');
 	If they take longer than 12 seconds to execute, she should remain permanently invincible, after all.
 	<!-- Furthermore, can you delay these attacks by kiting her? -->
 </p>
-
 <p>
 	Test at level 1 (44 ROF, 0.88 attacks/sec): Alchemist's skill activates at 13.27s. She touches down after making her attacks at 15.43s (2.16s later), and receives an attack (taking damage) at 15.83s.
 </p>
@@ -140,8 +142,8 @@ gtag('config', 'G-805N997DPC');
 	Alchemist generates shields from:
 </p>
 <ol>
-	<li>Attacking targets marked with "Organism." (6 points, for 18 seconds, no stack limit). A mark of "Organism" is inflicted whenever Alchemist scores a critical hit. Her base crit rate is 40%/attack.</li>
-	<li>Being in Defense Mode (6% of max HP every second (72 points at lv100), for 5 seconds)</li>
+<li>Attacking targets marked with "Organism." (6 points, for 18 seconds, no stack limit). A mark of "Organism" is inflicted whenever Alchemist scores a critical hit. Her base crit rate is 40%/attack.</li>
+<li>Being in Defense Mode (6% of max HP every second (72 points at lv100), for 5 seconds)</li>
 </ol>
 <p>
 	At level 100, Alchemist has 111 ROF (13f, 2.308 attacks/second).
@@ -157,33 +159,31 @@ gtag('config', 'G-805N997DPC');
 	She has between 162-173 EVA (lv90-100, no petals) which goes a long way to extending these:
 </p>
 <center>
-	<table style="width:auto">
-	  <tr>
-		<th>Alchemist's EVA</th>
-		<th>Enemy ACC</th>
-		<th>Percent of attacks on marked targets</th>
-	  </tr>
-	  <tr>
-		<td><input id="eva1" type="text" value=173></input><br></td>
-		<td><input id="acc1" type="text" value=100></input><br></td>
-		<td><input id="stacks1" type="text" value=80></input><br></td>
-	  </tr>
-	</table>
-
-	<button type="button small" onclick="calculate()">Calculate</button>
-
-	<table style="width:auto; margin-top: 25px;">
-	  <tr>
-		<th>Dodge chance</th>
-		<th>Raw shield generation</th>
-		<th>Effective shield HP</th>
-	  </tr>
-	  <tr>
-		<td id="base_chance">?%</td>
-		<td id="shields">? Shields/sec</td>
-		<td id="shield_ehp">? SHP/sec</td>
-	  </tr>
-	</table>
+<table style="width:auto">
+<tr>
+<th>Alchemist's EVA</th>
+<th>Enemy ACC</th>
+<th>Percent of attacks on marked targets</th>
+</tr>
+<tr>
+<td><input id="eva1" type="text" value="173"/><br/></td>
+<td><input id="acc1" type="text" value="100"/><br/></td>
+<td><input id="stacks1" type="text" value="80"/><br/></td>
+</tr>
+</table>
+<button onclick="calculate()" type="button small">Calculate</button>
+<table style="width:auto; margin-top: 25px;">
+<tr>
+<th>Dodge chance</th>
+<th>Raw shield generation</th>
+<th>Effective shield HP</th>
+</tr>
+<tr>
+<td id="base_chance">?%</td>
+<td id="shields">? Shields/sec</td>
+<td id="shield_ehp">? SHP/sec</td>
+</tr>
+</table>
 </center>
 <p>
 	Shield HP can also stack up while executing her active or while enemies are walking.
@@ -196,7 +196,7 @@ gtag('config', 'G-805N997DPC');
 </div></center> -->
 <!-- <p></p> -->
 <span class="anchor" id="dps"></span>
-<h2>Ringleader DPS<sup><small><a href="#dps">&#35;</a></small></sup></h2>
+<h2>Ringleader DPS<sup><small><a href="#dps">#</a></small></sup></h2>
 <p>
 	Alchemist is allegedly all about defense and tanking.
 	You may still be interested in how much damage she can deal, so let's run a few tests
@@ -204,28 +204,28 @@ gtag('config', 'G-805N997DPC');
 	A lv1 XS Jaguar was used to eliminate any walk time while not dealing a significant amount of damage.
 </p>
 <center><div class="figure">
-	<img src="images/sftesting-I/ringleader-dpschart.png" width="100%"/>
+<img src="images/sftesting-I/ringleader-dpschart.png" width="100%"/>
 </div></center>
 <p>
 	There are a <em>lot</em> of factors that will mess things up, so these are very imprecise.
-	This certainly doesn't establish some threshold like "Hunter>Alchemist for enemy HP>X points."
+	This certainly doesn't establish some threshold like "Hunter&gt;Alchemist for enemy HP&gt;X points."
 	However, it does give us the sense that Alchemist can deal respectable single-target damage compared to some other ringleaders.
 </p>
 <p>
 	Let's do one more against a decent group - the 56x Strelet mob from Theater 1-4 Core 8.
 </p>
 <center><div class="figure">
-	<img src="images/sftesting-I/ringleader-barstrelets.png" width="100%"/>
+<img src="images/sftesting-I/ringleader-barstrelets.png" width="100%"/>
 </div></center>
 <p>
 	Once again, these are extremely rough.
 	Notable takeaways:
 </p>
 <ul>
-	<li>Intruder's summoned dinergate waves don't suddenly become super OP at dealing damage when fighting groups.</li>
-	<li>Destroyer's AOE seemed much better than Architect's here, different than their <a href="8-2#architect">8-2 performance</a>.</li>
-	<li>Alchemist's shields worked very well. Any damage taken came from the run-up. After that, her shields never went below half. Even Destroyer with the ~10s clear took much more damage.</li>
-	<li>You shouldn't deploy ringleaders alone. These results don't necessarily map onto real combat results all that well (you can tank with Manticores, get AOE from Jaguars/Manticores, add single-target DPS with Nemeums, and so on).</li>
+<li>Intruder's summoned dinergate waves don't suddenly become super OP at dealing damage when fighting groups.</li>
+<li>Destroyer's AOE seemed much better than Architect's here, different than their <a href="8-2#architect">8-2 performance</a>.</li>
+<li>Alchemist's shields worked very well. Any damage taken came from the run-up. After that, her shields never went below half. Even Destroyer with the ~10s clear took much more damage.</li>
+<li>You shouldn't deploy ringleaders alone. These results don't necessarily map onto real combat results all that well (you can tank with Manticores, get AOE from Jaguars/Manticores, add single-target DPS with Nemeums, and so on).</li>
 </ul>
 <span class="anchor" id="manticore"></span>
 <!-- <h2>Tankier than a Manticore?<sup><small><a href="#manticore">&#35;</a></small></sup></h2>
@@ -259,23 +259,22 @@ gtag('config', 'G-805N997DPC');
 </p>
 <span class="anchor" id="feats"></span>
 <h2>Feats of Strength<sup><small><a href="#feats">&#35;</a></small></sup></h2> -->
-
 <span class="anchor" id="jaeums"></span>
-<h2>Jaegers and Nemeums<sup><small><a href="#jaeums">&#35;</a></small></sup></h2>
+<h2>Jaegers and Nemeums<sup><small><a href="#jaeums">#</a></small></sup></h2>
 <p>
 	Jaegers are a basic DPS unit with 4 cost, backline targeting, and a skillshot.
 	Nemeums are a basic DPS unit with 6 cost, frontline targeting, and bonus damage based on target HP/building stacks.
 	Let's run them against some different Target Practice dummy settings to see how they stack up.
 </p>
 <center><div class="figure">
-	<img src="images/sftesting-I/jaeum-dpschart.png" width="100%"/>
+<img src="images/sftesting-I/jaeum-dpschart.png" width="100%"/>
 </div></center>
 <p>
 	Alchemist's tiles give machines 9% ROF and ACC.
 	Assuming the accuracy is negligible and ignoring frame weirdness, this favors Nemeums a little more:
 </p>
 <center><div class="figure">
-	<img src="images/sftesting-I/jaeum-dpschart-alch.png" width="100%"/>
+<img src="images/sftesting-I/jaeum-dpschart-alch.png" width="100%"/>
 </div></center>
 <p>
 	Note that <a href="augelica">frontline targeting isn't always the greatest</a>, so Jaegers may still be preferred for their backline targeting.
@@ -319,47 +318,51 @@ gtag('config', 'G-805N997DPC');
 	</p>
 </blockquote> -->
 
-<span class="anchor" id="ads"></span>
-<h2>More like this</h2>
-<section class="tiles">
-	<a href="8-2">
-		<div class="gallery gen sf">
-		  <div class="gallerypic">
-			<img src="images/icon/8-2.jpg" alt="8-2 Armor requirements" width="33%" height="400">
-			<div class="gallerypicdesc"><b>SF Dragging</b><br/>Armor requirements, maps, routes</div>
-		  </div>
-		</div>
-	</a>
-	
-	<a href="sfstats">
-		<div class="gallery gen">
-			<div class="gallerypic">
-			<img src="images/icon/sfstat.jpg" width="33%" height="400">
-			<div class="gallerypicdesc"><b>SF Size and Keycode stats</b><br/>Probability estimates and math</div>
-			</div>
-		</div>
-	</a>
-</section>
 
 
 <!-- Footer -->
-	<footer id="footer">
-		<div class="inner">
-			<ul class="copyright">
-		<li>Content: BigStupidJellyfish</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</div>
-	</footer>
-</div>
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+    <div class="more-like-this">
+        <h2>More like this</h2>
+        <div class="mlt-gallery-grid">
 
+                <a href="8-2" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/8-2.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">SF Dragging</div>
+                            <div class="mlt-gallery-desc"></div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="sfstats" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/sfstat.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">SF Size and Keycode stats</div>
+                            <div class="mlt-gallery-desc"></div>
+                        </div>
+                    </div>
+                </a>
+        </div>
+    </div>
+    
+
+            </div> 
+        </div> </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                <a href="../pages/about">About GFMath</a> ·
+                <a href="../pages/spoilers">Explanation of common plot types</a> ·
+                <a href="#" onclick="window.scrollTo(0,0)">Back to top</a>
+            </p>
+            <p style="margin-top: 20px;">
+                Content: BigStupidJellyfish
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

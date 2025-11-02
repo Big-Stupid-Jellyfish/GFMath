@@ -1,22 +1,28 @@
-<!DOCTYPE HTML>
-<!--
-Forty by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-805N997DPC');
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-805N997DPC');
+    </script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    <title>ROF Calculator - GFMath</title>
+
+<link href="images/icon/ads-180.png" rel="icon" sizes="180x180"/>
+<link href="images/icon/ads-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="images/icon/ads-16.png" rel="icon" sizes="16x16" type="image/png"/>
+
+    <link rel="stylesheet" href="../assets/css/common.css" />
+
+    <script>
 function strip(number) {
     return (parseFloat(number).toPrecision(12));
 }
@@ -101,95 +107,91 @@ function calculateAR() {
 	document.getElementById("ar2_focus").innerHTML = effective_rof[9] + "<font color='#E5857F'>+" + rof_diff[9] + "</font> (" + frame_instance[9] + "f)";
 }
 </script>
-<title>ROF Calculator - GFMath</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="../assets/css/main.css" />
-<link rel="icon" sizes="180x180" href="images/icon/ads-180.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/icon/ads-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/icon/ads-16.png">
-<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
 </head>
-<body class="is-preload">
-<div id="wrapper">
-<header id="header">
-<a href="../index" class="logo"><strong>GFMath</strong> <span>Detailed GFL analysis</span></a>
-<nav></nav>
-<a href="https://www.youtube.com/c/BigStupidJellyfish" class="logo"><strong>Youtube</strong></a>
-</header>
-<div id="main" class="alt">
-<section>
-<div class="inner">
-<header class="major">
-<h1>ROF Calculator</h1>
-</header>
-<center><em>By BigStupidJellyfish | 2022-March-15 | Updated 2023-November-13</em></center>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    GFMath
+                </div>
+                <nav>
+                    <a href="../index">Home</a>
+                    <a href="https://www.youtube.com/c/BigStupidJellyfish" target="_blank">YouTube</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
+    <main>
+        <div class="article-container">
+            <header class="article-header">
+                <h1>ROF Calculator</h1>
+                <div class="meta">By BigStupidJellyfish | 2022-March-15 | Updated 2023-November-13</div>
+            </header>
+            <div class="article-content">
 <span class="anchor" id="rfhg"></span>
-<h2>RFHGs<sup><small><a href="#rfhg">&#35;</a></small></sup></h2>
+<h2>RFHGs<sup><small><a href="#rfhg">#</a></small></sup></h2>
 <p>
 	Rifles have low base ROF, so RFHGs tend to include plenty of ROF buffs.
 </p>
 <center>
-	<table style="width:auto; text-align: center; vertical-align: middle;">
-	  <tr>
-		<th style="text-align: center; vertical-align: middle;"></th>
-		<th style="text-align: center; vertical-align: middle;">Doll 1</th>
-		<th style="text-align: center; vertical-align: middle;">Doll 2</th>
-	  </tr>
-	  <tr>
-		<td style="text-align: center; vertical-align: middle;">Base ROF (w/ equipment)</td>
-		<td style="text-align: center; vertical-align: middle;"><input id="rof1" type="text" value=34  style="text-align: center; vertical-align: middle;"></input><br></td>
-		<td style="text-align: center; vertical-align: middle;"><input id="rof2" type="text" value=37  style="text-align: center; vertical-align: middle;"></input><br></td>
-	  </tr>
-	  <tr>
-		<td style="text-align: center; vertical-align: middle;">Tiles (%)</td>
-		<td colspan="2" style="text-align: center; vertical-align: middle;"><input id="tiles" type="text" value=32  style="text-align: center; vertical-align: middle;"></input><br></td>
-	  </tr>
-	  <tr>
-		<td style="text-align: center; vertical-align: middle;">Individual skills (%)</td>
-		<td style="text-align: center; vertical-align: middle;"><input id="skills11" type="text" value=65  style="text-align: center; vertical-align: middle;"></input><br></td>
-		<td style="text-align: center; vertical-align: middle;"><input id="skills12" type="text" value=75  style="text-align: center; vertical-align: middle;"></input><br></td>
-	  </tr>
-	  <tr>
-		<td style="text-align: center; vertical-align: middle;">Global skill 1 (%)</td>
-		<td colspan="2" style="text-align: center; vertical-align: middle;"><input id="skills2" type="text" value=28  style="text-align: center; vertical-align: middle;"></input><br></td>
-	  </tr>
-	  <tr>
-		<td style="text-align: center; vertical-align: middle;">Global skill 2 (%)</td>
-		<td colspan="2" style="text-align: center; vertical-align: middle;"><input id="skills3" type="text" value=10  style="text-align: center; vertical-align: middle;"></input><br></td>
-	  </tr>
-	  <tr>
-		<td style="text-align: center; vertical-align: middle;">Global skill 3 (%)</td>
-		<td colspan="2" style="text-align: center; vertical-align: middle;"><input id="skills4" type="text" value=0  style="text-align: center; vertical-align: middle;"></input><br></td>
-	  </tr>
-	  <tr>
-		<td style="text-align: center; vertical-align: middle;">ROF Cap</td>
-		<td colspan="2" style="text-align: center; vertical-align: middle;"><input id="rf_cap" type="text" value=120 style="text-align: center; vertical-align: middle;"></input><br></td>
-	  </tr>
-	</table>
-
-	<button type="button small" onclick="calculateRF()">Calculate</button>
-
-	<table style="width:auto; margin-top: 25px;">
-	  <tr>
-		<th>Condition</th>
-		<th>Doll 1</th>
-		<th>Doll 2</th>
-	  </tr>
-	  <tr>
-		<td>Base ROF</td>
-		<td id="rof1_base">?</td>
-		<td id="rof2_base">?</td>
-	  </tr>
-	  <tr>
-		<td>In-skill ROF</td>
-		<td id="rof1_skill">?</td>
-		<td id="rof2_skill">?</td>
-	  </tr>
-	</table>
+<table style="width:auto; text-align: center; vertical-align: middle;">
+<tr>
+<th style="text-align: center; vertical-align: middle;"></th>
+<th style="text-align: center; vertical-align: middle;">Doll 1</th>
+<th style="text-align: center; vertical-align: middle;">Doll 2</th>
+</tr>
+<tr>
+<td style="text-align: center; vertical-align: middle;">Base ROF (w/ equipment)</td>
+<td style="text-align: center; vertical-align: middle;"><input id="rof1" style="text-align: center; vertical-align: middle;" type="text" value="34"/><br/></td>
+<td style="text-align: center; vertical-align: middle;"><input id="rof2" style="text-align: center; vertical-align: middle;" type="text" value="37"/><br/></td>
+</tr>
+<tr>
+<td style="text-align: center; vertical-align: middle;">Tiles (%)</td>
+<td colspan="2" style="text-align: center; vertical-align: middle;"><input id="tiles" style="text-align: center; vertical-align: middle;" type="text" value="32"/><br/></td>
+</tr>
+<tr>
+<td style="text-align: center; vertical-align: middle;">Individual skills (%)</td>
+<td style="text-align: center; vertical-align: middle;"><input id="skills11" style="text-align: center; vertical-align: middle;" type="text" value="65"/><br/></td>
+<td style="text-align: center; vertical-align: middle;"><input id="skills12" style="text-align: center; vertical-align: middle;" type="text" value="75"/><br/></td>
+</tr>
+<tr>
+<td style="text-align: center; vertical-align: middle;">Global skill 1 (%)</td>
+<td colspan="2" style="text-align: center; vertical-align: middle;"><input id="skills2" style="text-align: center; vertical-align: middle;" type="text" value="28"/><br/></td>
+</tr>
+<tr>
+<td style="text-align: center; vertical-align: middle;">Global skill 2 (%)</td>
+<td colspan="2" style="text-align: center; vertical-align: middle;"><input id="skills3" style="text-align: center; vertical-align: middle;" type="text" value="10"/><br/></td>
+</tr>
+<tr>
+<td style="text-align: center; vertical-align: middle;">Global skill 3 (%)</td>
+<td colspan="2" style="text-align: center; vertical-align: middle;"><input id="skills4" style="text-align: center; vertical-align: middle;" type="text" value="0"/><br/></td>
+</tr>
+<tr>
+<td style="text-align: center; vertical-align: middle;">ROF Cap</td>
+<td colspan="2" style="text-align: center; vertical-align: middle;"><input id="rf_cap" style="text-align: center; vertical-align: middle;" type="text" value="120"/><br/></td>
+</tr>
+</table>
+<button onclick="calculateRF()" type="button small">Calculate</button>
+<table style="width:auto; margin-top: 25px;">
+<tr>
+<th>Condition</th>
+<th>Doll 1</th>
+<th>Doll 2</th>
+</tr>
+<tr>
+<td>Base ROF</td>
+<td id="rof1_base">?</td>
+<td id="rof2_base">?</td>
+</tr>
+<tr>
+<td>In-skill ROF</td>
+<td id="rof1_skill">?</td>
+<td id="rof2_skill">?</td>
+</tr>
+</table>
 </center>
-
 <p>
 	Warning: while excess ROF is colored red, this is largely to help separate it and to match the now-defunct Brainlets sim's display style.
 	Do not try and "optimize" this away.
@@ -197,62 +199,59 @@ function calculateAR() {
 	You should only be concerned if you're going <em>significantly</em> over the ROF cap (something like 116+15).
 </p>
 <span class="anchor" id="arsmg"></span>
-<h2>ARSMGs<sup><small><a href="#arsmg">&#35;</a></small></sup></h2>
+<h2>ARSMGs<sup><small><a href="#arsmg">#</a></small></sup></h2>
 <p>
 	The above calculator works with ARSMGs, but perhaps more interesting to them are frame differences between sight options and how close they get to the ROF cap with chips.
 	You can use <a href="chip-calc">this calculator</a> for overall DPS optimization, or the following one for a quick look at the frames you'll end up on.
 </p>
 <center>
-	<table style="width:auto; text-align: center; vertical-align: middle;">
-	  <tr>
-		<th style="text-align: center; vertical-align: middle;">Base ROF (no equipment)</th>
-		<th style="text-align: center; vertical-align: middle;">ROF tiles (%)</th>
-		<th style="text-align: center; vertical-align: middle;">ROF skill (%)</th>
-		<th style="text-align: center; vertical-align: middle;">ROF Cap</th>
-	  </tr>
-	  <tr>
-		<td style="text-align: center; vertical-align: middle;"><input id="arbase" type="text" value=78 style="text-align: center; vertical-align: middle;"></input><br></td>
-		<td style="text-align: center; vertical-align: middle;"><input id="artiles" type="text" value=15  style="text-align: center; vertical-align: middle;"></input><br></td>
-		<td style="text-align: center; vertical-align: middle;"><input id="arskill" type="text" value=0  style="text-align: center; vertical-align: middle;"></input><br></td>
-		<td style="text-align: center; vertical-align: middle;"><input id="ar_cap" type="text" value=120  style="text-align: center; vertical-align: middle;"></input><br></td>
-	  </tr>
-	</table>
-
-	<button type="button small" onclick="calculateAR()">Calculate</button>
-
-	<table style="width:auto; margin-top: 25px;">
-	  <tr>
-		<th></th>
-		<th>Basic ROF</th>
-		<th>VFL+#2 Chip</th>
-		<th>EOT+#2 Chip</th>
-		<th>ITI+#2 Chip</th>
-		<th>VFL+Focus Chip</th>
-	  </tr>
-	  <tr>
-		<td>Pre-skill</td>
-		<td id="ar_basic">?</td>
-		<td id="ar_vfl">?</td>
-		<td id="ar_eot">?</td>
-		<td id="ar_iti">?</td>
-		<td id="ar_focus">?</td>
-	  </tr>
-	  <tr>
-		<td>In-skill</td>
-		<td id="ar2_basic">?</td>
-		<td id="ar2_vfl">?</td>
-		<td id="ar2_eot">?</td>
-		<td id="ar2_iti">?</td>
-		<td id="ar2_focus">?</td>
-	  </tr>
-	</table>
+<table style="width:auto; text-align: center; vertical-align: middle;">
+<tr>
+<th style="text-align: center; vertical-align: middle;">Base ROF (no equipment)</th>
+<th style="text-align: center; vertical-align: middle;">ROF tiles (%)</th>
+<th style="text-align: center; vertical-align: middle;">ROF skill (%)</th>
+<th style="text-align: center; vertical-align: middle;">ROF Cap</th>
+</tr>
+<tr>
+<td style="text-align: center; vertical-align: middle;"><input id="arbase" style="text-align: center; vertical-align: middle;" type="text" value="78"/><br/></td>
+<td style="text-align: center; vertical-align: middle;"><input id="artiles" style="text-align: center; vertical-align: middle;" type="text" value="15"/><br/></td>
+<td style="text-align: center; vertical-align: middle;"><input id="arskill" style="text-align: center; vertical-align: middle;" type="text" value="0"/><br/></td>
+<td style="text-align: center; vertical-align: middle;"><input id="ar_cap" style="text-align: center; vertical-align: middle;" type="text" value="120"/><br/></td>
+</tr>
+</table>
+<button onclick="calculateAR()" type="button small">Calculate</button>
+<table style="width:auto; margin-top: 25px;">
+<tr>
+<th></th>
+<th>Basic ROF</th>
+<th>VFL+#2 Chip</th>
+<th>EOT+#2 Chip</th>
+<th>ITI+#2 Chip</th>
+<th>VFL+Focus Chip</th>
+</tr>
+<tr>
+<td>Pre-skill</td>
+<td id="ar_basic">?</td>
+<td id="ar_vfl">?</td>
+<td id="ar_eot">?</td>
+<td id="ar_iti">?</td>
+<td id="ar_focus">?</td>
+</tr>
+<tr>
+<td>In-skill</td>
+<td id="ar2_basic">?</td>
+<td id="ar2_vfl">?</td>
+<td id="ar2_eot">?</td>
+<td id="ar2_iti">?</td>
+<td id="ar2_focus">?</td>
+</tr>
+</table>
 </center>
-
 <p>
 	See <a href="https://docs.google.com/spreadsheets/d/1pA0eA4GU6RK8BBSKetx4a1ULeKzUcSVzRiNBU7880Mw/edit?usp=sharing">this spreadsheet</a> for a precomputed table.
 </p>
 <span class="anchor" id="mgsg"></span>
-<h2>MGSGs<sup><small><a href="#mgsg">&#35;</a></small></sup></h2>
+<h2>MGSGs<sup><small><a href="#mgsg">#</a></small></sup></h2>
 <p>
 	MG and SG ROF works a bit differently.
 	MGs fire at a fixed rate (<a href="datasim#frames">which varies by doll - see "MG ROF" subsection here</a>) - typically equivalent to 150 ROF, or 10 frames per attack.
@@ -267,7 +266,7 @@ function calculateAR() {
 	SG ROF acts like normal, but is capped at 60.
 </p>
 <span class="anchor" id="about"></span>
-<h2>About ROF<sup><small><a href="#about">&#35;</a></small></sup></h2>
+<h2>About ROF<sup><small><a href="#about">#</a></small></sup></h2>
 <p>
 	The ROF stat governs how quickly your dolls attack.
 	It's calculated as
@@ -295,65 +294,58 @@ $$ \text{Attacks/sec} = \frac{30}{\left\lfloor \frac{1500}{\text{Final ROF}} \ri
 	Skills activating/ending cause the entire stat to be recalculated - for example, M4A1's cannon ROF debuff is multiplied with HG buffs regardless of when they're applied.
 	Her ROF is not capped at 120 and then reduced to 30% of that.
 </p>
-
 <p>
 	For a precomputed table of ROF values and some corresponding dolls, <a href="https://docs.google.com/spreadsheets/d/1k74SCGGMHtwbl8gmTaETLsa8t12A7dWdj0V1tjdMD4Y/edit#gid=0">this sheet may be helpful</a>.
 	Note that it's quite old at this point, and is missing many newer dolls and chip considerations.
 </p>
-
 <span class="anchor" id="disclaimer"></span>
-<h2>Disclaimer<sup><small><a href="#disclaimer">&#35;</a></small></sup></h2>
+<h2>Disclaimer<sup><small><a href="#disclaimer">#</a></small></sup></h2>
 <p>
 	This game sometimes <a href="sniper-rework">cannot</a> <a href="images/misc/HCGTdcT.png">math</a> <a href="https://old.reddit.com/r/girlsfrontline/comments/we5q4h/weekly_commanders_lounge_august_02_2022/iino3ww/">properly</a>, so I cannot guarantee these results will always be correct.
 	These equations will work almost all the time, but sometimes for no reason you may end up with an off-by-one error.
 </p>
-<span class="anchor" id="ads"></span>
-<h2>More like this</h2>
-<section class="tiles">
-	<!-- <a href="skill-levels">
-		<div class="gallery gen">
-		  <div class="gallerypic">
-			<img src="images/icon/skill-levels.jpg" width="33%" height="400">
-			<div class="gallerypicdesc"><b>Skill Levels</b><br/>What changes, and what's worth it</div>
-		  </div>
-		</div>
-	</a> -->
-	<a href="armor-calc">
-		<div class="gallery gen solo arsmg rfhg mgsg calc">
-		  <div class="gallerypic">
-			<img src="images/icon/armor-calc.jpg" width="33%" height="400">
-			<div class="gallerypicdesc"><b>Armor Calculator</b><br/>Optimize your MGSGs</div>
-		  </div>
-		</div>
-	</a>
 
-	<a href="aim">
-		<div class="gallery rfhg calc">
-			<div class="gallerypic">
-			<img src="images/icon/aim.jpg" width="33%" height="400">
-			<div class="gallerypicdesc"><b>Taking Aim</b><br/>(the talent)</div>
-			</div>
-		</div>
-	</a>
-</section>
+    <div class="more-like-this">
+        <h2>More like this</h2>
+        <div class="mlt-gallery-grid">
 
+                <a href="armor-calc" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/armor-calc.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">Armor Calculator</div>
+                            <div class="mlt-gallery-desc"></div>
+                        </div>
+                    </div>
+                </a>
 
-<footer id="footer">
-	<div class="inner">
-		<ul class="copyright">
-			<li>Content: BigStupidJellyfish</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-		</ul>
-	</div>
-</footer>
-</div>
+                <a href="aim" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/aim.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">Taking Aim</div>
+                            <div class="mlt-gallery-desc"></div>
+                        </div>
+                    </div>
+                </a>
+        </div>
+    </div>
+    
 
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+            </div> 
+        </div> </main>
 
+    <footer>
+        <div class="container">
+            <p>
+                <a href="../pages/about">About GFMath</a> ·
+                <a href="../pages/spoilers">Explanation of common plot types</a> ·
+                <a href="#" onclick="window.scrollTo(0,0)">Back to top</a>
+            </p>
+            <p style="margin-top: 20px;">
+                Content: BigStupidJellyfish
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

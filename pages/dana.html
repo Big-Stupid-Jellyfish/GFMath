@@ -1,74 +1,79 @@
-<!DOCTYPE HTML>
-<!--
-Forty by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-805N997DPC');
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<title>Dana Analysis - GFMath</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="../assets/css/main.css" />
-<link rel="icon" sizes="180x180" href="images/icon/ads-180.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/icon/ads-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/icon/ads-16.png">
-<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-805N997DPC');
+    </script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    <title>Dana Analysis - GFMath</title>
+
+<link href="images/icon/ads-180.png" rel="icon" sizes="180x180"/>
+<link href="images/icon/ads-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="images/icon/ads-16.png" rel="icon" sizes="16x16" type="image/png"/>
+
+    <link rel="stylesheet" href="../assets/css/common.css" />
+
+    
 </head>
-<body class="is-preload">
-<!-- Wrapper -->
-<div id="wrapper">
-<!-- Header -->
-<header id="header">
-<a href="../index" class="logo"><strong>GFMath</strong> <span>Detailed GFL analysis</span></a>
-<nav></nav>
-<a href="https://www.youtube.com/c/BigStupidJellyfish" class="logo"><strong>Youtube</strong></a>
-</header>
-<div id="main" class="alt">
-<section>
-<div class="inner">
-<header class="major">
-<h1>Dana Analysis</h1>
-</header>
-<center><em>By BigStupidJellyfish | 2022-April-04</em></center>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    GFMath
+                </div>
+                <nav>
+                    <a href="../index">Home</a>
+                    <a href="https://www.youtube.com/c/BigStupidJellyfish" target="_blank">YouTube</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="article-container">
+            <header class="article-header">
+                <h1>Dana Analysis</h1>
+                <div class="meta">By BigStupidJellyfish | 2022-April-04</div>
+            </header>
+            <div class="article-content">
 <p>
-	<em>This is part of a series covering the VA-11 Hall-A dolls. <a href="valhalla">You can go back to the overview here</a>.</em>
+<em>This is part of a series covering the VA-11 Hall-A dolls. <a href="valhalla">You can go back to the overview here</a>.</em>
 </p>
 <span class="anchor" id="intro"></span>
-<h2>Introduction<sup><small><a href="#intro">&#35;</a></small></sup></h2>
+<h2>Introduction<sup><small><a href="#intro">#</a></small></sup></h2>
 <blockquote>
-	
-	<div class="row">
-		<div class="col-9 col-12-small">
-			<p><strong>Crimson Geyser</strong> ICD 8s/CD 18s</p>
-	<p>
+<div class="new-flex" style="display:flex; align-items:center; gap:1em;">
+  <div style="flex:5;">
+<p><strong>Crimson Geyser</strong> ICD 8s/CD 18s</p>
+<p>
 		Jump up and pound the ground to create a big explosion, dealing 0.6x damage to enemies within a radius of 2 and knocking them back.
 		Every point of armor increases the damage by 1%.
 	</p>
-	<p>
+<p>
 		Favorite Drink: When buffed by a Big Beer, gain 0.5 points of shield HP per point of armor.
 	</p>
-	<p>
+<p>
 		Normal attack: Launch an exploding rocket punch that deals 1.8x damage to a single target with a 10% knockback chance (does not stack with slug ammo).
 	</p>
-		</div>
-		<div class="col-3 col-12-small">
-			<center><div class="figure">
-				<img src="images/valhalla/dana.png" width="80%"/>
-			</div><em>Buffs MG: 15% FP, 15% ACC</em></center>
-		</div>
-	</div>
+  </div>
+  <div style="flex:1;">
+<center><div class="figure">
+<img src="images/valhalla/dana.png" width="80%"/>
+</div><em>Buffs MG: 15% FP, 15% ACC</em></center>
+  </div>
+</div>
 </blockquote>
+
 <p>
 	While <a href="newquip#flash">flash shells</a> are one of the strongest new equipment pieces, they also take out almost all the fun from SGs.
 	Most skills and stats are cut down into one simple question: do you have enough armor to be immune to all attacks from the enemies you're fighting?
@@ -83,28 +88,28 @@ gtag('config', 'G-805N997DPC');
 	A full list, as of ~the time of writing:
 </p>
 <ul>
-	<li>23 base armor: Elphelt, CAWS, DP-12, M870, Saiga-12, FO-12</li>
-	<li>24 base armor: Am KSG, FP-6</li>
-	<li>25 base armor: LTLX7000</li>
+<li>23 base armor: Elphelt, CAWS, DP-12, M870, Saiga-12, FO-12</li>
+<li>24 base armor: Am KSG, FP-6</li>
+<li>25 base armor: LTLX7000</li>
 </ul>
 <p>
 	You could say that Dana is a free SG with armor in the general range of a 5-star SG, but M870 is <a href="campaign-rewards#ct">permanently farmable</a>, has more armor, and has a nifty skill for blocking certain skill shots that would otherwise bypass armor.
 	The anniversary/major event true core masks let you pick LTLX, while M500 has a good mod <em>and</em> is given out partially leveled as part of the IOP career quests.
 </p>
 <span class="anchor" id="autoattacks"></span>
-<h2>About the ground pound<sup><small><a href="#autoattacks">&#35;</a></small></sup></h2>
+<h2>About the ground pound<sup><small><a href="#autoattacks">#</a></small></sup></h2>
 <p>
 	While SG DPS is never really going to be some amazing thing, you may wonder if the knockback is worthwhile - it could delay specific enemies (Brutes) that can bypass your SG/armor, giving you more time to take them out.
 	Here's one test:
 </p>
 <center><div class="figure">
-	<img src="images/valhalla/dana-kb.png" width="100%"/>
+<img src="images/valhalla/dana-kb.png" width="100%"/>
 </div><em>To avoid making this a game of spot-the-difference, I've highlighted the <strong>1</strong> enemy that was moved.</em></center>
 <p>
 	For comparison, here's LTLX:
 </p>
 <center><div class="figure">
-	<img src="images/valhalla/ltlx-kb.png" width="100%"/>
+<img src="images/valhalla/ltlx-kb.png" width="100%"/>
 </div><em>Oh, and this comes up 3 seconds faster.</em></center>
 <p>
 	Yeah, powercreep has not been kind here.
@@ -117,12 +122,12 @@ gtag('config', 'G-805N997DPC');
 	However, Defender tends to do the same job better.
 </p>
 <span class="anchor" id="history"></span>
-<h2>Historical Uses<sup><small><a href="#history">&#35;</a></small></sup></h2>
+<h2>Historical Uses<sup><small><a href="#history">#</a></small></sup></h2>
 <p>
 	Dana has not seen significant representation in competitive content.
 </p>
 <span class="anchor" id="conclusion"></span>
-<h2>Conclusion<sup><small><a href="#conclusion">&#35;</a></small></sup></h2>
+<h2>Conclusion<sup><small><a href="#conclusion">#</a></small></sup></h2>
 <p>
 	Very few SG gimmicks matter post-flash shells, and Dana doesn't have one of those that has kept up.
 	Better SGs are permanently available.
@@ -138,48 +143,51 @@ gtag('config', 'G-805N997DPC');
 <h2>Minor Notes<sup><small><a href="#notes">&#35;</a></small></sup></h2>
  -->
 
-<span class="anchor" id="ads"></span>
-<h2>More like this</h2>
-<section class="tiles">
-	<a href="valhalla">
-		<div class="gallery gen solo arsmg rfhg mgsg calc">
-		  <div class="gallerypic">
-			<img src="images/icon/valhalla.jpg" width="33%" height="400">
-			<div class="gallerypicdesc"><b>VA-11 Hall-A Collab Doll Analysis</b><br/>An updated perspective</div>
-		  </div>
-		</div>
-	</a>
 
-	<a href="ak15">
-		<div class="gallery solo arsmg">
-		  <div class="gallerypic">
-			<img src="images/icon/ak15.jpg" width="33%" height="400">
-			<div class="gallerypicdesc"><b>Monitoring your Anger</b><br/>AK-15 Analysis</div>
-		  </div>
-		</div>
-	</a>
-	<!-- What does AK-15 have to do with Dana?
-	No clue, but I really don't have much MGSG-type content to advertise. -->
-</section>
 
 <!-- Footer -->
-	<footer id="footer">
-		<div class="inner">
-			<ul class="copyright">
-		<li>Content: BigStupidJellyfish</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</div>
-	</footer>
-</div>
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+    <div class="more-like-this">
+        <h2>More like this</h2>
+        <div class="mlt-gallery-grid">
 
+                <a href="valhalla" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/valhalla.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">VA-11 Hall-A Collab Doll Analysis</div>
+                            <div class="mlt-gallery-desc">An updated perspective</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="ak15" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/ak15.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">Monitoring your Anger</div>
+                            <div class="mlt-gallery-desc">AK-15 Analysis</div>
+                        </div>
+                    </div>
+                </a>
+        </div>
+    </div>
+    
+
+            </div> 
+        </div> </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                <a href="../pages/about">About GFMath</a> ·
+                <a href="../pages/spoilers">Explanation of common plot types</a> ·
+                <a href="#" onclick="window.scrollTo(0,0)">Back to top</a>
+            </p>
+            <p style="margin-top: 20px;">
+                Content: BigStupidJellyfish
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

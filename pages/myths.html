@@ -1,125 +1,117 @@
-<!DOCTYPE HTML>
-<!--
-Forty by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-805N997DPC');
-</script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-<meta name="description" content="Girls Frontline, by the numbers">
-<title>Common Myths & Misconceptions - GFMath</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="../assets/css/main.css" />
-<link rel="icon" sizes="180x180" href="images/icon/ads-180.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/icon/ads-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/icon/ads-16.png">
-<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-805N997DPC');
+    </script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    <title>Common Myths & Misconceptions - GFMath</title>
+
+<link href="images/icon/ads-180.png" rel="icon" sizes="180x180"/>
+<link href="images/icon/ads-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="images/icon/ads-16.png" rel="icon" sizes="16x16" type="image/png"/>
+
+    <link rel="stylesheet" href="../assets/css/common.css" />
+
+    
 </head>
-<body class="is-preload">
-<!-- Wrapper -->
-<div id="wrapper">
-<!-- Header -->
-<header id="header">
-<a href="../index" class="logo"><strong>GFMath</strong> <span>Detailed GFL analysis</span></a>
-<nav></nav>
-<a href="https://www.youtube.com/c/BigStupidJellyfish" class="logo"><strong>Youtube</strong></a>
-</header>
-<div id="main" class="alt">
-<section>
-<div class="inner">
-<header class="major">
-	<h1>Common Myths & Misconceptions</h1>
-</header>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    GFMath
+                </div>
+                <nav>
+                    <a href="../index">Home</a>
+                    <a href="https://www.youtube.com/c/BigStupidJellyfish" target="_blank">YouTube</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-<center><em>By BigStupidJellyfish | Last updated 2023-May-11</em></center>
-
+    <main>
+        <div class="article-container">
+            <header class="article-header">
+                <h1>Common Myths & Misconceptions</h1>
+                <div class="meta">By BigStupidJellyfish | Last updated 2023-May-11</div>
+            </header>
+            <div class="article-content">
 <p>Girls' Frontline is not exactly the most transparent game out there with regards to its mechanics.
 There are few good ways to get information in-game, and players will often have to turn to guides and resources made by other players to figure out what's going on.</p>
-
 <p>This page is a collection of some things I have heard in various communities that are inaccurate.
 There may be <em>some</em> opinion here and there, but I will try to keep this as objective as possible.</p>
-
 <h2>Contents</h2>
 <ul>
-	<li><a href="#hr">Minimum hit rate</a></li>
-	<li><a href="#valmod">AS Val vs Groza</a></li>
-	<li><a href="#iws">IWS Exodia</a></li>
-	<li><a href="#crit2">Critical II Fury</a></li>
-	<li><a href="#rateup">Fairy rateups (Pre v3.0, December 2022)</a></li>
-	<li><a href="#tilebug1">Px4 Storm tilebug</a></li>
-	<li><a href="#tilebug2">K5 tilebug</a></li>
-	<li><a href="#mandatory">"Mandatory"</a></li>
-	<li><a href="#cap">Stat overcap</a></li>
-	<!-- <li><a href="#mp5">MP5's SPEQ</a></li> -->
-	<li><a href="#hydras">FP vs ROF buffs on rifles & high armor</a></li>
-	<li><a href="#capes">Capes & their MS penalty</a></li>
-	<li><a href="#additive">Additive vs Multiplicative buffs</a></li>
-	<li><a href="#dmgchart">The damage chart</a></li>
-	<li><a href="#twentyfive">#2 Chips and fairy crit damage</a></li>
-	<li><a href="#hanyangacc">Type88 suffers from low accuracy</a></li>
-	<li><a href="#sl8acr">SL8, ACR, and team comp sacrifices</a></li>
-	<li><a href="#px4-sl">DPS loss with Px4 Storm?</a></li>
-	<li><a href="#kouji">Kouji's active skill</a></li>
-	<li><a href="#assault">Assault on Shield fairies</a></li>
-	<li><a href="#oathbonus">Oaths give a +5% stat bonus</a></li>
-	<li><a href="#eots">EOTs are good?</a></li>
-	<!-- <li><a href="#talent-lowrarity">Damage II/Fervor at low rarities</a></li> -->
-	<li><a href="#base-stats">Base stats matter</a></li>
-	<li><a href="#disuse">X is bad because I haven't used them lately</a></li>
-	<li><a href="#rofchips">ALL ARs should get chips, even ROF buffers</a></li>
-	<li><a href="#mgeva">MGs and 0-EVA enemies</a></li>
-	<li><a href="#svdspeq">SVD's SPEQ</a></li>
-	<li><a href="#xlvsxs">Stat difference from XS to XL mooks</a></li>
-	<li><a href="#eva">Evasion has diminishing returns</a></li>
-	<li><a href="#p2liu">P22 is bad to pair with General Liu</a></li>
-	<li><a href="#svd-variance">SVD's SPEQ has reduced damage variance</a></li>
-	<li><a href="#pcthp">%-based damage is good</a></li>
-	<li><a href="#buffer-type">What type of buffer a HG is</a></li>
-	<li><a href="#mg338">Underpowering MG338</a></li>
-	<li><a href="#fo12rounds">FO-12's ammo count</a></li>
-	<li><a href="#calibpity">Something about equipment calibration pity</a></li>
+<li><a href="#hr">Minimum hit rate</a></li>
+<li><a href="#valmod">AS Val vs Groza</a></li>
+<li><a href="#iws">IWS Exodia</a></li>
+<li><a href="#crit2">Critical II Fury</a></li>
+<li><a href="#rateup">Fairy rateups (Pre v3.0, December 2022)</a></li>
+<li><a href="#tilebug1">Px4 Storm tilebug</a></li>
+<li><a href="#tilebug2">K5 tilebug</a></li>
+<li><a href="#mandatory">"Mandatory"</a></li>
+<li><a href="#cap">Stat overcap</a></li>
+<!-- <li><a href="#mp5">MP5's SPEQ</a></li> -->
+<li><a href="#hydras">FP vs ROF buffs on rifles &amp; high armor</a></li>
+<li><a href="#capes">Capes &amp; their MS penalty</a></li>
+<li><a href="#additive">Additive vs Multiplicative buffs</a></li>
+<li><a href="#dmgchart">The damage chart</a></li>
+<li><a href="#twentyfive">#2 Chips and fairy crit damage</a></li>
+<li><a href="#hanyangacc">Type88 suffers from low accuracy</a></li>
+<li><a href="#sl8acr">SL8, ACR, and team comp sacrifices</a></li>
+<li><a href="#px4-sl">DPS loss with Px4 Storm?</a></li>
+<li><a href="#kouji">Kouji's active skill</a></li>
+<li><a href="#assault">Assault on Shield fairies</a></li>
+<li><a href="#oathbonus">Oaths give a +5% stat bonus</a></li>
+<li><a href="#eots">EOTs are good?</a></li>
+<!-- <li><a href="#talent-lowrarity">Damage II/Fervor at low rarities</a></li> -->
+<li><a href="#base-stats">Base stats matter</a></li>
+<li><a href="#disuse">X is bad because I haven't used them lately</a></li>
+<li><a href="#rofchips">ALL ARs should get chips, even ROF buffers</a></li>
+<li><a href="#mgeva">MGs and 0-EVA enemies</a></li>
+<li><a href="#svdspeq">SVD's SPEQ</a></li>
+<li><a href="#xlvsxs">Stat difference from XS to XL mooks</a></li>
+<li><a href="#eva">Evasion has diminishing returns</a></li>
+<li><a href="#p2liu">P22 is bad to pair with General Liu</a></li>
+<li><a href="#svd-variance">SVD's SPEQ has reduced damage variance</a></li>
+<li><a href="#pcthp">%-based damage is good</a></li>
+<li><a href="#buffer-type">What type of buffer a HG is</a></li>
+<li><a href="#mg338">Underpowering MG338</a></li>
+<li><a href="#fo12rounds">FO-12's ammo count</a></li>
+<li><a href="#calibpity">Something about equipment calibration pity</a></li>
 </ul>
-
 <span class="anchor" id="hr"></span>
-<h2>There is a 3% minimum hit rate<sup><small><a href="#hr">&#35;</a><a href="#">↑</a></small></sup></h2>
-
+<h2>There is a 3% minimum hit rate<sup><small><a href="#hr">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> false.</p>
-
 <p>There is no detectable minimum hit rate for either your own dolls or your enemies.
 The general formula <code>hit rate = acc/(acc+eva)</code> works for any accuracy and any evasion.
 10 base accuracy + night + no PEQ vs 210 evasion target dummy? Expect to hit 0.47% of your shots.
 Bring surehit when fighting Patrollers, although with decent accuracy buffs most rifles would hit more than 3% of their shots anyways (but still not nearly enough to be practical).</p>
-
 <p>See also: <a href="https://old.reddit.com/r/girlsfrontline/comments/n9rsw4/weekly_commanders_lounge_may_11_2021/gyhr307/">a few tests/examples verifying this</a>.
 	<a href="images/misc/tRFbSpN.png">Another example</a>. <a href="images/misc/UQepRgu.png">And another</a>.</p>
 <p>Side note: HOCs actually do have a minimum hit rate. Their floor pre-rework was 30%, but EN started with reworked HOCs who among other changes got that bumped up to 40%.
 This is only for lethality - pierce always applies, even if the target dodges.
 It also isn't very relevant.
 Fully leveled HOCs will only start to run up against this if hitting things dodgier than scouts.</p>
-
 <p>
 	For more details about accuracy and evasion, <a href="evasion">see here</a>.
 	There similarly is no sort of maximum hit rate outside of the obvious 100%.
 </p>
-
 <span class="anchor" id="valmod"></span>
-<h2>AS Val mod is worse than Groza without Python/Fervor<sup><small><a href="#valmod">&#35;</a><a href="#">↑</a></small></sup></h2>
+<h2>AS Val mod is worse than Groza without Python/Fervor<sup><small><a href="#valmod">#</a><a href="#">↑</a></small></sup></h2>
 <!-- AS Val mod performs worse than Groza (OTs-14) if you don't have Python and a Fervor fairy -->
 <p><strong>Status:</strong> false.</p>
-
 <p>Post-mod, of course. Pre-mod, AS Val has no redeeming features and will usually be outperformed by T65.</p>
-
 <center>
 <table style="width:60%">
 <tr>
@@ -154,181 +146,128 @@ Fully leveled HOCs will only start to run up against this if hitting things dodg
 </tr>
 </table>
 </center>
-
 <p>AS Val and OTs-14 have nearly identical stats - OTs-14 with marginally more FP, and AS Val with marginally more ROF.
 If neither receive ROF buffs, this generally works out to a slight DPS edge in favor of AS Val if you give them both PEQs.</p>
-
 <p>Beyond that, AS Val has a second skill. Without any special support, she gets 3 seconds of perfect accuracy on skill activation and at battle start (due to fairy talent).
 Suppose a standard 15 evasion enemy. Without any other accuracy buffs, AS Val goes from a 78% to 100% hit rate any time she gets a FP buff, increasing her average DPS by over 20% during those periods.</p>
-
 <p>What about high armor? I can assure you that a difference of 2 FP is not a significant benefit in favor OTs-14.
 The following charts have both using PEQs:</p>
-
 <div class="figure">
 <img src="images/myths/val1.PNG" width="100%"/>
 </div>
 <center><em>Night/PEQs/0 evasion/160 armor/no fairies or other buffs</em></center>
-
 <div class="figure">
 <img src="images/myths/val2.PNG" width="100%"/>
 </div>
 <center><em>Add 15 evasion, a supporting team, and a fairy. This is with a 140% net accuracy buff on AS Val, reducing the advantage from her second skill.</em></center>
-
 <p>If both are oathed, the extra affection from mod3 makes it even less competitive. AS Val matches OTs-14's FP at 74 and is only 1 acc behind (59 vs 60).
 Once you start being able to add in more FP buffs (mostly from Python), AS Val can equip her critscope and <a href="g41-standard#night">rocket even further ahead.</a>
 In the meantime, she does very well once modded with a PEQ on.</p>
-
 <p>OTs-14 is cheaper to raise with only one skill and no neural fragment costs making her a more attractive option to new players, but she's often less accessible (being a <a href="limited-dolls">limited event drop</a>) and is less useful long-term.
 9A-91 and T65 are reasonable budget options if you are really concerned about cores.</p>
-
 <!-- Personally, I don't think I've deployed either of my Grozas since Singularity.</p> -->
-
 <span class="anchor" id="iws"></span>
-<h2>IWS is best in exodia/specialized teams<sup><small><a href="#iws">&#35;</a><a href="#">↑</a></small></sup></h2>
-
+<h2>IWS is best in exodia/specialized teams<sup><small><a href="#iws">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> mostly false.</p>
-
 <p>IWS is a FP-buffing rifle with lower ROF than other rifles but high overall DPS due to a massive FP multiplier. Her skill uses slightly atypical targeting (each shot retargets to the current farthest enemy) and has 10/16 uptime instead of the 5/8 seen with most rifles.
 This is not anything so abnormal that it requires a specific team composition to make use of.</p>
-
 <p>IWS is perfectly serviceable in typical FP-based RFHG teams, with somewhat worse performance versus swarms/large groups but better performance versus smaller groups and tougher enemies.
 The only reason I can think of to run IWS+4HG is to save resources on easy content, at which point you may as well use Hanyang+4HG/5HG/M4+2HG/4HG/1AR+1-3HG and so on.</p>
-
 <p>Exodia-style formations also come with their own set of problems (<a href="evasion#exodia">link protection + evasion</a>, to name a big one) and I would not recommend using them with any doll for most content.</p>
-
 <span class="anchor" id="crit2"></span>
-<h2>Critical II talent is good on Fury fairy<sup><small><a href="#crit2">&#35;</a><a href="#">↑</a></small></sup></h2>
-
+<h2>Critical II talent is good on Fury fairy<sup><small><a href="#crit2">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> for most people, false. It's also terrible on other fairies.</p>
-
 <p>Do you have Jill? If you do, it is possible to build a team that makes use of a Crit II Fury fairy with her Bleeding Jane drink that gives somewhat acceptable DPS numbers.
 It has a number of limitations, but it's usable.
 Otherwise, you'll almost always be better off with Damage I/II/Fervor.
 Most echelons have very high or already maxed crit rates, making Critical II add very little actual DPS.
 Fairies are expensive to raise, so getting a talent that only works in certain unusual scenarios is generally a bad idea.</p>
-
 <p>Crit II may give decent numbers on MG echelons using crit scopes, but confining a fairy to a single echelon type is generally a bad idea.
 It also has <a href="criticalII">potential use on a parachute fairy</a> for debuffed fights, but this is about using the talent on a Fury fairy (or other typical ones like Taunt).</p>
-
-<p>The talent also is not necessary or important for Px4 Storm. A rifle with 88% crit rate, 100 FP, Px4 Storm tiles & skill, and a 5* Damage II command does (0.7*194*3.57)+(0.3*194)=543 average damage per shot.
+<p>The talent also is not necessary or important for Px4 Storm. A rifle with 88% crit rate, 100 FP, Px4 Storm tiles &amp; skill, and a 5* Damage II command does (0.7*194*3.57)+(0.3*194)=543 average damage per shot.
 Switching to a Critical II talent, the rifle would deal (1.0*169*3.57)=603 damage per shot.
 A slight advantage, but this immediately disappears with any crit rate tiles or Fury's own skill and makes the talent near-useless in standard teams without Px4 Storm.</p>
-
 <p>For a fairly mild example with crit rate tiles, adding 20% crit rate (as can be gotten from Desert Eagle, Python, Nagant revolver, and Contender; Five-Seven/PPK offer even more) changes the comparison to (0.84*194*3.57)+(0.16*194)=612 damage per shot with Damage II, already higher than the 603 damage/shot with Crit II.</p>
-
 <p>This is also all ignoring Fury's active skill. At SL10, it boosts crit rate by 25% for the first 20 seconds, maxing out rifles and bringing ARs up to an 85% crit chance.
 Critical II gives even less benefit there.</p>
-
 <span class="anchor" id="rateup"></span>
-<h2>Fairy rateup is nonexistant/a lie<sup><small><a href="#rateup">&#35;</a><a href="#">↑</a></small></sup></h2>
-
+<h2>Fairy rateup is nonexistant/a lie<sup><small><a href="#rateup">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> false.</p>
-
 <p>
-	<em>(As of 2022-December-13 and client version 3.0, fairies now have a permanent 100% rate from heavy equipment production. Fairy rateups are now a thing of the past, so this isn't important.)</em>
+<em>(As of 2022-December-13 and client version 3.0, fairies now have a permanent 100% rate from heavy equipment production. Fairy rateups are now a thing of the past, so this isn't important.)</em>
 </p>
 <p>A reddit post from years ago claimed there was almost no change in the fairy rates during a general rateup.
 I can't personally verify if the numbers were accurate at that time, but all rateups over at least the past ~2 years have seen significant rate increases.
 I have a more in-depth comparison of rates for one rateup <a href="extras#fairycraft">here</a>, where the rates improved by 30-40% depending on recipe.
 This isn't as much as the general T-doll rateup where many rates are doubled, but it's hardly something to pass on.</p>
-
 <p>Either way, it's no excuse to stop crafting fairies.</p>
-
 <span class="anchor" id="tilebug1"></span>
-<h2>It's no longer possible to double-dip on Px4's skill by standing between her tiles<sup><small><a href="#tilebug1">&#35;</a><a href="#">↑</a></small></sup></h2>
-
+<h2>It's no longer possible to double-dip on Px4's skill by standing between her tiles<sup><small><a href="#tilebug1">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> <a href="https://old.reddit.com/r/girlsfrontline/comments/rg2l32/weekly_commanders_lounge_december_14_2021/hoihygm/">true</a> (as of 2021-12-14).</p>
-
 <!-- <p><strong>Status:</strong> false (last checked 2021-06).</p> -->
-
 <!-- <div class="figure">
 <img src="https://i.imgur.com/7Id4oJT.png" width="50%"/>
 </div>
 
 <p>After kiting KSVK such that she was between tiles when Px4's skill activated, the bottom 3 screenshots show critical hits with damage numbers within the expected range for two stacks of Px4's skill, that would not be possible with only one stack.</p> -->
-
 <span class="anchor" id="tilebug2"></span>
-<h2>It's possible to double-dip on K5's skill by standing between her tiles<sup><small><a href="#tilebug2">&#35;</a><a href="#">↑</a></small></sup></h2>
-
+<h2>It's possible to double-dip on K5's skill by standing between her tiles<sup><small><a href="#tilebug2">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> false (last checked 2021-06).</p>
-
 <div class="figure">
 <img src="images/misc/VdbE8ic.png" width="50%"/>
 </div>
-
 <p>These numbers don't account for the +2 damage from piercing armor, but that doesn't significantly change the range of damage values or the conclusion.
 After a number of attempts I did not observe any numbers outside the expected range for one layer of K5's skill.</p>
-
 <!-- <p>The inconsistency between this and Px4's skill is odd, but hey: it's Mica.</p> -->
-
 <span class="anchor" id="mandatory"></span>
-<h2>X is needed for Y<sup><small><a href="#mandatory">&#35;</a><a href="#">↑</a></small></sup></h2>
-
+<h2>X is needed for Y<sup><small><a href="#mandatory">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> X is probably not needed for Y.</p>
-
 <p>It is true that certain dolls and fairies can make your life a whole lot easier in certain circumstances.
 However, there are often wide enough margins for success and enough alternative options that do similar things that no singular doll/fairy/piece of equipment is critical to win.</p>
-
 <p>This can't be extended forever - if you insist on doing Theater's Core 8 with only 2* dolls, no fairies, AGS only, and no equipment: don't expect to accomplish much.
 But as long as you're not intentionally crippling yourself and have some decent options available, there is probably a way.</p>
-
 <p>Some examples:</p>
 <ul>
-  <li>Beach Fairy, while very important, was not strictly necessary to kill deathstacks in Polarized Light ranking. Combo and Command were possible alternatives, and their downsides certainly wouldn't matter for any bracket below top 100.
+<li>Beach Fairy, while very important, was not strictly necessary to kill deathstacks in Polarized Light ranking. Combo and Command were possible alternatives, and their downsides certainly wouldn't matter for any bracket below top 100.
     Landmine/Rocket/Suee/Construction fairies could be used to lower requirements even further.</li>
-  <!-- <li>Using two Carcano M91/38s to drag 10-4E is cheap and easy, but M4+Calico+a FP HG could work full supply (with a decent fairy) and a few other rifles (NTW/IWS/R93) could also drag it (with a strong fairy).</li> [removed: 10-4E is rather irrelevant now] -->
-  <li>416 mod is best for dragging 12-4E, but it can also be done decently by Uzi and K11. Depending on your tolerance for repairs, other grenadiers like M4 Sopmod II could be used. It's still <em>strongly</em> recommended to use 416 as one of your draggers as you'll save a significant amount on repairs.</li>
-  <li>P22 is very well-rounded and a strong option for many teams, but there are always possible replacements depending on what you need.
+<!-- <li>Using two Carcano M91/38s to drag 10-4E is cheap and easy, but M4+Calico+a FP HG could work full supply (with a decent fairy) and a few other rifles (NTW/IWS/R93) could also drag it (with a strong fairy).</li> [removed: 10-4E is rather irrelevant now] -->
+<li>416 mod is best for dragging 12-4E, but it can also be done decently by Uzi and K11. Depending on your tolerance for repairs, other grenadiers like M4 Sopmod II could be used. It's still <em>strongly</em> recommended to use 416 as one of your draggers as you'll save a significant amount on repairs.</li>
+<li>P22 is very well-rounded and a strong option for many teams, but there are always possible replacements depending on what you need.
     Px4 Storm will probably give better DPS, an SMG offtank may be better against swarms, Webley will do very well if the team depends on one rifle in particular, and backline HGs like C-93/HS2000/Desert Eagle may allow for more frontline HGs to cover everyone with their tiles.</li>
 </ul>
-
 <p>Girls' Frontline is not a game that requires players to follow an exact "meta" strategy to do well, but you still need to build functional echelons and adapt to the situation.
 Better equipment, fairies, teambuilding skills, and kiting can help offset weaker areas.</p>
-
 <span class="anchor" id="cap"></span>
-<h2>A team is bad because of stat overcap<sup><small><a href="#cap">&#35;</a><a href="#">↑</a></small></sup></h2>
-
+<h2>A team is bad because of stat overcap<sup><small><a href="#cap">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> not necessarily (although it often is concerning).</p>
-
 <p>Stat overcap does not make a team bad or good. It is something to keep in mind when building an echelon.</p>
-
 <p>The most relevant stat that has a cap is ROF, where any points past 116 on non-MG/SG dolls have no effect.
 Putting in too many ROF buffers can cause the stat to get boosted far higher than it needs to, wasting some or all the buffs.
 Crit chance also stops at 100%, though having some extra can be nice if you're running Px4 Storm.</p>
-
 <p>This sounds bad, but it's not always that simple.
 Suppose there were arbitrarily many dolls with any possible fair combination of stats/tiles/skills you want.
 In that case, a team that overcaps ROF could be improved by switching out a ROF buffer for an otherwise identical doll that trades just enough ROF to get under the cap for some other useful stat like FP.</p>
-
 <p>This is not exactly the current state of the game.
 It is entirely possible to have teams with not-100% "optimized" buffs that still perform useful functions better than many alternatives.
 For example, if you need high uptime evasion and high-ROF ARs for a specific situation, you may end up wanting to use Angelica and C-MS.
 The 5% ROF tile from C-MS is wasted on Angelica during her skill, but both dolls still perform important functions for the team and may not be easily replaceable.
 JS 9 is perfectly usable in a team that has AR-15, even though AR-15 can cap ROF on her own and wouldn't benefit from JS 9's 18% ROF tile.
 An efficient team is not necessarily an effective team.</p>
-
 <p>ROF overcaps from HG skills may disappear before skills activate, when the HG skill is off cooldown, or if the HG/RF skills get out of sync.
 Skill-based overcap won't last for 100% of the battle.</p>
-
 <p>The crit rate boost from Five-Seven's active skill won't benefit rifles with gold VFLs that already have her tiles, but even without that she is still a very strong ROF buffer - her ROF+crit rate tiles are excellent, and the ROF multiplier from her skill (20%) is only slightly lower than standard 5* buff skills (25%).</p>
-
 <div class="figure">
 <img src="images/myths/overcap-fiveseven.jpg" width="100%"/>
 </div>
-
 <p>(Note that in this sort of echelon, Stechkin mod may perform better than either, depending on how valuable the extra consistency from a 100% crit rate is. Both echelons are using a Command Fairy.)</p>
-
 <p>That said, any <em>major</em> stat overcaps are very likely to be a problem.
 Using 3 generic ROF handguns to buff WA2000+SVD is still bad, as there are other generic FP buffers on a similar level you could slot in to see a significant increase in damage at almost the same rate of fire.</p>
-
 <div class="figure">
 <img src="images/myths/overcap.jpg" width="100%"/>
 </div>
-
 <p>Damage is somewhat capped due to link protection/overkilling, so it's possible to stack excessive amounts of FP against swarms of weak enemies.
 This is all of course situation-dependent, and if it's a big deal, the fight is probably easy anyways.
 Accuracy and evasion are not capped (<a href="#hr">nor is there a floor</a>), but accuracy has diminishing returns. <a href="evasion">Evasion does not</a>, but there may be more worthwhile things to do than stack evasion.</p>
-
 <!-- <h3>On the FP cap</h3>
 
 <p>There is an incredibly impractical limit: a single bullet appears to be capped at 99,999 damage.</p>
@@ -348,7 +287,6 @@ It still can come up and is good to keep in mind.</p>
 
 <p>Dinergates are probably the enemy that shows this limitation the most - even on 12-4E, they have around 100 HP/link but can come in massive packs.
 It's trivial to get FP past that threshold, so after that you'd need AOE or ROF buffs to clear them faster.</p> -->
-
 <!-- <span class="anchor" id="mp5"></span>
 <h2>MP5 needs her night SPEQ to work<sup><small><a href="#mp5">&#35;</a><a href="#">↑</a></small></sup></h2>
 
@@ -458,74 +396,63 @@ For even more stuff about force shielders (especially Thompson), <a href="thomps
 	I expect this would be a relatively minor effect, but it's also worth mentioning that shield HP (P22/HS2000/Shield fairy) helps dolls with higher evasion more.
 	For example, Thompson would gain less effective HP than MP5 as she'll take more hits (and thus shield damage) on average from the same number of attacks.
 </p> -->
-
 <span class="anchor" id="hydras"></span>
-<h2>Rifles need FP more than ROF buffs to kill Hydras/armored enemies<sup><small><a href="#hydras">&#35;</a><a href="#">↑</a></small></sup></h2>
-
+<h2>Rifles need FP more than ROF buffs to kill Hydras/armored enemies<sup><small><a href="#hydras">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> decent AP is so close to (or past) enemy armor values and rifles have such high base FP that it doesn't matter.</p>
-
 <p>A quick refresher on how armor works:</p>
 <ul>
-	<li>Enemy armor stat - AP = effective armor (min. 0)</li>
-	<li>Post-buff damage * damage variance - effective armor = final damage (min. 1)</li>
-	<li>There's a slight overpenetration bonus: if AP>armor, final damage += 2</li>
-	<li>Crit damage = final damage * critical damage multiplier</li>
-	<li>Base AP of all dolls: 15</li>
+<li>Enemy armor stat - AP = effective armor (min. 0)</li>
+<li>Post-buff damage * damage variance - effective armor = final damage (min. 1)</li>
+<li>There's a slight overpenetration bonus: if AP&gt;armor, final damage += 2</li>
+<li>Crit damage = final damage * critical damage multiplier</li>
+<li>Base AP of all dolls: 15</li>
 </ul>
 <p>Fully enhanced and calibrated gold ammo gives +180 AP. On top of the 15 AP all dolls start with, that's 195 armor gone.
 Even without any buffs or fairies, rifles tend to have 120-170 base FP.
 Hydras with their 199 armor are only blocking four points of damage, which is usually less than 3% of their FP.
 Add on HG tiles/skills/fairy auras and armor is reducing their damage taken by less than 1% and is totally irrelevant.</p>
-
 <p>
 	Even highly armored enemies like Uhlans (~226 armor) have nowhere near enough armor to be a concern.
 	Once buff skills start kicking in it's not too hard to have rifles with 500-1000 FP.
 	You're not going to miss that 30 damage.
 </p>
-
 <p>In the pre-AP buff days (max 135 AP including base), people still dramatically overstated the importance of FP buffs.
 Typical ROF-based RFHGs could handle Hydras just fine, and IWS was not a requirement at all.
 You'd want at least some FP buffs, but that's true for any team.</p>
-
 <p>While it's not actively <em>bad</em>, the additional AP from Springfield's special ammo does not provide a significant amount of value over other rifles with "just" 195 AP.</p>
-
 <p>See also: <a href="https://www.youtube.com/watch?v=cUHNbUeqX3M">a demonstration</a> of various ~200 armor enemies being killed without <em>any</em> AP ammo equipped, with a fairy FP buff equivalent to a ~3-star Artillery Fairy.</p>
-
 <p>
 	Ultimately, enemy armor is just not a relevant consideration when building high-end RFHG echelons.
 	(This doesn't mean you should neglect AP ammo - it certainly makes things much easier. It's just that enemies don't suddenly become immortal because they have a few more points of armor than you can fully pierce.)
 </p>
-
 <span class="anchor" id="capes"></span>
-<h2>Capes can be bad on RFs because of the MS penalty<sup><small><a href="#capes">&#35;</a><a href="#">↑</a></small></sup></h2>
-
+<h2>Capes can be bad on RFs because of the MS penalty<sup><small><a href="#capes">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> not really.</p>
-
 <p>
 	In approximate order of preference, here's a list of ways to deal with things that need movespeed on your DPS:
 </p>
 <ol>
-	<li value="0">Use Calico mod (non-allied nodes). This will cover 99% of such cases.</li>
-	<li>Reset until RNG targeting/AOE effects don't hit your rifles.</li>
-	<li>Rebuild into a Hanyang mod exodia.</li>
-	<li>Use a dupe Calico mod.</li>
-	<li>Just move the rifles anyways as needed. Worked fine on many PL deathstacks (when slow field was active).</li>
-	<li>Use a sniper fairy to do the damage for you.</li>
-	<li>Craft a 5* Combo and use it to kill the boss before their big attack.</li>
-	<li>Put M500 mod or HS2000 by your rifles to protect them.</li>
-	<li>Retreat your DPS, let SGs tank, and have your HOCs do the damage.</li>
-	<li>Put another team with Auspicious fairy nearby and eat its peach.</li>
-	<li>Use 5HG instead.</li>
-	<li>Use ARHG instead.</li>
-	<li>Use ARSMG instead.</li>
-	<li>Just tank the extra damage and repair after.</li>
+<li value="0">Use Calico mod (non-allied nodes). This will cover 99% of such cases.</li>
+<li>Reset until RNG targeting/AOE effects don't hit your rifles.</li>
+<li>Rebuild into a Hanyang mod exodia.</li>
+<li>Use a dupe Calico mod.</li>
+<li>Just move the rifles anyways as needed. Worked fine on many PL deathstacks (when slow field was active).</li>
+<li>Use a sniper fairy to do the damage for you.</li>
+<li>Craft a 5* Combo and use it to kill the boss before their big attack.</li>
+<li>Put M500 mod or HS2000 by your rifles to protect them.</li>
+<li>Retreat your DPS, let SGs tank, and have your HOCs do the damage.</li>
+<li>Put another team with Auspicious fairy nearby and eat its peach.</li>
+<li>Use 5HG instead.</li>
+<li>Use ARHG instead.</li>
+<li>Use ARSMG instead.</li>
+<li>Just tank the extra damage and repair after.</li>
 </ol>
 <p>
 	...
 </p>
 <ol>
-	<li value="96">Use P30.</li>
-	<li >Sacrifice ~17% DPS on your DPS units for a slight movespeed increase in that one fight.</li>
+<li value="96">Use P30.</li>
+<li>Sacrifice ~17% DPS on your DPS units for a slight movespeed increase in that one fight.</li>
 </ol>
 <p>
 	Point is - rifles crit a lot, so capes are a massive damage buff.
@@ -537,29 +464,26 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 	(Bonus fun fact: in some circumstances, Judge may switch her targeting to your rifle if they move up too fast. Wear capes to protect yourself!
 	No clue why this happens; credit to Frey for discovering the interaction.)
 </p>
-
 <span class="anchor" id="additive"></span>
-<h2>X stacks additively<sup><small><a href="#additive">&#35;</a><a href="#">↑</a></small></sup></h2>
-
+<h2>X stacks additively<sup><small><a href="#additive">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> X probably stacks multiplicatively.</p>
-
 <p>
 	There are a lot of stacking buffs in this game, often from the same source (examples: Rico's passive, Fervor, Combo's active).
 	While the skills generally don't specify, almost all of these effects stack multiplicatively:
 </p>
 <ul>
-	<li>Past 16 seconds, Fervor multiplies your FP by 1.1<sup>3</sup> for a 33.1% FP buff.</li>
-	<li>With three stacks, Rico buffs her FP by 1.15<sup>3</sup> for a 52% buff.</li>
-	<li>Two stacks of the SF Weaken chip reduce enemy FP to (1-0.12)<sup>2</sup>=77.44% of its base value.</li>
-	<li>Multiple HG FP buff skills multiply.</li>
-	<li>HG buff skills multiply with fairy talents and selfbuffs</li>
+<li>Past 16 seconds, Fervor multiplies your FP by 1.1<sup>3</sup> for a 33.1% FP buff.</li>
+<li>With three stacks, Rico buffs her FP by 1.15<sup>3</sup> for a 52% buff.</li>
+<li>Two stacks of the SF Weaken chip reduce enemy FP to (1-0.12)<sup>2</sup>=77.44% of its base value.</li>
+<li>Multiple HG FP buff skills multiply.</li>
+<li>HG buff skills multiply with fairy talents and selfbuffs</li>
 </ul>
 <p>
 	Exceptions are possible, but if you aren't sure it's much safer to assume it's multiplicative.
 	<!-- The only thing that comes to my mind as additive are tiles (with each other), which are clearly written out on the formation screen anyways. -->
 </p>
 <p>
-	<em>
+<em>
 		(Update, 2022-June-25: note that an increasing number of effects seem to be additive.
 		This could just be confirmation bias, or Mica could be shifting their implementations.
 		Best to be cautious.)
@@ -570,13 +494,13 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 	Things that are actually additive:
 </p>
 <ul>
-	<li>Tiles, with each other. The net tile buff is multiplied with other skills/talents, though.</li>
-	<li>Equipment. Should be rather obvious due to the "+" sign in front. This is applied before skill/tile/fairy multipliers.</li>
-	<li>De Lisle and VP1915's vulnerability stacks (<a href="https://old.reddit.com/r/girlsfrontline/comments/t9bw95/weekly_commanders_lounge_march_08_2022/i0fnsvx/">source</a>).</li>
-	<li><a href="https://old.reddit.com/r/girlsfrontline/comments/v1l5po/weekly_commanders_lounge_may_31_2022/ib1jf1b/">AK-74M's selfbuff</a></li>
-	<li><a href="https://www.youtube.com/watch?v=Hm4C72Cc4r8">9A-91's login SPEQ crit rate buff</a></li>
-	<li><a href="https://cdn.discordapp.com/attachments/975589451612950579/998231487419797534/SL810k.png">SL8's FP buff (test+image thanks to LRP)</a></li>
-	<li><a href="https://www.youtube.com/watch?v=fz9jN-ntYb8">Fedorov's stacking buffs</a> (ROF component tested, no reason to believe the FP/ACC parts work differently)</li>
+<li>Tiles, with each other. The net tile buff is multiplied with other skills/talents, though.</li>
+<li>Equipment. Should be rather obvious due to the "+" sign in front. This is applied before skill/tile/fairy multipliers.</li>
+<li>De Lisle and VP1915's vulnerability stacks (<a href="https://old.reddit.com/r/girlsfrontline/comments/t9bw95/weekly_commanders_lounge_march_08_2022/i0fnsvx/">source</a>).</li>
+<li><a href="https://old.reddit.com/r/girlsfrontline/comments/v1l5po/weekly_commanders_lounge_may_31_2022/ib1jf1b/">AK-74M's selfbuff</a></li>
+<li><a href="https://www.youtube.com/watch?v=Hm4C72Cc4r8">9A-91's login SPEQ crit rate buff</a></li>
+<li><a href="https://cdn.discordapp.com/attachments/975589451612950579/998231487419797534/SL810k.png">SL8's FP buff (test+image thanks to LRP)</a></li>
+<li><a href="https://www.youtube.com/watch?v=fz9jN-ntYb8">Fedorov's stacking buffs</a> (ROF component tested, no reason to believe the FP/ACC parts work differently)</li>
 </ul>
 <p>
 	I recommend, in general, assuming things are multiplicative.
@@ -584,29 +508,26 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 	To save you the time of verifying, here are some things I have checked that are indeed multiplicative:
 </p>
 <ul>
-	<li><a href="images/misc/jFeM2nT.png">UMP40</a>, <a href="https://youtu.be/TGa7ML1DM1g">SVCh's passive</a>.</li>
+<li><a href="images/misc/jFeM2nT.png">UMP40</a>, <a href="https://youtu.be/TGa7ML1DM1g">SVCh's passive</a>.</li>
 </ul>
-
 <span class="anchor" id="dmgchart"></span>
-<h2>This doll is doing more damage on the chart, so she's better<sup><small><a href="#dmgchart">&#35;</a><a href="#">↑</a></small></sup></h2>
-
+<h2>This doll is doing more damage on the chart, so she's better<sup><small><a href="#dmgchart">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> it's possible, but it isn't conclusive evidence.</p>
-
 <p>
 	Some things about the in-game damage bar chart:
 </p>
 <ul>
-	<li>Dolls can interact.</li>
-	<ul>
-		<li>One obvious case of this is with SL8. In normal RFHG echelons, she may appear to underperform by a little when compared to the other rifle.
+<li>Dolls can interact.</li>
+<ul>
+<li>One obvious case of this is with SL8. In normal RFHG echelons, she may appear to underperform by a little when compared to the other rifle.
 			This is expected, and a good sign - her tiles give the other rifle an extra 10% damage, so they will do a bit more relative damage. <!-- Good sign assuming they're expected to deal about equal damage otherwise. -->
-		</li>
-		<li>Similarly, Ribeyrolles is never going to be topping a damage chart. On its own, the chart won't show you how much her buffs are contributing.</li>
-	</ul>
-	<li>It counts damage <em>inflicted</em>. A few implications of that:</li>
-	<ul>
-		<li>It may be underrepresenting contributions against enemies with high evasion/armor/force shields.</li>
-		<li>Shooting partially wounded enemies will contribute less damage, but may give the same outcome as if shot order was flipped.
+</li>
+<li>Similarly, Ribeyrolles is never going to be topping a damage chart. On its own, the chart won't show you how much her buffs are contributing.</li>
+</ul>
+<li>It counts damage <em>inflicted</em>. A few implications of that:</li>
+<ul>
+<li>It may be underrepresenting contributions against enemies with high evasion/armor/force shields.</li>
+<li>Shooting partially wounded enemies will contribute less damage, but may give the same outcome as if shot order was flipped.
 			Suppose you have a horde of 100 HP enemies, and two rifles that each deal 75 damage.
 		One rifle hits the back enemy, leaving it at 25 HP (75 damage dealt).
 		Immediately after, the second rifle shoots it, killing it (25 damage dealt).
@@ -614,28 +535,27 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 		If the second rifle was the one to hit first, it would be a 25/75% split with the same overall outcome.
 		They're contributing equally, perform equally, but one is displayed as being 3 times better than the other.
 		</li>
-	</ul>
-	<li>Battle conditions are very dynamic, so a snapshot at any given time doesn't say much about the whole battle or other battles.</li>
-	<li>Not all damage is created equal - taking out Doppels is much more important than cleaning up a few Strelets in front.
+</ul>
+<li>Battle conditions are very dynamic, so a snapshot at any given time doesn't say much about the whole battle or other battles.</li>
+<li>Not all damage is created equal - taking out Doppels is much more important than cleaning up a few Strelets in front.
 		On the other hand, partial damage against that same doppel is worthless if Grape snipes it shortly after.
 	</li>
-	<li>RNG. Damage variance, crits, accuracy, random targeting, kiting variations, and so on all contribute to making battle outcomes vary significantly.</li>
-	<li>Differences may not be significant.
+<li>RNG. Damage variance, crits, accuracy, random targeting, kiting variations, and so on all contribute to making battle outcomes vary significantly.</li>
+<li>Differences may not be significant.
 		Let's say your ARSMG runs into an easy mob fight.
 		Uzi's initial grenade deletes nearly the whole thing, and she ends the fight with 60% of the damage done.
 		This may make her appear strong, but if you even just removed Uzi without replacement, your ARs would still be strong enough to gun down everything a second later with no damage taken.
 		Uzi claimed most of the damage done, but it didn't actually impact the fight outcome.
 	</li>
-	<li>
+<li>
 		Enemy shields and other weird mechanics (looking at you, Orthrus) aren't always represented well.
 	</li>
-	<ul>
-		<li>One particularly odd note: the in-battle damage chart appears not to count damage dealt to HP shields, but the endscreen in Target Practice does.
+<ul>
+<li>One particularly odd note: the in-battle damage chart appears not to count damage dealt to HP shields, but the endscreen in Target Practice does.
 			The two can therefore be at odds with each other at times.
 		</li>
-	</ul>
 </ul>
-
+</ul>
 <!-- <p>
 	While not a trivial process, I recommend something along these lines to better test options:
 </p>
@@ -646,23 +566,19 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 	<li>Compare results between options, and pick the one that works best</li>
 </ol> -->
 <!-- Probably not much point to including this.... it seems no one ever goes through the trouble to properly verify teambuilding ideas. -->
-
-
 <span class="anchor" id="twentyfive"></span>
-<h2>With the #2 chip, use VFLs if fairy crit damage &gt;25% and EOTs otherwise<sup><small><a href="#twentyfive">&#35;</a><a href="#">↑</a></small></sup></h2>
-
+<h2>With the #2 chip, use VFLs if fairy crit damage &gt;25% and EOTs otherwise<sup><small><a href="#twentyfive">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> false.</p>
-
 <p>
 	The value provided by VFLs and EOTs when paired with the #2 chip depend on:
 </p>
 <ul>
-	<li>Base stats (FP/ROF/ACC)</li>
-	<li>SPEQs</li>
-	<li>Enemy stats (EVA/Armor/mechanics like Orthrus shields)</li>
-	<li>External buffs (fairy aura, tiles, skills)</li>
-	<li>Frame breakpoints</li>
-	<li>The value of consistency (reaching 100% crit chance, higher ROF reducing overkill and the effect of damage variance)</li>
+<li>Base stats (FP/ROF/ACC)</li>
+<li>SPEQs</li>
+<li>Enemy stats (EVA/Armor/mechanics like Orthrus shields)</li>
+<li>External buffs (fairy aura, tiles, skills)</li>
+<li>Frame breakpoints</li>
+<li>The value of consistency (reaching 100% crit chance, higher ROF reducing overkill and the effect of damage variance)</li>
 </ul>
 <p>
 	For some charts and examples on how this all plays out, <a href="newquip#2chip">see my commentary on the #2 chip here</a> (<em>and, as of December 2022, on the newer focus chip: <a href="newerquip">see here</a></em>).
@@ -672,12 +588,9 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 	(Though for most gameplay scenarios, the differences realistically are not that big of a deal.)
 	ITIs are also <a href="https://old.reddit.com/r/girlsfrontline/comments/p1aoy3/on_eots_itis_and_the_2_chip/">a reasonable option</a> for higher-evasion scenarios.
 </p>
-
 <span class="anchor" id="hanyangacc"></span>
-<h2>Type88 suffers from low accuracy<sup><small><a href="#hanyangacc">&#35;</a><a href="#">↑</a></small></sup></h2>
-
+<h2>Type88 suffers from low accuracy<sup><small><a href="#hanyangacc">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> false.</p>
-
 <p>
 	Type88 has slightly lower than average accuracy for a rifle.
 </p>
@@ -717,48 +630,42 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 </tr>
 </table>
 </center>
-
 <p>
 	Hitrate vs 15 evasion: 83.0% (Type88), 85.3% (WA2000), a ~2.7% disadvantage.
 	Hitrate vs 15 evasion, at night, with 110% accuracy tiles and no fairy aura: 50% (Type88), 54.5% (WA2000), a ~9.3% disadvantage.
 	If you think Hanyang's piercing is worth less than 10% of her kit, she may be better replaced with other rifles.
 	But in that case, you're probably looking at a boss and shouldn't be looking for AOE/piercing anyways.
 </p>
-
 <p>
 	If you're big on meta and have oathed your Type88, she goes up to 80 accuracy.
 </p>
-
 <p>
 	General points:
 </p>
 <ol>
-	<li>Accuracy is less useful the more of it you have. You can read more about that <a href="evasion#acc">over here</a>. Rifles generally have a lot of accuracy.</li>
-	<li>The DPS loss from reduced accuracy cannot exceed the percentage loss in accuracy (and it only matches as enemy evasion grows arbitrarily high). 20% lower ACC is never more than 20% less average damage.</li>
-	<li>Good handguns often include even more accuracy: 60% from Calico, Px4 Storm, and SAA; 50% from P22 and Clear. Many useful fairies also give big accuracy buffs (Warrior 80%, Taunt 58%).</li>
-	<li>
+<li>Accuracy is less useful the more of it you have. You can read more about that <a href="evasion#acc">over here</a>. Rifles generally have a lot of accuracy.</li>
+<li>The DPS loss from reduced accuracy cannot exceed the percentage loss in accuracy (and it only matches as enemy evasion grows arbitrarily high). 20% lower ACC is never more than 20% less average damage.</li>
+<li>Good handguns often include even more accuracy: 60% from Calico, Px4 Storm, and SAA; 50% from P22 and Clear. Many useful fairies also give big accuracy buffs (Warrior 80%, Taunt 58%).</li>
+<li>
 		Type88 has an absurdly strong skill set that few other rifles can match.
 		Piercing is <em>really</em> good, even if you miss a few more shots.
 		To take a relatively extreme hypothetical, suppose her direct-fire DPS is 30% lower than some competitor due to accuracy (it shouldn't for any reasonable encounter), dealing 0.7 unit damage per shot (vs the other rifle's 1 unit damage).
-		If Hanyang pierces and hits two enemies, she's already ahead on DPS: 2*0.7=1.4>1.
+		If Hanyang pierces and hits two enemies, she's already ahead on DPS: 2*0.7=1.4&gt;1.
 	</li>
-	<li>At night, Type88 has a better skill multiplier (100%) vs typical 75% selfbuffs</li>
-	<li>At day, <a href="daynyang">she can still be a viable option</a> (<a href="arisaka">additional indirect testing here</a>), meaning her piercing is more valuable than the multiplier loss (35% vs typical 75%). That's a much bigger DPS loss than any remotely realistic accuracy scenario, but she still does well.</li>
-	<!-- <li>If accuracy was such a big deal for rifles, SRS/T-5000 would get used a <em>lot</em> more.</li> -->
-	<li>There are cases (mostly at night) where enemy evasion is high enough for any normal rifle to suffer. That's when you bring M200/4 Shiki/416/AS Val/M4A1.</li>
+<li>At night, Type88 has a better skill multiplier (100%) vs typical 75% selfbuffs</li>
+<li>At day, <a href="daynyang">she can still be a viable option</a> (<a href="arisaka">additional indirect testing here</a>), meaning her piercing is more valuable than the multiplier loss (35% vs typical 75%). That's a much bigger DPS loss than any remotely realistic accuracy scenario, but she still does well.</li>
+<!-- <li>If accuracy was such a big deal for rifles, SRS/T-5000 would get used a <em>lot</em> more.</li> -->
+<li>There are cases (mostly at night) where enemy evasion is high enough for any normal rifle to suffer. That's when you bring M200/4 Shiki/416/AS Val/M4A1.</li>
 </ol>
-
 <span class="anchor" id="sl8acr"></span>
-<h2>If you can get more value from a skill/doll, the team benefits<sup><small><a href="#sl8acr">&#35;</a><a href="#">↑</a></small></sup></h2>
-
+<h2>If you can get more value from a skill/doll, the team benefits<sup><small><a href="#sl8acr">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> A⇏B.</p>
-
 <p>
 	Consider two options:
 </p>
 <ol>
-	<li>Use a normal buffing HG on position 5, with tiles that give a permanent ~30% DPS buff to both rifles and a skill that adds ~25% more DPS.</li>
-	<li>Replace that HG with some SMG, losing those buffs and giving just SL8 5% FP during her active.</li>
+<li>Use a normal buffing HG on position 5, with tiles that give a permanent ~30% DPS buff to both rifles and a skill that adds ~25% more DPS.</li>
+<li>Replace that HG with some SMG, losing those buffs and giving just SL8 5% FP during her active.</li>
 </ol>
 <p>
 	In that case, there <em>could</em> be some merit to using a SMG if you need more tanking and Twin/Taunt/Beach aren't options.
@@ -774,12 +681,9 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 <p>
 	Focusing on a specific aspect of a single doll's performance is almost always a completely invalid way of teambuilding.
 </p>
-
 <span class="anchor" id="px4-sl"></span>
-<h2>Px4 Storm's skill can be a DPS loss at low SL/low crit rate<sup><small><a href="#px4-sl">&#35;</a><a href="#">↑</a></small></sup></h2>
-
+<h2>Px4 Storm's skill can be a DPS loss at low SL/low crit rate<sup><small><a href="#px4-sl">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> false.</p>
-
 <p>
 	Suppose you have a doll with a 10% crit rate and 300% crit damage - pretty much the worst possible scenario for Px4 Storm.
 	Their average per-shot damage (with "1" base damage) is (1-0.1)*1+(0.1)*3=1.2.
@@ -789,12 +693,9 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 	Px4 Storm's skill is better than that of standard buffers for most reasonable configurations, and her tiles give her a major advantage over SAA/K5/Mk23 in the offside HG role.
 	For more reasonable numbers and further information, <a href="px4">see this writeup</a>.
 </p>
-
 <span class="anchor" id="kouji"></span>
-<h2>Kouji's active skill is always bad<sup><small><a href="#kouji">&#35;</a><a href="#">↑</a></small></sup></h2>
-
+<h2>Kouji's active skill is always bad<sup><small><a href="#kouji">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> there are certainly better fairies, but this is not strictly true.</p>
-
 <p>
 	Damage vulnerability is calculated after armor, and MG firing speed is not affected by reload speed.
 	The debuffs are therefore relatively minor on MGSG echelons that have sufficient armor.
@@ -802,25 +703,22 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 </p>
 <center>
 <div class="figure">
-	<img src="images/misc/7XtGs6y.png" width="90%"/>
+<img src="images/misc/7XtGs6y.png" width="90%"/>
 </div>
 </center>
 <p>
 	This was done with a SL1 Kouji fairy (-18% ROF, +18% damage taken).
 	M870 took significantly less damage with the skill on compared to without it.
 </p>
-
 <p>
 	It's important to keep in mind that the skill not always being bad does not mean it's good.
 	Kouji's active is only acceptable in specific echelons, and her aura is awful.
 	For the biggest DPS numbers, just use Command/Para/Warrior/Beach/Combo/etc.
 	For bigger DPS numbers than what Kouji gives, use almost any fairy.
 </p>
-
 <span class="anchor" id="assault"></span>
-<h2>Assault can be a good talent for Shield fairy<sup><small><a href="#assault">&#35;</a><a href="#">↑</a></small></sup></h2>
+<h2>Assault can be a good talent for Shield fairy<sup><small><a href="#assault">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> it's a terrible talent.</p>
-
 <p>
 	Assault is an AR-specific talent that increases damage by 10% and rate of fire by 8%.
 	On average, this sounds like an 18.8% net DPS buff which is a bit higher than Damage II.
@@ -830,12 +728,12 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 	Assault is terrible for a few reasons:
 </p>
 <ul>
-	<li>Chips put most ARs quite close to the ROF cap. The ROF component is much more likely to be wasted.</li>
-	<ul>
-		<li>Some very strong maintanks like <a href="ro635">RO635</a> have ROF tiles, making this even worse.</li>
-	</ul>
-	<li>Molotov/grenadier SMGs can contribute significant amounts of damage, much more than most HGs would in RFHGs. Assault doesn't buff these, making it worse.</li>
-	<li>ARs value FP significantly more than ROF - their ROF is already good (especially with chips), it helps grenade damage, and increasing FP makes them not as hopeless against somewhat armored enemies.</li>
+<li>Chips put most ARs quite close to the ROF cap. The ROF component is much more likely to be wasted.</li>
+<ul>
+<li>Some very strong maintanks like <a href="ro635">RO635</a> have ROF tiles, making this even worse.</li>
+</ul>
+<li>Molotov/grenadier SMGs can contribute significant amounts of damage, much more than most HGs would in RFHGs. Assault doesn't buff these, making it worse.</li>
+<li>ARs value FP significantly more than ROF - their ROF is already good (especially with chips), it helps grenade damage, and increasing FP makes them not as hopeless against somewhat armored enemies.</li>
 </ul>
 <p>
 	Don't put Assault on any fairy, including Shield.
@@ -844,30 +742,28 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 	Note that at low fairy rarities, no talent triggers enough to be reliable.
 	It's fine to raise a fairy with Assault, but waiting for a better talent would be better and if that's not possible I'd strongly advise calibrating it at some point.
 </p>
-
 <p>
-	<em>(Assault is technically okay on an M4 exodia-type team, but that's a super niche scenario to dedicate an entire fairy and a specific talent to.)</em>
+<em>(Assault is technically okay on an M4 exodia-type team, but that's a super niche scenario to dedicate an entire fairy and a specific talent to.)</em>
 </p>
 <p>
-	<em>2022-March-09 update: the <a href="sniper-rework">fairy reworks</a> make Shield useful on a much wider range of teams - it was a bad idea before, but Assault on Shield is now a dreadful idea!</em>
+<em>2022-March-09 update: the <a href="sniper-rework">fairy reworks</a> make Shield useful on a much wider range of teams - it was a bad idea before, but Assault on Shield is now a dreadful idea!</em>
 </p>
-
 <span class="anchor" id="oathbonus"></span>
-<h2>Oaths give a +5% stat bonus<sup><small><a href="#oathbonus">&#35;</a><a href="#">↑</a></small></sup></h2>
+<h2>Oaths give a +5% stat bonus<sup><small><a href="#oathbonus">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> they're not quite that good.</p>
 <p>
 	Here's what oaths do:
 </p>
 <ol>
-	<li>Increase affection cap from 100 to 150, or 100 to 200 if mod3.</li>
-	<ul>
-		<li>90-139 affection: +5% to base FP/ACC/EVA (rounds up)</li>
-		<li>140-189 affection: +10% to base FP/ACC/EVA (rounds up)</li>
-		<li>190-200 affection: +15% to base FP/ACC/EVA (rounds up)</li>
-	</ul>
-	<li>Gives double XP <em>after</em> modding from all sources (battles, CRs, autobattles). Order of modding/oathing doesn't matter.</li>
-	<li>Reduces repair time by 30%, and repairs the doll on oath if they are damaged.</li>
-	<li>Adds an extra voice line when set as adjutant. This may also be unlocked with some costumes.</li>
+<li>Increase affection cap from 100 to 150, or 100 to 200 if mod3.</li>
+<ul>
+<li>90-139 affection: +5% to base FP/ACC/EVA (rounds up)</li>
+<li>140-189 affection: +10% to base FP/ACC/EVA (rounds up)</li>
+<li>190-200 affection: +15% to base FP/ACC/EVA (rounds up)</li>
+</ul>
+<li>Gives double XP <em>after</em> modding from all sources (battles, CRs, autobattles). Order of modding/oathing doesn't matter.</li>
+<li>Reduces repair time by 30%, and repairs the doll on oath if they are damaged.</li>
+<li>Adds an extra voice line when set as adjutant. This may also be unlocked with some costumes.</li>
 </ol>
 <p>
 	However, point 1 is not as straightforward as it may seem.
@@ -880,146 +776,146 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 </p>
 <center>
 <table style="width:auto; text-align:center;">
-	<tr>
-		<td></td>
-		<td colspan="3">G41 (VFL/SPEQ)</td>
-		<td colspan="3">ADS (EOT/Chip)</td>
-		<td colspan="3">FNC (EOT/Chip)</td>
-	</tr>
-	<tr>
-		<td></td>
-		<td>Normal</td>
-		<td>Oathed</td>
-		<td>Increase</td>
-		<td>Normal</td>
-		<td>Oathed</td>
-		<td>Increase</td>
-		<td>Normal</td>
-		<td>Oathed</td>
-		<td>Increase</td>
-	</tr>
-	<tr>
-		<td>Base FP</td>
-		<td>50</td>
-		<td>50</td>
-		<td>0.0%</td>
-		<td>50</td>
-		<td>50</td>
-		<td>0.0%</td>
-		<td>51</td>
-		<td>51</td>
-		<td>0.0%</td>
-	</tr>
-	<tr>
-		<td>With Affection</td>
-		<td>53</td>
-		<td>55</td>
-		<td>3.8%</td>
-		<td>53</td>
-		<td>55</td>
-		<td>3.8%</td>
-		<td>54</td>
-		<td>57</td>
-		<td>5.6%</td>
-	</tr>
-	<tr>
-		<td>With HV ammo</td>
-		<td>73</td>
-		<td>75</td>
-		<td>2.7%</td>
-		<td>73</td>
-		<td>75</td>
-		<td>2.7%</td>
-		<td>74</td>
-		<td>77</td>
-		<td>4.1%</td>
-	</tr>
-	<tr>
-		<td>With accessory/doll slot equip</td>
-		<td>98</td>
-		<td>100</td>
-		<td>2.0%</td>
-		<td>96</td>
-		<td>98</td>
-		<td>2.1%</td>
-		<td>97</td>
-		<td>100</td>
-		<td>3.1%</td>
-	</tr>
+<tr>
+<td></td>
+<td colspan="3">G41 (VFL/SPEQ)</td>
+<td colspan="3">ADS (EOT/Chip)</td>
+<td colspan="3">FNC (EOT/Chip)</td>
+</tr>
+<tr>
+<td></td>
+<td>Normal</td>
+<td>Oathed</td>
+<td>Increase</td>
+<td>Normal</td>
+<td>Oathed</td>
+<td>Increase</td>
+<td>Normal</td>
+<td>Oathed</td>
+<td>Increase</td>
+</tr>
+<tr>
+<td>Base FP</td>
+<td>50</td>
+<td>50</td>
+<td>0.0%</td>
+<td>50</td>
+<td>50</td>
+<td>0.0%</td>
+<td>51</td>
+<td>51</td>
+<td>0.0%</td>
+</tr>
+<tr>
+<td>With Affection</td>
+<td>53</td>
+<td>55</td>
+<td>3.8%</td>
+<td>53</td>
+<td>55</td>
+<td>3.8%</td>
+<td>54</td>
+<td>57</td>
+<td>5.6%</td>
+</tr>
+<tr>
+<td>With HV ammo</td>
+<td>73</td>
+<td>75</td>
+<td>2.7%</td>
+<td>73</td>
+<td>75</td>
+<td>2.7%</td>
+<td>74</td>
+<td>77</td>
+<td>4.1%</td>
+</tr>
+<tr>
+<td>With accessory/doll slot equip</td>
+<td>98</td>
+<td>100</td>
+<td>2.0%</td>
+<td>96</td>
+<td>98</td>
+<td>2.1%</td>
+<td>97</td>
+<td>100</td>
+<td>3.1%</td>
+</tr>
 </table>
 </center>
 <p>
 	Mod3 dolls get a bit more affection with an oath, but they experience a similar effect and see less of a benefit than you'd expect:
 </p>
 <center>
-	<table style="width:auto; text-align:center;">
-		<tr>
-			<td></td>
-			<td colspan="3">AR-15 (<a href="star-buffs">Reworked SPEQs</a>)</td>
-			<td colspan="3">AS Val (VFL/Chip)</td>
-			<td colspan="3">G11 (VFL/SPEQ)</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>Normal</td>
-			<td>Oathed</td>
-			<td>Increase</td>
-			<td>Normal</td>
-			<td>Oathed</td>
-			<td>Increase</td>
-			<td>Normal</td>
-			<td>Oathed</td>
-			<td>Increase</td>
-		</tr>
-		<tr>
-			<td>Base FP</td>
-			<td>50</td>
-			<td>50</td>
-			<td>0.0%</td>
-			<td>43</td>
-			<td>43</td>
-			<td>0.0%</td>
-			<td>48</td>
-			<td>48</td>
-			<td>0.0%</td>
-		</tr>
-		<tr>
-			<td>With Affection</td>
-			<td>53</td>
-			<td>58</td>
-			<td>9.4%</td>
-			<td>46</td>
-			<td>50</td>
-			<td>8.7%</td>
-			<td>51</td>
-			<td>56</td>
-			<td>9.8%</td>
-		</tr>
-		<tr>
-			<td>With HV ammo</td>
-			<td>88</td>
-			<td>93</td>
-			<td>5.7%</td>
-			<td>70</td>
-			<td>74</td>
-			<td>5.7%</td>
-			<td>71</td>
-			<td>76</td>
-			<td>7.0%</td>
-		</tr>
-		<tr>
-			<td>With accessory/doll slot equip</td>
-			<td>103</td>
-			<td>108</td>
-			<td>4.9%</td>
-			<td>85</td>
-			<td>89</td>
-			<td>4.7%</td>
-			<td>91</td>
-			<td>96</td>
-			<td>5.5%</td>
-		</tr>
-	</table>
+<table style="width:auto; text-align:center;">
+<tr>
+<td></td>
+<td colspan="3">AR-15 (<a href="star-buffs">Reworked SPEQs</a>)</td>
+<td colspan="3">AS Val (VFL/Chip)</td>
+<td colspan="3">G11 (VFL/SPEQ)</td>
+</tr>
+<tr>
+<td></td>
+<td>Normal</td>
+<td>Oathed</td>
+<td>Increase</td>
+<td>Normal</td>
+<td>Oathed</td>
+<td>Increase</td>
+<td>Normal</td>
+<td>Oathed</td>
+<td>Increase</td>
+</tr>
+<tr>
+<td>Base FP</td>
+<td>50</td>
+<td>50</td>
+<td>0.0%</td>
+<td>43</td>
+<td>43</td>
+<td>0.0%</td>
+<td>48</td>
+<td>48</td>
+<td>0.0%</td>
+</tr>
+<tr>
+<td>With Affection</td>
+<td>53</td>
+<td>58</td>
+<td>9.4%</td>
+<td>46</td>
+<td>50</td>
+<td>8.7%</td>
+<td>51</td>
+<td>56</td>
+<td>9.8%</td>
+</tr>
+<tr>
+<td>With HV ammo</td>
+<td>88</td>
+<td>93</td>
+<td>5.7%</td>
+<td>70</td>
+<td>74</td>
+<td>5.7%</td>
+<td>71</td>
+<td>76</td>
+<td>7.0%</td>
+</tr>
+<tr>
+<td>With accessory/doll slot equip</td>
+<td>103</td>
+<td>108</td>
+<td>4.9%</td>
+<td>85</td>
+<td>89</td>
+<td>4.7%</td>
+<td>91</td>
+<td>96</td>
+<td>5.5%</td>
+</tr>
+</table>
 </center>
 <p>
 	This also applies to SMGs - take C-MS, for example. She has 75 base EVA, an a T-Exo+Suppressor adds +45.
@@ -1038,13 +934,11 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 	Affection bonuses are percentage-based, so their "big" stat gains are not any larger, effectively (outside of the lack of additive equipment to detract from its percent increase).
 </p>
 <p>
-	<em>(You could also argue that an oath is really more like a (1.1/1.05)=+4.76% stat boost, but that's a very minor distinction and we can approximately pair that off with affection bonuses rounding up.)</em>
+<em>(You could also argue that an oath is really more like a (1.1/1.05)=+4.76% stat boost, but that's a very minor distinction and we can approximately pair that off with affection bonuses rounding up.)</em>
 </p>
-
 <span class="anchor" id="eots"></span>
-<h2>EOTs are a strong equipment option<sup><small><a href="#eots">&#35;</a><a href="#">↑</a></small></sup></h2>
+<h2>EOTs are a strong equipment option<sup><small><a href="#eots">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> it's possible for them to be optimal, but they're generally not great.</p>
-
 <p>
 	(Referring to their use on primary DPS units, i.e. ARs. EOTs are good on molotov/grenade SMGs and decent on <a href="shrimp-equip">direct-fire DPS SMGs</a>.)
 </p>
@@ -1065,7 +959,6 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 <p>
 	(Of course, newer players without an inventory of five-star fairies still can make good use out of EOT+Chip setups. But long-term, they're not fantastic.)
 </p>
-
 <!-- <span class="anchor" id="talent-lowrarity"></span>
 <h2>Damage II/Fervor are bad at low rarities<sup><small><a href="#talent-lowrarity">&#35;</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> only if operating in an incredibly shortsighted way.</p>
@@ -1094,12 +987,10 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 		You'll be glad you did so once it's finished.
 	</li>
 </ul> -->
-
 <span class="anchor" id="base-stats"></span>
-<h2>Base stats matter<sup><small><a href="#base-stats">&#35;</a><a href="#">↑</a></small></sup></h2>
+<h2>Base stats matter<sup><small><a href="#base-stats">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> base stats don't matter.</p>
 <!-- 2022-03-26 -->
-
 <p>
 	Almost no individual doll base stat is worth thinking about.
 	Doll stats within each rarity are roughly similar, and skills/tiles make far larger an impact.
@@ -1114,7 +1005,7 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 	If an analysis spends a large amount of time reporting what's displayed in the index, I would not trust its conclusions at all.
 </p>
 <center><div class="figure">
-	<img src="images/myths/index-stats.png" width="100%"/>
+<img src="images/myths/index-stats.png" width="100%"/>
 </div><em>Anyways, you can look them up yourself.</em></center>
 <p>
 	Numbers can also be misleading - people like to panic about Type88's accuracy, but it's an almost complete <a href="#hanyangacc">non-factor</a>.
@@ -1124,11 +1015,11 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 	A few derived statistics/situations that may be worth some consideration:
 </p>
 <ul>
-	<li>Basic DPS, on DPS units (FP/ACC/ROF+equipment)</li>
-	<li>Effective HP, on tank units (HP/EVA/Armor+equipment vs enemy FP/ACC)</li>
-	<li>RFs for one-shotting the basic data dummy have largely been chosen by FP in the past. But this isn't enough to displace dolls with skills like HS.50 and Type56R mod.</li>
-	<li>Armor is worth some consideration, but you often can just add another armor tile for a specific case.</li>
-	<li>ROF seems like it would matter more with how frames work, but very few players will get into that level of optimization and it approximately averages out across various configurations.
+<li>Basic DPS, on DPS units (FP/ACC/ROF+equipment)</li>
+<li>Effective HP, on tank units (HP/EVA/Armor+equipment vs enemy FP/ACC)</li>
+<li>RFs for one-shotting the basic data dummy have largely been chosen by FP in the past. But this isn't enough to displace dolls with skills like HS.50 and Type56R mod.</li>
+<li>Armor is worth some consideration, but you often can just add another armor tile for a specific case.</li>
+<li>ROF seems like it would matter more with how frames work, but very few players will get into that level of optimization and it approximately averages out across various configurations.
 		If you're not overcapping, WA's active will typically buff her DPS by ~75%. You really don't need to plug her ROF/other buffs into some calculator for 99% of situations.
 	</li>
 </ul>
@@ -1136,24 +1027,21 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 	It's much better to focus on things like their skill effect, total damage dealt, specific calculations, overall performance in field tests, and so on.
 </p>
 <span class="anchor" id="disuse"></span>
-<h2>X is bad because I haven't used them lately<sup><small><a href="#disuse">&#35;</a><a href="#">↑</a></small></sup></h2>
+<h2>X is bad because I haven't used them lately<sup><small><a href="#disuse">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> it's a weak argument.</p>
 <!-- 2022-03-26 -->
-
 <p>
 	I haven't used a Command fairy in years. <a href="images/misc/4o72763.png">I'll let you guess why</a>.
 	Does that make Command fairy bad?
 	Should new players not actually raise one?
 	In an even worse position by this metric would be Warrior/Artillery/Airstrike/Rescue.
 </p>
-
 <p>
 	Almost all event/story content is trivial for players with well-developed armories.
 	If that's what you want to do, guess what - 1 ARSMG, 1 RFHG, and 1 Coalition team can clear almost everything. (Something like M4/G11/416/RO/P22, Type88/R93/Stech/M950A/P22, Manticore/Manticore/Ringleader/Nemeum.)
 	That's just 9/330+ dolls used.
 	Does that make the remaining ~320 dolls bad?
 </p>
-
 <p>
 	Players don't always make optimal decisions.
 	Many players field G36c over Thompson as a backup RFSMG force shielder despite her almost always <a href="thompson">being inferior</a>.
@@ -1162,35 +1050,33 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 	It worked better than expected, honestly.
 	Is she now meta, and worth rushing one? I just used her recently!
 </p>
-
 <p>
 	The answers to these questions are no, no, and no (outside of waifu reasons).
 </p>
-
 <p>
 	Not to mention - if you personally haven't used the doll in ages, how can you really comment on their performance?
 	Basic hand calculations can show Ak 5 to be a better version of FNC, but many dolls have quirks and mechanics that need more than that to properly evaluate.
 </p>
 <span class="anchor" id="rofchips"></span>
-<h2>ALL ARs should get chips, even ROF buffers<sup><small><a href="#rofchips">&#35;</a><a href="#">↑</a></small></sup></h2>
+<h2>ALL ARs should get chips, even ROF buffers<sup><small><a href="#rofchips">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> not all ARs should get chips.</p>
 <p>
 	First: it is true that, for many default-ish damage simulator conditions, ROF ARs get slightly bigger numbers with EOT or VFL+Chip setups instead of a VFL+empty slot.
 	However:
 </p>
 <ol>
-	<li>Default-ish damage simulator conditions are not necessarily well-aligned with actual gameplay conditions.</li>
-	<li>This is largely carried by pre-skill DPS and short timeframes. If you care that much about pre-skill DPS, use something with a much shorter ICD or a passive.</li>
-	<li>This advantage will erode quite quickly once you insert the doll into real echelons. You'll probably end up with at least some combination of ROF/crit rate tiles and a crit damage aura (have you seen <a href="ro635">RO's mod?</a> Beach fairy? M4A1?), which make chips much less attractive on ROF buffers.</li>
+<li>Default-ish damage simulator conditions are not necessarily well-aligned with actual gameplay conditions.</li>
+<li>This is largely carried by pre-skill DPS and short timeframes. If you care that much about pre-skill DPS, use something with a much shorter ICD or a passive.</li>
+<li>This advantage will erode quite quickly once you insert the doll into real echelons. You'll probably end up with at least some combination of ROF/crit rate tiles and a crit damage aura (have you seen <a href="ro635">RO's mod?</a> Beach fairy? M4A1?), which make chips much less attractive on ROF buffers.</li>
 </ol>
 <p>
 	(But this doesn't make ROF buffers worth using! Their skill multipliers are about on par with FP selfbuffers, and they see little to no benefit from chips - making them do worse by comparison.)
 </p>
 <p>
-	<em>(Update: As of December 2022, Focus chips are also a strong option on almost all ARs. More on those <a href="newerquip">here</a>.)</em>
+<em>(Update: As of December 2022, Focus chips are also a strong option on almost all ARs. More on those <a href="newerquip">here</a>.)</em>
 </p>
 <span class="anchor" id="mgeva"></span>
-<h2>MGs should only be used against 0-EVA enemies<sup><small><a href="#mgeva">&#35;</a><a href="#">↑</a></small></sup></h2>
+<h2>MGs should only be used against 0-EVA enemies<sup><small><a href="#mgeva">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> if only we could be so lucky.</p>
 <p>
 	MGSG echelons have two main uses nowadays: armorstacking and gunboating.
@@ -1211,9 +1097,8 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 <p>
 	(If you are immune to every single attack from some enemy group, your exact DPS may not matter much. SWAP Jaegers and Gladiator slams can still make optimizing your MG DPS useful.)
 </p>
-
 <span class="anchor" id="svdspeq"></span>
-<h2>SVD's SPEQ makes her better against high armor<sup><small><a href="#svdspeq">&#35;</a><a href="#">↑</a></small></sup></h2>
+<h2>SVD's SPEQ makes her better against high armor<sup><small><a href="#svdspeq">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> it's a damage boost, but rifles <em>really</em> do not care about armor!</p>
 <p>
 	SVD's login SPEQ deals an extra instance of damage against armored enemies equal to 10% of her FP, ignoring armor.
@@ -1225,9 +1110,9 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 	99.9% of enemies have 226 armor or less - let's take that as a realistic worst case.
 </p>
 <ul>
-	<li>On her own, SVD will deal (400-(226-195))*2=738 average damage.</li>
-	<li>With her SPEQ, she'd deal (400-(226-195)+0.1*400)*2=818 average damage (+10.8%)</li>
-	<li>With a regular 10% FP buff, she'd deal (1.1*400-(226-195))*2=818 average damage (+10.8%)</li>
+<li>On her own, SVD will deal (400-(226-195))*2=738 average damage.</li>
+<li>With her SPEQ, she'd deal (400-(226-195)+0.1*400)*2=818 average damage (+10.8%)</li>
+<li>With a regular 10% FP buff, she'd deal (1.1*400-(226-195))*2=818 average damage (+10.8%)</li>
 </ul>
 <p>
 	It should be clear how these formulas can be rearranged.
@@ -1240,28 +1125,27 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 <p>
 	See also: <a href="hydras">this myth about high armor in general</a>.
 </p>
-
 <span class="anchor" id="xlvsxs"></span>
-<h2>The stat difference between XL/XS SF mooks is 10%<sup><small><a href="#xlvsxs">&#35;</a><a href="#">↑</a></small></sup></h2>
+<h2>The stat difference between XL/XS SF mooks is 10%<sup><small><a href="#xlvsxs">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> this doesn't make any sense.</p>
 <p>
 	Consider:
 </p>
 <ol>
-	<li>
+<li>
 		Stat differences between XL/XS units are not meaningful. It takes 5 total copies to fully raise a unit, which <a href="sfstats">virtually guarantees</a> you'll have at least a Medium (i.e., ~99.97% of the time with just 5 total pulls).
 		Odds of a Large are also pretty good.
 		Why make a comparison to an option that you will never actually use?
 		Should we be comparing G11's DPS to L85A1's?
 	</li>
-	<li>
+<li>
 		Stat differences are almost never 10%. For exact comparisons, see <a href="https://docs.google.com/spreadsheets/d/1TYKbdjuOdOMsvaaIduWW_8FF0tm27BjwKbC4uggl1wE/edit#gid=79016818">this excellent sheet by /u/UnironicWeeaboo</a>.
-		For example: each stat affected by size (HP/FP/ROF/ACC/EVA/Armor) on a XS->XL lv100 Manticore increases by 4.8-6.5%.
+		For example: each stat affected by size (HP/FP/ROF/ACC/EVA/Armor) on a XS-&gt;XL lv100 Manticore increases by 4.8-6.5%.
 		On a Nemeum: they improve by 6.0-10.0%.
 		Tarantulas: 4.0-8.5%.
 		There may be some 10% scaling factor in internal calculations, but that doesn't directly map onto the actual stat changes.
 	</li>
-	<li>
+<li>
 		Actual improvements in effectiveness are not the same as the individual stat increases.
 		Basic DPS output is approximately the product of the FP/ROF increases (plus acc), and typically goes up by +10-20% between XS and XL mooks - hardly a trivial difference!
 		That's approaching a typical HG buff skill, with 100% "uptime."
@@ -1269,9 +1153,8 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 		Armor can have an even bigger impact - under the right circumstances, gaining 2 points of armor can as much as triple your survivability.
 	</li>
 </ol>
-
 <span class="anchor" id="eva"></span>
-<h2>Evasion has diminishing returns<sup><small><a href="#eva">&#35;</a><a href="#">↑</a></small></sup></h2>
+<h2>Evasion has diminishing returns<sup><small><a href="#eva">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> if anything, it's the opposite!</p>
 <p>
 	For the long version, <a href="evasion">see my writeup on accuracy and evasion</a>.
@@ -1294,9 +1177,8 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 	<a href="thompson">Some examples of that here</a>, but that tends to get into super niche theory.
 	EHP is an excellent at-a-glance measure.
 </p>
-
 <span class="anchor" id="p2liu"></span>
-<h2>P22 is bad to pair with General Liu<sup><small><a href="#p2liu">&#35;</a><a href="#">↑</a></small></sup></h2>
+<h2>P22 is bad to pair with General Liu<sup><small><a href="#p2liu">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> false.</p>
 <!-- 2022-06-03 -->
 <p>
@@ -1311,34 +1193,30 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 	Key points:
 </p>
 <ul>
-	<li>Liu's clones make up a minority of Liu's damage output.</li>
-	<li>P22 serves a number of other functions beyond her skill's FP buff. This includes her excellent tiles, EVA buff, FP buff to the other rifle, and HP shields.</li>
-	<li>There is no HG that does the same things as P22, while also affecting the clones.</li>
+<li>Liu's clones make up a minority of Liu's damage output.</li>
+<li>P22 serves a number of other functions beyond her skill's FP buff. This includes her excellent tiles, EVA buff, FP buff to the other rifle, and HP shields.</li>
+<li>There is no HG that does the same things as P22, while also affecting the clones.</li>
 </ul>
 <p>
 	There's essentially no actual reason to separate P22 and Liu.
 	More details <a href="glue">on my Liu analysis</a>.
 </p>
-
 <span class="anchor" id="svd-variance"></span>
-<h2>SVD's SPEQ has reduced damage variance<sup><small><a href="#svd-variance">&#35;</a><a href="#">↑</a></small></sup></h2>
+<h2>SVD's SPEQ has reduced damage variance<sup><small><a href="#svd-variance">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> true!</p>
-
 <p>
 	To shake things up, here's a claim that <em>sounds</em> like nonsense (why would they use a <em>different amount</em> of damage variance for this one specific thing?) but actually seems to be true.
 	Observe:
 </p>
 <center><div class="figure">
-	<img src="images/misc/5N1n2rW.png" width="100%"/>
+<img src="images/misc/5N1n2rW.png" width="100%"/>
 </div><em>KR sim lets us bloat SVD's FP stat to minimize rounding issues and remove crits entirely. The grey numbers are her normal hits; the yellow numbers are the extra hit from her SPEQ.</em></center>
-
 <p>
 	Bonus math: <a href="images/misc/vqf4hWK.png">if you were curious how much the surehit component of her extra hit helped, here's a chart of its effective DPS increase as a function of SVD's net accuracy buff</a>.
 	Not particularly relevant at day, but usually gets at least an extra 5% more average damage at night.
 </p>
-
 <span class="anchor" id="pcthp"></span>
-<h2>%-based damage is good<sup><small><a href="#pcthp">&#35;</a><a href="#">↑</a></small></sup></h2>
+<h2>%-based damage is good<sup><small><a href="#pcthp">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> possibly, not necessarily.</p>
 <!-- 2022-08-20 -->
 <p>
@@ -1358,16 +1236,15 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 	But a decent amount of that is also attributable to her high basic DPS, massive in-skill burst due to the triple hit, and an insane mod 3 SPEQ - especially outside of boss battles.
 </p>
 <span class="anchor" id="buffer-type"></span>
-<h2>The type of buffer a HG is is decided by their skill<sup><small><a href="#buffer-type">&#35;</a><a href="#">↑</a></small></sup></h2>
+<h2>The type of buffer a HG is is decided by their skill<sup><small><a href="#buffer-type">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> it isn't.</p>
 <!-- 2022-10-28 -->
-
 <p>
 	Two things:
 </p>
 <ol>
-	<li>Newer players tend to over-focus on buff tiles, and can end up selecting bad dolls like Welrod, NZ75, or P7 thinking of them as FP/ROF buffers. Buff tiles are not the only thing to look at for HG performance. Skills matter, a lot.</li>
-	<li>Buff tiles are still a very significant part of what makes a HG, and <em>only</em> looking at their skill is a poor simplification.</li>
+<li>Newer players tend to over-focus on buff tiles, and can end up selecting bad dolls like Welrod, NZ75, or P7 thinking of them as FP/ROF buffers. Buff tiles are not the only thing to look at for HG performance. Skills matter, a lot.</li>
+<li>Buff tiles are still a very significant part of what makes a HG, and <em>only</em> looking at their skill is a poor simplification.</li>
 </ol>
 <p>
 	A doll with a skill and tiles that buff FP is an FP buffer.
@@ -1385,18 +1262,16 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 	Some examples:
 </p>
 <ul>
-	<li>PPK gives a 100% uptime 32% ROF buff from her tiles, and an 8/12 uptime 10% FP buff. She mostly provides ROF to the echelon, despite her skill not buffing ROF at all.</li>
-	<li>Welrod (pre-mod) gives 20% FP/16% ROF from her tiles, and nothing from her skill. She gives a mix of ROF/FP to the echelon from her tiles, but her lack of a buffing skill makes her falls behind dedicated buffers.</li>
-	<li>El Clear gives 30% ROF from her tiles, and 40% FP/ACC from her skill. She provides an approximately even mix of FP and ROF to the echelon.</li>
+<li>PPK gives a 100% uptime 32% ROF buff from her tiles, and an 8/12 uptime 10% FP buff. She mostly provides ROF to the echelon, despite her skill not buffing ROF at all.</li>
+<li>Welrod (pre-mod) gives 20% FP/16% ROF from her tiles, and nothing from her skill. She gives a mix of ROF/FP to the echelon from her tiles, but her lack of a buffing skill makes her falls behind dedicated buffers.</li>
+<li>El Clear gives 30% ROF from her tiles, and 40% FP/ACC from her skill. She provides an approximately even mix of FP and ROF to the echelon.</li>
 </ul>
-
 <span class="anchor" id="mg338"></span>
-<h2>MG338's DPS should be kept low so she continues to shoot<sup><small><a href="#mg338">&#35;</a><a href="#">↑</a></small></sup></h2>
+<h2>MG338's DPS should be kept low so she continues to shoot<sup><small><a href="#mg338">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> please do not do this.</p>
-
 <blockquote>
-	<p><strong>Get Smashed</strong> ICD 0s/CD 0s</p>
-	<p>
+<p><strong>Get Smashed</strong> ICD 0s/CD 0s</p>
+<p>
 		Prioritize attacking the enemy unit with the highest base damage.
 		Keep firing after ammo is depleted and only reload when she has the highest DPS out of all T-Dolls on the battlefield.
 		Increase critical rate by 3% with every attack, lasting 4 seconds and stacking up to 12 times.
@@ -1411,7 +1286,7 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 	Consider the following scientific diagram.
 </p>
 <center><div class="figure">
-	<img src="images/myths/MG338-1.png" width="100%"/>
+<img src="images/myths/MG338-1.png" width="100%"/>
 </div><em></em></center>
 <p>
 	Perhaps more importantly, depending on the encounter, certain dolls can do a <em>lot</em> of damage up front.
@@ -1419,28 +1294,25 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 	The difference becomes even more clear:
 </p>
 <center><div class="figure">
-	<img src="images/myths/MG338-2.png" width="100%"/>
+<img src="images/myths/MG338-2.png" width="100%"/>
 </div><em></em></center>
 <p>
 	If all you need is a doll that will continue firing no matter the situation, consider using options meant to continue firing no matter the situation like:
 </p>
 <ol>
-	<li>An AR/RF/HG/SMG</li>
-	<li>RPK-203</li>
+<li>An AR/RF/HG/SMG</li>
+<li>RPK-203</li>
 </ol>
 <span class="anchor" id="fo12rounds"></span>
-<h2>FO-12 has 4 base ammo<sup><small><a href="#fo12rounds">&#35;</a><a href="#">↑</a></small></sup></h2>
-<p><strong>Status:</strong> <img src="images/misc/HTKS2jW.png" height="100%"/></p>
-
+<h2>FO-12 has 4 base ammo<sup><small><a href="#fo12rounds">#</a><a href="#">↑</a></small></sup></h2>
+<p><strong>Status:</strong> <img height="100%" src="images/misc/HTKS2jW.png"/></p>
 <p>
 	While "4 volleys" has some relevance to FO-12's skill ([3+2 targets]*5 links*4 rounds=100 Activity stacks), that doesn't mean that's her limit.
 	Even without a choke, she has some leniency in getting to 100.
 </p>
-
 <span class="anchor" id="calibpity"></span>
-<h2>Something about equipment calibration pity<sup><small><a href="#calibpity">&#35;</a><a href="#">↑</a></small></sup></h2>
+<h2>Something about equipment calibration pity<sup><small><a href="#calibpity">#</a><a href="#">↑</a></small></sup></h2>
 <p><strong>Status:</strong> kinda.</p>
-
 <p>
 	There is no exact hard pity for calibrating equipment.
 </p>
@@ -1448,9 +1320,9 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 	There is, however, a pity mechanic. Normally, calibrations can do three things:
 </p>
 <ol>
-	<li>Redistribute stat points between each stat, keeping the same number of stat points (raw % numbers may not add up, depending on how many stat points each stat is assigned)</li>
-	<li>Do nothing</li>
-	<li>Increase some stat point</li>
+<li>Redistribute stat points between each stat, keeping the same number of stat points (raw % numbers may not add up, depending on how many stat points each stat is assigned)</li>
+<li>Do nothing</li>
+<li>Increase some stat point</li>
 </ol>
 <p>
 	On the 6th, 16th, 26th, and every 10 calibrations onward, there appears to be a soft pity where you are guaranteed a stat point increase.
@@ -1465,64 +1337,72 @@ You'd want at least some FP buffs, but that's true for any team.</p>
 	See <a href="https://old.reddit.com/r/girlsfrontline/comments/we5q4h/weekly_commanders_lounge_august_02_2022/iino3ww/">this discussion</a> for some more numbers/examples.
 	As far as I know, fairy talent calibrations are random each time (<a href="talent-data">see here for their specific rates</a>).
 </p>
-<span class="anchor" id="ads"></span>
-<h2>More like this</h2>
-	<section class="tiles">	
-		<a href="augelica">
-			<div class="gallery">
-			  <div class="gallerypic">
-				<img src="images/icon/augelica.jpg" width="33%" height="400">
-				<div class="gallerypicdesc"><b>AUG and Angelica</b><br/>Random spray vs AR targeting</div>
-			  </div>
-			</div>
-		</a>
-		
-		<a href="2v3ar">
-			<div class="gallery">
-				<div class="gallerypic">
-				<img src="images/icon/2v3ar.jpg" width="33%" height="400">
-				<div class="gallerypicdesc"><b>Are 2 ARs or 3 ARs Better?</b><br/>Does it matter?</div>
-				</div>
-			</div>
-		</a>
-		
-		<a href="manual-labor">
-			<div class="gallery">
-			  <div class="gallerypic">
-				<img src="images/icon/manual-labor.jpg" width="33%" height="400">
-				<div class="gallerypicdesc"><b>Rico Skill Analysis</b><br/>Force manual vs Autoskill</div>
-			  </div>
-			</div>
-		</a>
 
-		<a href="hanyangle">
-			<div class="gallery">
-			  <div class="gallerypic">
-				<img src="images/icon/hanyangle.jpg" width="33%" height="400">
-				<div class="gallerypicdesc"><b>Type88: Formation and Skins</b><br/>Performance analysis</div>
-			  </div>
-			</div>
-		</a>
-</section>
-	
+
+
 <!-- Footer -->
-	<footer id="footer">
-		<div class="inner">
-			<ul class="copyright">
-				<li>Content: BigStupidJellyfish</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</div>
-	</footer>
-</div>
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+    <div class="more-like-this">
+        <h2>More like this</h2>
+        <div class="mlt-gallery-grid">
 
+                <a href="augelica" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/augelica.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">AUG and Angelica</div>
+                            <div class="mlt-gallery-desc">Random spray vs AR targeting</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="2v3ar" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/2v3ar.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">Are 2 ARs or 3 ARs Better?</div>
+                            <div class="mlt-gallery-desc">Does it matter?</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="manual-labor" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/manual-labor.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">Rico Skill Analysis</div>
+                            <div class="mlt-gallery-desc">Force manual vs Autoskill</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="hanyangle" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/hanyangle.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">Type88: Formation and Skins</div>
+                            <div class="mlt-gallery-desc">Performance analysis</div>
+                        </div>
+                    </div>
+                </a>
+        </div>
+    </div>
+    
+
+            </div> 
+        </div> </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                <a href="../pages/about">About GFMath</a> ·
+                <a href="../pages/spoilers">Explanation of common plot types</a> ·
+                <a href="#" onclick="window.scrollTo(0,0)">Back to top</a>
+            </p>
+            <p style="margin-top: 20px;">
+                Content: BigStupidJellyfish
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

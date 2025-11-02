@@ -1,20 +1,28 @@
-<!DOCTYPE HTML>
-<!--
-Forty by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-805N997DPC');
-</script>
-<script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-805N997DPC');
+    </script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    <title>To Lead or to Follow? - GFMath</title>
+
+<link href="images/icon/ads-180.png" rel="icon" sizes="180x180"/>
+<link href="images/icon/ads-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="images/icon/ads-16.png" rel="icon" sizes="16x16" type="image/png"/>
+
+    <link rel="stylesheet" href="../assets/css/common.css" />
+
+    <script>
 	filterSelection("all")
 	function filterSelection(c) {
 	  var x, i;
@@ -98,62 +106,49 @@ function calculate() {
 	//document.getElementById("d3").innerHTML = Math.abs(frame_instance[2] - frame_instance[2+3]) + " (" + frame_instance[2] + " to " + frame_instance[2+3] + ")";
 }
 </script>
-<style>
-	.dollbox {
-	  display: none;
-	}
-	.show {
-		display: block;
-	}
-</style>
-<meta name="description" content="Girls Frontline, by the numbers">
-<title>To Lead or to Follow? - GFMath</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="../assets/css/main.css" />
-<link rel="icon" sizes="180x180" href="images/icon/ads-180.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/icon/ads-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/icon/ads-16.png">
-<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
 </head>
-<body class="is-preload">
-<!-- Wrapper -->
-<div id="wrapper">
-<!-- Header -->
-<header id="header">
-<a href="../index" class="logo"><strong>GFMath</strong> <span>Detailed GFL analysis</span></a>
-<nav></nav>
-<a href="https://www.youtube.com/c/BigStupidJellyfish" class="logo"><strong>Youtube</strong></a>
-</header>
-<div id="main" class="alt">
-<section>
-<div class="inner">
-<header class="major">
-	<h1>To Lead or to Follow?</h1>
-</header>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    GFMath
+                </div>
+                <nav>
+                    <a href="../index">Home</a>
+                    <a href="https://www.youtube.com/c/BigStupidJellyfish" target="_blank">YouTube</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="article-container">
+            <header class="article-header">
+                <h1>To Lead or to Follow?</h1>
+                <div class="meta">By BigStupidJellyfish | 2022-March-11</div>
+            </header>
+            <div class="article-content">
 <!-- Last updated 2021-October-17 -->
-<center><em>By BigStupidJellyfish | 2022-March-11</em></center>
 
 <span class="anchor" id="review"></span>
-<h2>Review<sup><small><a href="#review">&#35;</a></small></sup></h2>
+<h2>Review<sup><small><a href="#review">#</a></small></sup></h2>
 <p>
 	In case you've forgotten what Webley does, here's a refresher:
 </p>
 <blockquote>
-	<p>
-		<strong>Linked Order</strong>. Initial CD 6s/Skill CD 12s.
+<p>
+<strong>Linked Order</strong>. Initial CD 6s/Skill CD 12s.
 	</p>
-
-	<p>
+<p>
 		When placed in an echelon member slot, increase the echelon leader's damage and ROF by 22% for 8 seconds, while reducing the current cooldown time of the leader's skill by 25%.
 	</p>
-
-	<p>
+<p>
 		When placed in the echelon leader position or if the leader is absent, raise all allies' damage by 25%, lasting for 8 seconds.
 	</p>
 </blockquote>
 <center><div class="figure">
-	<img src="images/webley/webley.png" width="20%"/>
+<img src="images/webley/webley.png" width="20%"/>
 </div><em>ALL: 16% FP, 20% ROF</em></center>
 <p>
 	Originally released as a PL clear reward, Webley started the trend of making the echelon order matter - outside of deciding who should get a little extra XP/affection, at least.
@@ -162,7 +157,7 @@ function calculate() {
 <p>
 	I'd like to investigate her role in more normal 2RF3HG echelons, and which skill modes work best there.
 </p>
-	<!-- There are some easy things to say about Webley:
+<!-- There are some easy things to say about Webley:
 </p>
 <ul>
 	<li>Webley is a strong pos2 buffing HG.</li>
@@ -189,18 +184,17 @@ function calculate() {
 	<li>When is she better than P22? Px4?</li>
 </ul>
 <p>Let's investigate.</p> -->
-
 <span class="anchor" id="math"></span>
-<h2>Basic Math<sup><small><a href="#math">&#35;</a></small></sup></h2>
+<h2>Basic Math<sup><small><a href="#math">#</a></small></sup></h2>
 <p>
 	In standard RFHGs:
 </p>
 <ul>
-	<li>Webley's leader buff is an effective <code>1.22*1.22=48.84%</code> DPS buff for one doll, plus cooldown reduction. Skill timings will vary so it's hard to assign this a specific number.</li>
-	<ul>
-		<li>If it was somehow able to apply perfectly to every RF activation (it won't), a typical 75% FP and 5/8 uptime skill (47% avg DPS) would improve its uptime to 5/6, and become a 62.5% average buff just from that CDR.</li>
-	</ul>
-	<li>Webley's team-wide buff is a 25% DPS buff for both dolls.</li>
+<li>Webley's leader buff is an effective <code>1.22*1.22=48.84%</code> DPS buff for one doll, plus cooldown reduction. Skill timings will vary so it's hard to assign this a specific number.</li>
+<ul>
+<li>If it was somehow able to apply perfectly to every RF activation (it won't), a typical 75% FP and 5/8 uptime skill (47% avg DPS) would improve its uptime to 5/6, and become a 62.5% average buff just from that CDR.</li>
+</ul>
+<li>Webley's team-wide buff is a 25% DPS buff for both dolls.</li>
 </ul>
 <p>
 	If both dolls contribute equally, Webley's leader buff is similar to a 24.4% DPS buff for the team, plus CDR.
@@ -217,9 +211,8 @@ function calculate() {
 	They also undervalue the ROF component.
 	To Target Saving!
 </p>
-
 <span class="anchor" id="testing"></span>
-<h2>Testing<sup><small><a href="#testing">&#35;</a></small></sup></h2>
+<h2>Testing<sup><small><a href="#testing">#</a></small></sup></h2>
 <p>
 	To start, I'll use an ordinary Rico/R93 RFHG with Webley in place of the usual P22.
 	SAA is used in place of Five-Seven/Stechkin to avoid overcap.
@@ -235,10 +228,10 @@ function calculate() {
 	From left to right, considering both clear times and damage taken:
 </p>
 <ol>
-	<li>Rico (as leader) appears to have a significant advantage.</li>
-	<li>All three options are about equal.</li>
-	<li>R93 does worse.</li>
-	<li>All three options are about equal.</li>
+<li>Rico (as leader) appears to have a significant advantage.</li>
+<li>All three options are about equal.</li>
+<li>R93 does worse.</li>
+<li>All three options are about equal.</li>
 </ol>
 <p>
 	So we'd want to set Rico as leader.
@@ -254,10 +247,10 @@ function calculate() {
 <img src="images/webley/test2.png" width="100%"/>
 </div>
 <ol>
-	<li>All about equal.</li>
-	<li>All about equal.</li>
-	<li>Possible advantage for WA2000 (reduced damage taken), but close.</li>
-	<li>All about equal - by time, WA2000 looks stronger but by damage taken weaker.</li>
+<li>All about equal.</li>
+<li>All about equal.</li>
+<li>Possible advantage for WA2000 (reduced damage taken), but close.</li>
+<li>All about equal - by time, WA2000 looks stronger but by damage taken weaker.</li>
 </ol>
 <p>
 	So any of the three options should be fine.
@@ -266,17 +259,16 @@ function calculate() {
 <p>
 	In either case, setting Webley as leader did not appear to exceed the alternatives.
 </p>
-
 <span class="anchor" id="interactions"></span>
-<h2>Doll interactions and considerations<sup><small><a href="#interactions">&#35;</a></small></sup></h2>
+<h2>Doll interactions and considerations<sup><small><a href="#interactions">#</a></small></sup></h2>
 <div id="myBtnContainer">
-	<!-- <button class="btn active" onclick="filterSelection('all')"> Show all</button> -->
-	<button class="btn" onclick="filterSelection('p22')"> P22</button>
-	<button class="btn" onclick="filterSelection('px4')"> Px4 Storm</button>
-	<button class="btn" onclick="filterSelection('mondragon')"> Mondragon</button>
-	<button class="btn" onclick="filterSelection('rex')"> Rex Zero</button>
-	<button class="btn" onclick="filterSelection('liu')"> Liu</button>
-	<button class="btn" onclick="filterSelection('m200')"> M200</button>
+<!-- <button class="btn active" onclick="filterSelection('all')"> Show all</button> -->
+<button class="btn" onclick="filterSelection('p22')"> P22</button>
+<button class="btn" onclick="filterSelection('px4')"> Px4 Storm</button>
+<button class="btn" onclick="filterSelection('mondragon')"> Mondragon</button>
+<button class="btn" onclick="filterSelection('rex')"> Rex Zero</button>
+<button class="btn" onclick="filterSelection('liu')"> Liu</button>
+<button class="btn" onclick="filterSelection('m200')"> M200</button>
 </div>
 <div class="dollbox p22">
 <h3>P22</h3>
@@ -290,16 +282,16 @@ function calculate() {
 </p>
 <p>
 	P22 offers a 25% FP buff to your backline, which Webley can match as leader or often exceed with another doll as leader.
-	However, P22 also can give your frontline both EVA & shields, which is a significant survivability bonus.
+	However, P22 also can give your frontline both EVA &amp; shields, which is a significant survivability bonus.
 </p>
 <p>
 	In short, if they're both available, I'd decide between them like this:
 </p>
 <ul>
-	<li>If you can kite the enemies without taking shots, or are particularly interested in Webley's focused buff, pick Webley.</li>
-	<li>If you need to move your DPS out of the back column, pick Webley.</li>
-	<li>If you expect to be "tanking" some hits with your HGs, pick P22.</li>
-	<li>If you still can't decide, pick P22.</li>
+<li>If you can kite the enemies without taking shots, or are particularly interested in Webley's focused buff, pick Webley.</li>
+<li>If you need to move your DPS out of the back column, pick Webley.</li>
+<li>If you expect to be "tanking" some hits with your HGs, pick P22.</li>
+<li>If you still can't decide, pick P22.</li>
 </ul>
 </div>
 <div class="dollbox px4">
@@ -309,32 +301,32 @@ function calculate() {
 	But if you are deciding between them:
 </p>
 <ul>
-	<li>If your echelon doesn't have crit tiles, favor Webley for the extra ROF. Px4's net DPS boost isn't likely to be way above Webley's (<a href="px4">specific numbers here</a>).</li>
-	<li>Favor Webley if you aren't able to have Px4 stop by 8 for a moment to use her skill. It's really not that hard do to so, though - this would mostly only come up in specific fights.</li>
-	<li>If you need big DPS numbers on both rifles, it's hard to beat Px4 Storm.</li>
+<li>If your echelon doesn't have crit tiles, favor Webley for the extra ROF. Px4's net DPS boost isn't likely to be way above Webley's (<a href="px4">specific numbers here</a>).</li>
+<li>Favor Webley if you aren't able to have Px4 stop by 8 for a moment to use her skill. It's really not that hard do to so, though - this would mostly only come up in specific fights.</li>
+<li>If you need big DPS numbers on both rifles, it's hard to beat Px4 Storm.</li>
 </ul>
 <p>
 	You're already using Webley and Calico?
 	Here's a secret: despite looking odd, there's nothing really wrong with this formation:
 </p>
 <center>
-	<table style="width:auto;">
-		<tr>
-			<td>RF</td>
-			<td>Px4 Storm</td>
-			<td>-</td>
-		</tr>
-		<tr>
-			<td>-</td>
-			<td>M950A</td>
-			<td>-</td>
-		</tr>
-		<tr>
-			<td>RF</td>
-			<td>Webley</td>
-			<td>-</td>
-		</tr>
-	</table>
+<table style="width:auto;">
+<tr>
+<td>RF</td>
+<td>Px4 Storm</td>
+<td>-</td>
+</tr>
+<tr>
+<td>-</td>
+<td>M950A</td>
+<td>-</td>
+</tr>
+<tr>
+<td>RF</td>
+<td>Webley</td>
+<td>-</td>
+</tr>
+</table>
 </center>
 <p>
 	Just slip Webley/Calico back to 4 at the start and you can kite with a completely normal team.
@@ -368,31 +360,29 @@ function calculate() {
 </p>
 </div>
 <div class="dollbox m200">
-	<h3>M200</h3>
-	<p>
+<h3>M200</h3>
+<p>
 		M200's skillshots have a fixed delay, and so she's not affected by Webley's ROF tiles or the ROF component of her superbuff.
 	</p>
-	<p>
+<p>
 		While CDR tiles from the Carcano sisters/De Lisle will shorten this interval and give her an extra shot or two, the same does not apply to Webley's CDR component.
 		<a href="https://www.youtube.com/watch?v=9_zybqFLavQ">Video reference here</a>.
 	</p>
-	<!-- <p>
+<!-- <p>
 		Don't use M200 as a leader.
 	</p> -->
-	</div>
+</div>
 <span class="anchor" id="cdr"></span>
-<h2>CDR: Tiles and Skill<sup><small><a href="#cdr">&#35;</a></small></sup></h2>
+<h2>CDR: Tiles and Skill<sup><small><a href="#cdr">#</a></small></sup></h2>
 <p>
 	Most teambuilding is done without going deep into specifics, so the echelons used in my tests above were put together without much thought or calculation aside from making sure a doll wasn't being buffed to 200 ROF.
 	Let's go into a few details on both CDR tiles on Webley and her own skill's CDR component.
 </p>
-
 <p>
 	First of all: Webley's skill effect is rather uniquely<sup>1</sup> applied two frames after activation.
 	This gives you a slight bit of wiggle room - her skill can activate just before your leader's, and they can still receive the full CDR effect.
 	You can see an example of that <a href="https://www.youtube.com/watch?v=vd0AdFkNjGY">here with SVD</a>, and some investigation/other evidence <a href="https://old.reddit.com/r/girlsfrontline/comments/rl9oul/weekly_commanders_lounge_december_21_2021/hq64qh3/">here</a>.
 </p>
-
 <!-- <p>
 	This presents another issue with Hycdes - a google translate of their "Special" tab includes the comment
 </p>
@@ -411,43 +401,43 @@ function calculate() {
 	For reference, here is Webley's ICD with a few common levels of CDR:
 </p>
 <center>
-	<table style="width:auto">
-		<tr>
-			<th>Tiles</th>
-			<th>Comes from</th>
-			<th>ICD</th>
-			<th>Skill CD</th>
-			<th>Uptime %</th>
-		</tr>
-		<tr>
-			<td>15%</td>
-			<td>1x 4★ RF</td>
-			<td>5.1s</td>
-			<td>10.2s</td>
-			<td>78%</td>
-		</tr>
-		<tr>
-			<td>18%</td>
-			<td>1x 5★ RF</td>
-			<td>4.9s</td>
-			<td>9.8s</td>
-			<td>81%</td>
-		</tr>
-		<tr>
-			<td>20%</td>
-			<td>1x 6★ RF</td>
-			<td>4.8s</td>
-			<td>9.6s</td>
-			<td>83%</td>
-		</tr>
-		<tr>
-			<td>30%</td>
-			<td>Max</td>
-			<td>4.2s</td>
-			<td>8.4s</td>
-			<td>95%</td>
-		</tr>
-	</table>
+<table style="width:auto">
+<tr>
+<th>Tiles</th>
+<th>Comes from</th>
+<th>ICD</th>
+<th>Skill CD</th>
+<th>Uptime %</th>
+</tr>
+<tr>
+<td>15%</td>
+<td>1x 4★ RF</td>
+<td>5.1s</td>
+<td>10.2s</td>
+<td>78%</td>
+</tr>
+<tr>
+<td>18%</td>
+<td>1x 5★ RF</td>
+<td>4.9s</td>
+<td>9.8s</td>
+<td>81%</td>
+</tr>
+<tr>
+<td>20%</td>
+<td>1x 6★ RF</td>
+<td>4.8s</td>
+<td>9.6s</td>
+<td>83%</td>
+</tr>
+<tr>
+<td>30%</td>
+<td>Max</td>
+<td>4.2s</td>
+<td>8.4s</td>
+<td>95%</td>
+</tr>
+</table>
 </center>
 <p>
 	Popular rifles with a 5s ICD: SVD, WA, Lee, M14, SL8.
@@ -457,14 +447,14 @@ function calculate() {
 <p>
 	It might at first seem like a good idea to avoid putting CDR tiles on Webley, so she'd be more likely to apply her own CDR to the rifles.
 	I wouldn't recommend that.
-	The bulk of her strength comes from the combined FP & ROF buffs, and giving her CDR tiles significantly improves her uptime and gets it online faster.
+	The bulk of her strength comes from the combined FP &amp; ROF buffs, and giving her CDR tiles significantly improves her uptime and gets it online faster.
 	In longer fights (when Webley's applied CDR would be relevant), her skills will desync from rifles anyways - most of them have a 8s cooldown without reduction, which she can never match.
 </p>
 <p>
-	<em><sup>1</sup>: For obvious reasons, I'm not verifying this against the entire pokedex. But standard buff skills do apply on the same frame they're activated.</em>
+<em><sup>1</sup>: For obvious reasons, I'm not verifying this against the entire pokedex. But standard buff skills do apply on the same frame they're activated.</em>
 </p>
 <span class="anchor" id="overcap"></span>
-<h2>Overcapping<sup><small><a href="#overcap">&#35;</a></small></sup></h2>
+<h2>Overcapping<sup><small><a href="#overcap">#</a></small></sup></h2>
 <p>
 	While I have said lots of good things about Webley's superbuff, there is one concern worth keeping in mind.
 	If its ROF component ends up being largely or entirely lost to the ROF cap, you're not getting much mileage out of it and she really should just stick to the global FP buff.
@@ -484,39 +474,39 @@ function calculate() {
 </tr>
 <tr>
 <td>M950A+Stechkin</td><td>0%</td><td>35</td>
-<td>94<font color="#E5857F">+4</td>
-<td>116<font color="#E5857F">+4</td>
-<td>84<font color="#E5857F">+3</td>
+<td>94<font color="#E5857F">+4</font></td>
+<td>116<font color="#E5857F">+4</font></td>
+<td>84<font color="#E5857F">+3</font></td>
 </tr>
 <tr>
 <td></td><td></td><td>36</td>
-<td>101<font color="#E5857F">+0</td>
-<td>116<font color="#E5857F">+7</td>
-<td>89<font color="#E5857F">+0</td>
+<td>101<font color="#E5857F">+0</font></td>
+<td>116<font color="#E5857F">+7</font></td>
+<td>89<font color="#E5857F">+0</font></td>
 </tr>
 <tr>
 <td></td><td></td><td>37</td>
-<td>101<font color="#E5857F">+3</td>
-<td>116<font color="#E5857F">+11</td>
-<td>89<font color="#E5857F">+3</td>
+<td>101<font color="#E5857F">+3</font></td>
+<td>116<font color="#E5857F">+11</font></td>
+<td>89<font color="#E5857F">+3</font></td>
 </tr>
 <tr>
 <td></td><td></td><td>38</td>
-<td>101<font color="#E5857F">+6</td>
-<td>116<font color="#E5857F">+14</td>
-<td>94<font color="#E5857F">+0</td>
+<td>101<font color="#E5857F">+6</font></td>
+<td>116<font color="#E5857F">+14</font></td>
+<td>94<font color="#E5857F">+0</font></td>
 </tr>
 <tr>
 <td></td><td></td><td>39</td>
-<td>108<font color="#E5857F">+1</td>
-<td>116<font color="#E5857F">+17</td>
-<td>94<font color="#E5857F">+3</td>
+<td>108<font color="#E5857F">+1</font></td>
+<td>116<font color="#E5857F">+17</font></td>
+<td>94<font color="#E5857F">+3</font></td>
 </tr>
 <tr>
 <td></td><td></td><td>40</td>
-<td>108<font color="#E5857F">+4</td>
-<td>116<font color="#E5857F">+21</td>
-<td>94<font color="#E5857F">+5</td>
+<td>108<font color="#E5857F">+4</font></td>
+<td>116<font color="#E5857F">+21</font></td>
+<td>94<font color="#E5857F">+5</font></td>
 </tr>
 <tr>
 <!--<td>M950A</td><td>75%</td><td>35</td>
@@ -590,7 +580,7 @@ function calculate() {
 <td>108<font color="#E5857F">+5</td>
 <td>79<font color="#E5857F">+3</td>
 </tr> -->
-</table>
+</tr></table>
 </center>
 <p>
 	To make full use of her superbuff, you probably want to go at least slightly lighter on the ROF in the rest of your team, given standard formations (2 ROF HGs + FP rifles, 1 ROF HG + ROF rifles).
@@ -599,62 +589,59 @@ function calculate() {
 	If you'd like to check a specific case, here's a calculator:
 </p>
 <center>
-	<table style="width:auto">
-	  <tr>
-		<th>RF 1 ROF</th>
-		<th>RF 2 ROF</th>
-		<th>ROF tiles (w/o Webley)</th>
-		<th>ROF skills (w/o Webley)</th>
-	  </tr>
-	  <tr>
-		<td><input id="rof1" type="text" value=34></input><br></td>
-		<td><input id="rof2" type="text" value=37></input><br></td>
-		<td><input id="tiles" type="text" value=1.32></input><br></td>
-		<td><input id="skills" type="text" value=1.28></input><br></td>
-	  </tr>
-	</table>
-
-	<button type="button small" onclick="calculate()">Calculate</button>
-
-	<table style="width:auto; margin-top: 25px;">
-	  <tr>
-		<th>Rifle</th>
-		<th>Final ROF (w/o Webley)</th>
-		<th>Final ROF (Webley tiles)</th>
-		<th>Final ROF (Webley superbuff)</th>
-	  </tr>
-	  <tr>
-		<td>#1</td>
-		<td id="rof1_base">?</td>
-		<td id="rof1_tier1">?</td>
-		<td id="rof1_tier2">?</td>
-	  </tr>
-	  <tr>
-		<td>#2</td>
-		<td id="rof2_base">?</td>
-		<td id="rof2_tier1">?</td>
-		<td id="rof2_tier2">?</td>
-	  </tr>
-	  <!-- <tr>
+<table style="width:auto">
+<tr>
+<th>RF 1 ROF</th>
+<th>RF 2 ROF</th>
+<th>ROF tiles (w/o Webley)</th>
+<th>ROF skills (w/o Webley)</th>
+</tr>
+<tr>
+<td><input id="rof1" type="text" value="34"/><br/></td>
+<td><input id="rof2" type="text" value="37"/><br/></td>
+<td><input id="tiles" type="text" value="1.32"/><br/></td>
+<td><input id="skills" type="text" value="1.28"/><br/></td>
+</tr>
+</table>
+<button onclick="calculate()" type="button small">Calculate</button>
+<table style="width:auto; margin-top: 25px;">
+<tr>
+<th>Rifle</th>
+<th>Final ROF (w/o Webley)</th>
+<th>Final ROF (Webley tiles)</th>
+<th>Final ROF (Webley superbuff)</th>
+</tr>
+<tr>
+<td>#1</td>
+<td id="rof1_base">?</td>
+<td id="rof1_tier1">?</td>
+<td id="rof1_tier2">?</td>
+</tr>
+<tr>
+<td>#2</td>
+<td id="rof2_base">?</td>
+<td id="rof2_tier1">?</td>
+<td id="rof2_tier2">?</td>
+</tr>
+<!-- <tr>
 		<td>Frame difference</td>
 		<td id="d1">?</td>
 		<td id="d2">?</td>
 		<td id="d3">?</td>
 	  </tr> -->
-	</table>
+</table>
 </center>
 <p>
 	Enter ROF tiles as a multipler (56% = 1.56).
-	Enter ROF skills as a combined multiplier (28% & 25% = 1.28*1.25 = 1.6).
+	Enter ROF skills as a combined multiplier (28% &amp; 25% = 1.28*1.25 = 1.6).
 </p>
 <p>
 	But don't get <a href="myths#cap">too scared</a> of going slightly over.
 	Personal preferences will vary, but I'd start to worry past 116+5 or so in conventional cases.
 	<!-- Shooting fast is nice either way, and endlessly chasing after <a href="myths#cap">"efficiency"</a> is not how you build teams. -->
 </p>
-
 <span class="anchor" id="arsmgsg"></span>
-<h2>ARSMG & MGSG<sup><small><a href="#arsmgsg">&#35;</a></small></sup></h2>
+<h2>ARSMG &amp; MGSG<sup><small><a href="#arsmgsg">#</a></small></sup></h2>
 <p>
 	Webley is questionable in ARSMG echelons - <a href="2v3ar">you usually want three backline DPS dolls</a>, so Webley's leader buff is inherently less useful.
 	<a href="chips">#2 chips</a> make her ROF tiles likely to be wasted (especially when using RO635 as your tank), so P22 is almost a straight upgrade.
@@ -670,7 +657,7 @@ function calculate() {
 	(P22's shield is not quite as amazing now that flash ammo is an option, but it doesn't hurt.)
 </p>
 <span class="anchor" id="conclusion"></span>
-<h2>Conclusion<sup><small><a href="#conclusion">&#35;</a></small></sup></h2>
+<h2>Conclusion<sup><small><a href="#conclusion">#</a></small></sup></h2>
 <p>
 	I would call the apparently popular idea that "Webley should usually be put as leader" mostly inaccurate.
 	Webley's buff to the leader provides a similar effective buff, includes ROF, and reduces skill downtime.
@@ -685,55 +672,60 @@ function calculate() {
 	<a href="simulation">Don't listen to damage simulators</a>.
 </p>
 <span class="anchor" id="notes"></span>
-<h2>Notes<sup><small><a href="#notes">&#35;</a></small></sup></h2>
+<h2>Notes<sup><small><a href="#notes">#</a></small></sup></h2>
 <ul>
-	<!-- <li>To compensate for kiting not being practical when collecting large amounts of data, frontline HGs used no HP ammo.</li> -->
-	<li>When running 2 rifles with the same skill type (FP or ROF buff), Webley's skill can be an easy way to mitigate corpse whipping.
+<!-- <li>To compensate for kiting not being practical when collecting large amounts of data, frontline HGs used no HP ammo.</li> -->
+<li>When running 2 rifles with the same skill type (FP or ROF buff), Webley's skill can be an easy way to mitigate corpse whipping.
 		This isn't very likely to be a problem, though.
 	</li>
-	<!-- <li>Single-DPS teams are not covered here - it should be rather obvious which mode Webley should be in for those, as well as her superiority compared to standard buffing handguns.</li> -->
+<!-- <li>Single-DPS teams are not covered here - it should be rather obvious which mode Webley should be in for those, as well as her superiority compared to standard buffing handguns.</li> -->
 </ul>
 
-<span class="anchor" id="ads"></span>
-<h2>More like this</h2>
-<section class="tiles">
-	<a href="manual-labor">
-		<div class="gallery solo rfhg">
-		  <div class="gallerypic">
-			<img src="images/icon/manual-labor.jpg" width="33%" height="400">
-			<div class="gallerypicdesc"><b>Rico Skill Analysis</b><br/>Force manual vs Autoskill</div>
-		  </div>
-		</div>
-	</a>
 
-	<a href="hanyangle">
-		<div class="gallery solo rfhg">
-		  <div class="gallerypic">
-			<img src="images/icon/hanyangle.jpg" width="33%" height="400">
-			<div class="gallerypicdesc"><b>Type88: Formation and Skins</b><br/>Performance analysis</div>
-		  </div>
-		</div>
-	</a>
-</section>
 
 <!-- Footer -->
-	<footer id="footer">
-		<div class="inner">
-			<ul class="copyright">
-		<li>Content: BigStupidJellyfish</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</div>
-	</footer>
-</div>
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+    <div class="more-like-this">
+        <h2>More like this</h2>
+        <div class="mlt-gallery-grid">
 
+                <a href="manual-labor" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/manual-labor.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">Rico Skill Analysis</div>
+                            <div class="mlt-gallery-desc"></div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="hanyangle" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/hanyangle.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">Type88: Formation and Skins</div>
+                            <div class="mlt-gallery-desc"></div>
+                        </div>
+                    </div>
+                </a>
+        </div>
+    </div>
+    
+
+            </div> 
+        </div> </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                <a href="../pages/about">About GFMath</a> ·
+                <a href="../pages/spoilers">Explanation of common plot types</a> ·
+                <a href="#" onclick="window.scrollTo(0,0)">Back to top</a>
+            </p>
+            <p style="margin-top: 20px;">
+                Content: BigStupidJellyfish
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

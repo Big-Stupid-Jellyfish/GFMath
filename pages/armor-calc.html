@@ -1,22 +1,28 @@
-<!DOCTYPE HTML>
-<!--
-Forty by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-805N997DPC');
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-805N997DPC');
+    </script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    <title>Armor Calculator - GFMath</title>
+
+<link href="images/icon/ads-180.png" rel="icon" sizes="180x180"/>
+<link href="images/icon/ads-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="images/icon/ads-16.png" rel="icon" sizes="16x16" type="image/png"/>
+
+    <link rel="stylesheet" href="../assets/css/common.css" />
+
+    <script>
 function strip(number) {
     return (parseFloat(number).toPrecision(12));
 }
@@ -82,154 +88,145 @@ window.onload = function() {
 	calculateArmReq();
 };
 </script>
-<title>Armor Calculator - GFMath</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="../assets/css/main.css" />
-<link rel="icon" sizes="180x180" href="images/icon/ads-180.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/icon/ads-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/icon/ads-16.png">
-<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
 </head>
-<body class="is-preload">
-<div id="wrapper">
-<header id="header">
-<a href="../index" class="logo"><strong>GFMath</strong> <span>Detailed GFL analysis</span></a>
-<nav></nav>
-<a href="https://www.youtube.com/c/BigStupidJellyfish" class="logo"><strong>Youtube</strong></a>
-</header>
-<div id="main" class="alt">
-<section>
-<div class="inner">
-<header class="major">
-<h1>Armor Calculator</h1>
-</header>
-<center><em>By BigStupidJellyfish | 2022-March-16</em></center>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    GFMath
+                </div>
+                <nav>
+                    <a href="../index">Home</a>
+                    <a href="https://www.youtube.com/c/BigStupidJellyfish" target="_blank">YouTube</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
+    <main>
+        <div class="article-container">
+            <header class="article-header">
+                <h1>Armor Calculator</h1>
+                <div class="meta">By BigStupidJellyfish | 2022-March-16</div>
+            </header>
+            <div class="article-content">
 <span class="anchor" id="armor"></span>
-<h2>Armor calculator<sup><small><a href="#armor">&#35;</a></small></sup></h2>
+<h2>Armor calculator<sup><small><a href="#armor">#</a></small></sup></h2>
 <h3>Variable fairy aura</h3>
 <center><div class="figure">
-	<img src="images/armor-calc/no-fairy.png" width="100%"/>
+<img src="images/armor-calc/no-fairy.png" width="100%"/>
 </div><em>Here, your base armor would be 33.</em></center>
 <ul>
-	<li>Base armor, including equipment, with no fairy equipped: <input id="c1_armor_base" type="text" value=33  style="text-align: center; vertical-align: middle; width:25%;" oninput="calculateArmA()"></input></li>
+<li>Base armor, including equipment, with no fairy equipped: <input id="c1_armor_base" oninput="calculateArmA()" style="text-align: center; vertical-align: middle; width:25%;" type="text" value="33"/></li>
 </ul>
 <ul>
-	<li>Total armor tiles (%): <input id="c1_tiles" type="text" value=30  style="text-align: center; vertical-align: middle; width:25%;" oninput="calculateArmA()"></input></li>
+<li>Total armor tiles (%): <input id="c1_tiles" oninput="calculateArmA()" style="text-align: center; vertical-align: middle; width:25%;" type="text" value="30"/></li>
 </ul>
 <ul>
-	<li>Armor aura under consideration (%): <input id="c1_aura" type="text" value=11.4  style="text-align: center; vertical-align: middle; width:25%;" oninput="calculateArmA()"></input></li>
+<li>Armor aura under consideration (%): <input id="c1_aura" oninput="calculateArmA()" style="text-align: center; vertical-align: middle; width:25%;" type="text" value="11.4"/></li>
 </ul>
 <ul>
-	<li>Product of any skills (%): <input id="c1_skills" type="text" value=0  style="text-align: center; vertical-align: middle; width:25%;" oninput="calculateArmA()"></input></li>
+<li>Product of any skills (%): <input id="c1_skills" oninput="calculateArmA()" style="text-align: center; vertical-align: middle; width:25%;" type="text" value="0"/></li>
 </ul>
 <ul>
-	<li>
-		<div class="col-12">
-			<select id="c1_talent" style="width:auto;" oninput="calculateArmA()">
-				<option value="0">- Talent -</option>
-				<option value="2">Armor I</option>
-				<option value="2">Sturdy</option>
-				<option value="3">Armor II</option>
-				<option value="1">Anything else</option>
-			</select>
-		</div>
-	</li>
-</ul>
+<li>
 
-<!-- <button type="button small" onclick="calculateArmA()">Calculate</button> -->
-<font size="5"><p id="c1"></p></font>
+<select id="c1_talent" oninput="calculateArmA()" style="width:auto;">
+<option value="0">- Talent -</option>
+<option value="2">Armor I</option>
+<option value="2">Sturdy</option>
+<option value="3">Armor II</option>
+<option value="1">Anything else</option>
+</select>
 
-<h3>With fairy equipped</h3>
-<center><div class="figure">
-	<img src="images/armor-calc/with-fairy.png" width="100%"/>
-</div><em>Here, your base armor would be 38. This number already factors in your fairy aura, but not talent/tiles/skills.</em></center>
-<ul>
-	<li>Base armor, including equipment, with fairy aura: <input id="c2_armor_base" type="text" value=38  style="text-align: center; vertical-align: middle; width:25%;" oninput="calculateArmB()"></input></li>
-</ul>
-<ul>
-	<li>Total armor tiles (%): <input id="c2_tiles" type="text" value=15  style="text-align: center; vertical-align: middle; width:25%;" oninput="calculateArmB()"></input></li>
-</ul>
-<ul>
-	<li>Product of any skills (%): <input id="c2_skills" type="text" value=0  style="text-align: center; vertical-align: middle; width:25%;" oninput="calculateArmB()"></input></li>
-</ul>
-<ul>
-	<li>
-		<div class="col-12">
-		<select id="c2_talent" style="width:auto;" oninput="calculateArmB()">
-			<option value="0">- Talent -</option>
-			<option value="2">Armor I</option>
-			<option value="2">Sturdy</option>
-			<option value="3">Armor II</option>
-			<option value="1">Anything else/no activation</option>
-		</select>
-	</div>
 </li>
 </ul>
+<!-- <button type="button small" onclick="calculateArmA()">Calculate</button> -->
+<font size="5"><p id="c1"></p></font>
+<h3>With fairy equipped</h3>
+<center><div class="figure">
+<img src="images/armor-calc/with-fairy.png" width="100%"/>
+</div><em>Here, your base armor would be 38. This number already factors in your fairy aura, but not talent/tiles/skills.</em></center>
+<ul>
+<li>Base armor, including equipment, with fairy aura: <input id="c2_armor_base" oninput="calculateArmB()" style="text-align: center; vertical-align: middle; width:25%;" type="text" value="38"/></li>
+</ul>
+<ul>
+<li>Total armor tiles (%): <input id="c2_tiles" oninput="calculateArmB()" style="text-align: center; vertical-align: middle; width:25%;" type="text" value="15"/></li>
+</ul>
+<ul>
+<li>Product of any skills (%): <input id="c2_skills" oninput="calculateArmB()" style="text-align: center; vertical-align: middle; width:25%;" type="text" value="0"/></li>
+</ul>
+<ul>
+<li>
 
+<select id="c2_talent" oninput="calculateArmB()" style="width:auto;">
+<option value="0">- Talent -</option>
+<option value="2">Armor I</option>
+<option value="2">Sturdy</option>
+<option value="3">Armor II</option>
+<option value="1">Anything else/no activation</option>
+</select>
+
+</li>
+</ul>
 <!-- <button type="button small" onclick="calculateArmB()">Calculate</button> -->
 <font size="5"><p id="c2"></p></font>
-
 <span class="anchor" id="req"></span>
-<h2>Armor requirement calculator<sup><small><a href="#req">&#35;</a></small></sup></h2>
+<h2>Armor requirement calculator<sup><small><a href="#req">#</a></small></sup></h2>
 <p>
 	Against enemies with low to moderate amounts of damage, it's possible to stack your armor high enough to reduce all attacks to 1 - or even to 0 with flashbangs!
 	To help set your goals, here's an armor requirement calculator.
-	Just enter in the enemy's FP (<a href="https://pengupengupengu.github.io/gflmaps/#campaign=6006&mission=648">look that up here</a>),
+	Just enter in the enemy's FP (<a href="https://pengupengupengu.github.io/gflmaps/#campaign=6006&amp;mission=648">look that up here</a>),
 	and note the enemy type if applicable (visual reference: <a href="https://iopwiki.com/images/b/b9/Judge_S.png">Judge</a>, <a href="https://iopwiki.com/images/3/35/Pyxis_S.png">Pyxis</a>, <a href="https://static.tvtropes.org/pmwiki/pub/images/girls_frontline_dragoon_swap.png">SWAP Dragoon</a>).
 </p>
 <ul>
-	<li><input id="efp" type="text" value=40  style="text-align: center; vertical-align: middle; width:25%;" oninput="calculateArmReq()"></input></li>
+<li><input id="efp" oninput="calculateArmReq()" style="text-align: center; vertical-align: middle; width:25%;" type="text" value="40"/></li>
 </ul><ul>
-	<li>
-		<div class="col-12">
-			<select id="enemycat" style="width:auto;" oninput="calculateArmReq()">
-				<option value="0">- Enemy type -</option>
-				<option value="2">Judge</option>
-				<option value="3">Pyxis</option>
-				<option value="4">SWAP Dragoon</option>
-				<option value="1">Most/generic enemies</option>
-				<!-- <option value="1">Human Resources</option> -->
-			</select>
-		</div>
-	</li>
+<li>
+
+<select id="enemycat" oninput="calculateArmReq()" style="width:auto;">
+<option value="0">- Enemy type -</option>
+<option value="2">Judge</option>
+<option value="3">Pyxis</option>
+<option value="4">SWAP Dragoon</option>
+<option value="1">Most/generic enemies</option>
+<!-- <option value="1">Human Resources</option> -->
+</select>
+
+</li>
 </ul>
-
 <!-- <button type="button small" onclick="calculateArmReq()">Calculate</button> -->
-
-	<table style="width:auto; margin-top: 25px;">
-		<tr>
-			<th>Equip</th>
-			<th>Ideal armor</th>
-		</tr>
-		<tr>
-			<td>No Flash</td>
-			<td id="id_arm_1">?</td>
-		</tr>
-		<tr>
-			<td>Flash</td>
-			<td id="id_arm_2">?</td>
-		</tr>
-		<tr>
-			<td>M26-MASS</td>
-			<td id="id_arm_3">?</td>
-		</tr>
-		<tr>
-			<td>M26-MASS+Flash</td>
-			<td id="id_arm_4">?</td>
-		</tr>
-	</table>
-</center>
+<table style="width:auto; margin-top: 25px;">
+<tr>
+<th>Equip</th>
+<th>Ideal armor</th>
+</tr>
+<tr>
+<td>No Flash</td>
+<td id="id_arm_1">?</td>
+</tr>
+<tr>
+<td>Flash</td>
+<td id="id_arm_2">?</td>
+</tr>
+<tr>
+<td>M26-MASS</td>
+<td id="id_arm_3">?</td>
+</tr>
+<tr>
+<td>M26-MASS+Flash</td>
+<td id="id_arm_4">?</td>
+</tr>
+</table>
 
 <p>
 	Keep in mind that some enemies may have skills, armor piercing, or other effects that complicate matters.
 	At least in the case of AP, just add their AP stat to the armor requirement.
 	SGs can survive even with less armor than listed, but they will die faster.
 </p>
-
 <span class="anchor" id="equations"></span>
-<h2>Equations used<sup><small><a href="#equations">&#35;</a></small></sup></h2>
+<h2>Equations used<sup><small><a href="#equations">#</a></small></sup></h2>
 <p>
 	Maximum enemy damage, assuming no AP, is
 </p>
@@ -251,52 +248,54 @@ $$ \text{Final armor} = \left\lfloor \left\lceil (\text{Base armor} + \text{equi
 	To combine skills, convert each skill effect into a multiplier, multiply them, and convert back to a percent increase.
 	For example: given a 30% and 45% skill buff, <code>1.3*1.45=1.885</code> for an 88.5% net skill buff.
 </p>
-
 <span class="anchor" id="disclaimer"></span>
-<h2>Disclaimer<sup><small><a href="#disclaimer">&#35;</a></small></sup></h2>
+<h2>Disclaimer<sup><small><a href="#disclaimer">#</a></small></sup></h2>
 <p>
 	This game sometimes <a href="sniper-rework">cannot</a> <a href="images/misc/HCGTdcT.png">math</a> <a href="https://old.reddit.com/r/girlsfrontline/comments/we5q4h/weekly_commanders_lounge_august_02_2022/iino3ww/">properly</a>, so I cannot guarantee these results will always be correct.
 	These equations will work almost all the time, but sometimes for no reason you may end up with an off-by-one error.
 </p>
-<span class="anchor" id="ads"></span>
-<h2>More like this</h2>
-<section class="tiles">
-	<a href="rof-calc">
-		<div class="gallery">
-		  <div class="gallerypic">
-			<img src="images/icon/rof-calc.jpg" width="33%" height="400">
-			<div class="gallerypicdesc"><b>Rate of Fire Calculator</b><br/>Optimize your RFHGs and ARSMGs</div>
-		  </div>
-		</div>
-	</a>
 
-	<a href="skill-levels">
-		<div class="gallery gen">
-		  <div class="gallerypic">
-			<img src="images/icon/skill-levels.jpg" width="33%" height="400">
-			<div class="gallerypicdesc"><b>Skill Levels</b><br/>What changes, and what's worth it</div>
-		  </div>
-		</div>
-	</a>
-</section>
+    <div class="more-like-this">
+        <h2>More like this</h2>
+        <div class="mlt-gallery-grid">
 
+                <a href="rof-calc" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/rof-calc.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">Rate of Fire Calculator</div>
+                            <div class="mlt-gallery-desc">Optimize your RFHGs and ARSMGs</div>
+                        </div>
+                    </div>
+                </a>
 
-<footer id="footer">
-	<div class="inner">
-		<ul class="copyright">
-			<li>Content: BigStupidJellyfish</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-		</ul>
-	</div>
-</footer>
-</div>
+                <a href="skill-levels" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/skill-levels.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">Skill Levels</div>
+                            <div class="mlt-gallery-desc">What changes, and what's worth it</div>
+                        </div>
+                    </div>
+                </a>
+        </div>
+    </div>
+    
 
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+            </div> 
+        </div> </main>
 
+    <footer>
+        <div class="container">
+            <p>
+                <a href="../pages/about">About GFMath</a> ·
+                <a href="../pages/spoilers">Explanation of common plot types</a> ·
+                <a href="#" onclick="window.scrollTo(0,0)">Back to top</a>
+            </p>
+            <p style="margin-top: 20px;">
+                Content: BigStupidJellyfish
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

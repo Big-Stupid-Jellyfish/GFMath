@@ -1,61 +1,60 @@
-<!DOCTYPE HTML>
-<!--
-Forty by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-805N997DPC');
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-<meta name="description" content="Girls Frontline, by the numbers">
-<title>AR Damage over time - GFMath</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="../assets/css/main.css" />
-<link rel="icon" sizes="180x180" href="images/icon/ads-180.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/icon/ads-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/icon/ads-16.png">
-<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-805N997DPC');
+    </script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    <title>AR Damage over time - GFMath</title>
+
+<link href="images/icon/ads-180.png" rel="icon" sizes="180x180"/>
+<link href="images/icon/ads-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="images/icon/ads-16.png" rel="icon" sizes="16x16" type="image/png"/>
+
+    <link rel="stylesheet" href="../assets/css/common.css" />
+
+    
 </head>
-<body class="is-preload">
-<!-- Wrapper -->
-<div id="wrapper">
-<!-- Header -->
-<header id="header">
-<a href="../index" class="logo"><strong>GFMath</strong> <span>Detailed GFL analysis</span></a>
-<nav></nav>
-<a href="https://www.youtube.com/c/BigStupidJellyfish" class="logo"><strong>Youtube</strong></a>
-</header>
-<div id="main" class="alt">
-<section>
-<div class="inner">
-<header class="major">
-	<h1>AR Damage Over Time: Chip Edition</h1>
-</header>
-			
-<center><em>By BigStupidJellyfish | 2020-November-07 | Rewritten 2022-January-14</em></center>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    GFMath
+                </div>
+                <nav>
+                    <a href="../index">Home</a>
+                    <a href="https://www.youtube.com/c/BigStupidJellyfish" target="_blank">YouTube</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
+    <main>
+        <div class="article-container">
+            <header class="article-header">
+                <h1>AR Damage Over Time: Chip Edition</h1>
+                <div class="meta">By BigStupidJellyfish | 2020-November-07 | Rewritten 2022-January-14</div>
+            </header>
+            <div class="article-content">
 <p>
 	There are many self-buffing ARs in the game, with all sorts of combinations of stats, buffs, and cooldowns.
 	The relatively new <a href="chips">#2 Processor chip</a> has thrown a wrench into the established AR 'meta,' benefitting slower ARs much more.
 	A number of significant <a href="newquip#speqs">SPEQ adjustments</a> were also released.
 </p>
-
 <p>
 	G41 is a classic doll to use as a baseline for comparison (taking the role of "a generic selfbuffing AR").
 	With her own ranking SPEQ seeing a major power spike, let's redo some comparisons and see how some ARs are affected.
 </p>
-
 <p>
 	Before we get into things, a disclaimer: I've only selected dolls/configurations that translate rather simply into theoretical DPS numbers.
 	There are a <em>lot</em> of ARs whose skills rely on various external factors that can't be represented well here.
@@ -64,10 +63,8 @@ gtag('config', 'G-805N997DPC');
 	Consider RFB's targeting, which may significantly reduce incoming damage from Jaeger-style backlines, or G11's triple hit, which improves consistency and reduces the effect of link protection.
 	As always, for best results, test your teams in Target Saving.
 </p>
-
 <span class="anchor" id="day"></span>
-<h2>Daytime<sup><small><a href="#day">&#35;</a></small></sup></h2>
-
+<h2>Daytime<sup><small><a href="#day">#</a></small></sup></h2>
 <p>
 	Starting off with some various 5-star ARs and a fairy that doesn't change anything:
 </p>
@@ -92,13 +89,12 @@ gtag('config', 'G-805N997DPC');
 <div class="figure">
 <img src="images/g41-standard/set1-command-day.jpg" width="100%"/>
 </div>
-
 <p>
 	RO's neural upgrade is coming soon, so it's reasonable to expect some ROF tiles in your ARSMGs:
 </p>
 <div class="figure">
-	<img src="images/g41-standard/set1.1-artillery-day.jpg" width="49%"/>
-	<img src="images/g41-standard/set1.1-command-day.jpg" width="49%"/>
+<img src="images/g41-standard/set1.1-artillery-day.jpg" width="49%"/>
+<img src="images/g41-standard/set1.1-command-day.jpg" width="49%"/>
 </div>
 <p>
 	As expected, G36/AR-15/G11 drop off a bit due to their high base/in-skill ROF.
@@ -110,44 +106,42 @@ gtag('config', 'G-805N997DPC');
 	M4 can't exactly buff herself, so I'll put R5 in her place:
 </p>
 <div class="figure">
-	<img src="images/g41-standard/set1.2-artillery-day.jpg" width="49%"/>
-	<img src="images/g41-standard/set1.2-command-day.jpg" width="49%"/>
+<img src="images/g41-standard/set1.2-artillery-day.jpg" width="49%"/>
+<img src="images/g41-standard/set1.2-command-day.jpg" width="49%"/>
 </div>
 <p>
 	All this crit rate means STAR can go back to her mod SPEQ, and it looks like she and G41 like this configuration a lot.
 </p>
-
 <p>
 	Continuing to generate all these variant charts for other sets of ARs would take a while, so here are some more generic cases with new dolls:
 </p>
 <div class="figure">
-	<img src="images/g41-standard/set2.0-artillery-day.jpg" width="100%"/>
+<img src="images/g41-standard/set2.0-artillery-day.jpg" width="100%"/>
 </div>
 <p>And with Command:</p>
 <div class="figure">
-	<img src="images/g41-standard/set2.0-command-day.jpg" width="100%"/>
+<img src="images/g41-standard/set2.0-command-day.jpg" width="100%"/>
 </div>
 <ul>
-	<li>For typical ARSMG battle durations (6-12s), AK-12 is now much worse than G41 (for more AK-12 equipment comparisons, <a href="https://imgur.com/a/RZOInWT">see these charts</a>).</li>
-	<li>MDR does quite nicely, especially with lower crit auras. Her partial ROF selfbuff means she'll do worse, relatively, as you add ROF tiles (similarly to G36 earlier).</li>
-	<li>TAR-21 doesn't lose ground when switching to Command, but she wasn't great to begin with.</li>
+<li>For typical ARSMG battle durations (6-12s), AK-12 is now much worse than G41 (for more AK-12 equipment comparisons, <a href="https://imgur.com/a/RZOInWT">see these charts</a>).</li>
+<li>MDR does quite nicely, especially with lower crit auras. Her partial ROF selfbuff means she'll do worse, relatively, as you add ROF tiles (similarly to G36 earlier).</li>
+<li>TAR-21 doesn't lose ground when switching to Command, but she wasn't great to begin with.</li>
 </ul>
-
 <p>
 	A comparison focusing on AUG and Angelica:
 </p>
 <div class="figure">
-	<img src="images/g41-standard/aug-artillery-day.jpg" width="49%"/>
-	<img src="images/g41-standard/aug-command-day.jpg" width="49%"/>
+<img src="images/g41-standard/aug-artillery-day.jpg" width="49%"/>
+<img src="images/g41-standard/aug-command-day.jpg" width="49%"/>
 </div>
 <span class="anchor" id="night"></span>
-<h2>Nighttime<sup><small><a href="#night">&#35;</a></small></sup></h2>
+<h2>Nighttime<sup><small><a href="#night">#</a></small></sup></h2>
 <p>
 	Chips are generally awesome at day, but they become even better at night - PEQs are almost mandatory, so crits are less valuable to start with.
 	Let's see how some night ARs stack up.
 </p>
 <div class="figure">
-	<img src="images/g41-standard/set3.0-artillery-night.jpg" width="100%"/>
+<img src="images/g41-standard/set3.0-artillery-night.jpg" width="100%"/>
 </div>
 <!-- AS Val gets a VFL here as it's only *barely* worse than an EOT and I'm lazy. -->
 <p>
@@ -158,7 +152,7 @@ gtag('config', 'G-805N997DPC');
 	And if you weren't around for Deep Dive or are from the future with her chip-slot SPEQ, <a href="https://imgur.com/a/JYEgQBO">here are some more comparisons with 9A-91</a>.
 </p>
 <div class="figure">
-	<img src="images/g41-standard/set3.0-command-night.jpg" width="100%"/>
+<img src="images/g41-standard/set3.0-command-night.jpg" width="100%"/>
 </div>
 <p>
 	Crit damage auras only benefit AR-15 and AS Val here.
@@ -170,15 +164,13 @@ gtag('config', 'G-805N997DPC');
 	You may need to kite Python a little bit to delay some stacks.
 </p>
 <span class="anchor" id="comments"></span>
-<h2>Other Comments<sup><small><a href="#comments">&#35;</a></small></sup></h2>
-
+<h2>Other Comments<sup><small><a href="#comments">#</a></small></sup></h2>
 <p>
 	Most of the dolls here aren't all that meta - RFHG continues to dominate that landscape.
 	Upcoming ranking events are unlikely to call for anything far beyond M4A1/G11/416.
 	416 and M4's cannon mode aren't covered here as there's no reasonable way to plot AOE on a chart like this.
 	Similar deal with G11's mod and it's HP percentage-based damage.
 </p>
-
 <p>
 	Your dolls probably aren't in echelons all by themselves (unless it's some cheap farm route), so other skills and tilebuffs will change how things work out.
 	Add a Fervor talent for even more fun. Some ARs will have better or worse tilebuffs themselves for your frontline.
@@ -188,25 +180,21 @@ gtag('config', 'G-805N997DPC');
 	The frame timings of each attack may also cause slight differences with simulators.
 	Think of this as a more general/average relationship. 
 </p>
-
 <p>
 	Old (pre-chip) version of this page <a href="g41-standard-legacy">is here</a>.
 </p>
-
 <p>
 	Bonus representation - to see about where these plots converge to over very long periods, here are some example semilog plots going up to 10000 seconds:
 </p>
 <div class="figure">
-	<img src="images/g41-standard/sl2.0-artillery-day.jpg" width="49%"/>
-	<img src="images/g41-standard/sl2.0-command-day.jpg" width="49%"/>
+<img src="images/g41-standard/sl2.0-artillery-day.jpg" width="49%"/>
+<img src="images/g41-standard/sl2.0-command-day.jpg" width="49%"/>
 </div>
-
 <p>
 	In a sense, chips make ARSMG teambuilding super annoying.
 	So many dolls have the potential to be strong, but are incredibly sensitive to a number of conditions (crit rate/crit damage/ROF buffs, mostly).
 	Dolls will want to change equipment at different times, changing their relative performance.
 </p>
-
 <p>
 	... Does it count as a "bright side" that almost all remotely competitively viable ARs have chip-replacement SPEQs with no crit damage penalty, so you're free to just VFL+SPEQ?
 </p>
@@ -225,45 +213,51 @@ gtag('config', 'G-805N997DPC');
 	Chips end up making optimized teambuilding rely way harder on external calculators while also making half the class even more irrelevant.
 -->
 
-<span class="anchor" id="ads"></span>
-<h2>More like this</h2>
-	<section class="tiles">	
-		<a href="fairy-talents">
-			<div class="gallery">
-			  <div class="gallerypic">
-				<img src="images/icon/fairy-talents.jpg" alt="" width="33%" height="100">
-				<div class="gallerypicdesc"><b>Picking Fairy Talents</b><br/>Fervor versus Damage II</div>
-			  </div>
-			</div>
-		</a>
-		
-		<a href="2v3ar">
-			<div class="gallery">
-				<div class="gallerypic">
-				<img src="images/icon/2v3ar.jpg" width="33%" height="400">
-				<div class="gallerypicdesc"><b>Are 2 ARs or 3 ARs Better?</b><br/>Does it matter?</div>
-				</div>
-			</div>
-		</a>
-</section>
-	<!-- Footer -->
-	<footer id="footer">
-		<div class="inner">
-			<ul class="copyright">
-		<li>Content: BigStupidJellyfish</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</div>
-	</footer>
-</div>
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
 
+<!-- Footer -->
+
+    <div class="more-like-this">
+        <h2>More like this</h2>
+        <div class="mlt-gallery-grid">
+
+                <a href="fairy-talents" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/fairy-talents.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">Picking Fairy Talents</div>
+                            <div class="mlt-gallery-desc">Fervor versus Damage II</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="2v3ar" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/2v3ar.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">Are 2 ARs or 3 ARs Better?</div>
+                            <div class="mlt-gallery-desc">Does it matter?</div>
+                        </div>
+                    </div>
+                </a>
+        </div>
+    </div>
+    
+
+            </div> 
+        </div> </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                <a href="../pages/about">About GFMath</a> ·
+                <a href="../pages/spoilers">Explanation of common plot types</a> ·
+                <a href="#" onclick="window.scrollTo(0,0)">Back to top</a>
+            </p>
+            <p style="margin-top: 20px;">
+                Content: BigStupidJellyfish
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,91 +1,93 @@
-<!DOCTYPE HTML>
-<!--
-Forty by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-805N997DPC');
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<title>General Liu - GFMath</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="../assets/css/main.css" />
-<link rel="icon" sizes="180x180" href="images/icon/ads-180.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/icon/ads-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/icon/ads-16.png">
-<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-</head>
-<body class="is-preload">
-<!-- Wrapper -->
-<div id="wrapper">
-<!-- Header -->
-<header id="header">
-<a href="../index" class="logo"><strong>GFMath</strong> <span>Detailed GFL analysis</span></a>
-<nav></nav>
-<a href="https://www.youtube.com/c/BigStupidJellyfish" class="logo"><strong>Youtube</strong></a>
-</header>
-<div id="main" class="alt">
-<section>
-<div class="inner">
-<header class="major">
-<h1>General Liu</h1>
-</header>
-<center><em>By BigStupidJellyfish | 2022-February-28 | Updated 2022-August-01</em></center>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-805N997DPC');
+    </script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    <title>General Liu - GFMath</title>
+
+<link href="images/icon/ads-180.png" rel="icon" sizes="180x180"/>
+<link href="images/icon/ads-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="images/icon/ads-16.png" rel="icon" sizes="16x16" type="image/png"/>
+
+    <link rel="stylesheet" href="../assets/css/common.css" />
+
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    GFMath
+                </div>
+                <nav>
+                    <a href="../index">Home</a>
+                    <a href="https://www.youtube.com/c/BigStupidJellyfish" target="_blank">YouTube</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="article-container">
+            <header class="article-header">
+                <h1>General Liu</h1>
+                <div class="meta">By BigStupidJellyfish | 2022-February-28 | Updated 2022-August-01</div>
+            </header>
+            <div class="article-content">
 <blockquote>
-	<p><strong>Shared Vengeance</strong> ICD 1s/CD 1s</p>
-	<p>
+<p><strong>Shared Vengeance</strong> ICD 1s/CD 1s</p>
+<p>
 		Passive: At the start of the battle, gain 3 squads of 3-linked reinforcement Dolls that move behind the echelon and start attacking.
 		The reinforcement Dolls have 35% of General Liu's firepower stat, 60% of her rate of fire stat, and 40% of her accuracy stat.
 		Each link has 5 HP.
 		All other stats and attack modes are the same as General Liu's.
 	</p>
-	<p>
+<p>
 		Active: Clicking the skill toggles between different modes.
 		Normal Mode (default): Decrease rate of fire by 10% and increase damage by 20%, prioritizing the most distant enemy unit.
 		Automatic Mode: Reduce damage by 10% and increase rate of fire by 20%, prioritizing the closest enemy unit.
 	</p>
 </blockquote>
-	
 <p>
 	General Liu, a new RF released as a drop in Dual Randomness, has a rather interesting skill.
 	Rather than buffing her own stats, she brings a few friends to help out.
 	There's a lot of numbers here, and the best way of comparing them to a run-of-the-mill selfbuffer is not so obvious.
 	Let's try a few things and see how she looks.
 </p>
-
 <span class="anchor" id="stats"></span>
-<h2>Quick Math<sup><small><a href="#stats">&#35;</a></small></sup></h2>
+<h2>Quick Math<sup><small><a href="#stats">#</a></small></sup></h2>
 <p>
 	Let's start by making a few bad assumptions, and reign them in over time:
 </p>
 <ol>
-	<li>Suppose accuracy doesn't matter</li>
-	<li>Suppose targeting doesn't matter</li>
-	<li>Suppose Liu's clones are already in play</li>
-	<li>Suppose Liu's clones are treated equally</li>
-	<li>Suppose ROF frames don't exist/consider only the average DPS changes.</li>
+<li>Suppose accuracy doesn't matter</li>
+<li>Suppose targeting doesn't matter</li>
+<li>Suppose Liu's clones are already in play</li>
+<li>Suppose Liu's clones are treated equally</li>
+<li>Suppose ROF frames don't exist/consider only the average DPS changes.</li>
 </ol>
 <p>
 	Considering those, Liu herself does <code>1x FP * 1x ROF * 5x Links = 5 relative DPS</code>.
-	Either skill mode is a <code>0.9x FP/ROF * 1.2x ROF/FP = 1.08</code> average DPS multiplier to both her & her clones, so we'll ignore those for now.
+	Either skill mode is a <code>0.9x FP/ROF * 1.2x ROF/FP = 1.08</code> average DPS multiplier to both her &amp; her clones, so we'll ignore those for now.
 	Her clones do <code>0.35x FP * 0.6x ROF * 3x squads * 3x links/squad = 1.89 relative DPS</code>.
 	A few ways of considering that:
 </p>
 <ul>
-	<li>Liu's clones are like a constant 37.8% DPS increase, ignoring their reduced accuracy (which the remaining numbers will also do in this section).</li>
-	<li>Liu's main body is responsible for 73% of her DPS, and her clones for the remaining 27%.</li>
-	<li>Factoring in the buffs from each targeting mode, she effectively has a 48.8% DPS buff with 100% uptime (compared to normal selfbuffers who get a ~75% selfbuff with 5/8 uptime, or a ~46.9% average buff ignoring ICDs).</li>
+<li>Liu's clones are like a constant 37.8% DPS increase, ignoring their reduced accuracy (which the remaining numbers will also do in this section).</li>
+<li>Liu's main body is responsible for 73% of her DPS, and her clones for the remaining 27%.</li>
+<li>Factoring in the buffs from each targeting mode, she effectively has a 48.8% DPS buff with 100% uptime (compared to normal selfbuffers who get a ~75% selfbuff with 5/8 uptime, or a ~46.9% average buff ignoring ICDs).</li>
 </ul>
 <h3>Day, with accuracy</h3>
 <p>
@@ -102,9 +104,9 @@ gtag('config', 'G-805N997DPC');
 	Now,
 </p>
 <ul>
-	<li>Liu's clones are like a constant 33.2% DPS increase, assuming normal-ish daytime conditions.</li>
-	<li>Liu's main body is responsible for 75% of her DPS, and her clones for the remaining 25%.</li>
-	<li>Factoring in the buffs from each targeting mode, she effectively has a 43.9% DPS buff with 100% uptime (compared to normal selfbuffers who get a ~75% selfbuff with 5/8 uptime, or a ~46.9% average buff ignoring ICDs).</li>
+<li>Liu's clones are like a constant 33.2% DPS increase, assuming normal-ish daytime conditions.</li>
+<li>Liu's main body is responsible for 75% of her DPS, and her clones for the remaining 25%.</li>
+<li>Factoring in the buffs from each targeting mode, she effectively has a 43.9% DPS buff with 100% uptime (compared to normal selfbuffers who get a ~75% selfbuff with 5/8 uptime, or a ~46.9% average buff ignoring ICDs).</li>
 </ul>
 <h3>Night, with accuracy</h3>
 <p>
@@ -118,9 +120,9 @@ gtag('config', 'G-805N997DPC');
 	Now,
 </p>
 <ul>
-	<li>Liu's clones are like a constant 26.5% DPS increase, assuming normal-ish night conditions.</li>
-	<li>Liu's main body is responsible for 79% of her DPS, and her clones for the remaining 21%.</li>
-	<li>Factoring in the buffs from each targeting mode, she effectively has a 36.6% DPS buff with 100% uptime (compared to normal selfbuffers who get a ~75% selfbuff with 5/8 uptime, or a ~46.9% average buff ignoring ICDs).</li>
+<li>Liu's clones are like a constant 26.5% DPS increase, assuming normal-ish night conditions.</li>
+<li>Liu's main body is responsible for 79% of her DPS, and her clones for the remaining 21%.</li>
+<li>Factoring in the buffs from each targeting mode, she effectively has a 36.6% DPS buff with 100% uptime (compared to normal selfbuffers who get a ~75% selfbuff with 5/8 uptime, or a ~46.9% average buff ignoring ICDs).</li>
 </ul>
 <h3>In Short</h3>
 <p>
@@ -129,35 +131,35 @@ gtag('config', 'G-805N997DPC');
 	As the clones have significantly reduced accuracy, Liu will be somewhat less effective at night.
 </p>
 <span class="anchor" id="oddities"></span>
-<h2>Oddities<sup><small><a href="#oddities">&#35;</a></small></sup></h2>
+<h2>Oddities<sup><small><a href="#oddities">#</a></small></sup></h2>
 <p>
 	Liu's skill doesn't always work exactly as you may expect.
 	Some things to keep in mind:
 </p>
 <ul>
-	<li>Liu's clones are affected by standard buff skills as you'd expect.</li>
-	<li>Liu's clones are treated as being behind the standard grid. Tile-based skills will have to reach "off the map" to benefit them.
+<li>Liu's clones are affected by standard buff skills as you'd expect.</li>
+<li>Liu's clones are treated as being behind the standard grid. Tile-based skills will have to reach "off the map" to benefit them.
 		<ul>
-			<li>To buff all clones, Px4 would have to be moved to position 7 (don't actually do this).</li>
-			<li>P22's active cannot buff the clones.</li>
-			<li>This does not apply to formation buffs - Liu's main body is affected by tiles as normal, and the clones inherit those bonuses.</li>
-		</ul>
-	</li>
-	<li>Liu's clones are not treated as having a gun class. Skills that depend on classes (like K5's buff) will not affect them. They do not benefit from <a href="aim">Aim</a>.</li>
-	<li>Liu's clones cannot be kited, and will die to Rodeleros.</li>
-	<li>El Clear does not buff Liu's clones. She only buffs the main body.</li>
-	<li>If Liu is the team leader, Webley only buffs her main body. This isn't a very exciting combination anyways as Liu doesn't benefit from the skill cooldown reduction.</li>
-	<li>With some variation based on enemy position/movement/kiting, Liu's clones will start dealing damage from ~3.9-4.4s onwards.
+<li>To buff all clones, Px4 would have to be moved to position 7 (don't actually do this).</li>
+<li>P22's active cannot buff the clones.</li>
+<li>This does not apply to formation buffs - Liu's main body is affected by tiles as normal, and the clones inherit those bonuses.</li>
+</ul>
+</li>
+<li>Liu's clones are not treated as having a gun class. Skills that depend on classes (like K5's buff) will not affect them. They do not benefit from <a href="aim">Aim</a>.</li>
+<li>Liu's clones cannot be kited, and will die to Rodeleros.</li>
+<li>El Clear does not buff Liu's clones. She only buffs the main body.</li>
+<li>If Liu is the team leader, Webley only buffs her main body. This isn't a very exciting combination anyways as Liu doesn't benefit from the skill cooldown reduction.</li>
+<li>With some variation based on enemy position/movement/kiting, Liu's clones will start dealing damage from ~3.9-4.4s onwards.
 		It's better than the typical 5-6s ICD of selfbuffer rifles, but not instant.
 	</li> <!-- test results were: 4.37 3.93 4.27 4.37s (various enemies) -->
-	<li>
+<li>
 		Liu's passive always inflicts a debuff on her and her clones, so she effectively gets a permanent 8% ROF buff from C-93's passive (in addition to her 18% FP active/8% ROF from an active pigeonwing).
 		This makes Liu an ~8% better idea to use in an echelon with C-93, but isn't enough to mandate pairing them.
 		(For some bonus humor, the manner in which pigeonwings are distributed can cause shots from Liu's clones to desync, even further reducing corpse-whipping/overkill. <a href="https://old.reddit.com/r/girlsfrontline/comments/we5q4h/weekly_commanders_lounge_august_02_2022/iiokri5/?context=1">For some bonus horror...</a>)
 	</li>
 </ul>
 <span class="anchor" id="modes"></span>
-<h2>Modes<sup><small><a href="#modes">&#35;</a></small></sup></h2>
+<h2>Modes<sup><small><a href="#modes">#</a></small></sup></h2>
 <p>
 	By default, Liu gives herself a permanent 10% ROF debuff and 20% FP buff with backline targeting.
 	Activating her skill switches to frontline targeting and flips the values (-10% FP, +20% ROF).
@@ -168,24 +170,22 @@ gtag('config', 'G-805N997DPC');
 	Let's run some tests with an ordinary RFHG and see what happens.
 </p>
 <center><div class="figure">
-	<img src="images/glue/team-target.png" width="80%"/>
+<img src="images/glue/team-target.png" width="80%"/>
 </div><em>The echelon used.</em></center>
-
 <h3>Homogeneous groups</h3>
 <p>
 	There are two main possibilities when it comes to explaining targeting-based performance variations:
 </p>
 <ol>
-	<li>One type of targeting is better because it damages important enemies. This is generally something you figure out by inspection on a per-fight basis, so there's not much to test.</li>
-	<li>One type of targeting is better because it hits different enemies from the other dolls.</li>
+<li>One type of targeting is better because it damages important enemies. This is generally something you figure out by inspection on a per-fight basis, so there's not much to test.</li>
+<li>One type of targeting is better because it hits different enemies from the other dolls.</li>
 </ol>
 <p>
 	I didn't look much into this in my <a href="augelica">AUG investigation</a>, leaving the exact reason for AUG's excellent (pre-chip) performance somewhat uncertain.
 	To help narrow that down with Liu, let's run the above team against some groups made up of only one enemy type.
 </p>
-
 <center><div class="figure">
-	<img src="images/glue/liu-test-1.png" width="100%"/>
+<img src="images/glue/liu-test-1.png" width="100%"/>
 </div><em>No fairy, across the board. Lee with SPEQ. Note that M14 is at a ~10% relative advantage due to her oath.</em></center>
 <p>
 	An unusual pattern emerges: with Liu changed to frontline targeting, clear times tended to be faster and the echelon took less damage.
@@ -205,7 +205,6 @@ gtag('config', 'G-805N997DPC');
 	Liu was also replaced by Lee in one set of the above tests, to help get a sense of how she compares to normal options.
 	Lee overall looked worse than either of Liu's targeting options.
 </p>
-
 <h3>Orthrus</h3>
 <p>
 	Liu has a whole bunch of links shooting bullets.
@@ -229,7 +228,7 @@ $$ 5\text{ links} \times \frac{30 \text{ frames/sec}}{\left\lfloor \frac{1500}{\
 </p>
 <p>
 	For comparison: ST AR-15 at max ROF (RO tiles <a href="star-buffs">post-rework</a>, normal skill ROF pre-rework) does \( 2\text{ hits/link} \times 5\text{ links} \times \frac{30 \text{ frames/sec}}{\left\lfloor \frac{1500}{116} \right\rfloor \text{ frames/attack}} = 25 \text{ SPS}\).
-	With a VFL & Chip, K2 goes through \( 3\text{ hits/link} \times 5\text{ links} \times \frac{30 \text{ frames/sec}}{\left\lfloor \frac{1500}{78+25} \right\rfloor \text{ frames/attack}} = 32.14 \text{ SPS}\).
+	With a VFL &amp; Chip, K2 goes through \( 3\text{ hits/link} \times 5\text{ links} \times \frac{30 \text{ frames/sec}}{\left\lfloor \frac{1500}{78+25} \right\rfloor \text{ frames/attack}} = 32.14 \text{ SPS}\).
 	While Liu clearly does better than normal rifles, it's nothing exceptional compared to multihit ARs.
 </p>
 <p>
@@ -238,7 +237,7 @@ $$ 5\text{ links} \times \frac{30 \text{ frames/sec}}{\left\lfloor \frac{1500}{\
 </p>
 <!-- Also don't mind the units not quite matching up :))) -->
 <span class="anchor" id="performance"></span>
-<h2>Real Performance<sup><small><a href="#performance">&#35;</a></small></sup></h2>
+<h2>Real Performance<sup><small><a href="#performance">#</a></small></sup></h2>
 <p>
 	One of the bigger problems with damage simulators is their inability to simulate link protection. (But not the only issue - not being able to properly model at least half the dolls in the game is another one! <a href="simulation">Read more about that here</a>.)
 	You can get decently large numbers with an IWS/Contender/Mk23/Grizzly/Webley echelon, but will end up with something absolutely miserable in real combat.
@@ -255,18 +254,17 @@ $$ 5\text{ links} \times \frac{30 \text{ frames/sec}}{\left\lfloor \frac{1500}{\
 </p> -->
 <p>
 	Now, to the testing.
-	I'll be keeping Liu in her default (backline) mode for consistency & laziness reasons.
+	I'll be keeping Liu in her default (backline) mode for consistency &amp; laziness reasons.
 	Keep in mind that switching her to frontline targeting may give better results in some cases.
 </p>
 <center><div class="figure">
-	<img src="images/glue/team-target2.png" width="80%"/>
+<img src="images/glue/team-target2.png" width="80%"/>
 </div><em>Type88 on 7, Liu on 1. Note that the rifles compared will have slightly different tiles.</em></center>
-
 <p>
 	And the results:
 </p>
 <center><div class="figure">
-	<img src="images/glue/liu-test-2.png" width="100%"/>
+<img src="images/glue/liu-test-2.png" width="100%"/>
 </div><em></em></center>
 <p>
 	A very strong showing for Liu.
@@ -276,16 +274,14 @@ $$ 5\text{ links} \times \frac{30 \text{ frames/sec}}{\left\lfloor \frac{1500}{\
 <p>
 	R93 was oathed, so an unoathed one will do slightly worse.
 </p>
-
 <p>
 	Another set, with Rico as the standard pair:
 </p>
 <center><div class="figure">
-	<img src="images/glue/team-target3.png" width="80%"/>
+<img src="images/glue/team-target3.png" width="80%"/>
 </div><em></em></center>
-
 <center><div class="figure">
-	<img src="images/glue/liu-test-3.png" width="100%"/>
+<img src="images/glue/liu-test-3.png" width="100%"/>
 </div><em></em></center>
 <p>
 	None of the rifles did a great job of outdamaging Rico, Liu included.
@@ -298,7 +294,7 @@ $$ 5\text{ links} \times \frac{30 \text{ frames/sec}}{\left\lfloor \frac{1500}{\
 	I would not take this as evidence of Lee actually performing more consistently or anything like that.
 </p>
 <span class="anchor" id="p22"></span>
-<h2>Is P22 bad?<sup><small><a href="#p22">&#35;</a></small></sup></h2>
+<h2>Is P22 bad?<sup><small><a href="#p22">#</a></small></sup></h2>
 <p>
 	Liu is good.
 	P22 is good.
@@ -312,14 +308,14 @@ $$ 5\text{ links} \times \frac{30 \text{ frames/sec}}{\left\lfloor \frac{1500}{\
 	Four easy reasons:
 </p>
 <ol>
-	<li>HG tiles are typically a bit more valuable than skills: ~30% more DPS with 100% uptime is better than ~25% more DPS with 8/12 uptime. P22's tiles work just fine, and are much better than most alternatives that only cover 1 RF.</li>
-	<ul>
-		<li>No, tiles being additive doesn't change this by much. If you already have a 30% tile: it's \( \frac{1.6}{1.3} = 23.1\% \) more DPS, with 100% uptime, with no ICD. Most good HGs, including P22, also have some nice extras (crit rate/acc) thrown in to make it even better.</li>
-		<li>I'm not saying skills are useless. NZ75 is still bad.</li>
-	</ul>
-	<li>The clones are not that big of a deal, as Liu's main body still does most of the damage. Liu receives an effective ~20% DPS buff from P22's active, compared to 25% on standard rifles.</li>
-	<li>P22 isn't just a damage buffer. She provides evasion and shields to your frontlines. If you cared so much for DPS at any expense that the ~20% effective buff bothers you, you shouldn't deploy P22 on any team because Px4 Storm exists and gives <a href="px4"><em>much</em> bigger numbers</a>.</li>
-	<li>Your other rifle still benefits fully from the skill.</li>
+<li>HG tiles are typically a bit more valuable than skills: ~30% more DPS with 100% uptime is better than ~25% more DPS with 8/12 uptime. P22's tiles work just fine, and are much better than most alternatives that only cover 1 RF.</li>
+<ul>
+<li>No, tiles being additive doesn't change this by much. If you already have a 30% tile: it's \( \frac{1.6}{1.3} = 23.1\% \) more DPS, with 100% uptime, with no ICD. Most good HGs, including P22, also have some nice extras (crit rate/acc) thrown in to make it even better.</li>
+<li>I'm not saying skills are useless. NZ75 is still bad.</li>
+</ul>
+<li>The clones are not that big of a deal, as Liu's main body still does most of the damage. Liu receives an effective ~20% DPS buff from P22's active, compared to 25% on standard rifles.</li>
+<li>P22 isn't just a damage buffer. She provides evasion and shields to your frontlines. If you cared so much for DPS at any expense that the ~20% effective buff bothers you, you shouldn't deploy P22 on any team because Px4 Storm exists and gives <a href="px4"><em>much</em> bigger numbers</a>.</li>
+<li>Your other rifle still benefits fully from the skill.</li>
 </ol>
 <p>
 	While we're on very shaky grounds here in trying to summarize this into a single number, you could sort of say that ~30-40% of P22's kit (her FP buff - the rest would be something like ~50% tiles, ~10-20% defense buffs) is ~20% less effective with Liu (who is half your team).
@@ -336,7 +332,7 @@ $$ 5\text{ links} \times \frac{30 \text{ frames/sec}}{\left\lfloor \frac{1500}{\
 	I would not extend the same charity to K5 - Grizzly/SAA can easily replace her and their skills have full effect.
 </p>
 <span class="anchor" id="conclusion"></span>
-<h2>Conclusion<sup><small><a href="#conclusion">&#35;</a></small></sup></h2>
+<h2>Conclusion<sup><small><a href="#conclusion">#</a></small></sup></h2>
 <p>
 	Liu's pretty cool.
 	I'm a little late to recommend farming her, but I can at least say you should raise one if you did.
@@ -350,32 +346,31 @@ $$ 5\text{ links} \times \frac{30 \text{ frames/sec}}{\left\lfloor \frac{1500}{\
 	But even without bothering with that she does well.
 </p>
 <span class="anchor" id="formations"></span>
-<h2>Echelon ideas<sup><small><a href="#formations">&#35;</a></small></sup></h2>
+<h2>Echelon ideas<sup><small><a href="#formations">#</a></small></sup></h2>
 <p>
 	Standard disclaimer: teams should be built as needed according to the circumstances of specific maps and enemies.
 	Do not blindly copy-and-paste teams.
 	With that in mind, here are some not-entirely-awful ideas to illustrate where General Liu can be used.
 </p>
 <center><div class="figure">
-	<img src="images/glue/teamex1.png" width="40%"/>
-	<img src="images/glue/teamex2.png" width="40%"/>
+<img src="images/glue/teamex1.png" width="40%"/>
+<img src="images/glue/teamex2.png" width="40%"/>
 </div></center>
 <p>
 	Left: R93/Stechkin/Liu/M950A/P22. Can't get more generic than that.
 	Right: Liu/Grizzly/SVD/SAA/M950A. Mixed selfbuffer types.
 </p>
 <center><div class="figure">
-	<img src="images/glue/teamex3.png" width="40%"/>
-	<img src="images/glue/teamex4.png" width="40%"/>
+<img src="images/glue/teamex3.png" width="40%"/>
+<img src="images/glue/teamex4.png" width="40%"/>
 </div></center>
 <p>
 	We can also challenge ourselves to not use Calico literally everywhere.
 	Left: Liu/Clear/M14/Px4 Storm/PPK.
 	Right: Type88/Liu/HP-35/Clear/Mk23. Somewhat night-oriented.
 </p>
-
 <span class="anchor" id="notes"></span>
-<h2>Minor notes<sup><small><a href="#notes">&#35;</a></small></sup></h2>
+<h2>Minor notes<sup><small><a href="#notes">#</a></small></sup></h2>
 <p>
 	Liu's ROF selfbuff in frontline mode is largely trivial.
 	You can classify her alongside FP selfbuffers, and favor ROF buffs from your HGs.
@@ -384,7 +379,7 @@ $$ 5\text{ links} \times \frac{30 \text{ frames/sec}}{\left\lfloor \frac{1500}{\
 </p>
 <p>
 	It's very rare for enemy armor to even marginally exceed your AP stat.
-	RFHGs tend to have a lot of FP buffs going around (<a href="myths#hydras">more on this & armor here</a>).
+	RFHGs tend to have a lot of FP buffs going around (<a href="myths#hydras">more on this &amp; armor here</a>).
 	Liu's performance is not significantly degraded by high-armor enemies.
 </p>
 <p>
@@ -397,52 +392,53 @@ $$ 5\text{ links} \times \frac{30 \text{ frames/sec}}{\left\lfloor \frac{1500}{\
 	Don't forget to save your tokens for next Halloween:
 </p>
 <center><div class="figure">
-	<img src="https://iopwiki.com/images/1/17/General_Liu_costume1.png" width="60%"/>
+<img src="https://iopwiki.com/images/1/17/General_Liu_costume1.png" width="60%"/>
 </div><em></em></center>
 <p>
 	Also includes a Kord costume for all your metaslave needs.
 </p>
-<span class="anchor" id="ads"></span>
-<h2>More like this</h2>
-<section class="tiles">
-	<a href="simulation">
-		<div class="gallery">
-		  <div class="gallerypic">
-			<img src="images/icon/simulation.jpg" width="33%" height="400">
-			<div class="gallerypicdesc"><b>The Problem with Damage Simulators</b><br/>On real performance and models of it</div>
-		  </div>
-		</div>
-	</a>
 
-	<a href="manual-labor">
-		<div class="gallery">
-		  <div class="gallerypic">
-			<img src="images/icon/manual-labor.jpg" width="33%" height="400">
-			<div class="gallerypicdesc"><b>Rico Skill Analysis</b><br/>Force manual vs Autoskill</div>
-		  </div>
-		</div>
-	</a>
-</section>
-</div>
+    <div class="more-like-this">
+        <h2>More like this</h2>
+        <div class="mlt-gallery-grid">
 
-<!-- Footer -->
-	<footer id="footer">
-		<div class="inner">
-			<ul class="copyright">
-		<li>Content: BigStupidJellyfish</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</div>
-	</footer>
-</div>
+                <a href="simulation" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/simulation.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">The Problem with Damage Simulators</div>
+                            <div class="mlt-gallery-desc">On real performance and models of it</div>
+                        </div>
+                    </div>
+                </a>
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+                <a href="manual-labor" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/manual-labor.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">Rico Skill Analysis</div>
+                            <div class="mlt-gallery-desc">Force manual vs Autoskill</div>
+                        </div>
+                    </div>
+                </a>
+        </div>
+    </div>
+    
 
+            </div> 
+        </div> </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                <a href="../pages/about">About GFMath</a> ·
+                <a href="../pages/spoilers">Explanation of common plot types</a> ·
+                <a href="#" onclick="window.scrollTo(0,0)">Back to top</a>
+            </p>
+            <p style="margin-top: 20px;">
+                Content: BigStupidJellyfish
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

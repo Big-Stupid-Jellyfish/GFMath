@@ -1,47 +1,51 @@
-<!DOCTYPE HTML>
-<!--
-Forty by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-805N997DPC');
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<title>Gacha Rates - GFMath</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="../assets/css/main.css" />
-<link rel="icon" sizes="180x180" href="images/icon/ads-180.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/icon/ads-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/icon/ads-16.png">
-<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-</head>
-<body class="is-preload">
-<!-- Wrapper -->
-<div id="wrapper">
-<!-- Header -->
-<header id="header">
-<a href="../index" class="logo"><strong>GFMath</strong> <span>Detailed GFL analysis</span></a>
-<nav></nav>
-<a href="https://www.youtube.com/c/BigStupidJellyfish" class="logo"><strong>Youtube</strong></a>
-</header>
-<div id="main" class="alt">
-<section>
-<div class="inner">
-<header class="major">
-<h1>Gacha Rates</h1>
-</header>
-<center><em>By BigStupidJellyfish | 2022-November-29 | Last updated 2023-December-20</em></center>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-805N997DPC');
+    </script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    <title>Gacha Rates - GFMath</title>
+
+<link href="images/icon/ads-180.png" rel="icon" sizes="180x180"/>
+<link href="images/icon/ads-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="images/icon/ads-16.png" rel="icon" sizes="16x16" type="image/png"/>
+
+    <link rel="stylesheet" href="../assets/css/common.css" />
+
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    GFMath
+                </div>
+                <nav>
+                    <a href="../index">Home</a>
+                    <a href="https://www.youtube.com/c/BigStupidJellyfish" target="_blank">YouTube</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="article-container">
+            <header class="article-header">
+                <h1>Gacha Rates</h1>
+                <div class="meta">By BigStupidJellyfish | 2022-November-29 | Last updated 2023-December-20</div>
+            </header>
+            <div class="article-content">
 <p>
 	Official disclosures state a <a href="https://web.archive.org/web/20170514001925/http://gf.ppgame.com/web/pc/info.html?id=740">2% overall skin rate</a>.
 	But often, when rolling on a banner, you're looking to get specific skins.
@@ -60,7 +64,7 @@ gtag('config', 'G-805N997DPC');
 	I recommend <a href="https://docs.google.com/spreadsheets/d/10ceReDBnWKelZhSN0ztsK6EA2_14Ll8ktcXBHMMs9gQ/edit?usp=sharing">this excellent spreadsheet</a> by /u/ConductorBichir and /u/UnironicWeeaboo.
 </p>
 <span class="anchor" id="sanity"></span>
-<h2>Sanity Check<sup><small><a href="#sanity">&#35;</a></small></sup></h2>
+<h2>Sanity Check<sup><small><a href="#sanity">#</a></small></sup></h2>
 <p>
 	Okay, so maybe online polls aren't always perfect.
 	To gain at least some confidence in the data submitted, let's ask a much more boring question first: is the total skin rate actually 2%?
@@ -73,7 +77,7 @@ gtag('config', 'G-805N997DPC');
 	<em>(And that's all we can ever get - more data can thin our confidence interval, but we can't definitively prove the rate is some exact value. But from what we've seen, 2% fits.)</em>
 </p>
 <span class="anchor" id="expectations"></span>
-<h2>Expectations<sup><small><a href="#expectations">&#35;</a></small></sup></h2>
+<h2>Expectations<sup><small><a href="#expectations">#</a></small></sup></h2>
 <p>
 	Given a 0.4% live2D rate and 5460 tokens to get the hard pity, you'd expect to get <em>on average</em> 12 total skins, including 2.4 live2D skins.
 	However, the low rates and limited number of tries make variance huge - it's plausible to get as few as 6 or as many as 21 total skins from those rolls, and 0 live2Ds would hardly be extraordinary.
@@ -83,14 +87,14 @@ gtag('config', 'G-805N997DPC');
 	But if we can compile a whole bunch of them, we might get somewhere.
 </p>
 <span class="anchor" id="data"></span>
-<h2>Data<sup><small><a href="#data">&#35;</a></small></sup></h2>
+<h2>Data<sup><small><a href="#data">#</a></small></sup></h2>
 <p>
 	To make things slightly tricker, banners typically have 1 L2D + 4 other skins or 2 L2Ds + 4 other skins.
 	We'll consider those separately.
 </p>
 <h3>Single L2D gachas</h3>
 <div class="figure">
-	<img src="images/gacha/costume-examples-1.jpg" width="100%"/>
+<img src="images/gacha/costume-examples-1.jpg" width="100%"/>
 </div>
 <p>
 	If the skin rates are all equal, we'd expect l2ds to be rolled 2%/5=0.4% of the time.
@@ -106,7 +110,7 @@ gtag('config', 'G-805N997DPC');
 </p>
 <h3>Double L2D gachas</h3>
 <div class="figure">
-	<img src="images/gacha/costume-examples-2.jpg" width="100%"/>
+<img src="images/gacha/costume-examples-2.jpg" width="100%"/>
 </div>
 <p>
 	If the skin rates are all equal, we'd expect l2ds to be rolled 2*2%/6=0.67% of the time.
@@ -119,71 +123,75 @@ gtag('config', 'G-805N997DPC');
 	Live2Ds made up 15.1% of the costumes rolled (34/225), rather than the expected 33% (75 costumes) - once again, about half.
 </p>
 <!-- <pre> for pre-formatted/code block text -->
-
 <span class="anchor" id="conclusion"></span>
-<h2>Conclusion<sup><small><a href="#conclusion">&#35;</a></small></sup></h2>
+<h2>Conclusion<sup><small><a href="#conclusion">#</a></small></sup></h2>
 <p>
 	The sample estimates above are technically the "best" guesses we currently have, but I'll round them off a little for my guesses here.
 	Live2Ds appear to be half as common than you'd expect, with a 0.2% rate in 5-skin gachas and 0.33% rate in 6-skin gachas (half that, 0.17%, per skin).
 	Bring <em>lots</em> of tokens, especially for those double l2d sets.
 </p>
-
 <span class="anchor" id="notes"></span>
-<h2>Notes<sup><small><a href="#notes">&#35;</a></small></sup></h2>
+<h2>Notes<sup><small><a href="#notes">#</a></small></sup></h2>
 <ul>
-	<li>As a broad principle, keep in mind: if someone claims rates are "different" for some thing or another but doesn't have a specific rate estimate or any data supporting the claim, it's probably made up.</li>
-	<li>I will still periodically check the survey for new responses, and update the numbers here as appropriate. It's always better to have more data to draw from.</li>
-	<li>I've updated the charts on my <a href="gacha">general gacha page</a> with these rate estimations.</li>
-	<li>This survey was typically distributed alongside the idea of investigating live2D rates. It is possible for that to have introduced some bias in the respondents either for people with better or worse than average luck.</li>
-	<li>Given the skin rate lining up, this doesn't seem likely, but it's possible for some respondents to have misunderstood the questions and included skins exchanged for, or simply misremembering how many tokens were spent.</li>
-	<!-- <li>I might suggest scouring livestreamed gacha pulls as a potential source of data for further study/confirmation, but the small community of this game makes that unlikely to be significant.</li> -->
-	<li>The data so far represents ~$16,000 of tokens by shop prices, or ~50 years of regular F2P gameplay.</li>
-	<li>
+<li>As a broad principle, keep in mind: if someone claims rates are "different" for some thing or another but doesn't have a specific rate estimate or any data supporting the claim, it's probably made up.</li>
+<li>I will still periodically check the survey for new responses, and update the numbers here as appropriate. It's always better to have more data to draw from.</li>
+<li>I've updated the charts on my <a href="gacha">general gacha page</a> with these rate estimations.</li>
+<li>This survey was typically distributed alongside the idea of investigating live2D rates. It is possible for that to have introduced some bias in the respondents either for people with better or worse than average luck.</li>
+<li>Given the skin rate lining up, this doesn't seem likely, but it's possible for some respondents to have misunderstood the questions and included skins exchanged for, or simply misremembering how many tokens were spent.</li>
+<!-- <li>I might suggest scouring livestreamed gacha pulls as a potential source of data for further study/confirmation, but the small community of this game makes that unlikely to be significant.</li> -->
+<li>The data so far represents ~$16,000 of tokens by shop prices, or ~50 years of regular F2P gameplay.</li>
+<li>
 		It's always possible for the game to change rates on the fly, by set, or do any other sort of weird thing to the results.
 		It is next to impossible to detect this, so we'll just have to cross our fingers.
 		There's also no point to such speculation without hard data to reference.
 	</li>
 </ul>
-<span class="anchor" id="ads"></span>
-<h2>More like this</h2>
-<section class="tiles">
-	<a href="ak15">
-		<div class="gallery solo arsmg">
-		  <div class="gallerypic">
-			<img src="images/icon/ak15.jpg" width="33%" height="400">
-			<div class="gallerypicdesc"><b>Monitoring your Anger</b><br/>AK-15 Analysis</div>
-		  </div>
-		</div>
-	</a>
 
-	<a href="tkb-408">
-		<div class="gallery solo arsmg">
-		  <div class="gallerypic">
-			<img src="images/icon/tkb-408.jpg" width="33%" height="400">
-			<div class="gallerypicdesc"><b>TKB-408 Analysis</b><br/>Critical night focus</div>
-		  </div>
-		</div>
-	</a>
-</section>
+
 
 <!-- Footer -->
-	<footer id="footer">
-		<div class="inner">
-			<ul class="copyright">
-		<li>Content: BigStupidJellyfish</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</div>
-	</footer>
-</div>
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+    <div class="more-like-this">
+        <h2>More like this</h2>
+        <div class="mlt-gallery-grid">
 
+                <a href="ak15" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/ak15.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">Monitoring your Anger</div>
+                            <div class="mlt-gallery-desc">AK-15 Analysis</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="tkb-408" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/tkb-408.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">TKB-408 Analysis</div>
+                            <div class="mlt-gallery-desc">Critical night focus</div>
+                        </div>
+                    </div>
+                </a>
+        </div>
+    </div>
+    
+
+            </div> 
+        </div> </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                <a href="../pages/about">About GFMath</a> ·
+                <a href="../pages/spoilers">Explanation of common plot types</a> ·
+                <a href="#" onclick="window.scrollTo(0,0)">Back to top</a>
+            </p>
+            <p style="margin-top: 20px;">
+                Content: BigStupidJellyfish
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

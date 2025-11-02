@@ -1,51 +1,55 @@
-<!DOCTYPE HTML>
-<!--
-Forty by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-805N997DPC');
-</script>
-<meta name="description" content="Girls Frontline, by the numbers">
-<title>Combat Effectiveness - GFMath</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="../assets/css/main.css" />
-<link rel="icon" sizes="180x180" href="images/icon/ads-180.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/icon/ads-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/icon/ads-16.png">
-<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-</head>
-<body class="is-preload">
-<!-- Wrapper -->
-<div id="wrapper">
-<!-- Header -->
-<header id="header">
-<a href="../index" class="logo"><strong>GFMath</strong> <span>Detailed GFL analysis</span></a>
-<nav></nav>
-<a href="https://www.youtube.com/c/BigStupidJellyfish" class="logo"><strong>Youtube</strong></a>
-</header>
-<div id="main" class="alt">
-<section>
-<div class="inner">
-<header class="major">
-	<h1>Combat Effectiveness</h1>
-</header>
-<center><em>By BigStupidJellyfish | 2021-July-22 | Last updated 2023-September-01</em></center>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-805N997DPC');
+    </script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    <title>Combat Effectiveness - GFMath</title>
+
+<link href="images/icon/ads-180.png" rel="icon" sizes="180x180"/>
+<link href="images/icon/ads-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="images/icon/ads-16.png" rel="icon" sizes="16x16" type="image/png"/>
+
+    <link rel="stylesheet" href="../assets/css/common.css" />
+
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    GFMath
+                </div>
+                <nav>
+                    <a href="../index">Home</a>
+                    <a href="https://www.youtube.com/c/BigStupidJellyfish" target="_blank">YouTube</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="article-container">
+            <header class="article-header">
+                <h1>Combat Effectiveness</h1>
+                <div class="meta">By BigStupidJellyfish | 2021-July-22 | Last updated 2023-September-01</div>
+            </header>
+            <div class="article-content">
 <p>
 	Combat Effectiveness, or CE, is a number the game assigns to your dolls, echelons, and enemies.
 	It is intended to provide an easy-to-understand evaluation of both your team's strength and the danger posed by enemies.
 </p>
-
 <center>
 <div class="figure">
 <img src="images/ce/ce.jpg" width="80%"/>
@@ -53,40 +57,33 @@ gtag('config', 'G-805N997DPC');
 </center>
 <center><em>If you've played this game for more than a minute, you should have seen this plenty of times.
 Just in case though, you can see the CE of the echelon (top right) and of each doll (bottom).</em></center>
-
 <p>
 	On an individual level, CE is calculated from the doll's stats, rarity, and skill level.
 	The exact formulas have been datamined by <a href="https://old.reddit.com/r/girlsfrontline/comments/kqtpcv/weekly_commanders_lounge_january_05_2021/gifxq8v/">/u/elgatoroid here</a>.
 	Echelon CE takes into account tiles and fairy aura, but not fairy talent or fairy skill level (example: <a href="images/ce/talent-skill.jpg">a SL10 Crit II Fury fairy vs a SL4 Fervor Fury fairy</a>).
 </p>
-
 <h2>Contents</h2>
 <ul>
-	<li><a href="#use">Value of CE</a></li>
-	<li><a href="#stack">CE Stacking</a></li>
-	<li><a href="#analysis">Analysis of Echelon Data</a></li>
+<li><a href="#use">Value of CE</a></li>
+<li><a href="#stack">CE Stacking</a></li>
+<li><a href="#analysis">Analysis of Echelon Data</a></li>
 </ul>
-
 <span class="anchor" id="use"></span>
-<h2>Value of CE<sup><small><a href="#use">&#35;</a></small></sup></h2>
-
+<h2>Value of CE<sup><small><a href="#use">#</a></small></sup></h2>
 <p>
 	At first glance, CE may look like a reasonably useful number to keep in mind.
 	Compared to a rifle with 100 FP, another rifle otherwise the same but with 120 FP will have a higher CE and be objectively better.
 	An ARSMG echelon with gold equipment and a high rarity fairy will have more CE than one with green equipment and no fairy.
 </p>
-
 <p>
 	However, because of how teambuilding and combat works in this game, combat effectiveness is a very unreliable metric that only really serves to tell you how many points you get for killing each enemy in ranking maps and give a very rough idea of how developed your echelon is (levels/equipment/fairy).
 	It should not inform any teambuilding or combat-related decisions.
 </p>
-
 <p>
 	One core part of teambuilding is counter-picking.
 	Especially as you get farther into the game, enemies will have very significant strengths and weaknesses.
 	Building custom echelons that can exploit these weaknesses and protect against their strengths will perform far better than random or generic setups.
 </p>
-
 <!--
 <p>Much of a doll's strength comes from their skill.
 There typically aren't massive differences in base stats, and the tiles on DPS dolls usually won't have a major impact.
@@ -96,40 +93,36 @@ Beyond that, the value provided by any given skill will vary tremendously by cir
 Molotov and grenade skills are strong against dense enemy groups but nearly useless against bosses.
 M200's perfect accuracy is great against high-evasion enemies at night but is rather disappointing against most daytime enemies.
 The shields HS2000 gives to your backline won't do much, until a Doppelsoldner triggers its field-wide barrage.</p> -->
-
 <p>
 	Skills are also one of the most important aspects of each doll.
 	They can be incredibly useful and perform critical functions in certain fights, but the CE formula neglects to account for anything beyond the raw skill level.
 	Carcano M91/38's skill is rated the same as WA2000's and M200's skills, despite their drastically different roles and effects.
 </p>
-
 <p>
 	In terms of evaluating enemy difficulty, here are some examples of where this can go very wrong:
 </p>
 <ul>
-	<li>250k CE Uhlans were highly desirable spawns late in Isomer - not only did they give a ton of points, but they were simple if you had a Taunt/Twin fairy.</li>
-	<li>300k deathstacks in Polarized Light could be killed at full health by: Kord-based gunboats, Hanyang-based RFHG echelons, and a few other specific RFHG teams if your kiting was incredible.
+<li>250k CE Uhlans were highly desirable spawns late in Isomer - not only did they give a ton of points, but they were simple if you had a Taunt/Twin fairy.</li>
+<li>300k deathstacks in Polarized Light could be killed at full health by: Kord-based gunboats, Hanyang-based RFHG echelons, and a few other specific RFHG teams if your kiting was incredible.
 	All these teams were in the 50-60k CE range. The deathstacks were far, far more challenging than those Uhlans.
 	A 70-80k ARSMG/MGSG echelon would have no hope without the use of EMPs/Goliath bombs.</li>
-	<li>A lone lv90/x5 MG (~3k CE) can solo the 65x Tarantula swarms in 8-1N, as can a level 60/x1 Zas with a few FP buffs (~200 CE).
+<li>A lone lv90/x5 MG (~3k CE) can solo the 65x Tarantula swarms in 8-1N, as can a level 60/x1 Zas with a few FP buffs (~200 CE).
 	On the other hand, many RFHG echelons (30-60k CE) would be quickly overwhelmed by the same enemies due to their low ROF and backline targeting.</li>
-	<li>Guard/Jaeger groups are harder for ARSMG echelons - the Guards can take a while to work through, while the Jaegers rip apart your SMGs.
+<li>Guard/Jaeger groups are harder for ARSMG echelons - the Guards can take a while to work through, while the Jaegers rip apart your SMGs.
 	RFHG echelons can take out the Jaegers immediately and deal with the less threatening Guards after.</li>
-	<li>Shotguns with sufficient armor for the enemy you're up against are nearly immortal, but add on a few more points of damage and they'll fall apart like wet paper.</li>
-	<ul>
-	<li>Some enemies like Brutes come with armor piercing, and are nearly harmless to SMGs but deadly to SGs.</li>
-	</ul>
-	<li>Armor is no problem if you have armor piercing, but heavily armored enemies like Hydras and Uhlans quickly become unkillable against an echelon without AP.</li>
+<li>Shotguns with sufficient armor for the enemy you're up against are nearly immortal, but add on a few more points of damage and they'll fall apart like wet paper.</li>
+<ul>
+<li>Some enemies like Brutes come with armor piercing, and are nearly harmless to SMGs but deadly to SGs.</li>
+</ul>
+<li>Armor is no problem if you have armor piercing, but heavily armored enemies like Hydras and Uhlans quickly become unkillable against an echelon without AP.</li>
 </ul>
 <p>
 	To know what to expect in each battle, you're better off <a href="https://pengupengupengu.github.io/gflmaps/">looking up the enemy stats here</a> and practicing against each enemy type to learn their mechanics and quirks.
 	CE may give you a rough idea of how developed a team is (levels, links, equipment, fairies).
 	But you can also get a more precise measure of that by looking at their levels/links/equipment/fairy.
 </p>
-
 <span class="anchor" id="stack"></span>
-<h2>CE Stacking<sup><small><a href="#stack">&#35;</a></small></sup></h2>
-
+<h2>CE Stacking<sup><small><a href="#stack">#</a></small></sup></h2>
 <p>
 	A while back, if you wanted loads of friend points, you could get massive CE numbers from a 3MG2SG armorstack echelon.
 	With a 5* Armor Fairy and everything else maxed, you could get up to <a href="https://cdn.discordapp.com/attachments/532176803364601866/803740280762138634/Screenshot_20210108_165221_com.sunborn.girlsfrontline.en.jpg">~112k CE</a>.
@@ -140,39 +133,35 @@ The shields HS2000 gives to your backline won't do much, until a Doppelsoldner t
 	Before (left) and after the change (right):
 </p>
 <center>
-	<div class="figure">
-		<img src="images/ce/armor-old.jpg" width="49%"/>
-		<img src="images/ce/armor-new.jpg" width="49%"/>
-	</div>
+<div class="figure">
+<img src="images/ce/armor-old.jpg" width="49%"/>
+<img src="images/ce/armor-new.jpg" width="49%"/>
+</div>
 </center>
 <p>
 	70k CE isn't exactly bad, but the change allowed for other team compositions to compete with MGSG for the top of your friend list.
 </p>
-
 <p>
 	... Or not.
 	The <a href="newquip">first wave of new equipment pieces released</a> allow for new levels of CE stacking.
 	A particular MGSG with SLAP ammo seems to be the best at the moment:
 	<!-- I don't yet know the maximum, but here's one example to give a general sense of what you can do: -->
-	
 </p>
-
 <center>
-	<div class="figure">
-		<img src="https://cdn.discordapp.com/attachments/790941455921184789/1147374064860676147/IMG_5309.png" width="100%"/>
-	</div>
+<div class="figure">
+<img src="https://cdn.discordapp.com/attachments/790941455921184789/1147374064860676147/IMG_5309.png" width="100%"/>
+</div>
 </center>
 <p>
-	Found thanks to BLT. This blows away the previous best team, pictured below, and puts G&K echelons far ahead of Coalition teams for CE.
+	Found thanks to BLT. This blows away the previous best team, pictured below, and puts G&amp;K echelons far ahead of Coalition teams for CE.
 	<!-- About the same as the previously best known team, but Walker has bigger tiles and CE doesn't understand skills. That was: -->
 </p>
 <center><div class="figure">
-	<img src="https://cdn.discordapp.com/attachments/372235987520323596/1074552559215325246/0A0B16E1-DC3E-4057-8C93-282A380A1692.png" width="100%"/>
+<img src="https://cdn.discordapp.com/attachments/372235987520323596/1074552559215325246/0A0B16E1-DC3E-4057-8C93-282A380A1692.png" width="100%"/>
 </div></center>
 <!-- <center><div class="figure">
 	<img src="https://cdn.discordapp.com/attachments/410790982116966400/1010206821769809990/IMG_2770.png" width="100%"/>
 </div></center> -->
-
 <!-- <center>
 <div class="figure">
 	<img src="images/ce/ce-104885.png" width="100%"/>
@@ -185,11 +174,9 @@ The shields HS2000 gives to your backline won't do much, until a Doppelsoldner t
 <p>
 	Much before that, a bizarre UMP40-based crit-stacking team did shockingly well with 80894 CE:
 </p>
-
 <div class="figure">
-	<img src="images/ce/ump40-redux.jpg" width="100%"/>
+<img src="images/ce/ump40-redux.jpg" width="100%"/>
 </div>
-
 <!-- <p>
 	The following KSVK/NTW RFHG echelon also does extremely well. You may still be able to break 80k without one or two HG oaths.
 </p>
@@ -205,12 +192,11 @@ The shields HS2000 gives to your backline won't do much, until a Doppelsoldner t
 <p>
 	A few other configurations that give pretty big numbers (but are not necessarily the best): <a href="https://i.imgur.com/6cb4Hwq.png">72867 with ARSMG</a> (70k+ possible without oaths on SMGs), <a href="https://i.imgur.com/asU43HB.png">76736 with 2SG3MG armorstack</a>, and <a href="https://i.imgur.com/CyBqyI6.png">70877 with 1SG4MG armorstack</a>.
 	<a href="https://i.imgur.com/7BybpzM.jpg">Welrod's mod</a> can go even higher, although other new dolls may give even better numbers by the time she makes it to EN. -->
-	<!-- <a href="newquip#slap">SLAP ammo</a> gives lots of CE when that gets to EN eventually: -->
+<!-- <a href="newquip#slap">SLAP ammo</a> gives lots of CE when that gets to EN eventually: -->
 <p>
-	 <!-- With some future mods, here's <a href="images/misc/LfvNmCV.png">a 110982-CE 5MG SLAP stack</a> by /u/UnironicWeeaboo. -->
+<!-- With some future mods, here's <a href="images/misc/LfvNmCV.png">a 110982-CE 5MG SLAP stack</a> by /u/UnironicWeeaboo. -->
 	 For a surprisingly normal formation, <a href="images/misc/WAPWmv6.png">here's an ARSMG with 88006 CE</a>, or <a href="https://i.imgur.com/6W9D137.png">100k</a> with Suomi's mod.
 </p>
-
 <!-- <p>
 	For the very top CEs, you'll have to look to SF echelons: <a href="https://i.imgur.com/vMgy7b8.png">here's 103262 CE with Dreamer</a> and <a href="https://i.imgur.com/3pWAnm1.png">91240 CE with Scarecrow</a>. 
 	(<a href="https://gall.dcinside.com/mgallery/board/view/?id=micateam&no=1658162">Source</a>, and as these were built for ranking you can stack even higher.)
@@ -223,16 +209,14 @@ The shields HS2000 gives to your backline won't do much, until a Doppelsoldner t
 -->
 <!-- F for our F2P friends -->
 <p>
-	<!-- In the future, SWAP Prowlers are nice (as above that's 3 Dinergates hidden behind the "in combat" signs): -->
+<!-- In the future, SWAP Prowlers are nice (as above that's 3 Dinergates hidden behind the "in combat" signs): -->
 	For a while, SF echelons were the way to get the very highest CE numbers.
 	SLAP ammo and various new MG (mods) have taken that throne from them, though.
 	The best known SF team:
 </p>
-
 <div class="figure">
-	<img src="images/ce/future-sf.jpg" width="100%"/>
+<img src="images/ce/future-sf.jpg" width="100%"/>
 </div>
-
 <p>
 	The "in combat" signs to the right are covering 3 Dinergates.
 </p>
@@ -241,19 +225,16 @@ The shields HS2000 gives to your backline won't do much, until a Doppelsoldner t
 	Warning: actually building this team may require funding an additional anime season.
 	Only recommended for CEOs and early bitcoin investors.
 </p>
-
 <p>
 	An older SF stack with an unusually round number:
 </p>
 <div class="figure">
-	<img src="images/ce/sfce.jpg" width="100%"/>
+<img src="images/ce/sfce.jpg" width="100%"/>
 </div>
-
 <p>
 	Keep in mind that this number has very little to do with real combat performance.
 	Please do not copy anything here when trying to build an effective team - think of it purely as an amusing exercise in "how big can I make this random number."
 </p>
-
 <p>
 	Theater CE stacking is an entirely different matter.
 	It wasn't worthwhile in early theaters and the best strategies vary by boss.
@@ -273,139 +254,121 @@ The shields HS2000 gives to your backline won't do much, until a Doppelsoldner t
 	If you want to make a useful friend echelon, I would go with one of these templates:
 </p>
 <ul>
-	<li><strong>Destroyer/Architect/Alina SF HOC support.</strong> With the release of Destroyer, there's now a <a href="https://www.youtube.com/watch?v=ZecHm-niQtQ">decent way of leveling SF units</a> that doesn't cost resources/CRs.
-	Fighting Spirit & Weaken are the recommended chips (<a href="8-2">Weaken especially helps with the armor requirements, Fighting Spirit is useful support, and Architect has an overall performance advantage over Destroyer here</a>). Alina enables an even better drag map, also noted on the my page on the subject.</li>
-	<li>Boss-oriented ARSMG, for people who don't want to kill 7-6 Dreamer with their own teams for the HOC daily as well as new players trying to clear early story chapters.</li>
-	<li>Generalist RFHG, optional Grape - for people trying to clear chapters 11/12.</li>
-	<li>Anti-Judge 2SG/2-3MG/0-1HG echelon - for people struggling to kill Judge. Desired armor: 29 for 9-6, 41 for 9-4E, 54 for 9-4N, 49 for 10-6, 57 for Isomer EX (campaign).</li>
-	<li>Waifu team. Good equipment & a 5* fairy will allow most echelons to clear most content people need a friend echelon for, so why not flex your favorite oath at the same time?</li>
+<li><strong>Destroyer/Architect/Alina SF HOC support.</strong> With the release of Destroyer, there's now a <a href="https://www.youtube.com/watch?v=ZecHm-niQtQ">decent way of leveling SF units</a> that doesn't cost resources/CRs.
+	Fighting Spirit &amp; Weaken are the recommended chips (<a href="8-2">Weaken especially helps with the armor requirements, Fighting Spirit is useful support, and Architect has an overall performance advantage over Destroyer here</a>). Alina enables an even better drag map, also noted on the my page on the subject.</li>
+<li>Boss-oriented ARSMG, for people who don't want to kill 7-6 Dreamer with their own teams for the HOC daily as well as new players trying to clear early story chapters.</li>
+<li>Generalist RFHG, optional Grape - for people trying to clear chapters 11/12.</li>
+<li>Anti-Judge 2SG/2-3MG/0-1HG echelon - for people struggling to kill Judge. Desired armor: 29 for 9-6, 41 for 9-4E, 54 for 9-4N, 49 for 10-6, 57 for Isomer EX (campaign).</li>
+<li>Waifu team. Good equipment &amp; a 5* fairy will allow most echelons to clear most content people need a friend echelon for, so why not flex your favorite oath at the same time?</li>
 </ul>
 <p>
 	Friend echelons can move around at night fine without a handgun, but I recommend including at least one anyways so it provides vision to nearby nodes.
 	Fairy skills aren't activated so just go with whatever gives the best stats (usually Command/Para/Witch).
 </p>
-
 <p>
 	After setting a friend echelon, its CE is never checked or recalculated.
 	You may see some players who still have a 2SG3MG 100k+ CE echelon - they simply set it before the nerf in 2020 and haven't updated the team.
 	Never trust friend echelons to be a good source of teambuilding advice.
 	They very likely contain waifu/CE stack elements, neither of which contribute to real combat performance.
 </p>
-
 <!-- Also most people who play this game are bad at it. Especially when it comes to teambuilding. -->
-
 <p>
 	Oaths are not strictly necessary for high CE - doll stats, tiles, equipment, and fairies make a much bigger difference.
 	I use fully oathed teams to show the expected upper limits of each echelon type, but you can even get 100k CE with no oaths and no 5* Parachute fairy.
 </p>
-
 <span class="anchor" id="analysis"></span>
-<h2>Analysis of Echelon Data<sup><small><a href="#analysis">&#35;</a></small></sup></h2>
-
+<h2>Analysis of Echelon Data<sup><small><a href="#analysis">#</a></small></sup></h2>
 <p>
 	You may have noticed the red exclamation mark in the first image here or seen it yourself in your own teams.
 	Clicking that CE display will bring up a window analyzing your echelon and offering suggestions:
 </p>
-
 <div class="figure">
-	<img src="images/ce/analysis.jpg" width="100%"/>
+<img src="images/ce/analysis.jpg" width="100%"/>
 </div>
 <center><em>One of the more common messages you'll see. No matter how much it insists, not every echelon needs a handgun.</em></center>
-
 <p>
 	There are some beginner mistakes that this system will properly identify and warn about, but once you understand the very basic fundamentals of teambuilding it will have nothing of value (and even then, it can give bad advice a new player won't be able to identify).
 	It encounters many of the same pitfalls as CE, and splitting the metric into a few categories isn't enough.
 </p>
-
 <p>
 	Here's one interesting case with the echelon I've been using for Neural Fragments:
 </p>
-
 <div class="figure">
-	<img src="images/ce/survivability.jpg" width="100%"/>
+<img src="images/ce/survivability.jpg" width="100%"/>
 </div>
-
 <p>
 	With no equipment on P22, it says the echelon has insufficient survivability.
 	Maybe it wouldn't do well against Judge, but for regular combat it has everything - one shotgun, high armor (55 before any Fairy skill/talent), and two shield skills.
 	Equipping an X-Exo on P22 will make it switch to complaining about equipment, which seems to be its fallback if it finds nothing else to say.
 </p>
-
 <p>
 	It also doesn't like RFHG echelons for similar reasons:
 </p>
 <div class="figure">
-	<img src="images/ce/survivability2.jpg" width="100%"/>
+<img src="images/ce/survivability2.jpg" width="100%"/>
 </div>
-
 <p>
 	This is somehow considered a "proper" formation:
 </p>
 <div class="figure">
-	<img src="images/ce/formation.jpg" width="100%"/>
+<img src="images/ce/formation.jpg" width="100%"/>
 </div>
-
 <p>
 	And it rates a SL1 PzB39 (arguably the worst rifle in the game) the same as a SL5 Gr G28 (a respectable FP buffer) in terms of DPS:
 </p>
 <div class="figure">
-	<img src="images/ce/pzb.jpg" width="100%"/>
+<img src="images/ce/pzb.jpg" width="100%"/>
 </div>
-
 <p>
 	I could go on with other examples, but these should get the point across.
 	The analysis of echelon data does not give you useful information, and if its advice happens to be correct, it just got lucky.
 </p>
 
-<span class="anchor" id="ads"></span>
-<h2>More like this</h2>
-	<section class="tiles">	
-		<a href="myths">
-			<div class="gallery">
-			  <div class="gallerypic">
-				<img src="images/icon/myths.jpg" width="33%" height="400">
-				<div class="gallerypicdesc"><b>Common Myths</b><br/>Mechanical misconceptions</div>
-			  </div>
-			</div>
-		</a>
-<!-- 		
-		<a href="newquip">
-			<div class="gallery">
-			  <div class="gallerypic">
-				<img src="images/icon/newquip.jpg" width="33%" height="400">
-				<div class="gallerypicdesc"><b>New Doll Equipment</b><br/>First thoughts, #2 Chip analysis</div>
-			  </div>
-			</div>
-		</a> -->
-		
-		<a href="quick-formation">
-			<div class="gallery">
-			  <div class="gallerypic">
-				<img src="images/icon/quick-formation.jpg" width="33%" height="400">
-				<div class="gallerypicdesc"><b>Quick Formation</b><br/>Where it goes wrong</div>
-			  </div>
-			</div>
-		</a>
-</section>
-	
-	<!-- Footer -->
-		<footer id="footer">
-			<div class="inner">
-				<ul class="copyright">
-		<li>Content: BigStupidJellyfish</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</div>
-		</footer>
-	</div>
-	
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-	
-	</body>
-	</html>
+
+
+<!-- Footer -->
+
+    <div class="more-like-this">
+        <h2>More like this</h2>
+        <div class="mlt-gallery-grid">
+
+                <a href="myths" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/myths.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">Common Myths</div>
+                            <div class="mlt-gallery-desc">Mechanical misconceptions</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="quick-formation" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/quick-formation.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">Quick Formation</div>
+                            <div class="mlt-gallery-desc">Where it goes wrong</div>
+                        </div>
+                    </div>
+                </a>
+        </div>
+    </div>
+    
+
+            </div> 
+        </div> </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                <a href="../pages/about">About GFMath</a> ·
+                <a href="../pages/spoilers">Explanation of common plot types</a> ·
+                <a href="#" onclick="window.scrollTo(0,0)">Back to top</a>
+            </p>
+            <p style="margin-top: 20px;">
+                Content: BigStupidJellyfish
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

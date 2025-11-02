@@ -1,55 +1,58 @@
-<!DOCTYPE HTML>
-<!--
-Forty by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-805N997DPC');
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<title>AK-15 Analysis - GFMath</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="../assets/css/main.css" />
-<link rel="icon" sizes="180x180" href="images/icon/ads-180.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/icon/ads-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/icon/ads-16.png">
-<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-805N997DPC');
+    </script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    <title>AK-15 Analysis - GFMath</title>
+
+<link href="images/icon/ads-180.png" rel="icon" sizes="180x180"/>
+<link href="images/icon/ads-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="images/icon/ads-16.png" rel="icon" sizes="16x16" type="image/png"/>
+
+    <link rel="stylesheet" href="../assets/css/common.css" />
+
+    
 </head>
-<body class="is-preload">
-<!-- Wrapper -->
-<div id="wrapper">
-<!-- Header -->
-<header id="header">
-<a href="../index" class="logo"><strong>GFMath</strong> <span>Detailed GFL analysis</span></a>
-<nav></nav>
-<a href="https://www.youtube.com/c/BigStupidJellyfish" class="logo"><strong>Youtube</strong></a>
-</header>
-<div id="main" class="alt">
-<section>
-<div class="inner">
-<header class="major">
-<h1>Monitoring your Anger: AK-15 Analysis</h1>
-</header>
-<center><em>By BigStupidJellyfish | 2022-February-12</em></center>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    GFMath
+                </div>
+                <nav>
+                    <a href="../index">Home</a>
+                    <a href="https://www.youtube.com/c/BigStupidJellyfish" target="_blank">YouTube</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-
+    <main>
+        <div class="article-container">
+            <header class="article-header">
+                <h1>Monitoring your Anger: AK-15 Analysis</h1>
+                <div class="meta">By BigStupidJellyfish | 2022-February-12</div>
+            </header>
+            <div class="article-content">
 <blockquote>
-	<p><strong>Eye of the White Mastiff</strong> ICD 6s/CD 8s</p>
-	<p>
+<p><strong>Eye of the White Mastiff</strong> ICD 6s/CD 8s</p>
+<p>
 		Passive: Attacks have a 15% chance to cause <strong>Rage</strong>, which lasts for 3 seconds.
 		While <strong>Rage</strong> is active, every normal attack deals an instance of 40% extra damage.
 	</p>
-	<p>
+<p>
 		Active: Activates <em>Eye of the White Mastiff</em> and <strong>monitors</strong> all enemies.
 		Attacks on <strong>monitored</strong> enemies raise self firepower, accuracy, and critical chance by 40%, and being attacked by a <strong>monitored</strong> enemy raises self evade by 40%.
 		<strong>Monitoring</strong> lasts for 6 seconds.
@@ -58,23 +61,20 @@ gtag('config', 'G-805N997DPC');
 		This debuff can coexist with <strong>Monitoring</strong>, but the skill cannot be ractivated while the debuff is in effect.
 	</p>
 </blockquote>
-	
 <p>
 	Well, that's quite the wall of text.
-	Three keywords, passive & active components, and all sorts of conditionals.
+	Three keywords, passive &amp; active components, and all sorts of conditionals.
 	The simple explanation is that AK-15 has a passive RNG DPS buff, and an active multi-stat buff with a penalty against sufficiently large groups.
 </p>
 <p>
 	That's better, but doesn't address the key overall question - how good is AK-15, and how does she compare to standard options?
 	Let's investigate.
-</p>	
-
+</p>
 <!-- <center><div class="figure">
 	<img src="images/arisaka/4shiki1.png" width="100%"/>
 </div></center> -->
-
 <span class="anchor" id="rage"></span>
-<h2>About Rage<sup><small><a href="#rage">&#35;</a></small></sup></h2>
+<h2>About Rage<sup><small><a href="#rage">#</a></small></sup></h2>
 <p>
 	Let's set aside her active component for a moment and look into Rage a bit more.
 	Multiplying the proc chance (15%) by its damage increase (+0.4x) doesn't quite work out - it covers multiple attacks with one trigger, and may happen at the very end of some timeframe, not granting the full effect.
@@ -92,7 +92,7 @@ gtag('config', 'G-805N997DPC');
 	To help you get an idea of how this works out, let's run a simulation for a short battle (&lt;6 seconds):
 </p>
 <center><div class="figure">
-	<img src="images/ak15/preSkillDamage.png" width="100%"/>
+<img src="images/ak15/preSkillDamage.png" width="100%"/>
 </div></center>
 <p>
 	Here, I've plotted AK-15's total relative damage output, with 0% corresponding to no increase over her base damage (no triggers).
@@ -103,7 +103,7 @@ gtag('config', 'G-805N997DPC');
 </p>
 <!-- I suspect her attack after rage cannot also be a 'rage' attack, making 40% impossible. Its probability is low enough anyways I think we can discard this potential factor. -->
 <p>
-	<a href="images/ak15/preSkillDamageFast.png">ROF tiles don't affect things much</a>.
+<a href="images/ak15/preSkillDamageFast.png">ROF tiles don't affect things much</a>.
 	Don't pick SMGs specifically to buff AK-15's ROF.
 	They'd be a little nicer if you could refresh the duration mid-Rage, but it doesn't work like that.
 </p>
@@ -111,7 +111,7 @@ gtag('config', 'G-805N997DPC');
 	For a longer view, let's do the same thing over 60 seconds:
 </p>
 <center><div class="figure">
-	<img src="images/ak15/long-preSkillDamage.png" width="100%"/>
+<img src="images/ak15/long-preSkillDamage.png" width="100%"/>
 </div></center>
 <p>
 	Predictably, the overall effects of this passive stabilize over long periods of time.
@@ -125,7 +125,7 @@ gtag('config', 'G-805N997DPC');
 	In short: there will be some variation in shorter fights, but overall you're fine to think of this as a passive +15-20% damage or so with synergy against Orthrus and anti-synergy against armored enemies.
 </p>
 <span class="anchor" id="strain"></span>
-<h2>About Strain<sup><small><a href="#strain">&#35;</a></small></sup></h2>
+<h2>About Strain<sup><small><a href="#strain">#</a></small></sup></h2>
 <p>
 	Strain is the sum of the incremental elongations divided by the current gauge length at load \(P\), or
 </p>
@@ -255,79 +255,79 @@ $$ \varepsilon = \int_{l_0}^l \frac{dl}{l} = \ln \frac{l}{l_0} $$
 	If we set aside the weird behaviors above and assume enemy count remains the same over battle (both risky assumptions), we'd be looking at something like this:
 </p>
 <center>
-	<table style="width:auto; text-align:center;">
-		<tr>
-			<th>Enemy group count</th>
-			<th>Strain per interval</th>
-			<th>Estimated overload time</th>
-		</tr>
-		<tr>
-			<td>1/2</td>
-			<td>6/7</td>
-			<td>16s</td>
-		</tr>
-		<tr>
-			<td>3/4/5/6</td>
-			<td>8/9/10/11</td>
-			<td>12s</td>
-		</tr>
-		<tr>
-			<td>7-18</td>
-			<td>12-23</td>
-			<td>10s</td>
-		</tr>
-		<tr>
-			<td>19+</td>
-			<td>24+</td>
-			<td>8s</td>
-		</tr>
-	</table>
+<table style="width:auto; text-align:center;">
+<tr>
+<th>Enemy group count</th>
+<th>Strain per interval</th>
+<th>Estimated overload time</th>
+</tr>
+<tr>
+<td>1/2</td>
+<td>6/7</td>
+<td>16s</td>
+</tr>
+<tr>
+<td>3/4/5/6</td>
+<td>8/9/10/11</td>
+<td>12s</td>
+</tr>
+<tr>
+<td>7-18</td>
+<td>12-23</td>
+<td>10s</td>
+</tr>
+<tr>
+<td>19+</td>
+<td>24+</td>
+<td>8s</td>
+</tr>
+</table>
 </center>
 <p>
 	Keep in mind that AK-15 works based off "enemy groups," not links.
 	For example:
 </p>
 <center><div class="figure">
-	<img src="images/ak15/links.jpg" width="100%"/>
+<img src="images/ak15/links.jpg" width="100%"/>
 </div></center>
 <p>
 	Of course, if fighting these enemies, you'll hopefully have killed at least some of them before her first stacks of strain come in.
 </p>
 <!-- 7.60 7.67 7.27 -->
 <span class="anchor" id="equip"></span>
-<h2>Equipment<sup><small><a href="#equip">&#35;</a></small></sup></h2>
+<h2>Equipment<sup><small><a href="#equip">#</a></small></sup></h2>
 <p>
 	Picking AR equipment <a href="chips">can be a little tricky</a> nowadays.
 	Luckily, it's rather easy for AK-15.
 	EOTs have a tendency to put AK-15 on a slower frame, so she almost always prefers a VFL:
 </p>
 <center><div class="figure">
-	<img src="images/ak15/scope-skill.png" width="100%"/>
+<img src="images/ak15/scope-skill.png" width="100%"/>
 </div></center>
 <p>
 	Without the 40% crit rate buff from her active, she likes EOTs <em>slightly</em> more than she did before, but still not much:
 </p>
 <center><div class="figure">
-	<img src="images/ak15/scope-noskill.png" width="100%"/>
+<img src="images/ak15/scope-noskill.png" width="100%"/>
 </div></center>
 <p>
 	See also: <a href="newquip">an overview of all the new equipment pieces</a> or <a href="chip-calc">this chip calculator</a>.
 </p>
 <span class="anchor" id="dps"></span>
-<h2>DPS Comparison<sup><small><a href="#dps">&#35;</a></small></sup></h2>
+<h2>DPS Comparison<sup><small><a href="#dps">#</a></small></sup></h2>
 <p>
 	To justify not considering strain, let's look at shorter battles for these damage-over-time comparisons.
-	I'll chart a line for a 15% & 20% average DPS boost from Rage, depending on how lucky you feel.
+	I'll chart a line for a 15% &amp; 20% average DPS boost from Rage, depending on how lucky you feel.
 </p>
 <!-- <center><div class="figure">
 	<img src="images/ak15/dot-artillery.png" width="49%"/>
 	<img src="images/ak15/dot-command.png" width="49%"/>
 </div></center> -->
 <center><div class="figure">
-	<img src="images/ak15/dot-artillery.png" width="100%"/>
+<img src="images/ak15/dot-artillery.png" width="100%"/>
 </div></center>
 <center><div class="figure">
-	<img src="images/ak15/dot-command.png" width="100%"/>
+<img src="images/ak15/dot-command.png" width="100%"/>
 </div></center>
 <p>
 	AK-15 has excellent DPS early on, but starts to drop down once the ARs with 4s ICDs get their skills up.
@@ -339,10 +339,10 @@ $$ \varepsilon = \int_{l_0}^l \frac{dl}{l} = \ln \frac{l}{l_0} $$
 	<img src="images/ak15/dot-command-crit.png" width="49%"/>
 </div></center> -->
 <center><div class="figure">
-	<img src="images/ak15/dot-artillery-crit.png" width="100%"/>
+<img src="images/ak15/dot-artillery-crit.png" width="100%"/>
 </div></center>
 <center><div class="figure">
-	<img src="images/ak15/dot-command-crit.png" width="100%"/>
+<img src="images/ak15/dot-command-crit.png" width="100%"/>
 </div></center>
 <p>
 	With M4A1's crit tiles, AR-15 gets a double boost - her mod SPEQ has a solid crit damage buff, and her own skill damage improves.
@@ -373,14 +373,13 @@ $$ \varepsilon = \int_{l_0}^l \frac{dl}{l} = \ln \frac{l}{l_0} $$
 	To see how some others stack up on the same G41 scale, see <a href="g41-standard">my charts here</a>.
 	AK-15 tends not to fall below G41 by more than ~5% under these assumptions, so she compares favorably to the vast majority of ARs.
 </p>
-
 <span class="anchor" id="performance"></span>
-<h2>Performance Comparison<sup><small><a href="#performance">&#35;</a></small></sup></h2>
+<h2>Performance Comparison<sup><small><a href="#performance">#</a></small></sup></h2>
 <p>
 	AK-15's unusual skill means all these theoretical calculations apply to real combat even less well than they usually would, so I'd hardly be doing her justice without at least some field testing.
 </p>
 <div class="figure">
-	<img src="images/ak15/test152.png" width="100%"/>
+<img src="images/ak15/test152.png" width="100%"/>
 </div>
 <p>
 	A fairly consistent ordering of AK-15 &gt; AR-15 &gt; G41 (clear time); AR-15 &gt; AK-15 &gt; G41 (damage contribution) can be seen.
@@ -393,7 +392,7 @@ $$ \varepsilon = \int_{l_0}^l \frac{dl}{l} = \ln \frac{l}{l_0} $$
 	Before you get too excited, remember G11 has a mod now:
 </p>
 <div class="figure">
-	<img src="images/ak15/test153.png" width="100%"/>
+<img src="images/ak15/test153.png" width="100%"/>
 </div>
 <p>
 	AK-15 looks a little better than AN-94 (with her tiles likely a significant factor), with apparently similar consistency.
@@ -404,7 +403,7 @@ $$ \varepsilon = \int_{l_0}^l \frac{dl}{l} = \ln \frac{l}{l_0} $$
 	PP-19 and 416 dealt ~30% of the damage each, leaving very little for the rest of the team and making it hard for AK-15's performance to be distinguished.
 </p>
 <span class="anchor" id="conclusion"></span>
-<h2>Conclusion<sup><small><a href="#conclusion">&#35;</a></small></sup></h2>
+<h2>Conclusion<sup><small><a href="#conclusion">#</a></small></sup></h2>
 <p>
 	AK-15 is a strong single-target AR with an emphasis on single-target.
 	While not on the level of the absolute top-tier ARs, I would consider her to be preferable over many of the decent 5-star selfbuffers.
@@ -422,23 +421,23 @@ $$ \varepsilon = \int_{l_0}^l \frac{dl}{l} = \ln \frac{l}{l_0} $$
 	With that in mind, here are some not-entirely-awful ideas to illustrate where AK-15 can be used.
 </p>
 <center><div class="figure">
-	<img src="images/ak15/teamex1.png" width="40%"/>
-	<img src="images/ak15/teamex2.png" width="40%"/>
+<img src="images/ak15/teamex1.png" width="40%"/>
+<img src="images/ak15/teamex2.png" width="40%"/>
 </div></center>
 <p>
 	Left: UMP45, PP-19, AK-15, 416 mod, G41. A backup day ARSMG if your AR team is all occupied.
 	Right: MP5 mod, Lusa, AR-15, M4A1, AK-15. A more defensive/boss-oriented ARSMG with an acceptable Centaurus/Orthrus matchup.
 </p>
 <center><div class="figure">
-	<img src="images/ak15/teamex3.png" width="40%"/>
-	<img src="images/ak15/teamex4.png" width="40%"/>
+<img src="images/ak15/teamex3.png" width="40%"/>
+<img src="images/ak15/teamex4.png" width="40%"/>
 </div></center>
 <p>
 	Left: RO635, P22, AK-15, Python, AS Val. Night ARSMG.
 	Right: C-MS, Uzi mod, AK-15, M4A1, Zas M21.
 </p>
 <span class="anchor" id="notes"></span>
-<h2>Other notes<sup><small><a href="#notes">&#35;</a></small></sup></h2>
+<h2>Other notes<sup><small><a href="#notes">#</a></small></sup></h2>
 <p>
 	AK-15 will get a mod, but probably not for at least a year from the time of writing.
 	This page is purely looking at her base form.
@@ -448,7 +447,7 @@ $$ \varepsilon = \int_{l_0}^l \frac{dl}{l} = \ln \frac{l}{l_0} $$
 	She was part of an old record CE stack I found, beating out the previous NTW/KSVK stack by a few hundred CE:
 </p>
 <div class="figure">
-	<img src="images/ce/ump40-redux.jpg" width="100%"/>
+<img src="images/ce/ump40-redux.jpg" width="100%"/>
 </div>
 <p>
 	It's since <a href="ce">been replaced</a> by SLAP MGHG, AR modspam, and all sorts of coalition stacks.
@@ -457,49 +456,55 @@ $$ \varepsilon = \int_{l_0}^l \frac{dl}{l} = \ln \frac{l}{l_0} $$
 	There's no limit on how much Strain can increase in one go:
 </p>
 <center><div class="figure">
-	<img src="images/ak15/nightmare37.jpg" width="80%"/>
+<img src="images/ak15/nightmare37.jpg" width="80%"/>
 </div></center>
 <center><em>5 stacks+(155 links/(5 links/group))*1 stack/group + 1 mystery stack = 37 stacks.</em></center>
-<span class="anchor" id="ads"></span>
-<h2>More like this</h2>
-<section class="tiles">
-	<a href="g41-standard">
-		<div class="gallery">
-		  <div class="gallerypic">
-			<img src="images/icon/g41-standard.jpg" width="33%" height="400">
-			<div class="gallerypicdesc"><b>AR Damage over time</b><br/>Comparing direct-fire damage output</div>
-		  </div>
-		</div>
-	</a>
-	
-	<a href="ro635">
-		<div class="gallery">
-		  <div class="gallerypic">
-			<img src="images/icon/ro635.jpg" width="33%" height="400">
-			<div class="gallerypicdesc"><b>RO635's Second Chance</b><br/>Passive analysis</div>
-		  </div>
-		</div>
-	</a>
-</section>
+
+
 
 <!-- Footer -->
-	<footer id="footer">
-		<div class="inner">
-			<ul class="copyright">
-		<li>Content: BigStupidJellyfish</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</div>
-	</footer>
-</div>
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+    <div class="more-like-this">
+        <h2>More like this</h2>
+        <div class="mlt-gallery-grid">
 
+                <a href="g41-standard" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/g41-standard.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">AR Damage over time</div>
+                            <div class="mlt-gallery-desc">Comparing direct-fire damage output</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="ro635" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/ro635.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">RO635's Second Chance</div>
+                            <div class="mlt-gallery-desc">Passive analysis</div>
+                        </div>
+                    </div>
+                </a>
+        </div>
+    </div>
+    
+
+            </div> 
+        </div> </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                <a href="../pages/about">About GFMath</a> ·
+                <a href="../pages/spoilers">Explanation of common plot types</a> ·
+                <a href="#" onclick="window.scrollTo(0,0)">Back to top</a>
+            </p>
+            <p style="margin-top: 20px;">
+                Content: BigStupidJellyfish
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,23 +1,28 @@
-<!DOCTYPE HTML>
-<!--
-Forty by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-805N997DPC');
-</script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-805N997DPC');
+    </script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    <title>Accuracy and Evasion - GFMath</title>
+
+<link href="images/icon/ads-180.png" rel="icon" sizes="180x180"/>
+<link href="images/icon/ads-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="images/icon/ads-16.png" rel="icon" sizes="16x16" type="image/png"/>
+
+    <link rel="stylesheet" href="../assets/css/common.css" />
+
+    <script>
 	function calculate() {
 		var eva1 = parseInt(document.getElementById("eva1").value),
 			acc1 = parseInt(document.getElementById("acc1").value),
@@ -45,49 +50,43 @@ gtag('config', 'G-805N997DPC');
   		calculate();
 	};
 </script>
-<meta name="description" content="Girls Frontline, by the numbers">
-<title>Accuracy and Evasion - GFMath</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="../assets/css/main.css" />
-<link rel="icon" sizes="180x180" href="images/icon/ads-180.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/icon/ads-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/icon/ads-16.png">
-<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
 </head>
-<body class="is-preload">
-<!-- Wrapper -->
-<div id="wrapper">
-<!-- Header -->
-<header id="header">
-<a href="../index" class="logo"><strong>GFMath</strong> <span>Detailed GFL analysis</span></a>
-<nav></nav>
-<a href="https://www.youtube.com/c/BigStupidJellyfish" class="logo"><strong>Youtube</strong></a>
-</header>
-<div id="main" class="alt">
-<section>
-<div class="inner">
-<header class="major">
-	<h1>Accuracy and Evasion</h1>
-</header>
-<center><em>By BigStupidJellyfish | 2021-November-25 | Updated 2022-April-30</em></center>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    GFMath
+                </div>
+                <nav>
+                    <a href="../index">Home</a>
+                    <a href="https://www.youtube.com/c/BigStupidJellyfish" target="_blank">YouTube</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-<h2>Contents<sup><small><a href="#">&#35;</a></small></sup></h2>
+    <main>
+        <div class="article-container">
+            <header class="article-header">
+                <h1>Accuracy and Evasion</h1>
+                <div class="meta">By BigStupidJellyfish | 2021-November-25 | Updated 2022-April-30</div>
+            </header>
+            <div class="article-content">
+<h2>Contents<sup><small><a href="#">#</a></small></sup></h2>
 <ul>
-	<li><a href="#introduction">Introduction</a></li>
-	<li><a href="#ehp">Effective HP</a></li>
-	<li><a href="#applications">Applications</a></li>
-	<li><a href="#myth">"Stacking evasion has diminishing returns"</a></li>
-	<li><a href="#danya">Still, don't use IDW</a></li>
-	<li><a href="#acc">The other side</a></li>
-	<li><a href="#exodia">A problem with IWS Exodia</a></li>
-	<li><a href="#hocs">Heavy Ordnance Corps</a></li>
-	<li><a href="#conclusion">In conclusion</a></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#ehp">Effective HP</a></li>
+<li><a href="#applications">Applications</a></li>
+<li><a href="#myth">"Stacking evasion has diminishing returns"</a></li>
+<li><a href="#danya">Still, don't use IDW</a></li>
+<li><a href="#acc">The other side</a></li>
+<li><a href="#exodia">A problem with IWS Exodia</a></li>
+<li><a href="#hocs">Heavy Ordnance Corps</a></li>
+<li><a href="#conclusion">In conclusion</a></li>
 </ul>
-
 <span class="anchor" id="introduction"></span>
-<h2>Introduction<sup><small><a href="#introduction">&#35;</a></small></sup></h2>
-
+<h2>Introduction<sup><small><a href="#introduction">#</a></small></sup></h2>
 <p>
 	Evasion and accuracy stats are used to determine how often your dolls will hit, and how often they will get hit in combat.
 	The formula for hit rate is pretty simple:
@@ -100,12 +99,11 @@ $$ \text{Hit rate}~(\%) = \frac{\text{ACC}}{\text{ACC}+\text{EVA}} \times 100\% 
 	<img src="images/evasion/dark/formula-hitrate.png" width="50%"/>
 </div>
 </center> -->
-
 <p>
 	But there are a number of interesting aspects to this. Let's plot this equation to get a visual.
 </p>
 <div class="figure">
-	<img src="images/evasion/hitrate.png" width="100%"/>
+<img src="images/evasion/hitrate.png" width="100%"/>
 </div>
 <p>
 	Hit rate increases rapidly at first, but will slow down the higher your accuracy is relative to enemy evasion.
@@ -113,15 +111,15 @@ $$ \text{Hit rate}~(\%) = \frac{\text{ACC}}{\text{ACC}+\text{EVA}} \times 100\% 
 	In 3D:
 </p>
 <div class="figure">
-	<img src="images/evasion/hitrate3d.png" width="100%"/>
+<img src="images/evasion/hitrate3d.png" width="100%"/>
 </div>
 <p>
-	Find where your accuracy & the enemy's evasion meet, and the color is your chance of each bullet hitting.
+	Find where your accuracy &amp; the enemy's evasion meet, and the color is your chance of each bullet hitting.
 	Warmer colors = more likely to hit, the reverse also works for the odds you'll get hit.
 	Dodge chance is simply 1 minus the hit rate, or EVA/(EVA+ACC).
 </p>
 <p>
-	Example: the Centaurus (KCCO Archers) in Core 8 have <a href="https://pengupengupengu.github.io/gflmaps/#campaign=6006&mission=648">51 accuracy</a>.
+	Example: the Centaurus (KCCO Archers) in Core 8 have <a href="https://pengupengupengu.github.io/gflmaps/#campaign=6006&amp;mission=648">51 accuracy</a>.
 	A fully equipped lv115 UMP45 with a 56% evasion buff (Artillery aura) has 203 evasion.
 	Each attack will then have a 51/(51+203)=51/254≈20.08% chance to hit her.
 </p>
@@ -139,24 +137,22 @@ $$ \mathrm{ACC}_{\mathrm{Night}} = \left\lfloor \mathrm{ACC} \cdot (1 - 0.9 \cdo
 	On your end, here's what this PEQ formula looks like:
 </p>
 <div class="figure">
-	<img src="images/evasion/nvg.png" width="100%"/>
+<img src="images/evasion/nvg.png" width="100%"/>
 </div>
 <!-- Disclaimer: this chart made without the floor function, to make it smoother. With floor, it's just slightly bumpier (uglier) without really giving more information. -->
 <p>
 	And you can probably see why calibrating gold PEQs isn't recommended: hit rate barely improves at that point, assuming your base accuracy is significantly above your target evasion.
 	If you don't care about min-maxing theater CE, even green PEQs are good enough for most purposes.
 </p>
-
 <p>
 	This works both ways, for friendlies and enemies, <a href="myths#hr">with no minimum</a>.
 	Today, I'd like to go over a few less-obvious aspects of this.
 </p>
-
 <p>
-	<sup>1</sup>: That document is quite old, and a few bits are out of date. All dolls have 15 base AP now, and HOCs have a 40% hit rate floor (bonus: <a href="https://old.reddit.com/r/girlsfrontline/comments/onxnav/weekly_commanders_lounge_july_20_2021/h611guq/">experimentally verified</a>).
+<sup>1</sup>: That document is quite old, and a few bits are out of date. All dolls have 15 base AP now, and HOCs have a 40% hit rate floor (bonus: <a href="https://old.reddit.com/r/girlsfrontline/comments/onxnav/weekly_commanders_lounge_july_20_2021/h611guq/">experimentally verified</a>).
 </p>
 <span class="anchor" id="ehp"></span>
-<h2>Effective HP<sup><small><a href="#ehp">&#35;</a></small></sup></h2>
+<h2>Effective HP<sup><small><a href="#ehp">#</a></small></sup></h2>
 $$ \mathrm{EHP} = \frac{\mathrm{HP}}{\mathrm{Enemy~hit~rate}} = \frac{\mathrm{HP}}{1-\mathrm{Dodge~chance}} $$
 <!-- <center>
 <div class="figure">
@@ -171,68 +167,62 @@ $$ \mathrm{EHP} = \frac{\mathrm{HP}}{\mathrm{Enemy~hit~rate}} = \frac{\mathrm{HP
 	On average, 50% of their shots will miss, requiring the enemy to attack for 2000 points of damage this time.
 	EHP is a measure of how much HP a 0-evasion tank would need to last as long on average.
 </p>
-
 <p>
 	Effective HP is very nice to work with: twice the EHP, twice the survivability, twice as good. It also lets you compare units with significantly different HP/EVA distributions.
 </p>
-
 <p>
 	If you'd like to play around with this a bit, here's a calculator:
 </p>
 <center>
-	<table style="width:auto" align="center">
-		<tr>
-			<th style="text-align: center;">Doll</th>
-			<th style="text-align: center;">HP</th>
-			<th style="text-align: center;">Final EVA</th>
-			<th style="text-align: center;">Enemy ACC</th>
-		</tr>
-		<tr>
-			<td style="text-align: center; vertical-align: middle;">Doll #1</td>
-			<td><input class="hp1" id="hp1" type="text" value=1100 style="text-align: center; vertical-align: middle;" oninput="calculate()"></input><br></td>
-			<td><input id="eva1" type="text" value=290 style="text-align: center; vertical-align: middle;" oninput="calculate()"></input><br></td>
-			<td><input id="acc1" type="text" value=80 style="text-align: center; vertical-align: middle;" oninput="calculate()"></input><br></td>
-		</tr>
-		<tr>
-			<td style="text-align: center; vertical-align: middle;">Doll #2</td>
-			<td><input id="hp2" type="text" value=990 style="text-align: center; vertical-align: middle;" oninput="calculate()"></input><br></td>
-			<td><input id="eva2" type="text" value=330 style="text-align: center; vertical-align: middle;" oninput="calculate()"></input><br></td>
-			<td></td>
-		</tr>
-	</table>
-
-	<!-- <button type="button" onclick="calculate()">Calculate</button> -->
-
-	<table style="width:auto; margin-top: 25px;">
-		<tr>
-			<th>Doll</th>
-			<th>Dodge chance</th>
-			<th>EHP</th>
-		</tr>
-		<tr>
-			<td>Doll #1</td>
-			<td id="dodge_1">?%</td>
-			<td id="ehp_1">? EHP</td>
-		</tr>
-		<tr>
-			<td>Doll #2</td>
-			<td id="dodge_2">?%</td>
-			<td id="ehp_2">? EHP</td>
-		</tr>
-	</table>
+<table align="center" style="width:auto">
+<tr>
+<th style="text-align: center;">Doll</th>
+<th style="text-align: center;">HP</th>
+<th style="text-align: center;">Final EVA</th>
+<th style="text-align: center;">Enemy ACC</th>
+</tr>
+<tr>
+<td style="text-align: center; vertical-align: middle;">Doll #1</td>
+<td><input class="hp1" id="hp1" oninput="calculate()" style="text-align: center; vertical-align: middle;" type="text" value="1100"/><br/></td>
+<td><input id="eva1" oninput="calculate()" style="text-align: center; vertical-align: middle;" type="text" value="290"/><br/></td>
+<td><input id="acc1" oninput="calculate()" style="text-align: center; vertical-align: middle;" type="text" value="80"/><br/></td>
+</tr>
+<tr>
+<td style="text-align: center; vertical-align: middle;">Doll #2</td>
+<td><input id="hp2" oninput="calculate()" style="text-align: center; vertical-align: middle;" type="text" value="990"/><br/></td>
+<td><input id="eva2" oninput="calculate()" style="text-align: center; vertical-align: middle;" type="text" value="330"/><br/></td>
+<td></td>
+</tr>
+</table>
+<!-- <button type="button" onclick="calculate()">Calculate</button> -->
+<table style="width:auto; margin-top: 25px;">
+<tr>
+<th>Doll</th>
+<th>Dodge chance</th>
+<th>EHP</th>
+</tr>
+<tr>
+<td>Doll #1</td>
+<td id="dodge_1">?%</td>
+<td id="ehp_1">? EHP</td>
+</tr>
+<tr>
+<td>Doll #2</td>
+<td id="dodge_2">?%</td>
+<td id="ehp_2">? EHP</td>
+</tr>
+</table>
 </center>
-
 <span class="anchor" id="applications"></span>
-<h2>Applications<sup><small><a href="#applications">&#35;</a></small></sup></h2>
-
+<h2>Applications<sup><small><a href="#applications">#</a></small></sup></h2>
 <p>
-	I've been collecting some data on the damage taken from <a href="8-2"></a>8-2 SF drag runs</a>.
+	I've been collecting some data on the damage taken from <a href="8-2"></a>8-2 SF drag runs.
 	The following chart shows the estimated number of total attacks the maintank took, by support configuration.
 	Using one or two Architects significantly reduced the number of attacks that need to be tanked, lowering damage and speeding the grind up.
 </p>
 <center>
 <div class="figure">
-	<img src="images/evasion/8-2-MT.png" width="75%"/>
+<img src="images/evasion/8-2-MT.png" width="75%"/>
 </div>
 </center>
 <p>
@@ -244,13 +234,13 @@ $$ \mathrm{EHP} = \frac{\mathrm{HP}}{\mathrm{Enemy~hit~rate}} = \frac{\mathrm{HP
 	A few examples:
 </p>
 <ul>
-	<li>lv96 L Aegis: 1309 HP, 66 EVA. It has \( \frac{1309}{20/(20+66)} = 5628~\mathrm{EHP} \). Not quite enough.</li>
-	<ul>
-		<li>Add Defend: \( \frac{1309}{20/(20+66\cdot 2)} = 9948~\mathrm{EHP} \), a 77% increase and enough EHP to survive with a decent safety margin.</li>
-	</ul>
-	<li>lv92 L Manticore: 1539 HP, 79 EVA. \( \frac{1537}{20/(20+79)} = 7618~\mathrm{EHP} \), or 13697 with Defend (+80%). Possibly survivable without Defend, but with Defend it's easy.</li>
-	<li>lv93 L Nemeum: 932 HP, 50 EVA. Even with Defend, it has only 5592 EHP.</li>
-	<li>Even a lv100 XL Tarantula, with 356 HP/88 EVA, has 1922/3489 EHP without/with Defend - with a decent chance at needing two repairs per run, I would not recommend these as a primary tank.
+<li>lv96 L Aegis: 1309 HP, 66 EVA. It has \( \frac{1309}{20/(20+66)} = 5628~\mathrm{EHP} \). Not quite enough.</li>
+<ul>
+<li>Add Defend: \( \frac{1309}{20/(20+66\cdot 2)} = 9948~\mathrm{EHP} \), a 77% increase and enough EHP to survive with a decent safety margin.</li>
+</ul>
+<li>lv92 L Manticore: 1539 HP, 79 EVA. \( \frac{1537}{20/(20+79)} = 7618~\mathrm{EHP} \), or 13697 with Defend (+80%). Possibly survivable without Defend, but with Defend it's easy.</li>
+<li>lv93 L Nemeum: 932 HP, 50 EVA. Even with Defend, it has only 5592 EHP.</li>
+<li>Even a lv100 XL Tarantula, with 356 HP/88 EVA, has 1922/3489 EHP without/with Defend - with a decent chance at needing two repairs per run, I would not recommend these as a primary tank.
 		Note that whatever you put on 7/8 takes far fewer attacks and only needs ~300-500 EHP, so they're perfectly fine in that position.
 	</li>
 </ul>
@@ -262,12 +252,10 @@ $$ \mathrm{EHP} = \frac{\mathrm{HP}}{\mathrm{Enemy~hit~rate}} = \frac{\mathrm{HP
 	<li>lv92 L Manticore: 1539 HP, 79 EVA. 1539/(20/(20+79)) = 7618 EHP, or 13697 with Defend (+80%). Possibly survivable without Defend, but with Defend it's easy.</li>
 	<li>lv93 L Nemeum: 932 HP, 50 EVA. Even with Defend, it has only 5592 EHP.</li>
 </ul> -->
-
 <p>
 Or for more a more competitively-relevant example, here's a comparison between the force shielders against Dog/Archers.
-Assuming max level/100 affection/best exo & suppressor equipped, their EHPs against a Centaurus' 51 accuracy are:
+Assuming max level/100 affection/best exo &amp; suppressor equipped, their EHPs against a Centaurus' 51 accuracy are:
 </p>
-
 <center>
 <table style="width:100%">
 <tr>
@@ -321,10 +309,8 @@ Assuming max level/100 affection/best exo & suppressor equipped, their EHPs agai
 </tr>
 </table>
 </center>
-
 <p>Orthrus are a bit more accurate.
 Here's the same table with 143 enemy accuracy.</p>
-
 <center>
 <table style="width:100%">
 <tr>
@@ -378,36 +364,29 @@ Here's the same table with 143 enemy accuracy.</p>
 </tr>
 </table>
 </center>
-
 <p>
 	This doesn't account for tile differences or MP5's skill2, but it's useful to see how they all compare in base durability.
 	Most interestingly, Thompson's large HP pool seems to outweigh her lower evasion, with the highest EHP across the board.
 	<a href="thompson">More on that over here</a>.
 	<!-- (Despite this, G36c usually still sees more use in ARSMGs due to her better tiles, and MP5 in most teams for her RF tiles and second skill.) -->
 </p>
-
 <span class="anchor" id="myth"></span>
-<h2>"Stacking evasion has diminishing returns"<sup><small><a href="#myth">&#35;</a></small></sup></h2>
-
+<h2>"Stacking evasion has diminishing returns"<sup><small><a href="#myth">#</a></small></sup></h2>
 <p>
 	The above statement is incorrect.
 </p>
-
 <p>
 	You may have noticed that the Defend chip in the SF examples above gave rather substantial survivability increases, even with a Manticore whose base evasion was ~4x the enemy's accuracy.
 	This is not some trick or fluke.
 </p>
-
 <p>
 	As your evasion gets higher and higher relative to enemy accuracy, your dodge chance will approach 100%.
 	While this does mean changes in dodge chance will be smaller percentage point-wise, that's not actually the metric you should be looking at.
 </p>
-
 <p>
 	Your effective HP will be quite good with a 99% dodge chance, but adding "just" 1 percentage point to that takes you to 100% dodge chance where your EHP would be infinite.
 	Not that you can actually get infinite EHP, but even consider the difference between a 90% dodge chance and 95% - you take half as many hits with a 95% dodge rate, and will live twice as long on average.
 </p>
-
 <p>
 	We can define a survivability increase like so:
 </p>
@@ -420,19 +399,15 @@ $$ \mathrm{Survivability~increase} = \frac{\mathrm{New~EHP}}{\mathrm{Old~EHP}} =
 <p>
 	For a visual perspective, here's a chart of the gain in survivability (EHP) a few different EVA buffs give you against a 20-accuracy enemy, depending on what your evasion stat was beforehand.
 </p>
-
 <div class="figure">
-	<img src="images/evasion/survivalincrease.png" width="100%"/>
+<img src="images/evasion/survivalincrease.png" width="100%"/>
 </div>
-
 <p>
 	This scales about as expected if going against higher accuracies:
 </p>
-
 <div class="figure">
-	<img src="images/evasion/survivalincreasehighacc.png" width="100%"/>
+<img src="images/evasion/survivalincreasehighacc.png" width="100%"/>
 </div>
-
 <p>
 	If you start with 0 evasion, evasion buffs obviously don't help you at all - 0*anything=0.
 	With low base evasion, you gain very little survivability from this - there's not much of a difference between getting hit 98% of the time and 95% of the time.
@@ -449,16 +424,15 @@ $$ \lim\limits_{\mathrm{EVA}\to\infty} \frac{\frac{a}{a+\mathrm{EVA}}}{\frac{a}{
 	(You can similarly show that an accuracy buff can never provide a larger DPS increase than the buff itself, i.e., a 100% ACC buff is <em>at its absolute best</em> a 100% DPS buff - which happens when your accuracy is near 0/enemy evasion is extremely large.)
 </p>
 <span class="anchor" id="danya"></span>
-<h2>Still, don't use IDW<sup><small><a href="#danya">&#35;</a></small></sup></h2>
-
+<h2>Still, don't use IDW<sup><small><a href="#danya">#</a></small></sup></h2>
 <p>
 	This shows that increasing evasion can do <em>something</em>, and there are no literal "diminishing returns" (if anything, it's the opposite).
 	This does not show that this thing is useful, or that it is better than other things you could be doing (like increasing damage).
 	Consider two theoretical options:
 </p>
 <ol>
-	<li>Increase your SMG maintank's evasion by 300%, massively boosting their survivability against weaker enemies</li>
-	<li>Increase your backline's DPS by 300%, killing all enemies before they get even a single attack off</li>
+<li>Increase your SMG maintank's evasion by 300%, massively boosting their survivability against weaker enemies</li>
+<li>Increase your backline's DPS by 300%, killing all enemies before they get even a single attack off</li>
 </ol>
 <p>
 	Guess which one is more likely to reduce your damage taken better.
@@ -466,32 +440,29 @@ $$ \lim\limits_{\mathrm{EVA}\to\infty} \frac{\frac{a}{a+\mathrm{EVA}}}{\frac{a}{
 	A number of especially scary attacks are surehit, and no amount of evasion will save you then (unless you're <a href="ro635">RO mod</a>).
 	It's also possible to cover survivability through other means, like with the skill of a <a href="fairy-reviews#shield">Shield Fairy</a>.
 </p>
-
 <p>
 	(If you don't care about minimizing damage and only need to win the fight, past some point you'll have enough evasion to get to the end anyways and further evasion buffs don't affect that outside of a minor consistency boost.
 	This could be viewed as proper 'diminishing returns,' but I don't think this is a relevant perspective for most stuff outside of coalition drills.)
 	<!-- Additive increases to evasion are also a smaller percentage increase the bigger your base stat, but that's not a relevant consideration. Equip T-Exos because you tank better with them, not because they're >x% better than X-Exos. -->
 </p>
-
 <h3>Experiment: Killing Strelets</h3>
-
 <p>
 	Starting with a team skeleton of G41, Type95, and C-MS, let's try killing a Strelet mob and see how it works for varying combinations of three offensive/defensive buffs.
 	To fill out the rest of the team, I'll use:
 </p>
 <ul>
-	<li>Defensive support</li>
-	<ol>
-		<li>Shield Fairy</li>
-		<li>El Fail</li>
-		<li>Makarov</li>
-	</ol>
-	<li>Offensive support</li>
-	<ol>
-		<li>Command Fairy</li>
-		<li>Mk23</li>
-		<li>SAA</li>
-	</ol>
+<li>Defensive support</li>
+<ol>
+<li>Shield Fairy</li>
+<li>El Fail</li>
+<li>Makarov</li>
+</ol>
+<li>Offensive support</li>
+<ol>
+<li>Command Fairy</li>
+<li>Mk23</li>
+<li>SAA</li>
+</ol>
 </ul>
 <p>
 	Tile differences, link protection, and various other factors make this rather unscientific.
@@ -500,38 +471,31 @@ $$ \lim\limits_{\mathrm{EVA}\to\infty} \frac{\frac{a}{a+\mathrm{EVA}}}{\frac{a}{
 	In normal combat you can also kite, significantly reducing the amount of time you're sitting there and taking attacks.
 	Cross-ish formation for easy tile-fitting. Don't try this at home.
 </p>
-
 <div class="figure">
-	<img src="images/evasion/strelets.png" width="100%"/>
+<img src="images/evasion/strelets.png" width="100%"/>
 </div>
-
 <p>
 	The teams with 0 or 1 defensive picks performed similarly well, but after that adding more enemy debuffs and party evasion was counterproductive - not only did fight time increase dramatically, but the damage taken also increased.
 </p>
-
 <p>
 	This is all against a very forgiving enemy with low accuracy.
 	Stacking evasion against Doppelsöldners, Uhlans, Minotaurus, Cerynitis, and many more enemies will end very badly.
 </p>
 <span class="anchor" id="acc"></span>
-<h2>The other side<sup><small><a href="#acc">&#35;</a></small></sup></h2>
-
+<h2>The other side<sup><small><a href="#acc">#</a></small></sup></h2>
 <p>
 	Now, let's look at this from the other side.
 	Enemies themselves have evasion, and you'd like to kill them as quickly as possible.
 	The previous results are easy enough to invert - the higher your accuracy is relative to their evasion the less it matters - but I'll rework the chart anyways as it can help to have a visual.
 </p>
-
 <div class="figure">
-	<img src="images/evasion/dpsincrease.png" width="100%"/>
+<img src="images/evasion/dpsincrease.png" width="100%"/>
 </div>
-
 <p>
 	Here's the average DPS increase a few common accuracy buffs give, by your starting accuracy, against a 15-evasion enemy.
 	If your base acc is double their evasion, even a 100% acc buff is reduced to a 20% DPS increase.
 	Past 70 accuracy and this buff is only 1/10th as strong.
 </p>
-
 <p>
 	As you may expect, the equation for net DPS increase is just about the inverse of the survivability increase:
 </p>
@@ -544,7 +508,6 @@ $$ \mathrm{DPS~increase} = \frac{\mathrm{New~hit~rate}}{\mathrm{Old~hit~rate}} $
 <p>
 	Going from a 70% hit rate to a 80% hit rate is an 80%/70% = 1.1428 = 14.28% DPS improvement, on average.
 </p>
-
 <p>
 	If you ever wanted to know why SRS isn't very popular at day, this is it.
 	She has a 60% FP/40% ACC selfbuff, and vs typical 15 evasion stuff that 40% acc is in the range of a 5% DPS boost given her 87 base ACC.
@@ -553,34 +516,28 @@ $$ \mathrm{DPS~increase} = \frac{\mathrm{New~hit~rate}}{\mathrm{Old~hit~rate}} $
 	At night, she does better: 8 accuracy vs 15 evasion means a ~25% DPS boost from that same acc component, for a ~2x net skill DPS boost.
 	But even then, there are other options like M200/Type88/4 Shiki/heavy acc tiles.
 </p>
-
 <p>
 	On the other hand, accuracy tends to be given in much larger amounts.
 	It's easy enough to get 100-150% acc from tiles, and another 60% or so from a fairy.
 	At night, rifles will have more around 10 base accuracy, so they gain much more from accuracy buffs.
 	This is nowhere near 1:1 with the same % damage buff, but it can be a respectable bonus.
 </p>
-
 <span class="anchor" id="exodia"></span>
-<h2>A problem with IWS Exodia<sup><small><a href="#exodia">&#35;</a></small></sup></h2>
-
+<h2>A problem with IWS Exodia<sup><small><a href="#exodia">#</a></small></sup></h2>
 <blockquote>
-	<p>
-		<strong>Giant Eagle Assault</strong>. Initial CD 6s/Skill CD 16s
+<p>
+<strong>Giant Eagle Assault</strong>. Initial CD 6s/Skill CD 16s
 	</p>
-
-	<p>
+<p>
 		In return for decreasing rate of fire by 35%, increase damage by 180% for 10 seconds.
 	</p>
 </blockquote>
-
 <p>
 	IWS captured the hearts of many players back around launch, as her skill had <em>big</em> numbers.
 	A popular idea was to pair her with 4 ROF-buffing HGs, and use IWS as the sole damage-dealer.
 	Even on paper its DPS output wasn't great, so this idea has largely fallen by the wayside.
 	However, exodia-style formations do see some use with other dolls instead of IWS (M4 exodia in SC ranking, Type88 exodia in PL ranking).
 </p>
-
 <p>
 	IWS' skill works out to an [(1-0.35)*2.8]-1=82% net DPS buff ignoring any frame shenanigans, which is slightly above the typical 5-star standard (of 75%, but also nowhere near as much as the FP buff could lead you to think).
 	One major problem with this type of formation is link protection - each bullet can kill at most one enemy link.
@@ -588,7 +545,7 @@ $$ \mathrm{DPS~increase} = \frac{\mathrm{New~hit~rate}}{\mathrm{Old~hit~rate}} $
 </p>
 <!-- It could be the case that IWS' continuous retargeting in-skill helps mitigate this slightly, i.e. she almost kills one enemy, moves to another new farthest, HGs finish that one off, etc. Haven't tested it to say for sure though. -->
 <div class="figure">
-	<img src="images/evasion/linkkiller.png" width="100%"/>
+<img src="images/evasion/linkkiller.png" width="100%"/>
 </div>
 <p>
 	Here are the odds of all shots connecting from a given volley (5 dummies).
@@ -596,19 +553,15 @@ $$ \mathrm{DPS~increase} = \frac{\mathrm{New~hit~rate}}{\mathrm{Old~hit~rate}} $
 	Oneshot probability increases much more linearly with typical accuracy values - 80-100 for rifles, before buffs - suggesting that accuracy is more useful to buff if you're fighting low-HP enemies.
 	Of course, ROF is even more valuable in many such situations.
 </p>
-
 <div class="figure">
-	<img src="images/evasion/linkkillerbuffed.png" width="100%"/>
+<img src="images/evasion/linkkillerbuffed.png" width="100%"/>
 </div>
-
 <p>
 	M4-based exodias avoid this problem by having surehit, Type88-based ones by having piercing/multihit.
 	An alternative interpretation of this is that you can't realistically buff acc enough to reliably oneshot evasive enemies, and thus shouldn't build IWS exodias.
 </p>
-
 <span class="anchor" id="hocs"></span>
-<h2>Heavy Ordnance Corps<sup><small><a href="#hocs">&#35;</a></small></sup></h2>
-
+<h2>Heavy Ordnance Corps<sup><small><a href="#hocs">#</a></small></sup></h2>
 <p>
 	HOCs have their own accuracy equivalent, precision.
 	It's a similar equation, but with different coefficients and an actual floor:
@@ -622,33 +575,28 @@ $$ \mathrm{HOC~hit~rate~(\%)} = \mathrm{max}\left(\frac{\mathrm{Precision}\div 8
 <p>
 	where \(\mathrm{max}(a,b)\) returns the higher value between <em>a</em> and <em>b</em>. Visually:
 </p>
-
 <div class="figure">
-	<img src="images/evasion/hochr.png" width="100%"/>
+<img src="images/evasion/hochr.png" width="100%"/>
 </div>
-
 <p>
 	Mk 153 may be added once Theater rewards are distributed and I get her chipped/upgraded.
 	QLZ's evasion debuff is not accounted for here.
 	Stats are based on my personal HOCs, which are at worst ~99.5% optimized.
 	2B14 uses a lethality/precision preset.
 </p>
-
 <p>
 	So: low-precision HOCs like 2B14 and M2 may run up against the 40% floor against enemies with 50+ EVA or so.
 	More precise ones will stay above it until a bit past 80 EVA.
 	In most cases, you can expect your HOCs to hit 70-80% of the time.
 </p>
-
 <span class="anchor" id="conclusion"></span>
-<h2>In conclusion<sup><small><a href="#conclusion">&#35;</a></small></sup></h2>
-
+<h2>In conclusion<sup><small><a href="#conclusion">#</a></small></sup></h2>
 <p>
 	Free evasion is never bad, but it's less exciting when you don't have much of it to start with.
 	Luckily, no currently released MGs waste their tilebuff on SG EVA.
 	Killing faster is generally better mitigation than evading harder, so take damage buffs over evasion buffs when possible.
 	If there's minimal opportunity cost, some extra evasion can be very nice in most ARSMG formations, as it will give a solid survivability improvement.
-	Don't sleep on P22's middle column buff, and try to double dip on that & the shields whenever possible.
+	Don't sleep on P22's middle column buff, and try to double dip on that &amp; the shields whenever possible.
 </p>
 <p>
 	Having high evasion doesn't mean you can't get hit.
@@ -663,59 +611,54 @@ $$ \mathrm{HOC~hit~rate~(\%)} = \mathrm{max}\left(\frac{\mathrm{Precision}\div 8
 <p>
 	For more math stuff including things like the reasons flares suck and converting between accuracy debuffs/evasion buffs, <a href="https://gfl.matsuda.tips/post/Accuracy">this writeup remains an excellent resource</a>.
 </p>
-
 <!-- <span class="anchor" id="ads">More like this / <a href="#"></span>
 <h2>back to top</a></h2> -->
 
-<span class="anchor" id="ads"></span>
-<h2>More like this</h2>
-	<section class="tiles">	
-		<!-- <a href="smgsg">
-			<div class="gallery">
-			  <div class="gallerypic">
-				<img src="images/icon/smgsg.jpg" width="33%" height="400">
-				<div class="gallerypicdesc"><b>Effective Survival Strategies</b><br/>Durability comparisons</div>
-			  </div>
-			</div>
-		</a> -->
-		
-		<a href="dummy">
-			<div class="gallery">
-				<div class="gallerypic">
-				<img src="images/icon/dummysettings.jpg" width="33%" height="400">
-				<div class="gallerypicdesc"><b>What's in the Dummy?</b><br/>Evasion & Armor settings</div>
-				</div>
-			</div>
-		</a>
-		
-		<a href="cms-dps">
-			<div class="gallery">
-			  <div class="gallerypic">
-				<img src="images/icon/cms-dps.jpg" width="33%" height="400">
-				<div class="gallerypicdesc"><b>Using C-MS for DPS</b><br/>Mode & equipment analysis</div>
-			  </div>
-			</div>
-		</a>
-</section>
-	
-	<!-- Footer -->
-		<footer id="footer">
-			<div class="inner">
-				<ul class="copyright">
-		<li>Content: BigStupidJellyfish</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</div>
-		</footer>
-	</div>
-	
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-	
-	</body>
-	</html>
+
+
+<!-- Footer -->
+
+    <div class="more-like-this">
+        <h2>More like this</h2>
+        <div class="mlt-gallery-grid">
+
+                <a href="dummy" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/dummysettings.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">What's in the Dummy?</div>
+                            <div class="mlt-gallery-desc"></div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="cms-dps" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/cms-dps.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">Using C-MS for DPS</div>
+                            <div class="mlt-gallery-desc"></div>
+                        </div>
+                    </div>
+                </a>
+        </div>
+    </div>
+    
+
+            </div> 
+        </div> </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                <a href="../pages/about">About GFMath</a> ·
+                <a href="../pages/spoilers">Explanation of common plot types</a> ·
+                <a href="#" onclick="window.scrollTo(0,0)">Back to top</a>
+            </p>
+            <p style="margin-top: 20px;">
+                Content: BigStupidJellyfish
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,68 +1,67 @@
-<!DOCTYPE HTML>
-<!--
-Forty by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-		gtag('config', 'G-805N997DPC');
-	</script>
-	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-	<title>Reading Backrow in Master Duel - GFMath</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="../assets/css/main.css" />
-	<link rel="icon" sizes="180x180" href="images/icon/ads-180.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="images/icon/ads-32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="images/icon/ads-16.png">
-	<noscript>
-		<link rel="stylesheet" href="../assets/css/noscript.css" />
-	</noscript>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-805N997DPC');
+    </script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    <title>Reading Backrow in Master Duel - GFMath</title>
+
+<link href="images/icon/ads-180.png" rel="icon" sizes="180x180"/>
+<link href="images/icon/ads-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="images/icon/ads-16.png" rel="icon" sizes="16x16" type="image/png"/>
+
+    <link rel="stylesheet" href="../assets/css/common.css" />
+
+    
 </head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    GFMath
+                </div>
+                <nav>
+                    <a href="../index">Home</a>
+                    <a href="https://www.youtube.com/c/BigStupidJellyfish" target="_blank">YouTube</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-<body class="is-preload">
-	<!-- Wrapper -->
-	<div id="wrapper">
-		<!-- Header -->
-		<header id="header">
-			<a href="../index" class="logo"><strong>GFMath</strong> <span>Detailed GFL analysis</span></a>
-			<nav></nav>
-			<a href="https://www.youtube.com/c/BigStupidJellyfish" class="logo"><strong>Youtube</strong></a>
-		</header>
-		<div id="main" class="alt">
-			<section>
-				<div class="inner">
-					<header class="major">
-						<h1>Reading Backrow in Master Duel</h1>
-					</header>
-					<center><em>By BigStupidJellyfish | 2025-June-28 | Last updated 2025-July-30</em></center>
-
-					<p>
-						<em>
+    <main>
+        <div class="article-container">
+            <header class="article-header">
+                <h1>Reading Backrow in Master Duel</h1>
+                <div class="meta">By BigStupidJellyfish | 2025-June-28 | Last updated 2025-July-30</div>
+            </header>
+            <div class="article-content">
+<p>
+<em>
 							(Update, 2025-July-30: one change with the late July client update claims that "cards are now shown in a new order on your Card List when selecting cards via card effects, etc. This also applies to cards in your hand."
 							I will be verifying what this affects, but for now, hand sorting seems to be the same and what's written below should still apply.)
 						</em>
-					</p>
-
-					<span class="anchor" id="introduction"></span>
-					<h2>Introduction<sup><small><a href="#introduction">&#35;</a></small></sup></h2>
-					<center>
-						<div class="figure">
-							<img src="images/md-traps/transparent-setting.jpg" width="100%" />
-							<!-- </div><em>Shockingly, this setting doesn't let you see your opponent's cards. It's a nice option, though.</em></center> -->
-						</div><em>This setting doesn't let you see your opponent's cards, so you'll have to think things
+</p>
+<span class="anchor" id="introduction"></span>
+<h2>Introduction<sup><small><a href="#introduction">#</a></small></sup></h2>
+<center>
+<div class="figure">
+<img src="images/md-traps/transparent-setting.jpg" width="100%"/>
+<!-- </div><em>Shockingly, this setting doesn't let you see your opponent's cards. It's a nice option, though.</em></center> -->
+</div><em>This setting doesn't let you see your opponent's cards, so you'll have to think things
 							through yourself.</em>
-					</center>
-					<p>
+</center>
+<p>
 						Your opponent, having finished their combo, sets three cards face-down - all unknowns.
 						Their archetype doesn't have much for specific backrow, so these cards are likely to be some
 						combination of Infinite Impermanence/Called by the Grave/Crossout Designator/bluffs.
@@ -70,27 +69,26 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 						opportunities to remove some of their sets.
 						But which of the three should you target? Is the best card in the middle?
 					</p>
-					<p>
+<p>
 						I'll go over some general strategies and considerations, and then introduce a strategy that
 						really shouldn't be possible, and that I haven't seen much awareness of.
 					</p>
-
-					<span class="anchor" id="basics"></span>
-					<h2>Basic reads<sup><small><a href="#basics">&#35;</a></small></sup></h2>
-					<p>
+<span class="anchor" id="basics"></span>
+<h2>Basic reads<sup><small><a href="#basics">#</a></small></sup></h2>
+<p>
 						Suppose your opponent ends with one unknown set.
 						There's no conclusive way to determine what it is, but a few factors can modify the
 						probabilities.
 						Some common examples:
 					</p>
-					<ul>
-						<li>Imperm is sort-of "optimal" to put in the pendulum zones - opponents on
+<ul>
+<li>Imperm is sort-of "optimal" to put in the pendulum zones - opponents on
 							pendulum strategies would be forced to play into the column effect.</li>
-						<li>The center column is also a decent option for Imperm - an inattentive opponent is more
+<li>The center column is also a decent option for Imperm - an inattentive opponent is more
 							likely to activate a Spell in the middle.</li>
-						<li>Those locations do send a stronger "this set may be Imperm" signal - so you could place
+<li>Those locations do send a stronger "this set may be Imperm" signal - so you could place
 							Imperm in zone 2/4 if you'd rather your opponent read it as Called by the Grave.</li>
-						<li>If, while your opponent comboed, you saw delays before their effects resolved, they likely
+<li>If, while your opponent comboed, you saw delays before their effects resolved, they likely
 							have Maxx "C"/Ash/Crossout in hand.
 							As you begin to play, if they don't drop any handtraps (but had delays during their combo),
 							a single set is more likely to be Crossout.
@@ -101,35 +99,35 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 								recent video</a> has some excellent information and examples.
 							Always be careful.
 						</li>
-						<li>In Stun, Dinomorphia, and similar decks, if playing Iron Thunder, their key cards may be more likely to be placed in zones they expect you not to activate cards in (for example, summoning Rexterm aligned with a potential imperm).</li>
-						<li>If set cards are already on the field, setting a Spell/Trap into the same column as one of yours hints at an Imperm (although this depends - setting an Imperm into an opponent's Imperm can be bad).</li>
-					</ul>
-					<p>
+<li>In Stun, Dinomorphia, and similar decks, if playing Iron Thunder, their key cards may be more likely to be placed in zones they expect you not to activate cards in (for example, summoning Rexterm aligned with a potential imperm).</li>
+<li>If set cards are already on the field, setting a Spell/Trap into the same column as one of yours hints at an Imperm (although this depends - setting an Imperm into an opponent's Imperm can be bad).</li>
+</ul>
+<p>
 						Metagame knowledge is obviously critical - knowing what cards which decks are likely to play is
 						crucial to narrow down the possibilities.
 						Setting aside delay-based reads, these considerations apply to Yugioh wherever it's played.
 						However, Master Duel has one more unique feature that can also have an influence.
 					</p>
-					<span class="anchor" id="sorting"></span>
-					<h2>Hand sorting<sup><small><a href="#sorting">&#35;</a></small></sup></h2>
-					<p>
+<span class="anchor" id="sorting"></span>
+<h2>Hand sorting<sup><small><a href="#sorting">#</a></small></sup></h2>
+<p>
 						PSY-Framegear Driver doesn't appear first in your hand just because he likes you so much.
 						It's also because Master Duel always presents your hand in a sorted manner, and normal monsters
 						happen to have priority.
 						You can check the duel log to see the actual draw order for your opening hand:
 					</p>
-					<center>
-						<div class="figure">
-							<img src="images/md-traps/hand-order.jpg" width="100%" />
-						</div>
-						<em>Generally: Monsters (Normal > Effect > Ritual, each sorted by level) > Spells > Traps.</em>
-						<!-- FUN FACT: this is the 2nd take - the first time Driver was actually drawn as the first card, which makes the demo less clear. -->
-					</center>
-					<p>
+<center>
+<div class="figure">
+<img src="images/md-traps/hand-order.jpg" width="100%"/>
+</div>
+<em>Generally: Monsters (Normal &gt; Effect &gt; Ritual, each sorted by level) &gt; Spells &gt; Traps.</em>
+<!-- FUN FACT: this is the 2nd take - the first time Driver was actually drawn as the first card, which makes the demo less clear. -->
+</center>
+<p>
 						Additional cards you draw or search will be sorted in through the same method - this is most
 						obvious if your opponent is taking the Maxx "C" challenge.
 					</p>
-					<p>
+<p>
 						This usually doesn't matter - when a card is played, it appears to be their left/rightmost card, no matter where the card actually was in their hand.
 						Monster effects activated in the hand appear to be their rightmost card.
 						<!-- If your opponent tribute summons Driver, it doesn't look like it was their leftmost card, for example. -->
@@ -139,34 +137,32 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 						In that case, your opponent can use their knowledge of Master Duel's sorting to estimate where
 						specific named cards would be.
 					</p>
-					<center>
-						<div class="figure">
-							<img src="images/md-traps/basic-demo.jpg" width="75%" />
-						</div>
-						<em>A basic example - assuming your opponent follows the "natural/easy" set order. They could
+<center>
+<div class="figure">
+<img src="images/md-traps/basic-demo.jpg" width="75%"/>
+</div>
+<em>A basic example - assuming your opponent follows the "natural/easy" set order. They could
 							also set in 3-2-1 order, producing the same result.</em>
-					</center>
-
-					<p>
+</center>
+<p>
 						For your reference, and to help understand how this will specifically play out, let's go through
 						most common Spells/Traps and their hand placement.
 					</p>
-
-					<span class="anchor" id="spells"></span>
-					<h2>Spells<sup><small><a href="#spells">&#35;</a></small></sup></h2>
-					<center>
-						<div class="figure">
-							<img src="images/md-traps/infinite-cards-spell.jpg" width="100%" />
-						</div>
-					</center>
-					<p>
+<span class="anchor" id="spells"></span>
+<h2>Spells<sup><small><a href="#spells">#</a></small></sup></h2>
+<center>
+<div class="figure">
+<img src="images/md-traps/infinite-cards-spell.jpg" width="100%"/>
+</div>
+</center>
+<p>
 						From some solo mode testing, here's an (incomplete) list of somewhat commonly played
 						Spells/Traps and the order they appear in (left-to-right).
 						Note that it is not alphabetical, by card subtype, or by passcode. If anything, release date
 						looks plausible.
 						More interesting cards bolded, and some archetype-specific cards are included.
 					</p>
-					<script type="text/javascript">
+<script type="text/javascript">
 						// As soon as the document's structure has been loaded:
 						document.addEventListener("DOMContentLoaded", function () {
 							// For each html elem:
@@ -205,167 +201,162 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 							}
 						});
 					</script>
-
-					<ol class="cols" rel="2">
-						<li>Dark Hole</li>
-						<li>Raigeki</li>
-						<li>Harpie's Feather Duster</li>
-						<li>Monster Reborn</li>
-						<li>Reinforcement of the Army (standard art)</li>
-						<li>Book of Moon</li>
-						<li>Gold Sarcophagus</li>
-						<li><strong>Super Polymerization</strong></li>
-						<li>Emergency Teleport</li>
-						<li>Book of Eclipse</li>
-						<li>Forbidden Chalice</li>
-						<li>Into the Void</li>
-						<li>Pot of Duality</li>
-						<li>Twin Twisters</li>
-						<li>Cosmic Cyclone</li>
-						<li>Pot of Desires</li>
-						<li>Foolish Burial Goods</li>
-						<li><strong>Called by the Grave</strong></li>
-						<li>Sky Striker Mecha - Hornet Drones</li>
-						<li>Sky Striker Mecha - Widow Anchor</li>
-						<li>Sky Striker Mecha - Eagler Booster</li>
-						<li>Sky Striker Mecha - Shark Cannon</li>
-						<li>Pot of Extravagance</li>
-						<li><strong>Crossout Designator</strong></li>
-						<li>Lightning Storm</li>
-						<li>Triple Tactics Talent</li>
-						<li><strong>Forbidden Droplet</strong></li>
-						<li>Ultimate Fusion</li>
-						<li>Sky Striker Mobilize - Linkage!</li>
-						<li>Runick Tip</li>
-						<li>Runick Flashing Fire</li>
-						<li>Runick Destruction</li>
-						<li>Runick Freezing Curses</li>
-						<li>Runick Slumber</li>
-						<li>Runick Smiting Storm</li>
-						<li>Runick Golden Droplet</li>
-						<li>Runick Dispelling</li>
-						<li>Scareclaw Straddle</li>
-						<li>Kashtiratheosis</li>
-						<li>Vanquish Soul Dust Devil</li>
-						<li>WANTED: Seeker of Sinful Spoils</li>
-						<li>Mementotlan Bone Party</li>
-						<li>Mementotlan Fusion</li>
-						<li>Reinforcement of the Army (Sky Striker alt art)</li>
-						<li>Tales of the White Forest</li>
-						<li>Vesper Girsu</li>
-						<li>Scourge of the White Forest</li>
-						<li>Final Bringer of the End Times</li>
-						<li>Sinful Spoils of the White Forest</li>
-						<!-- WF Scourge -->
-					</ol>
-
-					<span class="anchor" id="traps"></span>
-					<h2>Traps<sup><small><a href="#traps">&#35;</a></small></sup></h2>
-					<center>
-						<div class="figure">
-							<img src="images/md-traps/infinite-cards.jpg" width="100%" />
-						</div>
-					</center>
-					<ol class="cols" rel="2">
-						<li>Solemn Judgment</li>
-						<li>Rivalry of Warlords</li>
-						<li><strong>Skill Drain</strong></li>
-						<li><strong>Macro Cosmos</strong></li>
-						<li>Eradicator Epidemic Virus</li>
-						<li>Gozen Match</li>
-						<li>Different Dimension Ground</li>
-						<li>Solemn Strike</li>
-						<li>Dimensional Barrier</li>
-						<li>Heavy Storm Duster</li>
-						<li>Evenly Matched</li>
-						<li>There Can Be Only One</li>
-						<li><strong>Infinite Impermanence</strong></li>
-						<li>Trap Trick</li>
-						<li>Eldlixir of Scarlet Sanguine</li>
-						<li>Huaquero of the Golden Land</li>
-						<li>Conquistador of the Golden Land</li>
-						<li>Golden Land Forever!</li>
-						<li>Dogmatika Punishment</li>
-						<li>Ice Dragon's Prison</li>
-						<li>Angel Statue - Azurune</li>
-						<li>True Light</li>
-						<li>Branded Retribution</li>
-						<li>Branded Banishment</li>
-						<li><strong>Welcome Labrynth</strong></li>
-						<li>Archfiend's Ghastly Glitch</li>
-						<li>Tearlaments Metanoise</li>
-						<li>Tearlaments Sulliek</li>
-						<li>Tearlaments Cryme</li>
-						<li>Branded Beast</li>
-						<li>Kashtira Preparations</li>
-						<li>Destructive Daruma Karma Cannon</li>
-						<li>Kashtira Big Bang</li>
-						<li><strong>Big Welcome Labrynth</strong></li>
-						<li>Weighbridge</li>
-						<li>Brightest, Blazing, Branded King</li>
-						<li>Sinful Spoils of Betrayal - Silvera</li>
-						<li>Vanquish Soul Snow Devil</li>
-						<li>Radiance of the Voiceless Voice</li>
-						<li>Iron Thunder</li>
-						<li>Sinful Spoils of Slumber - Morrian</li>
-						<li><strong>Simultaneous Equation Cannons</strong></li>
-						<li>Woes of the White Forest</li>
-						<li>Azamina Aphes</li>
-						<!-- Ferret Flames, Superfactorial >> Golden Land Forever -->
-					</ol>
-
-					<span class="anchor" id="countermeasures"></span>
-					<h2>Countermeasures<sup><small><a href="#countermeasures">&#35;</a></small></sup></h2>
-					<p>
+<ol class="cols" rel="2">
+<li>Dark Hole</li>
+<li>Raigeki</li>
+<li>Harpie's Feather Duster</li>
+<li>Monster Reborn</li>
+<li>Reinforcement of the Army (standard art)</li>
+<li>Book of Moon</li>
+<li>Gold Sarcophagus</li>
+<li><strong>Super Polymerization</strong></li>
+<li>Emergency Teleport</li>
+<li>Book of Eclipse</li>
+<li>Forbidden Chalice</li>
+<li>Into the Void</li>
+<li>Pot of Duality</li>
+<li>Twin Twisters</li>
+<li>Cosmic Cyclone</li>
+<li>Pot of Desires</li>
+<li>Foolish Burial Goods</li>
+<li><strong>Called by the Grave</strong></li>
+<li>Sky Striker Mecha - Hornet Drones</li>
+<li>Sky Striker Mecha - Widow Anchor</li>
+<li>Sky Striker Mecha - Eagler Booster</li>
+<li>Sky Striker Mecha - Shark Cannon</li>
+<li>Pot of Extravagance</li>
+<li><strong>Crossout Designator</strong></li>
+<li>Lightning Storm</li>
+<li>Triple Tactics Talent</li>
+<li><strong>Forbidden Droplet</strong></li>
+<li>Ultimate Fusion</li>
+<li>Sky Striker Mobilize - Linkage!</li>
+<li>Runick Tip</li>
+<li>Runick Flashing Fire</li>
+<li>Runick Destruction</li>
+<li>Runick Freezing Curses</li>
+<li>Runick Slumber</li>
+<li>Runick Smiting Storm</li>
+<li>Runick Golden Droplet</li>
+<li>Runick Dispelling</li>
+<li>Scareclaw Straddle</li>
+<li>Kashtiratheosis</li>
+<li>Vanquish Soul Dust Devil</li>
+<li>WANTED: Seeker of Sinful Spoils</li>
+<li>Mementotlan Bone Party</li>
+<li>Mementotlan Fusion</li>
+<li>Reinforcement of the Army (Sky Striker alt art)</li>
+<li>Tales of the White Forest</li>
+<li>Vesper Girsu</li>
+<li>Scourge of the White Forest</li>
+<li>Final Bringer of the End Times</li>
+<li>Sinful Spoils of the White Forest</li>
+<!-- WF Scourge -->
+</ol>
+<span class="anchor" id="traps"></span>
+<h2>Traps<sup><small><a href="#traps">#</a></small></sup></h2>
+<center>
+<div class="figure">
+<img src="images/md-traps/infinite-cards.jpg" width="100%"/>
+</div>
+</center>
+<ol class="cols" rel="2">
+<li>Solemn Judgment</li>
+<li>Rivalry of Warlords</li>
+<li><strong>Skill Drain</strong></li>
+<li><strong>Macro Cosmos</strong></li>
+<li>Eradicator Epidemic Virus</li>
+<li>Gozen Match</li>
+<li>Different Dimension Ground</li>
+<li>Solemn Strike</li>
+<li>Dimensional Barrier</li>
+<li>Heavy Storm Duster</li>
+<li>Evenly Matched</li>
+<li>There Can Be Only One</li>
+<li><strong>Infinite Impermanence</strong></li>
+<li>Trap Trick</li>
+<li>Eldlixir of Scarlet Sanguine</li>
+<li>Huaquero of the Golden Land</li>
+<li>Conquistador of the Golden Land</li>
+<li>Golden Land Forever!</li>
+<li>Dogmatika Punishment</li>
+<li>Ice Dragon's Prison</li>
+<li>Angel Statue - Azurune</li>
+<li>True Light</li>
+<li>Branded Retribution</li>
+<li>Branded Banishment</li>
+<li><strong>Welcome Labrynth</strong></li>
+<li>Archfiend's Ghastly Glitch</li>
+<li>Tearlaments Metanoise</li>
+<li>Tearlaments Sulliek</li>
+<li>Tearlaments Cryme</li>
+<li>Branded Beast</li>
+<li>Kashtira Preparations</li>
+<li>Destructive Daruma Karma Cannon</li>
+<li>Kashtira Big Bang</li>
+<li><strong>Big Welcome Labrynth</strong></li>
+<li>Weighbridge</li>
+<li>Brightest, Blazing, Branded King</li>
+<li>Sinful Spoils of Betrayal - Silvera</li>
+<li>Vanquish Soul Snow Devil</li>
+<li>Radiance of the Voiceless Voice</li>
+<li>Iron Thunder</li>
+<li>Sinful Spoils of Slumber - Morrian</li>
+<li><strong>Simultaneous Equation Cannons</strong></li>
+<li>Woes of the White Forest</li>
+<li>Azamina Aphes</li>
+<!-- Ferret Flames, Superfactorial >> Golden Land Forever -->
+</ol>
+<span class="anchor" id="countermeasures"></span>
+<h2>Countermeasures<sup><small><a href="#countermeasures">#</a></small></sup></h2>
+<p>
 						There's a fairly annoying, if effective, way to make you safe from this.
 						After deciding which cards you wish to set, just randomize the cards and/or zones you set first.
 						Maybe roll a d6 to pick cards, setting them in zones left-to-right.
 					</p>
-					<p>
+<p>
 						Ideally, Master Duel could implement a button to shuffle your hand.
 						Then, you could just hit that button and lazily set the cards as they appear in your newly
 						reordered hand.
 						Some unofficial simulators like EDOPro have this feature already.
 					</p>
-					<p>
+<p>
 						If you believe your opponent is assuming your own sets are placed based on card ordering, you
 						can of course
 						use that to your advantage by setting the cards in some other order (putting your low-value
 						backrow/bluffs where they might expect your high-value sets to be).
 					</p>
-					<span class="anchor" id="conclusion"></span>
-					<h2>Conclusion<sup><small><a href="#conclusion">&#35;</a></small></sup></h2>
-					<p>
+<span class="anchor" id="conclusion"></span>
+<h2>Conclusion<sup><small><a href="#conclusion">#</a></small></sup></h2>
+<p>
 						If you believe your opponent is being careless with their set order, some simple takeaways:
 					</p>
-					<ul>
-						<li>The first sets (if done left-to-right) are more likely to be Spells, and the last sets are
+<ul>
+<li>The first sets (if done left-to-right) are more likely to be Spells, and the last sets are
 							more likely to be Traps</li>
-						<li>Super Polymerization, being one of the oldest dangerous staples and a Spell, is relatively
+<li>Super Polymerization, being one of the oldest dangerous staples and a Spell, is relatively
 							likely to be the first set</li>
-						<li>An archetype released after ~2018 is more likely to set their in-archetype trap after Imperm
+<li>An archetype released after ~2018 is more likely to set their in-archetype trap after Imperm
 						</li>
-						<li>Simultaneous Equation Cannons is likely set towards the end</li>
-					</ul>
-					<p>
+<li>Simultaneous Equation Cannons is likely set towards the end</li>
+</ul>
+<p>
 						Of course, if your opponent lazily sets their cards right-to-left, the field position doesn't
 						change but the order flips.
 					</p>
-					<p>
+<p>
 						In a more competitive setting, I wouldn't recommend relying on these reads.
 						Skilled opponents are more likely to at least somewhat randomize their set order/placement, and
 						could even use this to mislead you.
 					</p>
-
-					<span class="anchor" id="notes"></span>
-					<h2>Other notes<sup><small><a href="#notes">&#35;</a></small></sup></h2>
-					<p>
+<span class="anchor" id="notes"></span>
+<h2>Other notes<sup><small><a href="#notes">#</a></small></sup></h2>
+<p>
 						The card lists were derived from in-game tests.
 						If you see an error (cards appearing in your hand in some other sequence), please let me know so
 						I can correct it.
 					</p>
-
-					<!-- <span class="anchor" id="ads"></span>
+<!-- <span class="anchor" id="ads"></span>
 <h2>More like this</h2>
 <section class="tiles">
 	<a href="ak15">
@@ -386,27 +377,21 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 		</div>
 	</a>
 </section> -->
+<!-- Footer -->
+            </div> 
+        </div> </main>
 
-					<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="copyright">
-								<li>Content: BigStupidJellyfish</li>
-								<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
-				</div>
-
-				<!-- Scripts -->
-				<script src="assets/js/jquery.min.js"></script>
-				<script src="assets/js/jquery.scrolly.min.js"></script>
-				<script src="assets/js/jquery.scrollex.min.js"></script>
-				<script src="assets/js/browser.min.js"></script>
-				<script src="assets/js/breakpoints.min.js"></script>
-				<script src="assets/js/util.js"></script>
-				<script src="assets/js/main.js"></script>
-
+    <footer>
+        <div class="container">
+            <p>
+                <a href="../pages/about">About GFMath</a> ·
+                <a href="../pages/spoilers">Explanation of common plot types</a> ·
+                <a href="#" onclick="window.scrollTo(0,0)">Back to top</a>
+            </p>
+            <p style="margin-top: 20px;">
+                Content: BigStupidJellyfish
+            </p>
+        </div>
+    </footer>
 </body>
-
 </html>

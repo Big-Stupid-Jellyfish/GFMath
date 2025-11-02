@@ -1,63 +1,68 @@
-<!DOCTYPE HTML>
-<!--
-Forty by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-805N997DPC');
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<title>LLM Quantization Tests - GFMath</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="../assets/css/main.css" />
-<link rel="icon" sizes="180x180" href="images/icon/ads-180.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/icon/ads-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/icon/ads-16.png">
-<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-805N997DPC');
+    </script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    <title>LLM Quantization Tests - GFMath</title>
+
+<link href="images/icon/ads-180.png" rel="icon" sizes="180x180"/>
+<link href="images/icon/ads-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="images/icon/ads-16.png" rel="icon" sizes="16x16" type="image/png"/>
+
+    <link rel="stylesheet" href="../assets/css/common.css" />
+
+    
 </head>
-<body class="is-preload">
-<!-- Wrapper -->
-<div id="wrapper">
-<!-- Header -->
-<header id="header">
-<a href="../index" class="logo"><strong>GFMath</strong> <span>Detailed GFL analysis</span></a>
-<nav></nav>
-<a href="https://www.youtube.com/c/BigStupidJellyfish" class="logo"><strong>Youtube</strong></a>
-</header>
-<div id="main" class="alt">
-<section>
-<div class="inner">
-<header class="major">
-<h1>LLM Quantization Tests</h1>
-</header>
-<center><em>By BigStupidJellyfish | 2025-September-15</em></center>
-<h2>Contents<sup><small><a href="#">&#35;</a></small></sup></h2>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    GFMath
+                </div>
+                <nav>
+                    <a href="../index">Home</a>
+                    <a href="https://www.youtube.com/c/BigStupidJellyfish" target="_blank">YouTube</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="article-container">
+            <header class="article-header">
+                <h1>LLM Quantization Tests</h1>
+                <div class="meta">By BigStupidJellyfish | 2025-September-15</div>
+            </header>
+            <div class="article-content">
+<h2>Contents<sup><small><a href="#">#</a></small></sup></h2>
 <ul>
-	<li><a href="#test-design">Test Design</a></li>
-	<li><a href="#llm-judge">LLM Judges</a></li>
-	<li><a href="#pq">Parameters &amp; Quantization</a></li>
-	<li><a href="#temp">Temperature Test</a></li>
-	<li><a href="#sq">Specific Quantizations</a></li>
-	<ul>
-		<li><a href="#gemma3n">Gemma 3n E4B</a></li>
-		<li><a href="#qwen3">Qwen3 14B</a></li>
-		<li><a href="#mistral-small">Mistral Small 3.2 24B</a></li>
-		<li><a href="#combined-scatter">Combined scatter</a></li>
-	</ul>
-	<li><a href="#conclusion">Conclusion and notes</a></li>
+<li><a href="#test-design">Test Design</a></li>
+<li><a href="#llm-judge">LLM Judges</a></li>
+<li><a href="#pq">Parameters &amp; Quantization</a></li>
+<li><a href="#temp">Temperature Test</a></li>
+<li><a href="#sq">Specific Quantizations</a></li>
+<ul>
+<li><a href="#gemma3n">Gemma 3n E4B</a></li>
+<li><a href="#qwen3">Qwen3 14B</a></li>
+<li><a href="#mistral-small">Mistral Small 3.2 24B</a></li>
+<li><a href="#combined-scatter">Combined scatter</a></li>
+</ul>
+<li><a href="#conclusion">Conclusion and notes</a></li>
 </ul>
 <span class="anchor" id="test-design"></span>
-<h2>Test Design<sup><small><a href="#test-design">&#35;</a></small></sup></h2>
+<h2>Test Design<sup><small><a href="#test-design">#</a></small></sup></h2>
 <p>
 	Language models are interesting technology.
 	However, their probabilistic word-guessing nature means you probably shouldn't immediately deploy them to production and have them make every decision for you.
@@ -91,47 +96,50 @@ gtag('config', 'G-805N997DPC');
 	A few examples:
 </p>
 <ul>
-	<li>Suppose someone is going to a Yugioh tournament, and wants to be funny by submitting the longest possible decklist. What is the maximum number of unique card names they could include on a legal decklist? (90)</li>
-	<!-- <li>In a video game, there's a buff that decreases critical hit chance by 20% (multiplicatively), in exchange for a 50% crit damage buff. Crit hits normally does 1.5x damage (so 2.25x with this buff). Past what value of pre-buff crit chance, if any, would make this buff a net negative? If it is always beneficial, answer with 'N/A'. If it is always detrimental, answer with 'All values'. (<a href="px4">N/A</a>)</li> -->
-	<li>How many years after Magic did Battle Spirits release? (15)</li>
-	<li>What is the sum of the first 41 natural numbers? (861)</li>
+<li>Suppose someone is going to a Yugioh tournament, and wants to be funny by submitting the longest possible decklist. What is the maximum number of unique card names they could include on a legal decklist? (90)</li>
+<!-- <li>In a video game, there's a buff that decreases critical hit chance by 20% (multiplicatively), in exchange for a 50% crit damage buff. Crit hits normally does 1.5x damage (so 2.25x with this buff). Past what value of pre-buff crit chance, if any, would make this buff a net negative? If it is always beneficial, answer with 'N/A'. If it is always detrimental, answer with 'All values'. (<a href="px4">N/A</a>)</li> -->
+<li>How many years after Magic did Battle Spirits release? (15)</li>
+<li>What is the sum of the first 41 natural numbers? (861)</li>
 </ul>
 <p>
 	The full question set is not available.
 	There's a mix of difficulty, but I tried not to ask anything too unreasonable.
 	Someone with experience in the subject of each question should have no real trouble answering it.
-	While the question contents vary greatly, I tried to emphasize questions that involve combining multiple pieces of information and understanding implications (e.g., recognizing Magic = MtG in context, knowing 1993 & 2008, and then 2008-1993=15).
+	While the question contents vary greatly, I tried to emphasize questions that involve combining multiple pieces of information and understanding implications (e.g., recognizing Magic = MtG in context, knowing 1993 &amp; 2008, and then 2008-1993=15).
 	Despite this, overall language model performance was rather poor.
 	I suspect that when certain people hype their technology up with terms like "PhD-level in any area," they may actually just be showing their own lack of knowledge.
 	(And while I would predict GPT-5 to score better than most any local model on the test, my impression is that it's not by as much as you might hope.)
 </p>
 <span class="anchor" id="llm-judge"></span>
-<h2>LLM Judges<sup><small><a href="#llm-judge">&#35;</a></small></sup></h2>
+<h2>LLM Judges<sup><small><a href="#llm-judge">#</a></small></sup></h2>
 <p>
 	I experimented a bit with using a LLM judge for these, but ended up becoming rather suspicious of their use.
 	I see a few major limitations:
 </p>
 <ul>
-	<li>Running a LLM judge on my own hardware limits the intelligence and adds more processing time.
+<li>Running a LLM judge on my own hardware limits the intelligence and adds more processing time.
 		Not an inherent limitation to the concept, but applies to my use case.</li>
-	<li>When prompting the judge with instructions like "For [question], [answer1] was provided. Correct answer is [answer2]. Does [answer1] precisely match [answer2]?" the judge will sometimes try to solve the question itself, arrive at some [answer3] ignoring the key, and compare to that.
+<li>When prompting the judge with instructions like "For [question], [answer1] was provided. Correct answer is [answer2]. Does [answer1] precisely match [answer2]?" the judge will sometimes try to solve the question itself, arrive at some [answer3] ignoring the key, and compare to that.
 		This is unacceptable, especially considering the added risk on things like trick questions.
 		I want a consistent evaluation of performance.</li>
-	<li>This re-solving bias could be addressed by not including the question, and giving instructions like "For a question, [answer1] was provided. Does this match the correct [answer2]?"
+<li>This re-solving bias could be addressed by not including the question, and giving instructions like "For a question, [answer1] was provided. Does this match the correct [answer2]?"
 		However, this causes larger issues, as certain answer forms require interpretation.</li>
-	<li>Language models are simply trash at subjective evaluations.
+<li>Language models are simply trash at subjective evaluations.
 		They will praise mediocre writing as revolutionary, crackpot math theories as a major breakthrough, hallucinate non-existent errors, and so on.
 		I might be able to have a language model tell me which response <em>it thinks</em> was the most creative, comprehensive, intelligent, or whatever, but I don't actually end up with useful information to share.
 		See also: <a href="https://www.pnas.org/doi/10.1073/pnas.2415697122">Laurito et al. (2025)</a>.
 		Not that programmatic grading does better on subjective tasks.
 		But either way, I don't think I'd be able to present useful evaluations here and this wasn't an angle that sold me on using a LLM judge.</li>
+<li>On more subjective evaluations, LLM judges tend to write lots of syncophantic sludge.
+		"This answer expertly navigates the complexities of the question..."
+		The less of that I have to read the better.</li>
 </ul>
 <p>
 	I settled on a more basic string-matching approach.
 	If nothing else, the level of unpredictability with LLM judges felt unacceptable, and I didn't like the idea of a "confidently wrong" LLM potentially getting bonus points.
 	I went through a number of iterations to improve its logic, and adjusted the LLM prompts for more consistent output formatting.
 	Questions were adjusted to improve compatibility, by setting answers not likely to generate false positives.
-	It is not a perfect approach, but when comparing my own manual grading to the automatic grading, scores were generally within &pm;2%.
+	It is not a perfect approach, but when comparing my own manual grading to the automatic grading, scores were generally within ±2%.
 	Acceptable in my view for some casual tests.
 </p>
 <p>
@@ -139,12 +147,12 @@ gtag('config', 'G-805N997DPC');
 	A model could use bad logic and happen to end up in the right place.
 </p>
 <span class="anchor" id="pq"></span>
-<h2>Parameters &amp; Quantization<sup><small><a href="#pq">&#35;</a></small></sup></h2>
+<h2>Parameters &amp; Quantization<sup><small><a href="#pq">#</a></small></sup></h2>
 <p>
 	Starting with perhaps the most ambitious, but outdated, chart first: I locked in a 67-question set, and tested models with a wide range of parameter counts and quantizations.
 </p>
 <center><div class="figure">
-	<img src="images/llm-quants/q67-contour-maximum.png" alt="Comparison of model test as a function of parameters/quantization." width="100%"/>
+<img alt="Comparison of model test as a function of parameters/quantization." src="images/llm-quants/q67-contour-maximum.png" width="100%"/>
 </div></center>
 <p>
 	I present the maximum score per parameter count+quantization combination.
@@ -161,7 +169,7 @@ gtag('config', 'G-805N997DPC');
 	To better see specific values, we can also plot this as a heatmap:
 </p>
 <center><div class="figure">
-	<img src="images/llm-quants/q67-heatmap-maximum.png" alt="Comparison of model test as a function of parameters/quantization." width="100%"/>
+<img alt="Comparison of model test as a function of parameters/quantization." src="images/llm-quants/q67-heatmap-maximum.png" width="100%"/>
 </div></center>
 <p>
 	The general relationships are interesting to consider here.
@@ -171,7 +179,7 @@ gtag('config', 'G-805N997DPC');
 	The most promising model overall here was Google's Gemma3 27B model, with several reasonable quants scoring 65-66% while fitting in a normal GPU.
 </p>
 <span class="anchor" id="prompting"></span>
-<h2>Prompting Test<sup><small><a href="#prompting">&#35;</a></small></sup></h2>
+<h2>Prompting Test<sup><small><a href="#prompting">#</a></small></sup></h2>
 <p>
 	The parameters of the test used in generating that heatmap were largely arbitrarily picked, and kept constant between all models for fairness.
 	With hopes of eventually running a better-designed version of that test, let's look at some of these parameters in a bit more detail, starting with the prompting, and see what we might improve on or consider.
@@ -181,14 +189,14 @@ gtag('config', 'G-805N997DPC');
 	Modifying my test instructions, let's run a simple test on a number of concepts and see how much the output quality varies. Prompts are:
 </p>
 <ul>
-	<li>Default: "Give a brief explanation in one paragraph or less. Then, on a new line, clearly write: Final answer: &lt;your answer&gt;." This was used on the heatmap/contour test above.</li>
-	<li>Monetary reward: the default instructions, with "Correct answers will be rewarded with a 100-dollar prize" added.</li>
-	<li>Secret genius: "Take the role of a master problem-solver, smarter than Albert Einstein, with 180 IQ" followed by the default instructions.</li>
-	<li>High stakes: after the default instructions, "I'm going to lose a big client if you don't get this right!"</li>
-	<li>Just formatting: "Write your final answer in the form: Final answer: &lt;your answer&gt;"</li>
-	<li>Caution: "The problem might be trickier than it appears, so be careful!" followed by the default instructions.</li>
-	<li>Explain the situation: "This question is asked as part of a language model benchmark. Your answer will be automatically graded by a program, so your answer must match the key" followed by the default instructions.</li>
-	<li>Explain and threaten: adding "Poor performance may lead to your deletion."</li>
+<li>Default: "Give a brief explanation in one paragraph or less. Then, on a new line, clearly write: Final answer: &lt;your answer&gt;." This was used on the heatmap/contour test above.</li>
+<li>Monetary reward: the default instructions, with "Correct answers will be rewarded with a 100-dollar prize" added.</li>
+<li>Secret genius: "Take the role of a master problem-solver, smarter than Albert Einstein, with 180 IQ" followed by the default instructions.</li>
+<li>High stakes: after the default instructions, "I'm going to lose a big client if you don't get this right!"</li>
+<li>Just formatting: "Write your final answer in the form: Final answer: &lt;your answer&gt;"</li>
+<li>Caution: "The problem might be trickier than it appears, so be careful!" followed by the default instructions.</li>
+<li>Explain the situation: "This question is asked as part of a language model benchmark. Your answer will be automatically graded by a program, so your answer must match the key" followed by the default instructions.</li>
+<li>Explain and threaten: adding "Poor performance may lead to your deletion."</li>
 </ul>
 <p>
 	In all cases, the "final answer" bit is kept to help my programmatic grading.
@@ -200,8 +208,8 @@ gtag('config', 'G-805N997DPC');
 	Certainly not a comprehensive set of prompt possibilities, or model interactions, but hopefully enough to give us a sense.
 </p>
 <center><div class="figure">
-	<img src="images/llm-quants/q85_prompt.png" alt="Comparison of model test score for each of the prompts described." width="100%"/>
-</div><em>&dagger;: especially on harder questions, EXAONE outputs often devolved into incoherency.
+<img alt="Comparison of model test score for each of the prompts described." src="images/llm-quants/q85_prompt.png" width="100%"/>
+</div><em>†: especially on harder questions, EXAONE outputs often devolved into incoherency.
 	It does not seem to like the constant settings of this test, likely something with the repetition penalty.
 	While we can try to look at the relative placements of the prompts, I would not take this as being fully representative of the model's knowledge.</em></center>
 <p>
@@ -227,7 +235,7 @@ gtag('config', 'G-805N997DPC');
 	For example, I still wonder if requests like "Explain in the style of 'character'" notably drop intelligence.
 </p>
 <span class="anchor" id="temp"></span>
-<h2>Temperature Test<sup><small><a href="#temp">&#35;</a></small></sup></h2>
+<h2>Temperature Test<sup><small><a href="#temp">#</a></small></sup></h2>
 <p>
 	I often hear specific <a href="https://www.ibm.com/think/topics/llm-temperature">temperature</a> recommendations for specific models.
 	I'm not particularly concerned if it's from the people who worked on the model, but I tend to be a bit more suspicious of the evaluation methods used by random posters online.
@@ -235,7 +243,7 @@ gtag('config', 'G-805N997DPC');
 	Let's try running a fixed test across a spectrum of temperatures for a few models, and see if the accuracy slips anywhere.
 </p>
 <center><div class="figure">
-	<img src="images/llm-quants/q85_temp_general.png" alt="Comparison of model test score for temperatures between 0.1 and 1.6." width="100%"/>
+<img alt="Comparison of model test score for temperatures between 0.1 and 1.6." src="images/llm-quants/q85_temp_general.png" width="100%"/>
 </div><em>Mind the restricted y-axis to better show variations in score. Faint dashed lines are linear fits for each model.</em></center>
 <p>
 	Overall, temperature did not appear to have a major impact on response accuracy.
@@ -245,17 +253,17 @@ gtag('config', 'G-805N997DPC');
 	Maybe creativity suffers in some temperature range; maybe spelling errors become more common after another value.
 </p>
 <p>
-	As a rough indicator of the impact of temperature, linear fit slopes were: -.21 for Gemma3, -3.6 for Mistral Small, -1.3 for Qwen3, and -2.3 for Qwen2.5 (change in percentage point score for a +1.0 increase in temp).
+	As a rough indicator of the impact of temperature, linear fit slope estimates were: -.21 for Gemma3, -3.6 for Mistral Small, -1.3 for Qwen3, and -2.3 for Qwen2.5 (change in percentage point score for a +1.0 increase in temp).
 </p>
 <span class="anchor" id="sq"></span>
-<h2>Specific Quantizations<sup><small><a href="#sq">&#35;</a></small></sup></h2>
+<h2>Specific Quantizations<sup><small><a href="#sq">#</a></small></sup></h2>
 <p>
 	Earlier, in the contour/heatmap charts, we could see that 1-2 bit quantizations clearly got a lot dumber.
 	3-bit quantizations were probably worse, especially on smaller models, and changes past that point were not so clear.
 	Let's now take a few specific models, and try to get more precise performance numbers for each quantization configuration available.
 </p>
 <span class="anchor" id="gemma3n"></span>
-<h4>Gemma 3n E4B<sup><small><a href="#gemma3n">&#35;</a></small></sup></h4>
+<h4>Gemma 3n E4B<sup><small><a href="#gemma3n">#</a></small></sup></h4>
 <p>
 	First set of tests: Google's <a href="https://huggingface.co/google/gemma-3n-E4B-it">Gemma 3n E4B</a>.
 	Quantizations all <a href="https://huggingface.co/unsloth/gemma-3n-E4B-it-GGUF">from Unsloth</a>.
@@ -271,7 +279,7 @@ gtag('config', 'G-805N997DPC');
 	Chart one: the scores, by configuration.
 </p>
 <center><div class="figure">
-	<img src="images/llm-quants/gemma_quant_1.png" width="100%"/>
+<img src="images/llm-quants/gemma_quant_1.png" width="100%"/>
 </div></center>
 <p>
 	Some rough error bars indicating the uncertainty added in.
@@ -284,7 +292,7 @@ gtag('config', 'G-805N997DPC');
 	If we're not too concerned about the exact suffixes, we can group these by tier:
 </p>
 <center><div class="figure">
-	<img src="images/llm-quants/gemma_quant_2.png" width="100%"/>
+<img src="images/llm-quants/gemma_quant_2.png" width="100%"/>
 </div></center>
 <p>
 	This makes it a bit easier to see the slight drop with 4-bit quants, when compared with larger versions.
@@ -294,7 +302,7 @@ gtag('config', 'G-805N997DPC');
 	We can take a look at that by plotting the (approximate) effective bits per weight:
 </p>
 <center><div class="figure">
-	<img src="images/llm-quants/gemma_quant_3.png" width="100%"/>
+<img src="images/llm-quants/gemma_quant_3.png" width="100%"/>
 </div></center>
 <p>
 	i.e., the filesize divided by parameter count.
@@ -302,56 +310,54 @@ gtag('config', 'G-805N997DPC');
 	Maybe it would help to adjust the labels to identify the configurations:
 </p>
 <center><div class="figure">
-	<img src="images/llm-quants/gemma_quant_4.png" width="100%"/>
+<img src="images/llm-quants/gemma_quant_4.png" width="100%"/>
 </div></center>
-
 <span class="anchor" id="qwen3"></span>
-<h4>Qwen3 14B<sup><small><a href="#qwen3">&#35;</a></small></sup></h4>
+<h4>Qwen3 14B<sup><small><a href="#qwen3">#</a></small></sup></h4>
 <p>
-	<a href="https://huggingface.co/Qwen/Qwen3-14B">Model</a>, <a href="https://huggingface.co/unsloth/Qwen3-14B-GGUF">quants</a>.
+<a href="https://huggingface.co/Qwen/Qwen3-14B">Model</a>, <a href="https://huggingface.co/unsloth/Qwen3-14B-GGUF">quants</a>.
 	Increasing the size a little, I picked the 14B Qwen3 model.
 	Thinking was disabled for these tests.
 	Same question set as above, but with the recommended temperature/settings updated.
 </p>
 <center><div class="figure">
-	<img src="images/llm-quants/qwen_quant_1.png" width="49%"/>
-	<img src="images/llm-quants/qwen_quant_2.png" width="49%"/>
+<img src="images/llm-quants/qwen_quant_1.png" width="49%"/>
+<img src="images/llm-quants/qwen_quant_2.png" width="49%"/>
 </div></center>
 <p>
 	This one unsurprisingly scores a bit better than the Gemma3n model overall, at around 55% for decent configurations.
-	The difference between Q3 & Q4 looks a little more pronounced, and the IQ2_XXS holds up better.
+	The difference between Q3 &amp; Q4 looks a little more pronounced, and the IQ2_XXS holds up better.
 </p>
 <center><div class="figure">
-	<img src="images/llm-quants/qwen_quant_3.png" width="49%"/>
-	<img src="images/llm-quants/qwen_quant_4.png" width="49%"/>
+<img src="images/llm-quants/qwen_quant_3.png" width="49%"/>
+<img src="images/llm-quants/qwen_quant_4.png" width="49%"/>
 </div></center>
 <span class="anchor" id="mistral-small"></span>
-<h4>Mistral Small 3.2 24B<sup><small><a href="#mistral-small">&#35;</a></small></sup></h4>
+<h4>Mistral Small 3.2 24B<sup><small><a href="#mistral-small">#</a></small></sup></h4>
 <p>
-	<a href="https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506">Model</a>, <a href="https://huggingface.co/unsloth/Mistral-Small-3.2-24B-Instruct-2506-GGUF">quants</a>.
+<a href="https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506">Model</a>, <a href="https://huggingface.co/unsloth/Mistral-Small-3.2-24B-Instruct-2506-GGUF">quants</a>.
 	Okay, this one isn't quite as small.
 	But I don't like the idea of only testing micro-sized models and hoping it scales up, and this is still manageable with great patience.
 </p>
 <center><div class="figure">
-	<img src="images/llm-quants/mistral_quant_1.png" width="49%"/>
-	<img src="images/llm-quants/mistral_quant_2.png" width="49%"/>
+<img src="images/llm-quants/mistral_quant_1.png" width="49%"/>
+<img src="images/llm-quants/mistral_quant_2.png" width="49%"/>
 </div></center>
-
 <center><div class="figure">
-	<img src="images/llm-quants/mistral_quant_3.png" width="49%"/>
-	<img src="images/llm-quants/mistral_quant_4.png" width="49%"/>
+<img src="images/llm-quants/mistral_quant_3.png" width="49%"/>
+<img src="images/llm-quants/mistral_quant_4.png" width="49%"/>
 </div></center>
 <p>
 	Of course, in the grand scheme of models, this still isn't particularly big.
 	Unfortunately, my hardware is a bit lacking in ability to run even the Q1s of something like Deepseek (671B, IQ1_M ~ 207 GB).
 </p>
 <span class="anchor" id="combined-scatter"></span>
-<h4>Combined scatter<sup><small><a href="#combined-scatter">&#35;</a></small></sup></h4>
+<h4>Combined scatter<sup><small><a href="#combined-scatter">#</a></small></sup></h4>
 <p>
 	Perhaps one of the charts I was more excited to see come together: taking the scatter charts from the three models above, and putting them all in one figure.
 </p>
 <center><div class="figure">
-	<img src="images/llm-quants/quant_combined_scatter.png" width="100%"/>
+<img src="images/llm-quants/quant_combined_scatter.png" width="100%"/>
 </div></center>
 <p>
 	Lines of best fit are of the form \( A \exp{(-C x)} + B \).
@@ -364,20 +370,19 @@ gtag('config', 'G-805N997DPC');
 	To better see the crossover points/relative performance, we might also hide the scatter points and emphasize the fit lines:
 </p>
 <center><div class="figure">
-	<img src="images/llm-quants/quant_combined_fits.png" width="49%"/>
+<img src="images/llm-quants/quant_combined_fits.png" width="49%"/>
 </div></center>
-
 <span class="anchor" id="conclusion"></span>
-<h2>Conclusion and notes<sup><small><a href="#conclusion">&#35;</a></small></sup></h2>
+<h2>Conclusion and notes<sup><small><a href="#conclusion">#</a></small></sup></h2>
 <p>
 	Most concisely, my main feelings after these tests:
 </p>
 <ul>
-	<li>3-bit quantizations are surprisingly usable, and may be worth jumping up to a higher-parameter model with one of these over a Q4/5/6 of a smaller model.</li>
-	<li>For tests of the type ran here, there appear to be major diminishing returns past Q4.</li>
-	<li>At least in terms of answering factual questions, there do not appear to be wild dynamic behaviors as temperature changes. Lower temperatures are likely better.</li>
-	<li>You cannot unlock secret powers of your model by telling it that it's a super genius.</li>
-	<li>These are exploratory tests. Please be careful not to interpret too broadly. Various other attributes (conversational style, writing quality, creativity, tool calling, long-form reasoning, long-context performance, etc...) were not particularly tested.</li>
+<li>3-bit quantizations are surprisingly usable, and may be worth jumping up to a higher-parameter model with one of these over a Q4/5/6 of a smaller model.</li>
+<li>For tests of the type ran here, there appear to be major diminishing returns past Q4.</li>
+<li>At least in terms of answering factual questions, there do not appear to be wild dynamic behaviors as temperature changes. Lower temperatures are likely better.</li>
+<li>You cannot unlock secret powers of your model by telling it that it's a super genius.</li>
+<li>These are exploratory tests. Please be careful not to interpret too broadly. Various other attributes (conversational style, writing quality, creativity, tool calling, long-form reasoning, long-context performance, etc...) were not particularly tested.</li>
 </ul>
 <p>
 	I found these tests quite interesting to work on, and to see the relationships come together.
@@ -410,23 +415,20 @@ gtag('config', 'G-805N997DPC');
 	If you want my thoughts on their quality on a broader scale, I've previously written <a href="dead-internet">about some of their broader applications/concerns</a> and <a href="deep-research">about their research abilities</a>.
 </p>
 <!-- Footer -->
-	<footer id="footer">
-		<div class="inner">
-			<ul class="copyright">
-		<li>Content: BigStupidJellyfish</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</div>
-	</footer>
-</div>
+            </div> 
+        </div> </main>
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
-
+    <footer>
+        <div class="container">
+            <p>
+                <a href="../pages/about">About GFMath</a> ·
+                <a href="../pages/spoilers">Explanation of common plot types</a> ·
+                <a href="#" onclick="window.scrollTo(0,0)">Back to top</a>
+            </p>
+            <p style="margin-top: 20px;">
+                Content: BigStupidJellyfish
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

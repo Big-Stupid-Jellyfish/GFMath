@@ -1,77 +1,78 @@
-<!DOCTYPE HTML>
-<!--
-Forty by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-805N997DPC');
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<meta name="description" content="Girls Frontline, by the numbers">
-<title>Anchored Construction - GFMath</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="../assets/css/main.css" />
-<link rel="icon" sizes="180x180" href="images/icon/ads-180.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/icon/ads-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/icon/ads-16.png">
-<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-</head>
-<body class="is-preload">
-<!-- Wrapper -->
-<div id="wrapper">
-<!-- Header -->
-<header id="header">
-<a href="../index" class="logo"><strong>GFMath</strong> <span>Detailed GFL analysis</span></a>
-<nav></nav>
-<a href="https://www.youtube.com/c/BigStupidJellyfish" class="logo"><strong>Youtube</strong></a>
-</header>
-<div id="main" class="alt">
-<section>
-<div class="inner">
-<header class="major">
-	<h1>Anchored Construction and Probabilities</h1>
-</header>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-<center><em>By BigStupidJellyfish | 2022-February-26 | Updated 2022-June-21</em></center>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-805N997DPC');
+    </script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    <title>Anchored Construction - GFMath</title>
+
+<link href="images/icon/ads-180.png" rel="icon" sizes="180x180"/>
+<link href="images/icon/ads-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="images/icon/ads-16.png" rel="icon" sizes="16x16" type="image/png"/>
+
+    <link rel="stylesheet" href="../assets/css/common.css" />
+
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    GFMath
+                </div>
+                <nav>
+                    <a href="../index">Home</a>
+                    <a href="https://www.youtube.com/c/BigStupidJellyfish" target="_blank">YouTube</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="article-container">
+            <header class="article-header">
+                <h1>Anchored Construction and Probabilities</h1>
+                <div class="meta">By BigStupidJellyfish | 2022-February-26 | Updated 2022-June-21</div>
+            </header>
+            <div class="article-content">
 <h2>Contents</h2>
 <ul>
-	<li><a href="#nc">Normal Construction</a></li>
-	<li><a href="#ac">Anchored Construction</a></li>
-	<li><a href="#newplayer">2.09 Anchored Production</a></li>
-	<li><a href="#a2022">New Dolls: August 2022</a></li>
-	<li><a href="#j2022">New Dolls: June 2022</a></li>
-	<li><a href="#a2022">New SGs: April 2022</a></li>
-	<li><a href="#f2022">New Dolls: February 2022</a></li>
-	<li><a href="#notes">Notes</a></li>
+<li><a href="#nc">Normal Construction</a></li>
+<li><a href="#ac">Anchored Construction</a></li>
+<li><a href="#newplayer">2.09 Anchored Production</a></li>
+<li><a href="#a2022">New Dolls: August 2022</a></li>
+<li><a href="#j2022">New Dolls: June 2022</a></li>
+<li><a href="#a2022">New SGs: April 2022</a></li>
+<li><a href="#f2022">New Dolls: February 2022</a></li>
+<li><a href="#notes">Notes</a></li>
 </ul>
 <span class="anchor" id="nc"></span>
-<h2>Normal Construction<sup><small><a href="#nc">&#35;</a></small></sup></h2>
-
+<h2>Normal Construction<sup><small><a href="#nc">#</a></small></sup></h2>
 <p>
 	Most probabilities to do with doll crafting can be done in one line on a calculator.
-	You can find per-craft probabilities on <a href="https://gf-db.github.io/gfdb/index.html">gfdb</a>, though don't be fooled by odd voodoos with tiny sample sizes - the true rate could easily be two or three standard deviations below the mean listed.
-	For some reference numbers, I'll assume a <a href="https://gf-db.github.io/gfdb/gfdb.html?type=tdoll&id=95&epoch.tdoll=98.0&sort.tdoll=[{%22sort_column%22:%22total%22,%22dir%22:1}]">0.78% rate for Type88</a> (neglecting CR).
+	You can find per-craft probabilities on <a href="https://gf-db.github.io/gfdb/index">gfdb</a>, though don't be fooled by odd voodoos with tiny sample sizes - the true rate could easily be two or three standard deviations below the mean listed.
+	For some reference numbers, I'll assume a <a href="https://gf-db.github.io/gfdb/gfdb.html?type=tdoll&amp;id=95&amp;epoch.tdoll=98.0&amp;sort.tdoll=[{%22sort_column%22:%22total%22,%22dir%22:1}]">0.78% rate for Type88</a> (neglecting CR).
 	Probability math is generally easier using a scale of 0 (0%) to 1 (100%), so 0.78% would be 0.0078.
 </p>
-
 <p>
 	Letting \( p \) be the rate of your doll of interest,
 </p>
 <ul>
-	<li>The chance of you getting a doll on any specific roll is \( p \) (example: 0.78% or 0.0078).</li>
-	<li>The chance of you not getting a doll on any specific roll is \( 1-p \) (example: 99.22%).</li>
-	<li>The chance of you not getting a doll in \( n \) rolls is \( (1-p)^n \) (example, 100 rolls: 0.9922^100=45.7%).</li>
-	<li>The chance of you getting at least one copy in \( n \) rolls is \( 1-(1-p)^n \) (example, 200 rolls: 1-0.9922^200=79.1%).</li>
+<li>The chance of you getting a doll on any specific roll is \( p \) (example: 0.78% or 0.0078).</li>
+<li>The chance of you not getting a doll on any specific roll is \( 1-p \) (example: 99.22%).</li>
+<li>The chance of you not getting a doll in \( n \) rolls is \( (1-p)^n \) (example, 100 rolls: 0.9922^100=45.7%).</li>
+<li>The chance of you getting at least one copy in \( n \) rolls is \( 1-(1-p)^n \) (example, 200 rolls: 1-0.9922^200=79.1%).</li>
 </ul>
 <p>
 	It's important to keep in mind that dice have no memory.
@@ -95,7 +96,7 @@ gtag('config', 'G-805N997DPC');
 	A little over half the players will have gotten this doll within 200 crafts, but there's a long tail - some 7% of players still haven't seen one by 600 crafts, and there would be some people out past 1000 crafts with no luck.
 </p>
 <span class="anchor" id="ac"></span>
-<h2>Anchored Construction<sup><small><a href="#ac">&#35;</a></small></sup></h2>
+<h2>Anchored Construction<sup><small><a href="#ac">#</a></small></sup></h2>
 <p>
 	Introduced with the 2.08 client, anchored construction adds a sort of pity system.
 	Per introductory rateup event, you can pick one doll.
@@ -119,7 +120,6 @@ gtag('config', 'G-805N997DPC');
 	It's a linear increase, so that plot is <a href="images/misc/uPxAHYJ.png">rather trivial (this is with a 0.6% rate and 0.08% increment)</a>.
 </p>
 <p>So anchored constructions massively improve your odds. Now, virtually everyone has gotten their target in under 100 crafts, with most of them doing so in 40-60.</p>
-
 <p>
 	You can only use anchored construction on one doll per batch, and this feature is only available with new releases.
 	It's generally preferable to save anchored construction for last if the pools overlap - you could get one doll while crafting for another.
@@ -129,43 +129,43 @@ gtag('config', 'G-805N997DPC');
 	A few general notes on the system:
 </p>
 <ul>
-	<li>5-star non-SG dolls take 120 crafts for hard pity. 4-star non-SG dolls take 50 crafts for hard pity.</li>
-	<li>SGs take 35 and 20 crafts, respectively. The increased cost of heavy production still makes this costly.</li>
-	<li>The base rates of each doll in anchored production seems to correlate with their true rate in standard crafting recipes, despite Mica's insistence they have no relation.</li>
-	<!-- <li>The increment appears to be constant for each rarity, and the displayed number is rounded from its true value (which is not exactly known).</li>
+<li>5-star non-SG dolls take 120 crafts for hard pity. 4-star non-SG dolls take 50 crafts for hard pity.</li>
+<li>SGs take 35 and 20 crafts, respectively. The increased cost of heavy production still makes this costly.</li>
+<li>The base rates of each doll in anchored production seems to correlate with their true rate in standard crafting recipes, despite Mica's insistence they have no relation.</li>
+<!-- <li>The increment appears to be constant for each rarity, and the displayed number is rounded from its true value (which is not exactly known).</li>
 	<ul>
 		<li>Normal dolls, 5-stars: ~0.0828% increment (0.08% displayed)</li>
 		<li>Normal dolls, 4-stars: ~0.3957% increment (0.40% displayed)</li>
 		<li>SGs, 5-stars: ~0.28% increment (0.28% displayed)</li>
 		<li>SGs, 4-stars: ~0.97% increment (0.97% displayed)</li>
 	</ul> -->
-	<li>The 2.09 new-player anchored productions are all fixed to 30 crafts for hard pity.</li>
+<li>The 2.09 new-player anchored productions are all fixed to 30 crafts for hard pity.</li>
 </ul>
 <span class="anchor" id="newplayer"></span>
-<h2>2.09 Anchored Production<sup><small><a href="#newplayer">&#35;</a></small></sup></h2>
+<h2>2.09 Anchored Production<sup><small><a href="#newplayer">#</a></small></sup></h2>
 <p>
 	It's hard to give universal advice on this one, as there are many different circumstances and armories players will have.
 	General thoughts:
 </p>
 <ul>
-	<li>It's hard to have too many Grape (Carcano M91/38) dupes for ranking.</li>
-	<li>416 is the best grenade AR, and is useful for 12-4E dragging. G11 is the best DPS AR.</li>
-	<li>AK-15 has an amazing future mod. Vector is useful for 13-4 dragging (but is outperformed by Uzi/PP-19 mods for general use).</li>
-	<li>Negev, PKP, and RPK-16 are decent and expensive to obtain otherwise.</li>
-	<li>Suomi has an excellent mod in the very distant future.</li>
-	<li>AN-94, WA2000, Lee Enfield, C-MS, and P90 are decent units but are replaceable.</li>
-	<li>Zas M21, AK-12, and Kar98k have no significant uses.</li>
-	<li>M950A, Welrod, and Contender are cheap to craft. Don't anchor them.</li>
+<li>It's hard to have too many Grape (Carcano M91/38) dupes for ranking.</li>
+<li>416 is the best grenade AR, and is useful for 12-4E dragging. G11 is the best DPS AR.</li>
+<li>AK-15 has an amazing future mod. Vector is useful for 13-4 dragging (but is outperformed by Uzi/PP-19 mods for general use).</li>
+<li>Negev, PKP, and RPK-16 are decent and expensive to obtain otherwise.</li>
+<li>Suomi has an excellent mod in the very distant future.</li>
+<li>AN-94, WA2000, Lee Enfield, C-MS, and P90 are decent units but are replaceable.</li>
+<li>Zas M21, AK-12, and Kar98k have no significant uses.</li>
+<li>M950A, Welrod, and Contender are cheap to craft. Don't anchor them.</li>
 </ul>
 <p>
 	These are a bit more likely than usual to run to hard pity, though 30 crafts is cheap anyways.
 	Two examples:
 </p>
 <center>
-	<div class="figure">
-	<img src="images/misc/YFoUtt3.png" width="49%"/>
-	<img src="images/misc/ZslE2UF.png" width="49%"/>
-	</div>
+<div class="figure">
+<img src="images/misc/YFoUtt3.png" width="49%"/>
+<img src="images/misc/ZslE2UF.png" width="49%"/>
+</div>
 </center>
 <p>
 	I'm investigating whether or not the 4/5* drop rates are significantly different here than in normal crafting.
@@ -173,7 +173,7 @@ gtag('config', 'G-805N997DPC');
 	If you already did your crafting and forgot your results, but have GFAlarm saving production data, results are saved in the production csv as "WISH-NORMAL".
 </p>
 <span class="anchor" id="a2022"></span>
-<h2>New Dolls: August 2022<sup><small><a href="#a2022">&#35;</a></small></sup></h2>
+<h2>New Dolls: August 2022<sup><small><a href="#a2022">#</a></small></sup></h2>
 <p>
 	This batch only contains three dolls: SCR (5* AR), ZiP .22 (4* HG), and Vigneron M2 (4* SMG).
 	ZiP is the most useful doll of the bunch, but anchoring a 4* HG is quite silly.
@@ -183,7 +183,7 @@ gtag('config', 'G-805N997DPC');
 	SCR's base rate is 0.44%, making her pretty much indistinguishable from HS.50's chart below.
 </p>
 <span class="anchor" id="j2022"></span>
-<h2>New Dolls: June 2022<sup><small><a href="#j2022">&#35;</a></small></sup></h2>
+<h2>New Dolls: June 2022<sup><small><a href="#j2022">#</a></small></sup></h2>
 <p>
 	This batch contains four dolls: HS.50, SR-2, AK-74M, and CZ 100.
 	HS.50 is recommended to anchor for general gameplay, <em>maybe</em> SR-2 if you're big on Theater.
@@ -207,9 +207,8 @@ gtag('config', 'G-805N997DPC');
 <img src="images/misc/gdkIydP.png" width="49%"/>
 </div>
 </center>
-
 <span class="anchor" id="a2022"></span>
-<h2>New SGs: April 2022<sup><small><a href="#a2022">&#35;</a></small></sup></h2>
+<h2>New SGs: April 2022<sup><small><a href="#a2022">#</a></small></sup></h2>
 <p>
 	SG production has always been stupidly expensive.
 	Anchored production softens the blow a bit - there's a way to ensure at least one success - but not by too much.
@@ -231,14 +230,14 @@ gtag('config', 'G-805N997DPC');
 	A few strategies to consider:
 </p>
 <ol>
-	<li>If you are around the hardcap on resources and want to minimize True Core Mask expenses, target one of the 5-star SGs and exchange for the other with the anniversary TCM. This runs the risk of missing either or both of the 4-star SGs.</li>
-	<li>If you don't have 300k MP/Rations to spend and/or don't want to end up in low-rarity SG hell, you'll generally be best off targeting Supernova (the more useful 4-star SG) and exchanging for the 5-star SGs with TCMs.</li>
-	<li>If you have ~300k MP/Rations and aren't concerned with TCMs, you could consider rolling SGs for a bit (staying above 160k MP/Rations) and seeing if you roll one of the 4-star SGs. Then, anchor the other one.
+<li>If you are around the hardcap on resources and want to minimize True Core Mask expenses, target one of the 5-star SGs and exchange for the other with the anniversary TCM. This runs the risk of missing either or both of the 4-star SGs.</li>
+<li>If you don't have 300k MP/Rations to spend and/or don't want to end up in low-rarity SG hell, you'll generally be best off targeting Supernova (the more useful 4-star SG) and exchanging for the 5-star SGs with TCMs.</li>
+<li>If you have ~300k MP/Rations and aren't concerned with TCMs, you could consider rolling SGs for a bit (staying above 160k MP/Rations) and seeing if you roll one of the 4-star SGs. Then, anchor the other one.
 		This improves your odds of getting both 4-star SGs and not having to bother with SG production again for a full armory.
 	</li>
 </ol>
 <span class="anchor" id="f2022"></span>
-<h2>New Dolls: February 2022<sup><small><a href="#f2022">&#35;</a></small></sup></h2>
+<h2>New Dolls: February 2022<sup><small><a href="#f2022">#</a></small></sup></h2>
 <p>
 	The doll batch released on February 22 (RPK-203, SIG MCX, FX-05, AR-57, and PPD-40) was the first time on EN we got to use this system.
 	Following are the probability charts for each anchored construction option, alongside charts for their in-rateup standard crafting chances.
@@ -283,68 +282,63 @@ gtag('config', 'G-805N997DPC');
 
 <span class="anchor" id="ahc"></span>
 <h2>Anchored Heavy Doll Construction<sup><small><a href="#ahc">&#35;</a></small></sup></h2> -->
-
 <span class="anchor" id="notes"></span>
-<h2>Notes<sup><small><a href="#notes">&#35;</a></small></sup></h2>
+<h2>Notes<sup><small><a href="#notes">#</a></small></sup></h2>
 <ul>
-	<li>Compared to official recipes (some combination of 400/400/100 and 200 parts), 400/400/91/30 and its permutations appears to have near-identical rates. 170 parts/craft will add up over time, especially when crafting decent amounts of fairies, so I recommend the cheaper one.</li>
-	<li>No other voodoo recipes have strong evidence supporting their use.</li>
-	<li>If you have many recipes that have lots of variability (low sample size voodoos) and sort them by mean rate, the top ones are going to be the momentarily lucky ones. It's unlikely for their true rate to even match the displayed mean - one or two standard deviations below that is much more plausible.</li>
-	<li>Fairies are generally more important than dolls. Don't waste all your resouces crafting for a useless trophy when you could be developng fairies that make your best teams even stronger.</li>
-	<li>A true core mask is given out with each major event and during the anniversary, which you can exchange for any craftable 5-star doll. This is best saved for shotguns (LTLX) due to their high cost, though it may be justifiable to use on an exceptionally rare, highly meta-relevant doll (Carcano M91/38).</li>
-	<li>The base rates of dolls in anchored construction appears fairly consistent with their standard production rates.</li>
-	<li>The displayed increment values are not exact - their true value seems to be slightly higher, and is simply truncated on the crafting screen. The charts above use my best estimate for their true increment, though the difference is incredibly minor.</li>
+<li>Compared to official recipes (some combination of 400/400/100 and 200 parts), 400/400/91/30 and its permutations appears to have near-identical rates. 170 parts/craft will add up over time, especially when crafting decent amounts of fairies, so I recommend the cheaper one.</li>
+<li>No other voodoo recipes have strong evidence supporting their use.</li>
+<li>If you have many recipes that have lots of variability (low sample size voodoos) and sort them by mean rate, the top ones are going to be the momentarily lucky ones. It's unlikely for their true rate to even match the displayed mean - one or two standard deviations below that is much more plausible.</li>
+<li>Fairies are generally more important than dolls. Don't waste all your resouces crafting for a useless trophy when you could be developng fairies that make your best teams even stronger.</li>
+<li>A true core mask is given out with each major event and during the anniversary, which you can exchange for any craftable 5-star doll. This is best saved for shotguns (LTLX) due to their high cost, though it may be justifiable to use on an exceptionally rare, highly meta-relevant doll (Carcano M91/38).</li>
+<li>The base rates of dolls in anchored construction appears fairly consistent with their standard production rates.</li>
+<li>The displayed increment values are not exact - their true value seems to be slightly higher, and is simply truncated on the crafting screen. The charts above use my best estimate for their true increment, though the difference is incredibly minor.</li>
 </ul>
 
-<span class="anchor" id="ads"></span>
-<h2>More like this</h2>
-	<section class="tiles">	
-		<a href="gacha">
-			<div class="gallery">
-			  <div class="gallerypic">
-				<img src="images/icon/gacha-bcc.jpg" width="33%" height="400">
-				<div class="gallerypicdesc"><b>Black Cards & Completionism</b><br/>Costume gacha analysis</div>
-			  </div>
-			</div>
-		</a>
-		
-		<a href="sfstats">
-			<div class="gallery">
-				<div class="gallerypic">
-				<img src="images/icon/sfstat.jpg" width="33%" height="400">
-				<div class="gallerypicdesc"><b>SF Size and Keycode stats</b><br/>Probability estimates and math</div>
-				</div>
-			</div>
-		</a>
-		
-		<!-- <a href="hanyangle">
-			<div class="gallery">
-			  <div class="gallerypic">
-				<img src="images/icon/hanyangle.jpg" width="33%" height="400">
-				<div class="gallerypicdesc"><b>Type88: Formation and Skins</b><br/>Performance analysis</div>
-			  </div>
-			</div>
-		</a> -->
-</section>
-	
-	<!-- Footer -->
-		<footer id="footer">
-			<div class="inner">
-				<ul class="copyright">
-		<li>Content: BigStupidJellyfish</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</div>
-		</footer>
-	</div>
-	
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-	
-	</body>
-	</html>
+
+
+<!-- Footer -->
+
+    <div class="more-like-this">
+        <h2>More like this</h2>
+        <div class="mlt-gallery-grid">
+
+                <a href="gacha" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/gacha-bcc.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">Black Cards & Completionism</div>
+                            <div class="mlt-gallery-desc">Costume gacha analysis</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="sfstats" style="color: inherit; text-decoration: none;">
+                    <div class="mlt-gallery-item">
+                        <img src="images/icon/sfstat.jpg" alt="Article thumbnail">
+                        <div class="mlt-gallery-content">
+                            <div class="mlt-gallery-title">SF Size and Keycode stats</div>
+                            <div class="mlt-gallery-desc">Probability estimates and math</div>
+                        </div>
+                    </div>
+                </a>
+        </div>
+    </div>
+    
+
+            </div> 
+        </div> </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                <a href="../pages/about">About GFMath</a> ·
+                <a href="../pages/spoilers">Explanation of common plot types</a> ·
+                <a href="#" onclick="window.scrollTo(0,0)">Back to top</a>
+            </p>
+            <p style="margin-top: 20px;">
+                Content: BigStupidJellyfish
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

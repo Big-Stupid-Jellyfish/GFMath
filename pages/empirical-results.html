@@ -1,133 +1,130 @@
-<!DOCTYPE HTML>
-<!--
-Forty by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-805N997DPC');
-</script>
-<meta name="description" content="Girls Frontline, by the numbers">
-<title>Comments on empirical results - GFMath</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="../assets/css/main.css" />
-<link rel="icon" sizes="180x180" href="images/icon/ads-180.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/icon/ads-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/icon/ads-16.png">
-<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-805N997DPC');
+    </script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    <title>Comments on empirical results - GFMath</title>
+
+<link href="images/icon/ads-180.png" rel="icon" sizes="180x180"/>
+<link href="images/icon/ads-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="images/icon/ads-16.png" rel="icon" sizes="16x16" type="image/png"/>
+
+    <link rel="stylesheet" href="../assets/css/common.css" />
+
+    
 </head>
-<body class="is-preload">
-<!-- Wrapper -->
-<div id="wrapper">
-<!-- Header -->
-<header id="header">
-<a href="../index" class="logo"><strong>GFMath</strong> <span>Detailed GFL analysis</span></a>
-<nav></nav>
-<a href="https://www.youtube.com/c/BigStupidJellyfish" class="logo"><strong>Youtube</strong></a>
-</header>
-<div id="main" class="alt">
-<section>
-<div class="inner">
-<header class="major">
-	<h1>Comments on empirical results</h1>
-</header>
-			
-				<center><em>By BigStupidJellyfish | 2021-March-12</em></center>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    GFMath
+                </div>
+                <nav>
+                    <a href="../index">Home</a>
+                    <a href="https://www.youtube.com/c/BigStupidJellyfish" target="_blank">YouTube</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-				<p>
-					<em>(Note, 2022-May-14: this page is largely replaced by <a href="simulation">The Problem with Damage Simulators</a>.)</em>
-				</p>
-				
-        <p>Thanks to Target Saving, it's easier than ever to conduct field tests with your echelons.
-        When possible and practical, I like to make use of this in my articles. This page will hold some general comments on my approach & methods with this system.</p>
-
-        <p>A primary motivation: DPS simulator numbers are often unreliable and don't translate well into in-game performance.
+    <main>
+        <div class="article-container">
+            <header class="article-header">
+                <h1>Comments on empirical results</h1>
+                <div class="meta">By BigStupidJellyfish | 2021-March-12</div>
+            </header>
+            <div class="article-content">
+<p>
+<em>(Note, 2022-May-14: this page is largely replaced by <a href="simulation">The Problem with Damage Simulators</a>.)</em>
+</p>
+<p>Thanks to Target Saving, it's easier than ever to conduct field tests with your echelons.
+        When possible and practical, I like to make use of this in my articles. This page will hold some general comments on my approach &amp; methods with this system.</p>
+<p>A primary motivation: DPS simulator numbers are often unreliable and don't translate well into in-game performance.
             <ul>
-              <li>Grenade skills cannot be properly accounted for. The number of targets hit, their remaining HP when hit, and so on will vary quite a bit per-combat.
+<li>Grenade skills cannot be properly accounted for. The number of targets hit, their remaining HP when hit, and so on will vary quite a bit per-combat.
               Simulators generally assume some configurable number of enemy links to be hit and multiply the grenade damage by that number - this is not how combat actually goes.
               One issue this leads to is over-valuing FP buffs from HG skills/tiles on grenadiers.</li>
-              <li>Many other skills are also not properly modeled in a simulator.
+<li>Many other skills are also not properly modeled in a simulator.
               AN-94 and X95, for example, will do quite a bit more or less damage depending enemy density, damage state, and so on (though I have <a href="x95">some estimates on X95 here</a>).</li>
-              <ul>
-                <li>A non-exhaustive list of some other common dolls that work in ways a simulator won't be able to describe well, not counting all the grenadiers:
+<ul>
+<li>A non-exhaustive list of some other common dolls that work in ways a simulator won't be able to describe well, not counting all the grenadiers:
                   Type88 mod, KSVK mod, NTW mod, Rico, R93 (to a lesser extent), Carcano M91/38 (45x damage is amazing, but often is overkill and inflates simulator numbers),
                   M4A1 (cannon), ACR, C-93, El Clear (if you kite her), Contender (for non-boss combat), Python, Kord, and JS 9.</li>
-              </ul>
-              <li>Damage early is usually more valuable than damage later.
+</ul>
+<li>Damage early is usually more valuable than damage later.
               If you can kill the frontline Aegis before they shield, that's a lot less HP to work through.
               Similarly, dead enemies can't shoot back.
               Killing off dangerous enemies early can save a lot of damage taken.
               On the other hand, fights with long walks or a few trash mobs at the start (7-6 Dreamer, for example) don't need as much in the way of frontloaded damage.
               Getting a 20-second total damage number doesn't help you either way here.</li>
-              <li>Many skills offer unique benefits in certain situations. DPS simulators can't explain those scenarios or measure the value provided by these skills. A few examples:</li>
-              <ul>
-                <li>If your echelon is expecting to take field-wide AoE damage, HS2000 may be critical to keep your DPS healthy.
+<li>Many skills offer unique benefits in certain situations. DPS simulators can't explain those scenarios or measure the value provided by these skills. A few examples:</li>
+<ul>
+<li>If your echelon is expecting to take field-wide AoE damage, HS2000 may be critical to keep your DPS healthy.
                 M950A mod offers a very unique speed boost/slow field that can be very hard to replace.</li>
-                <li>Many ARs have unique attributes that help in certain encounters - RFB targets backline, MDR can shield your frontline, G11/AN-94/AR-15/K2 have multi-hit skills that deplete Orthrus shields faster, and so on.</li>
-                <li>Python's stream of FP buffs works very well with AS Val at night, and her skill in general isn't fully implemented on any simulator.</li>
-              </ul>
-              <li>Manual skill control and kiting is important in tougher fights. Outside of applying a fixed skill delay, this isn't something DPS simulators can account for.</li>
-							<li>Many battles have significant random elements. Your MGSG will do much differently against SF groups with Jaguars in the back depending on if those Jaguars get taken out quickly or not.</li>
-							<li>Taking less damage yourself is also important. A DPS simulator can't tell you how valuable +30% EVA on your offtank is, especially if it's being considered against different buffs.</li>
-            </ul>
-
-				<p>Damage simulators are most useful when you want to compare very similar options. They are good at answering questions like:</p>
-				<ul>
-					<li>Will G41 or ART556 do more damage in this echelon?</li>
-					<li>Which equipment combination on this doll gives the highest DPS in this echelon?</li>
-					<li>Considering some expected enemy evasion, will Warrior or Artillery provide more DPS here on average?</li>
-					<li>What MGs do I need to get 54+ armor on my shotguns for 9-4N Judge?</li>
-					<li>What approximate time can I expect on the data dummy with this MG setup?</li>
-					<li>Will placing SSG3000 such that her tile covers Mk23 or Px4 Storm give more DPS?</li>
-				</ul>
-				<p>They will almost never be a useful number for evaluating an echelon as a whole.</p>
-
-				<p>Field tests aren't perfect either.
+<li>Many ARs have unique attributes that help in certain encounters - RFB targets backline, MDR can shield your frontline, G11/AN-94/AR-15/K2 have multi-hit skills that deplete Orthrus shields faster, and so on.</li>
+<li>Python's stream of FP buffs works very well with AS Val at night, and her skill in general isn't fully implemented on any simulator.</li>
+</ul>
+<li>Manual skill control and kiting is important in tougher fights. Outside of applying a fixed skill delay, this isn't something DPS simulators can account for.</li>
+<li>Many battles have significant random elements. Your MGSG will do much differently against SF groups with Jaguars in the back depending on if those Jaguars get taken out quickly or not.</li>
+<li>Taking less damage yourself is also important. A DPS simulator can't tell you how valuable +30% EVA on your offtank is, especially if it's being considered against different buffs.</li>
+</ul>
+<p>Damage simulators are most useful when you want to compare very similar options. They are good at answering questions like:</p>
+<ul>
+<li>Will G41 or ART556 do more damage in this echelon?</li>
+<li>Which equipment combination on this doll gives the highest DPS in this echelon?</li>
+<li>Considering some expected enemy evasion, will Warrior or Artillery provide more DPS here on average?</li>
+<li>What MGs do I need to get 54+ armor on my shotguns for 9-4N Judge?</li>
+<li>What approximate time can I expect on the data dummy with this MG setup?</li>
+<li>Will placing SSG3000 such that her tile covers Mk23 or Px4 Storm give more DPS?</li>
+</ul>
+<p>They will almost never be a useful number for evaluating an echelon as a whole.</p>
+<p>Field tests aren't perfect either.
 				If trying to look into broad ideas or general cases, it's hard to say that any specific set of fights tested will perfectly represent the bigger picture.
 				Each battle may also have certain mechanics that significantly change the numbers you get (e.g., Cyclops grenades deal a lot of unavoidable damage after a certain period).
 				Kiting is a critical part of high-end fights, and consistently incorporating that into tests is challenging.
 				Target practice starts with everything at full health, so you can't see how things turn out several fights in, and strategic options are limited (para debuff/SF chips/combo/construction/suee).
 				They can help build your understanding of how different options will perform in a range of circumstances, but are hardly certain proof.</p>
-
-        <p>A few comments on other bits of methodology:</p>
-        <ul>
-					<li>Test fights are generally performed with no kiting (for consistency purposes), so the teams tested should be able to handle the fight like that. Doppelsoldners, for example, usually need HG kiting & retreating to fight properly and don't work as well here.
+<p>A few comments on other bits of methodology:</p>
+<ul>
+<li>Test fights are generally performed with no kiting (for consistency purposes), so the teams tested should be able to handle the fight like that. Doppelsoldners, for example, usually need HG kiting &amp; retreating to fight properly and don't work as well here.
 					Hydras either get killed fast enough (resulting in no damage taken) or absolutely destroy your dolls (not giving much good information).</li>
-          <li>To avoid fairy talent RNG the fights are done either with 5* fairies, no fairies, or a fairy with a flex/useless talent (e.g., Armor in non-SG echelon). Fairy selection varies to modify the difficulty.</li>
-          <li>For the most part, all dolls used are maxed out (all relevant stats/best equipment/SL10/SPEQs). Any deviations from this, mostly in skill levels, will be noted as appropriate.</li>
-          <li>The echelons built are not necessarily optimal for the situation or even in general.</li>
-          <li>I try to take at least 10-20 trials per configuration. More is always better, but I don't have infinite time, there are usually <em>many</em> different possible options to test, nor do I make any money off this, so it'll have to do.</li>
-					<li>Force shields, mixed armor/non-armor without AP, varying evasion, and other such factors will make damage statistics less reliable. One doll shooting only half-shielded Gunners will deal less damage on paper than another shooting only unshielded Strelets, all else being equal.
+<li>To avoid fairy talent RNG the fights are done either with 5* fairies, no fairies, or a fairy with a flex/useless talent (e.g., Armor in non-SG echelon). Fairy selection varies to modify the difficulty.</li>
+<li>For the most part, all dolls used are maxed out (all relevant stats/best equipment/SL10/SPEQs). Any deviations from this, mostly in skill levels, will be noted as appropriate.</li>
+<li>The echelons built are not necessarily optimal for the situation or even in general.</li>
+<li>I try to take at least 10-20 trials per configuration. More is always better, but I don't have infinite time, there are usually <em>many</em> different possible options to test, nor do I make any money off this, so it'll have to do.</li>
+<li>Force shields, mixed armor/non-armor without AP, varying evasion, and other such factors will make damage statistics less reliable. One doll shooting only half-shielded Gunners will deal less damage on paper than another shooting only unshielded Strelets, all else being equal.
 					It's harder to rack up damage against a bunch of scouts compared to guards.
 					When significant, shield HP depleted is added to each doll's damage dealt.</li>
-        </ul>
+</ul>
+<!-- Footer -->
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="copyright">
-		<li>Content: BigStupidJellyfish</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
-		</div>
-		
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-		
-		</body>
-		</html>
+</p>
+            </div> 
+        </div> </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                <a href="../pages/about">About GFMath</a> ·
+                <a href="../pages/spoilers">Explanation of common plot types</a> ·
+                <a href="#" onclick="window.scrollTo(0,0)">Back to top</a>
+            </p>
+            <p style="margin-top: 20px;">
+                Content: BigStupidJellyfish
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
