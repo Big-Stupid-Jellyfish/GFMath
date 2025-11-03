@@ -345,118 +345,124 @@ footer a:hover {
 }
 
 /* Hero Section */
-        .hero {
-            background: var(--bg-secondary);
-            padding: 40px 0;
-            text-align: center;
-            border-bottom: 1px solid var(--border);
-        }
+.hero {
+    background: var(--bg-secondary);
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
 
-        .hero h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: var(--text-primary);
-        }
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
 
-        .hero p {
-            color: var(--text-secondary);
-            max-width: 800px;
-            margin: 0 auto 30px;
-        }
+.hero p {
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
 
-        /* Search Box */
-        .search-container {
-            max-width: 500px;
-            margin: 0 auto;
-        }
+/* Search Box */
+.search-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
 
-        .search-box {
-            display: flex;
-            background: var(--bg-tertiary);
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            overflow: hidden;
-        }
+.search-box {
+    display: flex;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+}
 
-        .search-box input {
-            flex: 1;
-            padding: 10px;
-            background: transparent;
-            border: none;
-            color: var(--text-primary);
-            font-family: inherit;
-        }
+.search-box input {
+    flex: 1;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-family: inherit;
+}
 
-        .search-box button {
-            padding: 10px 20px;
-            background: var(--accent);
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-family: inherit;
-            transition: background 0.2s;
-        }
+.search-box button {
+    padding: 10px 20px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s;
+}
 
-        .search-box button:hover {
-            background: var(--accent-hover);
-        }
+.search-box button:hover {
+    background: var(--accent-hover);
+}
 
-        /* Filter Buttons */
-        .filter-section {
-            padding: 30px 0;
-            background: var(--bg-secondary);
-            border-bottom: 1px solid var(--border);
-        }
+/* Filter Buttons */
+.filter-section {
+    padding: 30px 0;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+}
 
-        .filter-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-        }
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
 
-        .filter-btn {
-            padding: 8px 16px;
-            background: var(--bg-tertiary);
-            border: 1px solid var(--border);
-            color: var(--text-secondary);
-            cursor: pointer;
-            font-family: inherit;
-            transition: all 0.2s;
-        }
+.filter-btn {
+    padding: 8px 16px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s;
+}
 
-        .filter-btn:hover {
-            border-color: var(--accent);
-            color: var(--text-primary);
-        }
+.filter-btn:hover {
+    border-color: var(--accent);
+    color: var(--text-primary);
+}
 
-        .filter-btn.active {
-            background: var(--accent);
-            color: white;
-            border-color: var(--accent);
-        }
+.filter-btn.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
 
-        /* Gallery Grid */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-            padding: 40px 0;
-        }
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 40px 0;
+}
 
-        .gallery-item {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            overflow: hidden;
-            transition: all 0.3s;
-            display: none;
-        }
+.gallery-item {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.3s;
+    display: none;
+}
 
-        .gallery-item.show {
-            display: block;
-            animation: fadeIn 0.3s;
-        }
+.gallery-item.show {
+    display: block;
+    animation: fadeIn 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    border-color: var(--accent);
+}
 
 .gallery-content {
     padding: 15px;
