@@ -625,28 +625,40 @@ mjx-container {
 /* Header - mobile fix attempt */
 @media (max-width: 768px) {
     header {
-        height: auto;
-        padding: 10px 0;
+        height: auto !important; /* Override the fixed height */
+        padding: 5px 0 !important; /* Reduce padding */
+        border-bottom: 1px solid var(--border);
     }
 
     .header-content {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row; /* Keep logo and nav on the same line */
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
     }
 
     .logo {
-        margin-bottom: 10px;
+        font-size: 20px; /* Smaller logo */
+        margin-bottom: 0;
+        flex-shrink: 0; /* Prevent it from shrinking */
     }
 
     nav {
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
         margin: 0;
+        flex-shrink: 0; /* Prevent it from shrinking */
     }
 
     nav a {
-        margin: 5px;
+        margin-left: 10px;
+        font-size: 14px;
+        white-space: nowrap; /* Prevent link text from wrapping */
+    }
+
+    /* Add a horizontal scroll if nav overflows */
+    .header-content {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 }
 
