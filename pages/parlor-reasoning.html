@@ -204,14 +204,14 @@
       <td>0%</td>
       <td>0 words</td>
     </tr> -->
-	<!-- <tr>
+	<tr>
       <td><a href="https://gemini.google.com/app">Gemini-2.5-Pro</a>** (batch size 10)</td>
 	  <td>???</td>
 	  <td>???</td>
       <td>113*1</td>
-      <td>0%</td>
+      <td>92.9%</td>
       <td>???</td>
-    </tr> -->
+    </tr>
 	<tr>
       <td><a href="https://huggingface.co/zai-org/GLM-4.5-Air">GLM-4.5-Air</a></td>
 	  <td>106B</td>
@@ -285,6 +285,14 @@
       <td>4001/2836 tokens</td>
     </tr>
 	<tr>
+      <td><a href="https://huggingface.co/openai/gpt-oss-120b">GPT-OSS-120B</a>** (batch size 10)</td>
+	  <td>120B</td>
+	  <td>MXFP4</td>
+      <td>113*1</td>
+      <td>94.7%</td> <!-- /113 -->
+      <td>3721 avg tokens</td>
+    </tr>
+	<tr>
       <td><a href="https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1_5">Llama-3.3-Nemotron-Super-49B-v1.5</a></td>
 	  <td>49B</td>
 	  <td>Q8_0</td>
@@ -351,6 +359,14 @@
 	<tr>
       <td><a href="https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct">Seed-OSS-36B</a></td>
 	  <td>36B</td>
+	  <td>Q4_K_XL</td>
+      <td>113*2</td>
+      <td>96.0%</td> <!-- 217/226 -->
+      <td>5530/4610 tokens</td>
+    </tr>
+	<tr>
+      <td></td>
+	  <td></td>
 	  <td>Q8_0</td>
       <td>113*2</td>
       <td>96.0%</td> <!-- 217/226 -->
@@ -436,10 +452,10 @@
 	I included it in this test because I was curious if that added thinking would still improve performance on other subjects.
 	It showed some improvement from Mistral Small, but was not on the level of Magistral.
 </p>
-<!-- <h3>**Gemini-2.5-Pro</h3>
+<h3>**Gemini-2.5-Pro</h3>
 <p>
 	Take these results with a grain of salt!
-	I tried sending these as sets of 10 puzzles at once.
+	I tried sending these as sets of 10 puzzles at once, due to their tight usage restrictions and my lack of interest in paying subscriptions/per prompt.
 	This has both positive and negative potential impacts on the results.
 </p>
 <p>
@@ -453,8 +469,8 @@
 	The model's true chain of thought is hidden, so we can't learn much about how it processes these.
 	(For what it's worth, Gemini itself claimed it could probably handle 20-50 of these at once with 100% accuracy before its performance starts dropping.
 	However, sets of 20 caused problems beyond the model's generation, so I reduced it to 10 per group.
-	Obviously models don't actually understand their capabilities, but I technically have its approval :) )
-</p> -->
+	Obviously models don't actually understand their capabilities, but I technically have its approval, and even went easy on it :) )
+</p>
 <h3>GLM</h3>
 <p>
 	I have really been liking GLM 4.6.
@@ -497,8 +513,31 @@
 	On one hand, fake confidence can be quite harmful.
 	On the other, as each puzzle should have one unique solution, coming up with an "ambiguous" situation is a good sign you made an error in your reasoning, and you should backtrack and try something else until you can resolve the gems to a single box.
 	<!-- I'll at least credit the 120B for being good at this logical reasoning puzzle (on high reasoning effort). -->
-	I could write on how much I dislike the GPT-OSS models, but that's mostly for <a href="images/parlor-reasoning/effects-arent-copyrighted-anyways.png">other reasons</a> and better saved for another time.
+	I have some <a href="images/parlor-reasoning/effects-arent-copyrighted-anyways.png">other reasons</a> to dislike these models for many uses, but I am quite pleased with how they did here.
 </p>
+<p>
+	**In connection with the Gemini-2.5-Pro batched test, I ran a set on GPT-OSS-120B, to get a sense for just how cruel asking a model to solve ten of these in one go is.
+	In this case, I loaded the model with max context and removed any response length limit. Reasoning: high, of course.
+	It used, in total, 420429 tokens for a score of 94.7% (3721 tokens per problem, highest per set was 74074).
+	For reference, its reasoning: high/one-by-one runs used on average 4000 tokens per problem, 97.0%.
+	I was not expecting it to scale this well, and it even managed to beat Gemini-2.5-Pro with this setup.
+	(Of course, with the limited sample size, I can't definitively claim GPT-OSS is truly better on this task - but it's at least competitive.
+	Gemini-2.5-Pro certainly has advantages and better performance on a number of other subjects.)
+</p>
+<!--
+Batch 1: 10546
+Batch 2: 8434
+Batch 3: 35278
+Batch 4: 27828
+Batch 5: 34554
+Batch 6: 31085
+Batch 7: 22151
+Batch 8: 61616
+Batch 9: 35707
+Batch 10: 35839
+Batch 11: 74074 // 377112
+Batch final 3: 43317
+-->
 <h3>Magistral</h3>
 <p>
 	&dagger;: This model was set to use <code>&lt;think&gt;</code> tags for this test, as it seemed to close them more consistently.
@@ -539,6 +578,10 @@ The statement matching this statement is on a completely true box."
 	Which, if you ask me, can actually be simplified/solved surprisingly quickly.
 	I'm not too surprised a LLM would get tripped up, though.
 	The reasoning traces largely seemed to struggle to understand what a "matching" statement is.
+</p>
+<p>
+	Amusingly, the Q4 timed out only once on a separate problem, and got this one right on one of its two attempts.
+	Total score was unchanged between quants.
 </p>
 <p>
 	Its score on my non-thinking/fact-based benchmark was about typical for its size.
