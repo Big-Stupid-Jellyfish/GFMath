@@ -44,7 +44,7 @@
         <div class="article-container">
             <header class="article-header">
                 <h1>Reasoning LLMs vs the Parlor Puzzle</h1>
-                <div class="meta">By BigStupidJellyfish | 2025-November-02</div>
+                <div class="meta">By BigStupidJellyfish | 2025-November-02 | Updated 2025-November-09</div>
             </header>
 <div class="article-content">
 
@@ -127,7 +127,7 @@
 <p>
 	I've generally been experimenting with language models lately, with <a href="deep-research">mixed</a> <a href="llm-quants">feelings</a>.
 	I have not done this while playing the game (that'd be cheating!) but I wrote down each Parlor Puzzle I encountered after coming up with the idea and started testing a number of "reasoning" language models with the various configurations to see if they'd be able to figure it out as well.
-	I ended up liking this test too much to leave it there, with a few scattered manual tests on a small subset of the questions.
+	I ended up liking this test too much to leave it there, with just a few scattered manual tests on a small subset of the questions.
 	So, I found a set of (likely) all the parlor puzzles in the game and hacked together something to test models on it properly.
 </p>
 <p>
@@ -196,6 +196,30 @@
       <td>63.1%</td> <!-- 214 -->
       <td>6161/6223 tokens</td>
     </tr>
+	<tr>
+      <td><a href="https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-1.2B">EXAONE-4.0</a></td>
+	  <td>1.2B</td>
+	  <td>F16</td>
+      <td>113*3</td>
+      <td>48.1%</td> <!-- 163/339 -->
+      <td>6546/6381 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B">EXAONE-4.0</a></td>
+	  <td>32B</td>
+	  <td>Q8_0</td>
+      <td>113*3</td>
+      <td>93.5%</td> <!-- 317/339 -->
+      <td>6133/4836 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/LGAI-EXAONE/EXAONE-4.0.1-32B">EXAONE-4.0.1</a></td>
+	  <td>32B</td>
+	  <td>Q8_0</td>
+      <td>113*3</td>
+      <td>92.6%</td> <!-- 315/339 -->
+      <td>6120/4500 tokens</td>
+    </tr>
 	<!-- <tr>
       <td><a href="https://huggingface.co/TheDrummer/Gemma-3-R1-12B-v1">Gemma3 R1</a></td>
 	  <td>12B</td>
@@ -237,46 +261,6 @@
       <td>21.2/17 seconds</td>
     </tr>
 	<tr>
-      <td><a href="https://huggingface.co/openai/gpt-oss-20b">GPT-OSS-20B</a> (Reasoning: low)</td>
-	  <td>20B</td>
-	  <td>MXFP4</td>
-      <td>113*3</td>
-      <td>73.7%</td>
-      <td>1242/1044 tokens</td>
-    </tr>
-	<tr>
-      <td><a href="https://huggingface.co/openai/gpt-oss-20b">GPT-OSS-20B</a> (Reasoning: medium)</td>
-	  <td>20B</td>
-	  <td>MXFP4</td>
-      <td>113*3</td>
-      <td>91.2%</td> <!-- 309/339-->
-      <td>3828/2259 tokens</td>
-    </tr>
-	<tr>
-      <td><a href="https://huggingface.co/openai/gpt-oss-20b">GPT-OSS-20B</a> (Reasoning: high)</td>
-	  <td>20B</td>
-	  <td>MXFP4</td>
-      <td>113*3</td>
-      <td>90.9%</td> <!-- 308/339 -->
-      <td>7836/5196 tokens</td>
-    </tr>
-	<tr>
-      <td><a href="https://huggingface.co/openai/gpt-oss-120b">GPT-OSS-120B</a> (Reasoning: low)</td>
-	  <td>120B</td>
-	  <td>MXFP4</td>
-      <td>113*5</td>
-      <td>84.2%</td> <!-- 476/565 -->
-      <td>1042/891 tokens</td>
-    </tr>
-	<tr>
-      <td><a href="https://huggingface.co/openai/gpt-oss-120b">GPT-OSS-120B</a> (Reasoning: medium)</td>
-	  <td>120B</td>
-	  <td>MXFP4</td>
-      <td>113*5</td>
-      <td>92.9%</td> <!-- 525/565 -->
-      <td>2168/1599 tokens</td>
-    </tr>
-	<tr>
       <td><a href="https://huggingface.co/openai/gpt-oss-120b">GPT-OSS-120B</a> (Reasoning: high)</td>
 	  <td>120B</td>
 	  <td>MXFP4</td>
@@ -285,12 +269,12 @@
       <td>4001/2836 tokens</td>
     </tr>
 	<tr>
-      <td><a href="https://huggingface.co/openai/gpt-oss-120b">GPT-OSS-120B</a>** (batch size 10)</td>
-	  <td>120B</td>
-	  <td>MXFP4</td>
-      <td>113*1</td>
-      <td>94.7%</td> <!-- /113 -->
-      <td>3721 avg tokens</td>
+      <td><a href="https://huggingface.co/NousResearch/Hermes-4-70B">Hermes-4-70B</a></td>
+	  <td>70B</td>
+	  <td>Q4_K_XL</td>
+      <td>113*3</td>
+      <td>89.1%</td> <!-- 302/339 -->
+      <td>6085/4923 tokens</td>
     </tr>
 	<tr>
       <td><a href="https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1_5">Llama-3.3-Nemotron-Super-49B-v1.5</a></td>
@@ -317,7 +301,7 @@
       <td>1891/1749 tokens</td>
     </tr>
 	<tr>
-      <td><a href="https://huggingface.co/Qwen/Qwen3-1.7B">Qwen3-1.7B (thinking on)</a></td>
+      <td><a href="https://huggingface.co/Qwen/Qwen3-1.7B">Qwen3-1.7B (thinking)</a></td>
 	  <td>1.7B</td>
 	  <td>F16</td>
       <td>113*3</td>
@@ -333,7 +317,7 @@
       <td>7481/6356 tokens</td>
     </tr>
 	<tr>
-      <td><a href="https://huggingface.co/Qwen/Qwen3-14B">Qwen3-14B (thinking on)</a></td>
+      <td><a href="https://huggingface.co/Qwen/Qwen3-14B">Qwen3-14B (thinking)</a></td>
 	  <td>14B</td>
 	  <td>Q8</td>
       <td>113*3</td>
@@ -355,6 +339,14 @@
       <td>113*3</td>
       <td>90.6%</td> <!-- 307/339 -->
       <td>7023/5797 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/inclusionAI/Ring-flash-2.0">Ring-Flash-2.0</a></td>
+	  <td>100B</td>
+	  <td>Q4_K_M</td>
+      <td>113*3</td>
+      <td>92.0%</td> <!-- /339 -->
+      <td>6604/5013 tokens</td>
     </tr>
 	<tr>
       <td><a href="https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct">Seed-OSS-36B</a></td>
@@ -400,6 +392,30 @@
 	Ideally, we'd want a model in the top left: high accuracy, few tokens to get there.
 	GPT-OSS-120B most clearly occupies that spot.
 </p>
+<p>
+	We could also try relating the scores on this benchmark to that on some more mainstream benchmarks.
+	For this chart, I'm referencing <a href="https://artificialanalysis.ai/">Artificial Analysis</a> scores:
+</p>
+<center><div class="figure">
+	<img src="images/parlor-reasoning/parlor-vs-aaii.png" width="100%"/>
+</div></center>
+<p>
+	I don't love that site much, in particular for how strongly its scoring favors reasoning models.
+	But as we're focused on reasoning models here anyways, it seems fair enough as a popular resource/reference point.
+	My general interpretation here would be that models in the top-left area perform <em>better</em> on parlor puzzles than on standard benchmarks, while models in the bottom-right area perform <em>worse</em> on these parlor puzzles than they do on standard benchmarks.
+</p>
+<p>
+	The two metrics are reasonably correlated, which is nice to see.
+</p>
+<p>
+	Artificial Analysis scores presumably represent the full precision of each model.
+	Parlor accuracy scores, and plotted points, are run with the quants described.
+	For instance, we could reasonably expect the GLM-4.6 at Q3 to technically have a slightly lower intelligence index score.
+	Many of the models were tested at Q4+, many at Q8, so I think it should be close enough overall.
+	I used the "medium" reasoning effort AAII score (61) to place GPT-5-Thinking-Mini.
+	They do not seem to have a score for low, and high is marginally higher at 64.
+	I did not specify a reasoning effort when doing this, if they even listen to the user prompt for that.
+</p>
 <span class="anchor" id="specific-models"></span>
 <h2>Model Commentary<sup><small><a href="#specific-models">&#35;</a></small></sup></h2>
 <p>
@@ -411,9 +427,9 @@
 	It barely does better than random guessing, and was much worse than even the 1.7B Qwen on this task.
 	Its responses were well-formatted English, so I doubt sampler settings could account for the discrepancy.
 	I also have <a href="llm-quants#temp">yet to see</a> evidence of temperature being a crucial factor.
-	To show how far off it is, here's one example final answer, after reasoning for ~4k tokens:
+	<!-- To show how far off it is, here's one example final answer, after reasoning for ~4k tokens: -->
 </p>
-<blockquote>
+<!-- <blockquote>
 <p>
 	The only way to satisfy the conditions is by assuming the white box contains the prize. Its statement “THE OTHER TWO BOXES CONTAIN GEMS.” is true, while the other two boxes’ statements are false. This fits the requirement of at least one true and one false statement.
 </p>
@@ -422,8 +438,8 @@
 </p>
 </blockquote>
 <p>
-	The blue box in this case asserted that all three boxes contain gems, obviously also false. The black box asserted that it contained gems, which must then be the sole true statement.
-	Another response helpfully explained "Assuming the Blue box is telling the truth, then the Black box contains gems.[...]Thus the prize is in the Blue box."
+	The blue box in this case asserted that all three boxes contain gems, obviously also false. The black box asserted that it contained gems, which must then be the sole true statement. -->
+	One response helpfully explained "Assuming the Blue box is telling the truth, then the Black box contains gems.[...]Thus the prize is in the Blue box."
 	In one of the easiest puzzles, we have an even more local contradiction: "White box’s false claim “THIS BOX IS EMPTY” confirms it is not the prize container."
 </p>
 <p>
@@ -452,6 +468,15 @@
 	I included it in this test because I was curious if that added thinking would still improve performance on other subjects.
 	It showed some improvement from Mistral Small, but was not on the level of Magistral.
 </p>
+<h3>EXAONE</h3>
+<p>
+	The 1.2B version was a bit worse than Qwen3-1.7B, but it's also a bit smaller than the Qwen model.
+</p>
+<p>
+	I'm somewhat curious what really changed between 4.0 and 4.0.1 (their statement is that it's "a patch version to reduce unintended or inappropriate responses," whatever that means).
+	While the score turned out slightly lower with 4.0.1, it's only two additional errors.
+	I can't claim any detectable difference/dumbing down yet.
+</p>
 <h3>**Gemini-2.5-Pro</h3>
 <p>
 	Take these results with a grain of salt!
@@ -461,8 +486,6 @@
 <p>
 	It is more to compute in one go, so token/reason limits could cause hard stops.
 	The grouping of the questions (difficulty-wise) would also affect this.
-</p>
-<p>
 	On the other hand, the model may be able to apply information/logic from one solution to another, or get additional context clues.
 </p>
 <p>
@@ -473,8 +496,8 @@
 </p>
 <h3>GLM</h3>
 <p>
-	I have really been liking GLM 4.6.
-	It's by far the best-scoring model on my in-progress fact-based testing, and overall seems to give great results.
+	<!-- I have really been liking GLM 4.6. -->
+	GLM 4.6 has been by far the best-scoring model on my in-progress fact-based testing, and overall seems to give great results.
 	Its answers were formatted more consistently than any other model.
 	However, it and the 4.5-Air version scored quite horribly on this test, considering their size!
 </p>
@@ -493,36 +516,119 @@
 </p>
 <h3>GPT-OSS</h3>
 <p>
-	These models took some fiddling to get them to pay attention to the reasoning levels.
-	Interestingly, GPT-OSS-20B actually performed (by 1 question) worse on "high" than on "medium."
-	This could largely be attributed to the token limit: "medium" timed out ~3 times, while "high" timed out ~10 times.
-	As the limit was 24000 tokens and these puzzles are not <em>that</em> complicated, fundamentally, I'm not sure how much adding more tokens would help.
+	The reasoning effort setting gives us a whole bunch of configurations, so I've copied over its best result and included the rest here:
 </p>
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+	  <th>Effort</th>
+	  <th>Parameters</th>
+	  <th>Quantization</th>
+      <th>Parlors Puzzled</th>
+      <th>Score (% correct)</th>
+      <th>Avg/Median Response length</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+      <td><a href="https://huggingface.co/openai/gpt-oss-20b">GPT-OSS-20B</a></td>
+	  <td>Low</td>
+	  <td>20B</td>
+	  <td>MXFP4</td>
+      <td>113*3</td>
+      <td>73.7%</td>
+      <td>1242/1044 tokens</td>
+    </tr>
+	<tr>
+      <td></td>
+	  <td>Medium</td>
+	  <td>20B</td>
+	  <td>MXFP4</td>
+      <td>113*3</td>
+      <td>91.2%</td> <!-- 309/339-->
+      <td>3828/2259 tokens</td>
+    </tr>
+	<tr>
+      <td></td>
+	  <td>High</td>
+	  <td>20B</td>
+	  <td>MXFP4</td>
+      <td>113*3</td>
+      <td>90.9%</td> <!-- 308/339 -->
+      <td>7836/5196 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/openai/gpt-oss-120b">GPT-OSS-120B</a></td>
+	  <td>Low</td>
+	  <td>120B</td>
+	  <td>MXFP4</td>
+      <td>113*5</td>
+      <td>84.2%</td> <!-- 476/565 -->
+      <td>1042/891 tokens</td>
+    </tr>
+	<tr>
+      <td></td>
+	  <td>Medium</td>
+	  <td>120B</td>
+	  <td>MXFP4</td>
+      <td>113*5</td>
+      <td>92.9%</td> <!-- 525/565 -->
+      <td>2168/1599 tokens</td>
+    </tr>
+	<tr>
+      <td></td>
+	  <td>High</td>
+	  <td>120B</td>
+	  <td>MXFP4</td>
+      <td>113*5</td>
+      <td>97.0%</td> <!-- 548/565 -->
+      <td>4001/2836 tokens</td>
+    </tr>
+	<tr>
+      <td>120B** (batch size 10)</td>
+	  <td>High</td>
+	  <td>120B</td>
+	  <td>MXFP4</td>
+      <td>113*1</td>
+      <td>94.7%</td> <!-- /113 -->
+      <td>3721 avg tokens</td>
+    </tr>
+  </tbody>
+</table>
 <p>
+	<!-- These models took some fiddling to get them to pay attention to the reasoning levels. -->
+	GPT-OSS-20B actually performed (by 1 question) worse on "high" than on "medium."
+	This could largely be attributed to the token limit: "medium" timed out ~3 times, while "high" timed out ~10 times.
+	As the limit was a rather generous 24000 tokens and these puzzles are not <em>that</em> complicated, fundamentally, I'm not sure how much adding more tokens would help.
 	The 120B model's high setting performed much better (97%), and is the current best.
+</p>
+<!-- <p>
 	"Medium" was not too impressive compared to the 20B version, only really improving in terms of token efficiency.
 	At least the "high" reasoning effort really did perform, making ~25% less errors than the next-best offline model.
-</p>
+</p> -->
 <p>
 	It's also notably a better score than the GPT-5-Thinking-Mini model, which is limited to ~10 messages every few hours without paying.
 	The OSS models lack certain features (image recognition) and would need setup for others (tool integration), but are surprisingly competitive for this sort of task.
 	Just make sure it's set to high, and make sure it's actually listening to that setting.
 </p>
-<p>
+<!-- <p>
 	These models seemed more likely than others to give "ambiguous"/"cannot be determined" answers.
 	On one hand, fake confidence can be quite harmful.
 	On the other, as each puzzle should have one unique solution, coming up with an "ambiguous" situation is a good sign you made an error in your reasoning, and you should backtrack and try something else until you can resolve the gems to a single box.
-	<!-- I'll at least credit the 120B for being good at this logical reasoning puzzle (on high reasoning effort). -->
-	I have some <a href="images/parlor-reasoning/effects-arent-copyrighted-anyways.png">other reasons</a> to dislike these models for many uses, but I am quite pleased with how they did here.
-</p>
+	I'll at least credit the 120B for being good at this logical reasoning puzzle (on high reasoning effort).
+</p> -->
 <p>
 	**In connection with the Gemini-2.5-Pro batched test, I ran a set on GPT-OSS-120B, to get a sense for just how cruel asking a model to solve ten of these in one go is.
 	In this case, I loaded the model with max context and removed any response length limit. Reasoning: high, of course.
-	It used, in total, 420429 tokens for a score of 94.7% (3721 tokens per problem, highest per set was 74074).
-	For reference, its reasoning: high/one-by-one runs used on average 4000 tokens per problem, 97.0%.
+	<!-- It used, in total, 420429 tokens for a score of 94.7% (3721 tokens per problem, highest per set was 74074).
+	For reference, its reasoning: high/one-by-one runs used on average 4000 tokens per problem, 97.0%. -->
 	I was not expecting it to scale this well, and it even managed to beat Gemini-2.5-Pro with this setup.
 	(Of course, with the limited sample size, I can't definitively claim GPT-OSS is truly better on this task - but it's at least competitive.
 	Gemini-2.5-Pro certainly has advantages and better performance on a number of other subjects.)
+</p>
+<p>
+	I have some <a href="images/parlor-reasoning/effects-arent-copyrighted-anyways.png">other reasons</a> to dislike these models for many uses, but I am quite pleased with how they did here.
 </p>
 <!--
 Batch 1: 10546
@@ -560,7 +666,6 @@ Batch final 3: 43317
 <p>
 	Very promising!
 	Its 96% is the second highest score, also beating the online GPT-5-Thinking-Mini.
-	<!-- I didn't run as many trials due to time constraints, but this might be worth diving deeper in to with its adjustable reasoning budget. -->
 	It only timed out two times (in 2x113 runs), both on the same puzzle:
 </p>
 <ul>
@@ -580,7 +685,7 @@ The statement matching this statement is on a completely true box."
 	The reasoning traces largely seemed to struggle to understand what a "matching" statement is.
 </p>
 <p>
-	Amusingly, the Q4 timed out only once on a separate problem, and got this one right on one of its two attempts.
+	Amusingly, the Q4 timed out only once on a separate problem, and got the above problem right on one of its two attempts.
 	Total score was unchanged between quants.
 </p>
 <p>
