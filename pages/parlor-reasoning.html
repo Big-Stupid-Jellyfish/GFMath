@@ -742,7 +742,13 @@ The statement matching this statement is on a completely true box."
 	In my more <a href="llm-quants#pq">fact-based testing</a>, the instruct version of this model scored around 45%. (Thinking, in general, showed no major improvement on those tests.)
 	Certainly not a bad score for its size, but a number of 7-14B models did noticeably better, and are not that much harder to run.
 </p>
-
+<p>
+	I also tested <a href="https://huggingface.co/Liontix/Qwen3-4B-Thinking-2507-Gemini-2.5-Pro-Distill">this "Gemini 2.5 Pro distill" of Qwen3-4B</a>.
+	It did quite poorly - 38.9% after 3 sets of all 113 questions.
+	Notably, it seemed to be trained on the <em><a href="https://ai.google.dev/gemini-api/docs/thinking#summaries">thought summaries</a></em> of 2.5-Pro, which is... not a good idea.
+	It made the thinking shorter (about 1.3k tokens/response) at the cost of all accuracy.
+	Bad implementations aside, I'm quite doubtful of distills in general: LLM output tends to be rather low quality (making it bad training data), and if there was some easy extra training/modifications you could do to make a model smarter, its creators probably would have figured that out and done it already.
+</p>
 
 <span class="anchor" id="conclusion"></span>
 <h2>Conclusion and notes<sup><small><a href="#conclusion">&#35;</a></small></sup></h2>
