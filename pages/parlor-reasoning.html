@@ -44,7 +44,7 @@
         <div class="article-container">
             <header class="article-header">
                 <h1>Reasoning LLMs vs the Parlor Puzzle</h1>
-                <div class="meta">By BigStupidJellyfish | 2025-November-02 | Updated 2025-November-09</div>
+                <div class="meta">By BigStupidJellyfish | 2025-November-02 | Updated 2025-November-19</div>
             </header>
 <div class="article-content">
 
@@ -242,6 +242,14 @@
 	  <td>???</td>
       <td>113*1</td>
       <td>92.9%</td>
+      <td>???</td>
+    </tr>
+	<tr>
+      <td><a href="https://gemini.google.com/app">Gemini-3-Pro</a>** (batch size 10)</td>
+	  <td>???</td>
+	  <td>???</td>
+      <td>113*1</td>
+      <td>93.8%</td>
       <td>???</td>
     </tr>
 	<tr>
@@ -493,7 +501,7 @@
 	While the score turned out slightly lower with 4.0.1, it's only two additional errors.
 	I can't claim any detectable difference/dumbing down yet.
 </p>
-<h3>**Gemini-2.5-Pro</h3>
+<h3>**Gemini-2.5-Pro & Gemini 3</h3>
 <p>
 	Take these results with a grain of salt!
 	I tried sending these as sets of 10 puzzles at once, due to their tight usage restrictions and my lack of interest in paying subscriptions/per prompt.
@@ -509,6 +517,10 @@
 	(For what it's worth, Gemini itself claimed it could probably handle 20-50 of these at once with 100% accuracy before its performance starts dropping.
 	However, sets of 20 caused problems beyond the model's generation, so I reduced it to 10 per group.
 	Obviously models don't actually understand their capabilities, but I technically have its approval, and even went easy on it :) )
+</p>
+<p>
+	Gemini 3 (Thinking) only scored marginally better (93.8% over 92.9%), and was still worse than GPT-OSS-120B with the same batch size (94.7%).
+	As these are only based on a single run of the 113 puzzles, we can't reach overly strong conclusions, but it's a relatively disappointing score given the presumed size of these models.
 </p>
 <h3>GLM</h3>
 <p>
@@ -540,7 +552,6 @@
       <th>Model</th>
 	  <th>Effort</th>
 	  <th>Parameters</th>
-	  <th>Quantization</th>
       <th>Parlors Puzzled</th>
       <th>Score (% correct)</th>
       <th>Avg/Median Response length</th>
@@ -551,7 +562,6 @@
       <td><a href="https://huggingface.co/openai/gpt-oss-20b">GPT-OSS-20B</a></td>
 	  <td>Low</td>
 	  <td>20B</td>
-	  <td>MXFP4</td>
       <td>113*3</td>
       <td>73.7%</td>
       <td>1242/1044 tokens</td>
@@ -560,7 +570,6 @@
       <td></td>
 	  <td>Medium</td>
 	  <td>20B</td>
-	  <td>MXFP4</td>
       <td>113*3</td>
       <td>91.2%</td> <!-- 309/339-->
       <td>3828/2259 tokens</td>
@@ -569,7 +578,6 @@
       <td></td>
 	  <td>High</td>
 	  <td>20B</td>
-	  <td>MXFP4</td>
       <td>113*3</td>
       <td>90.9%</td> <!-- 308/339 -->
       <td>7836/5196 tokens</td>
@@ -578,7 +586,6 @@
       <td><a href="https://huggingface.co/openai/gpt-oss-120b">GPT-OSS-120B</a></td>
 	  <td>Low</td>
 	  <td>120B</td>
-	  <td>MXFP4</td>
       <td>113*5</td>
       <td>84.2%</td> <!-- 476/565 -->
       <td>1042/891 tokens</td>
@@ -587,7 +594,6 @@
       <td></td>
 	  <td>Medium</td>
 	  <td>120B</td>
-	  <td>MXFP4</td>
       <td>113*5</td>
       <td>92.9%</td> <!-- 525/565 -->
       <td>2168/1599 tokens</td>
@@ -596,7 +602,6 @@
       <td></td>
 	  <td>High</td>
 	  <td>120B</td>
-	  <td>MXFP4</td>
       <td>113*5</td>
       <td>97.0%</td> <!-- 548/565 -->
       <td>4001/2836 tokens</td>
@@ -605,7 +610,6 @@
       <td>120B** (batch size 10)</td>
 	  <td>High</td>
 	  <td>120B</td>
-	  <td>MXFP4</td>
       <td>113*1</td>
       <td>94.7%</td> <!-- /113 -->
       <td>3721 avg tokens</td>
