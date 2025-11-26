@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-805N997DPC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-805N997DPC');
+    </script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    <title>Minding your Quadrants - GFMath</title>
+
+    <link rel="icon" sizes="180x180" href="images/icon/ads-180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon/ads-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icon/ads-16.png">
+
+    <link rel="stylesheet" href="../assets/css/common.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    GFMath
+                </div>
+                <nav>
+                    <a href="../index">Home</a>
+                    <a href="https://www.youtube.com/c/BigStupidJellyfish" target="_blank">YouTube</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <main>
+        <div class="article-container">
+            <header class="article-header">
+                <h1>Minding your Quadrants</h1>
+                <div class="meta">By BigStupidJellyfish | 2025-November-30</div>
+            </header>
+<div class="article-content">
+
+<span class="anchor" id="artificial-analysis"></span>
+<h2>Artificial Analysis' quadrants<sup><small><a href="#artificial-analysis">&#35;</a></small></sup></h2>
+<p>
+	As one point of comparison in my <a href="parlor-reasoning#llm-puzzles">Parlor puzzle LLM testing</a>, I mentioned the <a href="https://artificialanalysis.ai/">Artificial Analysis</a> "Intelligence Index" numbers.
+	It seems to be a rather popular site for comparing LLMs, overall, and they have plenty of numbers to look at.
+	More recently, I was reading their page for the dramatically named <a href="https://artificialanalysis.ai/evaluations/omniscience">Omniscience Index</a>.
+	A potentially interesting idea, but one minor detail in their charts bothered me enough while reading to take a moment and write this.
+</p>
+<p>
+	This doesn't have much to do with the actual usefulness of their metric, to be clear.
+	But it's something that I believe is worth being cautious about, and makes their charts less useful.
+</p>
+<center><div class="figure">
+	<img src="images/artificial-quadrants/aa-o-v-aa-ii.png" width="100%"/>
+</div></center>
+<p>
+	See that green rectangle in the top right, indicating the "most attractive quadrant?"
+	It sounds reasonable, right?
+	We want a model that is smart overall, and doesn't lie to us too often.
+	Here's another one with the same visualization:
+</p>
+<center><div class="figure">
+	<img src="images/artificial-quadrants/aa-o-v-params.png" width="100%"/>
+</div></center>
+<p>
+	The best quadrant moves to the left here, because we'd like the model to be efficient (smaller).
+    No model fits the criteria for being "attractive," which seems a bit odd.
+</p>
+<span class="anchor" id="demo"></span>
+<h2>Demonstration<sup><small><a href="#demo">&#35;</a></small></sup></h2>
+<p>
+	However, in my view, this is a very poor way to indicate good models and is misleading at best.
+	Allow me to demonstrate with an example.
+</p>
+<p>
+	Suppose we had an overall y=x relationship between two variables, with different models varying slightly off the trendline.
+	A plot might look something like this:
+</p>
+<center><div class="figure">
+	<img src="images/artificial-quadrants/quadrants_1_1.png" width="100%"/>
+</div></center>
+<p>
+	Broadly, we want models with less of thing 1 and more of thing 2, so we look to the upper-left compared to the average. Models on this side are, generally, "better than average."
+	A model at (0,1) is theoretically the best case, but this is almost always unrealistic to expect.
+	If we split the image up in to quadrants to match the Artificial Analysis style, I hope the problem becomes evident:
+</p>
+<center><div class="figure">
+	<img src="images/artificial-quadrants/quadrants_2.png" width="100%"/>
+</div></center>
+<p>
+	There's no real reason to believe that dividing either metric down the middle is a useful separation, nor that being around there is useful.
+	But highlighting it as green indicates that the top-left quadrant (rather than data to the top-left of other data) is uniquely valuable or interesting.
+</p>
+<p>
+    In the 2nd AA chart, for example, the "most attractive quadrant" includes models approximately below 400B parameters.
+    Why exactly would that be the important threshold?
+    For someone with a single 3090, the "most attractive" size would be more like ~32B and below.
+</p>
+<center><div class="figure">
+	<img src="images/artificial-quadrants/quadrants_2_1.png" width="100%"/>
+</div></center>
+<p>
+	If we're thinking about these as "parameters" and "intelligence", the circled point in the bottom left very well could be a standout performer amongst small models.
+	Similarly, we have many other points to the right that score much higher than the green zone in "intelligence," but appear to be far from the "attractive quadrant."
+</p>
+<p>
+    The real "worthwhile/attractive" options are those on the upper-left edge, across the entire range of the data (the Pareto frontier).
+    Making arbitrary cuts around the mean values is not a good way to examine the data.
+</p>
+<p>
+	In cases where right+up is better, the quadrant approximation might be more reasonable, but I would still recommend viewing it with respect to a normal line like this:
+</p>
+<center><div class="figure">
+	<img src="images/artificial-quadrants/quadrants_3.png" width="100%"/>
+</div></center>
+<p>
+	(Referencing off the black line and arrows, rather than the green quadrant. Move its base along the trendline depending on your standards, and maybe rotate depending on which metric you care more about.)
+    These issues hold for nonlinear data relationships.
+</p>
+
+<span class="anchor" id="conclusion"></span>
+<h2>Conclusion<sup><small><a href="#conclusion">&#35;</a></small></sup></h2>
+<p>
+	The idea of a "most attractive quadrant" is misleading for most types of data and relationships.
+	Better models will be ones that diverge from the overall performance trend in the directions relevant to your usecase, or simply ones that have a lot of the good stuff.
+</p>
+<p>
+    Just as you should be wary of stores advertising their "Best value!!" item, the same can happen in data.
+    The "most attractive" areas labeled on Artificial Analysis scatter plots are not a good indication of actual value.
+    They essentially seem to be carelessly automatically generated and slapped in every scatter plot, regardless of how much value or confusion it adds.
+    You're best off ignoring the highlight and looking closer at the actual numbers.
+</p>
+</div>
+
+</main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>
+                <a href="../pages/about">About GFMath</a> ·
+                <a href="../pages/spoilers">Explanation of common plot types</a> ·
+                <a href="#" onclick="window.scrollTo(0,0)">Back to top</a>
+            </p>
+            <p style="margin-top: 20px;">
+                Content: BigStupidJellyfish
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
