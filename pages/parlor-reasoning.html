@@ -44,7 +44,7 @@
         <div class="article-container">
             <header class="article-header">
                 <h1>Reasoning LLMs vs the Parlor Puzzle</h1>
-                <div class="meta">By BigStupidJellyfish | 2025-November-02 | Updated 2025-November-19</div>
+                <div class="meta">By BigStupidJellyfish | 2025-November-02 | Updated 2025-November-29</div>
             </header>
 <div class="article-content">
 
@@ -293,6 +293,14 @@
       <td>6085/4923 tokens</td>
     </tr>
 	<tr>
+      <td><a href="https://huggingface.co/PrimeIntellect/INTELLECT-3">INTELLECT-3</a></td>
+	  <td>106B</td>
+	  <td>Q4_K_M</td>
+      <td>113*5</td>
+      <td>97.0%</td> <!-- 548/565 -->
+      <td>6357/5245 tokens</td>
+    </tr>
+	<tr>
       <td><a href="https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1_5">Llama-3.3-Nemotron-Super-49B-v1.5</a></td>
 	  <td>49B</td>
 	  <td>Q8_0</td>
@@ -379,6 +387,14 @@
       <td>113*5</td>
 	  <td>94.5%</td> <!-- 534/565 -->
       <td>5762/4562 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Thinking">Qwen3-Next-80B-A3B</a></td>
+	  <td>80B</td>
+	  <td>Q8_0</td>
+      <td>113*3</td>
+	  <td>93.2%</td> <!-- 316/339 -->
+      <td>6781/5523 tokens</td>
     </tr>
 	<tr>
       <td><a href="https://huggingface.co/inclusionAI/Ring-flash-2.0">Ring-Flash-2.0</a></td>
@@ -688,6 +704,17 @@ Batch 10: 35839
 Batch 11: 74074 // 377112
 Batch final 3: 43317
 -->
+<h3>INTELLECT-3</h3>
+<p>
+	This is a modification of GLM-4.5-Air, apparently oriented towards math/coding/reasoning.
+	As far as this test is concerned, they were absolutely successful: GLM Air's disappointing 85% was improved to 97%, making it the highest scoring model configuration tested (tying GPT-OSS-120B at high effort).
+</p>
+<p>
+	Its reasoning length is a bit longer than GPT-OSS.
+</p>
+<p>
+	I may test this model more in other areas in the future, but cannot immediately comment on if any other areas have suffered as a result of this training.
+</p>
 <!-- <h3>Magistral</h3>
 <p>
 	&dagger;: This model was set to use <code>&lt;think&gt;</code> tags for this test, as it seemed to close them more consistently.
@@ -735,13 +762,12 @@ The statement matching this statement is on a completely true box."
 <p>
 	Its score on my non-thinking/fact-based benchmark was about typical for its size.
 </p>
-<h3>Qwen3-1.7B</h3>
+<h3>Qwen3 models</h3>
 <p>
-	I recommend using at least slightly larger models than this.
+	1.7B: I recommend using at least slightly larger models than this.
 </p>
-<h3>Qwen3-4B</h3>
 <p>
-	This model was small and promising enough to test a range of its quantizations, which may be easier to review visually:
+	4B: This model was small and promising enough to test a range of its quantizations, which may be easier to review visually:
 </p>
 <center><div class="figure">
 	<img src="images/parlor-reasoning/qwen_lines.png" width="100%"/>
@@ -777,7 +803,11 @@ The statement matching this statement is on a completely true box."
 	It made the thinking shorter (about 1.3k tokens/response) at the cost of all accuracy.
 	Bad implementations aside, I'm quite doubtful of distills in general: LLM output tends to be rather low quality (making it bad training data), and if there was some easy extra training/modifications you could do to make a model smarter, its creators probably would have figured that out and done it already.
 </p>
-
+<p>
+	Qwen3-Next: my impressions so far are that GLM-4.5-Air has a bit of an edge for instruct/general capabilities, and GPT-OSS-120B has a bit of an edge for reasoning.
+	That said, it's relatively competitive with both despite the size disadvantage.
+	It also has a bit of an edge on its knowledge cutoff, which can be very nice.
+</p>
 <span class="anchor" id="conclusion"></span>
 <h2>Conclusion and notes<sup><small><a href="#conclusion">&#35;</a></small></sup></h2>
 <p>
