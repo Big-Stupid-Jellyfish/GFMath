@@ -421,6 +421,14 @@
       <td>5596/4272 tokens</td>
     </tr>
 	<tr>
+      <td><a href="https://huggingface.co/arcee-ai/Trinity-Mini">Trinity Mini</a></td>
+	  <td>26B</td>
+	  <td>Q8_0</td>
+      <td>113*4</td>
+      <td>62.6%</td> <!-- 283/452 -->
+      <td>6525/4188 tokens</td>
+    </tr>
+	<tr>
       <td><a href="https://huggingface.co/WeiboAI/VibeThinker-1.5B">VibeThinker-1.5B</a></td>
 	  <td>1.5B</td>
 	  <td>F16</td>
@@ -804,9 +812,9 @@ The statement matching this statement is on a completely true box."
 	Bad implementations aside, I'm quite doubtful of distills in general: LLM output tends to be rather low quality (making it bad training data), and if there was some easy extra training/modifications you could do to make a model smarter, its creators probably would have figured that out and done it already.
 </p>
 <p>
-	Qwen3-Next: my impressions so far are that GLM-4.5-Air has a bit of an edge for instruct/general capabilities, and GPT-OSS-120B has a bit of an edge for reasoning.
+	Qwen3-Next: my impressions so far are that GLM-4.5-Air has a bit of an edge for instruct/general capabilities, and GPT-OSS-120B has an advantage in reasoning tasks.
 	That said, it's relatively competitive with both despite the size disadvantage.
-	It also has a bit of an edge on its knowledge cutoff, which can be very nice.
+	Its knowledge cutoff seems better than most models I've tested so far, which can be very nice.
 </p>
 <span class="anchor" id="conclusion"></span>
 <h2>Conclusion and notes<sup><small><a href="#conclusion">&#35;</a></small></sup></h2>
