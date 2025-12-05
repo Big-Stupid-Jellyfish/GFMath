@@ -44,7 +44,7 @@
         <div class="article-container">
             <header class="article-header">
                 <h1>Reasoning LLMs vs the Parlor Puzzle</h1>
-                <div class="meta">By BigStupidJellyfish | 2025-November-02 | Updated 2025-November-29</div>
+                <div class="meta">By BigStupidJellyfish | 2025-November-02 | Updated 2025-December-03</div>
             </header>
 <div class="article-content">
 
@@ -293,6 +293,14 @@
       <td>6085/4923 tokens</td>
     </tr>
 	<tr>
+      <td><a href="https://huggingface.co/NousResearch/Hermes-4.3-36B">Hermes-4.3-36B</a></td>
+	  <td>36B</td>
+	  <td>Q8_0</td>
+      <td>113*5</td>
+      <td>78.2%</td> <!-- 442/565 -->
+      <td>6691/4098 tokens</td>
+    </tr>
+	<tr>
       <td><a href="https://huggingface.co/PrimeIntellect/INTELLECT-3">INTELLECT-3</a></td>
 	  <td>106B</td>
 	  <td>Q4_K_M</td>
@@ -301,20 +309,36 @@
       <td>6357/5245 tokens</td>
     </tr>
 	<tr>
-      <td><a href="https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1_5">Llama-3.3-Nemotron-Super-49B-v1.5</a></td>
-	  <td>49B</td>
-	  <td>Q8_0</td>
-      <td>113*1</td>
-      <td>87.6%</td> <!-- 99/113-->
-      <td>5555/3908 tokens</td>
-    </tr>
-	<tr>
-      <td><a href="https://huggingface.co/mistralai/Magistral-Small-2509">Magistral-Small-2509</a><sup></sup></td>
+      <td><a href="https://huggingface.co/mistralai/Magistral-Small-2509">Magistral-Small-2509</a></td>
 	  <td>24B</td>
 	  <td>Q5_K_XL</td>
       <td>113*3</td>
       <td>89.7%</td><!-- 304-->
       <td>4045/3333 tokens</td>
+    </tr>
+	<tr>
+      <td></td>
+	  <td></td>
+	  <td>Q8_0</td>
+      <td>113*6</td>
+      <td>87.5%</td><!-- 593/678-->
+      <td>4153/3620 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/mistralai/Ministral-3-8B-Reasoning-2512">Ministral-3-8B-Reasoning-2512</a></td>
+	  <td>8B</td>
+	  <td>Q8_0</td>
+      <td>113*3</td>
+      <td>65.8%</td>
+      <td>13542/11577 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/mistralai/Ministral-3-14B-Reasoning-2512">Ministral-3-14B-Reasoning-2512</a></td>
+	  <td>14B</td>
+	  <td>Q8_0</td>
+      <td>113*5</td>
+      <td>44.8%</td> <!-- 253/565 -->
+      <td>19800/24000 tokens</td> <!-- You read that right. It timed out more than half the time. -->
     </tr>
 	<tr>
       <td><a href="https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506">Mistral-Small-3.2-24B-Instruct-2506</a> (non-thinking)</td>
@@ -324,6 +348,22 @@
       <td>74.1%</td>
       <td>1891/1749 tokens</td>
     </tr>
+	<tr>
+      <td><a href="https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1_5">NVIDIA Llama-3.3-Nemotron-Super-49B-v1.5</a></td>
+	  <td>49B</td>
+	  <td>Q8_0</td>
+      <td>113*1</td>
+      <td>87.6%</td> <!-- 99/113-->
+      <td>5555/3908 tokens</td>
+    </tr>
+	<!-- <tr>
+      <td><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2">NVIDIA Nemotron Nano 9B v2</a></td>
+	  <td>9B</td>
+	  <td>F16</td>
+      <td>113*</td>
+      <td>%</td>
+      <td>/ tokens</td>
+    </tr> -->
 	<tr>
       <td><a href="https://huggingface.co/allenai/Olmo-3-7B-Think">Olmo-3-7B-Think</a></td>
 	  <td>7B</td>
@@ -341,7 +381,7 @@
       <td>8573/6757 tokens</td>
     </tr>
 	<tr>
-      <td><a href="https://huggingface.co/Qwen/Qwen3-1.7B">Qwen3-1.7B (thinking)</a></td>
+      <td><a href="https://huggingface.co/Qwen/Qwen3-1.7B">Qwen3-1.7B</a> (thinking)</td>
 	  <td>1.7B</td>
 	  <td>F16</td>
       <td>113*3</td>
@@ -357,7 +397,7 @@
       <td>7481/6356 tokens</td>
     </tr>
 	<tr>
-      <td><a href="https://huggingface.co/Qwen/Qwen3-14B">Qwen3-14B (thinking)</a></td>
+      <td><a href="https://huggingface.co/Qwen/Qwen3-14B">Qwen3-14B</a> (thinking)</td>
 	  <td>14B</td>
 	  <td>Q8_0</td>
       <td>113*3</td>
@@ -697,6 +737,8 @@
 </p>
 <p>
 	I have some <a href="images/parlor-reasoning/effects-arent-copyrighted-anyways.png">other reasons</a> to dislike these models for many uses, but I am quite pleased with how they did here.
+	The <a href="https://huggingface.co/ArliAI/gpt-oss-120b-Derestricted">"derestricted" version</a> of GPT-OSS-120B scored 96.9% after a run of 8 attempts per puzzle (reasoning high), effectively the same result.
+	It did use ~20% more tokens on average.
 </p>
 <!--
 Batch 1: 10546
@@ -723,16 +765,10 @@ Batch final 3: 43317
 <p>
 	I may test this model more in other areas in the future, but cannot immediately comment on if any other areas have suffered as a result of this training.
 </p>
-<!-- <h3>Magistral</h3>
+
+<h3>Mistral Small/Magistral/Ministral</h3>
 <p>
-	&dagger;: This model was set to use <code>&lt;think&gt;</code> tags for this test, as it seemed to close them more consistently.
-	I saw a higher score in a different manual setup with <code>[THINK]</code> tags (which Mistral recommends using).
-	This test isn't directly comparable to that previous setup, but I may look in to re-running this test in the future in case the think tag format is a factor.
-	Some caution is advised.
-</p> -->
-<h3>Mistral Small</h3>
-<p>
-	This model is quite good!
+	Mistral Small is quite good!
 	It's one of my preferred options in the ~20-30B size range.
 </p>
 <p>
@@ -740,6 +776,20 @@ Batch final 3: 43317
 	Naturally, its average response length/tokens used was much lower.
 	On my short-form <a href="llm-quants">tests</a>, I did not find reasoning models to have a significant advantage on answering those factual questions (based on separate less formal tests; the linked data is only on non-reasoning models).
 	In other words, I would argue a (perhaps rather obvious) interpretation: reasoning models perform better at reasoning tasks, but are not necessarily superior in general.
+</p>
+<p>
+	Ministral 3 (8B & 14B) were truly awful.
+	They frequently ran out of tokens despite the 24k limit, used more tokens in general than any other model, only followed formatting directions about half the time, and were inconsistent in their reasoning formatting.
+	These problems absolutely should not need that many tokens to solve.
+	I may update this section and test the 3B version if there turns out to be some template fixes or similar, but my expectations are low based on the Dec 02 quantizations.
+	These issues largely relate to the reasoning process, so I can't make any particular comments about the quality of the instruct versions of these models.
+</p>
+<p>
+	Ministral 14B had a decent score (~94%) on the questions it didn't time out on, but even that's ignoring the errors it made in formatting its thinking/response.
+	Also, the questions it timed out on made up more than half the attempts.
+	Not something you can just sweep over.
+	I tried several tweaks (llama.cpp versions, temperature, flags, system prompt) with no substantial changes to these bad behaviors.
+	Some uncapped test generations took over 40k tokens.
 </p>
 <h3>Seed OSS 36B</h3>
 <p>
@@ -806,10 +856,11 @@ The statement matching this statement is on a completely true box."
 </p>
 <p>
 	I also tested <a href="https://huggingface.co/Liontix/Qwen3-4B-Thinking-2507-Gemini-2.5-Pro-Distill">this "Gemini 2.5 Pro distill" of Qwen3-4B</a>.
-	It did quite poorly - 38.9% after 3 sets of all 113 questions.
+	It is absolutely worthless - 38.9% after 3 sets of all 113 questions.
 	Notably, it seemed to be trained on the <em><a href="https://ai.google.dev/gemini-api/docs/thinking#summaries">thought summaries</a></em> of 2.5-Pro, which is... not a good idea.
 	It made the thinking shorter (about 1.3k tokens/response) at the cost of all accuracy.
 	Bad implementations aside, I'm quite doubtful of distills in general: LLM output tends to be rather low quality (making it bad training data), and if there was some easy extra training/modifications you could do to make a model smarter, its creators probably would have figured that out and done it already.
+	It's not included on the tables/charts as I don't consider it a legitimate model.
 </p>
 <p>
 	Qwen3-Next: my impressions so far are that GLM-4.5-Air has a bit of an edge for instruct/general capabilities, and GPT-OSS-120B has an advantage in reasoning tasks.
