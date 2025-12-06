@@ -381,46 +381,6 @@
       <td>8573/6757 tokens</td>
     </tr>
 	<tr>
-      <td><a href="https://huggingface.co/Qwen/Qwen3-1.7B">Qwen3-1.7B</a> (thinking)</td>
-	  <td>1.7B</td>
-	  <td>F16</td>
-      <td>113*3</td>
-      <td>60.5%</td> <!-- 205/339 -->
-      <td>8203/8255 tokens</td>
-    </tr>
-	<tr>
-      <td><a href="https://huggingface.co/Qwen/Qwen3-4B-Thinking-2507">Qwen3-4B-Thinking-2507</a></td>
-	  <td>4B</td>
-	  <td>F16</td>
-      <td>113*3</td>
-      <td>91.7%</td>
-      <td>7481/6356 tokens</td>
-    </tr>
-	<tr>
-      <td><a href="https://huggingface.co/Qwen/Qwen3-14B">Qwen3-14B</a> (thinking)</td>
-	  <td>14B</td>
-	  <td>Q8_0</td>
-      <td>113*3</td>
-      <td>88.2%</td> <!-- 299/339 -->
-      <td>5661/3956 tokens</td>
-    </tr>
-	<tr>
-      <td><a href="https://huggingface.co/Qwen/Qwen3-30B-A3B-Thinking-2507">Qwen3-30B-A3B-Thinking-2507</a></td>
-	  <td>30B</td>
-	  <td>Q4_K_XL</td>
-      <td>113*4</td>
-      <td>90.3%</td>
-      <td>7092/5819 tokens</td>
-    </tr>
-	<tr>
-      <td></td>
-	  <td></td>
-	  <td>Q8_0</td>
-      <td>113*3</td>
-      <td>90.6%</td> <!-- 307/339 -->
-      <td>7023/5797 tokens</td>
-    </tr>
-	<tr>
       <td><a href="https://huggingface.co/Qwen/Qwen3-VL-32B-Thinking">Qwen3-VL-32B-Thinking</a></td>
 	  <td>32B</td>
 	  <td>Q8_0</td>
@@ -822,7 +782,96 @@ The statement matching this statement is on a completely true box."
 </p>
 <h3>Qwen3 models</h3>
 <p>
-	1.7B: I recommend using at least slightly larger models than this.
+	There's a lot of these, so aside from the two top performers (VL 32B, Qwen3 Next 80B), I've moved them to this table:
+</p>
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+	  <th>Effort</th>
+	  <th>Parameters</th>
+      <th>Parlors Puzzled</th>
+      <th>Score (% correct)</th>
+      <th>Avg/Median Response length</th>
+    </tr>
+  </thead>
+  <tbody>
+	<tr>
+      <td><a href="https://huggingface.co/Qwen/Qwen3-1.7B">Qwen3-1.7B</a> (thinking)</td>
+	  <td>1.7B</td>
+	  <td>F16</td>
+      <td>113*3</td>
+      <td>60.5%</td> <!-- 205/339 -->
+      <td>8203/8255 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/Qwen/Qwen3-4B-Thinking-2507">Qwen3-4B-Thinking-2507</a></td>
+	  <td>4B</td>
+	  <td>F16</td>
+      <td>113*3</td>
+      <td>91.7%</td>
+      <td>7481/6356 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/Qwen/Qwen3-14B">Qwen3-14B</a> (thinking)</td>
+	  <td>14B</td>
+	  <td>Q8_0</td>
+      <td>113*3</td>
+      <td>88.2%</td> <!-- 299/339 -->
+      <td>5661/3956 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/Qwen/Qwen3-30B-A3B-Thinking-2507">Qwen3-30B-A3B-Thinking-2507</a></td>
+	  <td>30B</td>
+	  <td>Q4_K_XL</td>
+      <td>113*4</td>
+      <td>90.3%</td>
+      <td>7092/5819 tokens</td>
+    </tr>
+	<tr>
+      <td></td>
+	  <td></td>
+	  <td>Q8_0</td>
+      <td>113*3</td>
+      <td>90.6%</td> <!-- 307/339 -->
+      <td>7023/5797 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/Qwen/Qwen3-VL-2B-Thinking">Qwen3-VL-2B-Thinking</a></td>
+	  <td>2B</td>
+	  <td>F16</td>
+      <td>113*5</td>
+	  <td>46.4%</td> <!-- 262/565 -->
+      <td>17748/19845 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/Qwen/Qwen3-VL-8B-Thinking">Qwen3-VL-8B-Thinking</a></td>
+	  <td>8B</td>
+	  <td>F16</td>
+      <td>113*5</td>
+	  <td>85.0%</td> <!-- 480/565 -->
+      <td>9984/7490 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/Qwen/Qwen3-VL-32B-Thinking">Qwen3-VL-32B-Thinking</a></td>
+	  <td>32B</td>
+	  <td>Q8_0</td>
+      <td>113*5</td>
+	  <td>94.5%</td> <!-- 534/565 -->
+      <td>5762/4562 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Thinking">Qwen3-Next-80B-A3B</a></td>
+	  <td>80B</td>
+	  <td>Q8_0</td>
+      <td>113*3</td>
+	  <td>93.2%</td> <!-- 316/339 -->
+      <td>6781/5523 tokens</td>
+    </tr>
+	</tbody>
+</table>
+<p>
+	1.7B, VL-2B: I recommend using at least slightly larger models than this.
 </p>
 <p>
 	4B: This model was small and promising enough to test a range of its quantizations, which may be easier to review visually:
