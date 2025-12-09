@@ -164,14 +164,14 @@
       <td>41.4%</td>
       <td>3211/3221 tokens</td>
     </tr>
-	<tr>
+	<!-- <tr>
       <td><a href="https://huggingface.co/aquif-ai/aquif-3.5-Max-42B-A3B">Aquif-3.5-Max-42B-A3B</a></td>
 	  <td>42B</td>
 	  <td>Q8_0</td>
       <td>113*3</td>
-      <td>87.9%</td> <!-- 298/339, often failed to close thinking needing more manual correction -->
+      <td>87.9%</td> 298/339, often failed to close thinking needing more manual correction
       <td>5752/3734 tokens</td>
-    </tr>
+    </tr> Commented out - may not be a particularly legitimate model -->
 	<tr>
       <td><a href="https://huggingface.co/ServiceNow-AI/Apriel-1.5-15b-Thinker">Apriel 1.5 Thinker</a></td>
 	  <td>15B</td>
@@ -356,14 +356,14 @@
       <td>87.6%</td> <!-- 99/113-->
       <td>5555/3908 tokens</td>
     </tr>
-	<!-- <tr>
+	<tr>
       <td><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2">NVIDIA Nemotron Nano 9B v2</a></td>
 	  <td>9B</td>
 	  <td>F16</td>
-      <td>113*</td>
-      <td>%</td>
-      <td>/ tokens</td>
-    </tr> -->
+      <td>113*5</td>
+      <td>75.0%</td> <!-- 424/565 -->
+      <td>5167/4079 tokens</td>
+    </tr>
 	<tr>
       <td><a href="https://huggingface.co/allenai/Olmo-3-7B-Think">Olmo-3-7B-Think</a></td>
 	  <td>7B</td>
@@ -455,6 +455,7 @@
 	This shows, approximately, performance relative to model size.
 	I take the geometric mean of active & total parameters as an attempt to better place MoE models (although I have some concerns on how accurate that is).
 	Dense models are placed as you'd expect.
+	<a href="images/parlor-reasoning/named_scatter_total.png">Here's the same chart, with respect to just the total parameter count</a>.
 </p>
 <center><div class="figure">
 	<img src="images/parlor-reasoning/named_scatter_efficiency.png" width="100%"/>
