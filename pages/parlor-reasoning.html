@@ -44,7 +44,7 @@
         <div class="article-container">
             <header class="article-header">
                 <h1>Reasoning LLMs vs the Parlor Puzzle</h1>
-                <div class="meta">By BigStupidJellyfish | 2025-November-02 | Updated 2025-December-03</div>
+                <div class="meta">By BigStupidJellyfish | 2025-November-02 | Updated 2025-December-11</div>
             </header>
 <div class="article-content">
 
@@ -179,6 +179,14 @@
       <td>113*3</td>
       <td>94.4%</td>
       <td>5411/3592 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/ServiceNow-AI/Apriel-1.6-15b-Thinker">Apriel 1.6 Thinker</a></td>
+	  <td>15B</td>
+	  <td>Q8_0</td>
+      <td>113*5</td>
+      <td>97.0%</td>
+      <td>4793/2975 tokens</td>
     </tr>
 	<tr>
       <td><a href="https://huggingface.co/TheDrummer/Cydonia-R1-24B-v4.1">Cydonia R1 (v4f)</a></td>
@@ -349,6 +357,14 @@
       <td>1891/1749 tokens</td>
     </tr>
 	<tr>
+      <td><a href="https://huggingface.co/Nanbeige/Nanbeige4-3B-Thinking-2511">Nanbeige4-3B-Thinking-2511</a></td>
+	  <td>3B</td>
+	  <td>F16</td>
+      <td>113*3</td>
+      <td>81.1%</td> <!-- 275/339 -->
+      <td>12173/10166 tokens</td>
+    </tr>
+	<tr>
       <td><a href="https://huggingface.co/allenai/Olmo-3-7B-Think">Olmo-3-7B-Think</a></td>
 	  <td>7B</td>
 	  <td>Q8_0</td>
@@ -432,9 +448,7 @@
 </table>
 <p>
 	Reported percentages are exact results, but you may assume the model's "true" score is somewhere around &pm;3% from those.
-	Aside from Mistral Small, all here models were tested using their thinking modes.
-</p>
-<p>
+	Aside from Mistral Small, all models were tested using their thinking modes.
 	A model with significantly higher mean response lengths than its median is more likely to have some responses where it got stuck in some kind of generation/reasoning loop.
 </p>
 <p>
@@ -480,6 +494,8 @@
 	I used the "medium" reasoning effort AAII score (61) to place GPT-5-Thinking-Mini.
 	They do not seem to have a score for low, and high is marginally higher at 64.
 	I did not specify a reasoning effort when doing this, if they even listen to the user prompt for that.
+	Some models (Nvidia's OpenReasoning) use their own <a href="https://huggingface.co/nvidia/OpenReasoning-Nemotron-32B">"estimated" index scores as seen here</a>.
+	Rather unrealistic, in my opinion, but then again so are many of the AAII placements.
 </p>
 <span class="anchor" id="specific-models"></span>
 <h2>Model Commentary<sup><small><a href="#specific-models">&#35;</a></small></sup></h2>
@@ -512,9 +528,9 @@
 	How insightful.
 	(I'd expect most points earned in that range come from LLM judge errors.)
 </p>
-<h3>Apriel-1.5</h3>
+<h3>Apriel</h3>
 <p>
-	It did well overall, especially for its size.
+	1.5 did well overall, especially for its size.
 	I still have major doubts about their big advertising point:
 </p>
 <blockquote>
@@ -526,6 +542,11 @@
 </p>
 <p>
 	The model's "[BEGIN FINAL RESPONSE]" formatting is annoying.
+</p>
+<p>
+	The <a href="https://huggingface.co/ServiceNow-AI/Apriel-1.6-15b-Thinker">1.6 update</a> scored even better: 97.0%.
+	Its reasoning formatting was still irritating, to the point of making me not want to try using this model for other tasks, and it came up with more "unique" (bad) ways of displaying its answer than most models.
+	Amusingly, it is now exactly tied for first place with two other models.
 </p>
 <h3>Cydonia R1</h3>
 <p>
@@ -572,7 +593,8 @@
 </p>
 <p>
 	Perhaps there's some kind of logical reasoning focus in training this model neglected compared to its competitors.
-	Some blame of course may go to the low quant on 4.6, though I can't imagine that explains everything (even the Q3_K_XL Qwen3-4B did alright compared to their F16).
+	Some blame of course may go to the low quant on 4.6, though I can't imagine that explains everything (even the Q3_K_XL Qwen3-4B did alright compared to its F16 version).
+	See also the INTELLECT-3 model trained on 4.5-Air.
 </p>
 <h3>GPT-5-Thinking-Mini</h3>
 <p>
@@ -710,7 +732,7 @@ Batch final 3: 43317
 <h3>INTELLECT-3</h3>
 <p>
 	This is a modification of GLM-4.5-Air, apparently oriented towards math/coding/reasoning.
-	As far as this test is concerned, they were absolutely successful: GLM Air's disappointing 85% was improved to 97%, making it the highest scoring model configuration tested (tying GPT-OSS-120B at high effort).
+	As far as this test is concerned, they were absolutely successful: GLM Air's disappointing 85% was improved to 97%, making it the highest scoring model configuration tested (tying GPT-OSS-120B at high effort and Apriel 1.6).
 </p>
 <p>
 	Its reasoning length is a bit longer than GPT-OSS.
@@ -761,6 +783,14 @@ Batch final 3: 43317
     </tr>
   </thead>
   <tbody>
+	<!-- <tr>
+      <td><a href="https://huggingface.co/nvidia/AceReason-Nemotron-14B">AceReason-Nemotron-14B</a></td>
+	  <td>14B</td>
+	  <td>F16</td>
+      <td>113*3</td>
+      <td>%</td>
+      <td>/ tokens</td>
+    </tr> -->
 	<tr>
       <td><a href="https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1_5">Llama-3.3-Nemotron-Super-49B-v1.5</a></td>
 	  <td>49B</td>
@@ -770,6 +800,14 @@ Batch final 3: 43317
       <td>5555/3908 tokens</td>
     </tr>
 	<tr>
+      <td><a href="https://huggingface.co/nvidia/Nemotron-H-47B-Reasoning-128K">Nemotron-H-47B-Reasoning</a></td>
+	  <td>47B</td>
+	  <td>Q8_0</td>
+      <td>113*3</td>
+      <td>78.8%</td> <!-- 267/339 -->
+      <td>2798/2060 tokens</td>
+    </tr>
+	<tr>
       <td><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2">Nemotron Nano 9B v2</a></td>
 	  <td>9B</td>
 	  <td>F16</td>
@@ -777,12 +815,47 @@ Batch final 3: 43317
       <td>75.0%</td> <!-- 424/565 -->
       <td>5167/4079 tokens</td>
     </tr>
+	<tr>
+      <td><a href="https://huggingface.co/nvidia/OpenReasoning-Nemotron-1.5B">OpenReasoning-Nemotron-1.5B</a></td>
+	  <td>1.5B</td>
+	  <td>F16</td>
+      <td>113*3</td>
+      <td>37.5%</td> <!-- 127/339 -->
+      <td>11336/11400 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/nvidia/OpenReasoning-Nemotron-7B">OpenReasoning-Nemotron-7B</a></td>
+	  <td>7B</td>
+	  <td>F16</td>
+      <td>113*3</td>
+      <td>86.1%</td> <!-- 292/339 -->
+      <td>7405/5578 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/nvidia/OpenReasoning-Nemotron-14B">OpenReasoning-Nemotron-14B</a></td>
+	  <td>14B</td>
+	  <td>F16</td>
+      <td>113*3</td>
+      <td>90.3%</td> <!-- 306/339 -->
+      <td>6118/4647 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/nvidia/OpenReasoning-Nemotron-32B">OpenReasoning-Nemotron-32B</a></td>
+	  <td>32B</td>
+	  <td>Q8_0</td>
+      <td>113*5</td>
+      <td>92.6%</td> <!-- 523/565 -->
+      <td>5857/4633 tokens</td>
+    </tr>
 	</tbody>
 </table>
+<p>
+	Overall, they don't look particularly revolutionary.
+</p>
 <h3>Seed OSS 36B</h3>
 <p>
 	Very nice!
-	Its 96% is the third highest score, also beating the online GPT-5-Thinking-Mini.
+	Its 96% is the fourth highest score, also beating the online GPT-5-Thinking-Mini.
 	It only timed out two times (in 2x113 runs), both on the same puzzle:
 </p>
 <ul>
