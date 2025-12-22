@@ -381,12 +381,20 @@
       <td>8573/6757 tokens</td>
     </tr>
 	<tr>
-      <td><a href="https://huggingface.co/Qwen/Qwen3-VL-32B-Thinking">Qwen3-VL-32B-Thinking</a></td>
+      <td><a href="https://huggingface.co/allenai/Olmo-3.1-32B-Think">Olmo-3.1-32B-Think</a></td>
 	  <td>32B</td>
 	  <td>Q8_0</td>
-      <td>113*5</td>
-	  <td>94.5%</td> <!-- 534/565 -->
-      <td>5762/4562 tokens</td>
+      <td>113*3</td>
+	  <td>91.4%</td> <!-- 310/339 -->
+      <td>9787/8659 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507">Qwen3-235B-A22B-2507</a></td>
+	  <td>235B</td>
+	  <td>Q4_K_XL</td>
+      <td>113*2</td>
+	  <td>96.5%</td> <!-- 218/226 -->
+      <td>6922/5997 tokens</td>
     </tr>
 	<tr>
       <td><a href="https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Thinking">Qwen3-Next-80B-A3B</a></td>
@@ -546,7 +554,6 @@
 <p>
 	The <a href="https://huggingface.co/ServiceNow-AI/Apriel-1.6-15b-Thinker">1.6 update</a> scored even better: 97.0%.
 	Its reasoning formatting was still irritating, to the point of making me not want to try using this model for other tasks, and it came up with more "unique" (bad) ways of displaying its answer than most models.
-	Amusingly, it is now exactly tied for first place with two other models.
 </p>
 <h3>Cydonia R1</h3>
 <p>
@@ -684,7 +691,7 @@
 	GPT-OSS-20B actually performed (by 1 question) worse on "high" than on "medium."
 	This could largely be attributed to the token limit: "medium" timed out ~3 times, while "high" timed out ~10 times.
 	As the limit was a rather generous 24000 tokens and these puzzles are not <em>that</em> complicated, fundamentally, I'm not sure how much adding more tokens would help.
-	The 120B model's high setting performed much better with a 97%, and is the current (tied) best.
+	The 120B model's high setting performed much better with a 97%, and is one of the best performances.
 </p>
 <!-- <p>
 	"Medium" was not too impressive compared to the 20B version, only really improving in terms of token efficiency.
@@ -732,7 +739,7 @@ Batch final 3: 43317
 <h3>INTELLECT-3</h3>
 <p>
 	This is a modification of GLM-4.5-Air, apparently oriented towards math/coding/reasoning.
-	As far as this test is concerned, they were absolutely successful: GLM Air's disappointing 85% was improved to 97%, making it the highest scoring model configuration tested (tying GPT-OSS-120B at high effort and Apriel 1.6).
+	As far as this test is concerned, they were absolutely successful: GLM Air's disappointing 85% was improved to 97%, tying GPT-OSS-120B at high effort/Apriel 1.6.
 </p>
 <p>
 	Its reasoning length is a bit longer than GPT-OSS.
@@ -783,14 +790,14 @@ Batch final 3: 43317
     </tr>
   </thead>
   <tbody>
-	<!-- <tr>
+	<tr>
       <td><a href="https://huggingface.co/nvidia/AceReason-Nemotron-14B">AceReason-Nemotron-14B</a></td>
 	  <td>14B</td>
 	  <td>F16</td>
       <td>113*3</td>
-      <td>%</td>
-      <td>/ tokens</td>
-    </tr> -->
+      <td>90.0%</td> <!-- 305/339 -->
+      <td>6558/5511 tokens</td>
+    </tr>
 	<tr>
       <td><a href="https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1_5">Llama-3.3-Nemotron-Super-49B-v1.5</a></td>
 	  <td>49B</td>
@@ -798,6 +805,22 @@ Batch final 3: 43317
       <td>113*1</td>
       <td>87.6%</td> <!-- 99/113-->
       <td>5555/3908 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/nvidia/Nemotron-Cascade-8B-Thinking">Nemotron Cascade 8B</a></td>
+	  <td>8B</td>
+	  <td>Q8_0</td>
+      <td>113*5</td>
+      <td>93.3%</td> <!-- 527/565 -->
+      <td>5201/3678 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/nvidia/Nemotron-Cascade-14B-Thinking">Nemotron Cascade 14B</a></td>
+	  <td>14B</td>
+	  <td>Q8_0</td>
+      <td>113*10</td>
+      <td>93.5%</td> <!-- 1056/1130 -->
+      <td>4325/2863 tokens</td>
     </tr>
 	<tr>
       <td><a href="https://huggingface.co/nvidia/Nemotron-H-47B-Reasoning-128K">Nemotron-H-47B-Reasoning</a></td>
@@ -814,6 +837,38 @@ Batch final 3: 43317
       <td>113*5</td>
       <td>75.0%</td> <!-- 424/565 -->
       <td>5167/4079 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16">Nemotron 3 Nano</a></td>
+	  <td>30B</td>
+	  <td>IQ4_XS</td>
+      <td>113*10</td>
+      <td>89.0%</td> <!-- 1006/1130 -->
+      <td>7051/4333 tokens</td>
+    </tr>
+	<tr>
+      <td></td>
+	  <td></td>
+	  <td>Q4_K_XL</td>
+      <td>113*10</td>
+      <td>91.2%</td> <!-- 1031/1130 -->
+      <td>6513/3833 tokens</td>
+    </tr>
+	<tr>
+      <td></td>
+	  <td></td>
+	  <td>Q8_0</td>
+      <td>113*10</td>
+      <td>90.5%</td> <!-- 1023/1130 -->
+      <td>6213/3760 tokens</td>
+    </tr>
+	<tr>
+      <td></td>
+	  <td></td>
+	  <td>BF16</td>
+      <td>113*10</td>
+      <td>90.8%</td> <!-- 1026/1130 -->
+      <td>6253/3803 tokens</td>
     </tr>
 	<tr>
       <td><a href="https://huggingface.co/nvidia/OpenReasoning-Nemotron-1.5B">OpenReasoning-Nemotron-1.5B</a></td>
@@ -851,14 +906,20 @@ Batch final 3: 43317
 </table>
 <p>
 	Overall, they don't look particularly revolutionary.
+	Due to its speed, I ran the Nemotron 3 Nano with a few more attempts than usual per question.
+	As seems to be typical, going above Q4 had no clear benefit.
+</p>
+<p>
+	The Nemotron Cascade model was most impressive: low token usage, decent score, and only 14B parameters.
+	Its formatting was consistent, and never timed out.
 </p>
 <h3>Seed OSS 36B</h3>
 <p>
 	Very nice!
-	Its 96% is the fourth highest score, also beating the online GPT-5-Thinking-Mini.
-	It only timed out two times (in 2x113 runs), both on the same puzzle:
+	Its 96% is one of the better scores, also beating the online GPT-5-Thinking-Mini.
+	<!-- It only timed out two times (in 2x113 runs), both on the same puzzle: -->
 </p>
-<ul>
+<!-- <ul>
 	<li>Blue: "The statement matching this statement is true. 
 The statement matching this statement is on a completely true box."
 </li>
@@ -868,22 +929,23 @@ The statement matching this statement is on a box containing gems."
 <li>Black: "The statement matching this statement is on a box containing gems. 
 The statement matching this statement is on a completely true box."
 </li>
-</ul>
-<p>
+</ul> -->
+<!-- <p>
 	Which, if you ask me, can actually be simplified/solved surprisingly quickly.
 	I'm not too surprised a LLM would get tripped up, though.
 	The reasoning traces largely seemed to struggle to understand what a "matching" statement is.
-</p>
+</p> -->
 <p>
-	Amusingly, the Q4 timed out only once on a separate problem, and got the above problem right on one of its two attempts.
-	Total score was unchanged between quants.
+	<!-- Amusingly, the Q4 timed out only once on a separate problem, and got the above problem right on one of its two attempts. -->
+	Total score was unchanged between its Q4/Q8 quants.
 </p>
 <p>
 	Its score on my non-thinking/fact-based benchmark was about typical for its size.
 </p>
 <h3>Qwen3 models</h3>
 <p>
-	There's a lot of these, so aside from the two top performers (VL 32B, Qwen3 Next 80B), I've moved them to this table:
+	There's a lot of these, so I've moved them to this table (keeping a few of the notable ones duplicated above).
+	Qwen3-235B-A22B-Thinking-2507 is the current best, with a score of 96.5%, though only based on two passes.
 </p>
 <table>
   <thead>
@@ -938,6 +1000,14 @@ The statement matching this statement is on a completely true box."
       <td>7023/5797 tokens</td>
     </tr>
 	<tr>
+      <td><a href="https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507">Qwen3-235B-A22B-2507</a></td>
+	  <td>235B</td>
+	  <td>Q4_K_XL</td>
+      <td>113*2</td>
+	  <td>96.5%</td> <!-- 218/226 -->
+      <td>6922/5997 tokens</td>
+    </tr>
+	<tr>
       <td><a href="https://huggingface.co/Qwen/Qwen3-VL-2B-Thinking">Qwen3-VL-2B-Thinking</a></td>
 	  <td>2B</td>
 	  <td>F16</td>
@@ -968,6 +1038,14 @@ The statement matching this statement is on a completely true box."
       <td>113*3</td>
 	  <td>93.2%</td> <!-- 316/339 -->
       <td>6781/5523 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/Qwen/QwQ-32B">QwQ-32B</a></td>
+	  <td>32B</td>
+	  <td>Q8_0</td>
+      <td>113*5</td>
+	  <td>87.8%</td> <!-- 496/565 -->
+      <td>5629/4184 tokens</td>
     </tr>
 	</tbody>
 </table>
