@@ -44,7 +44,7 @@
         <div class="article-container">
             <header class="article-header">
                 <h1>Reasoning LLMs vs the Parlor Puzzle</h1>
-                <div class="meta">By BigStupidJellyfish | 2025-November-02 | Updated 2025-December-11</div>
+                <div class="meta">By BigStupidJellyfish | 2025-November-02 | Updated 2025-December-29</div>
             </header>
 <div class="article-content">
 
@@ -136,7 +136,7 @@
 </p>
 <p>
 	Max response length was set to 24k tokens.
-	Response lengths are slight approximations due to the tools used.
+	Some response lengths are slight approximations due to the tools used.
 	I wrote a standardized prompt that provides enough information to solve all the puzzle configurations.
 	<!-- like mentioning the wind-up key used to open the boxes. -->
 	<!-- All tests in this section were ran with a constant prompt. -->
@@ -331,6 +331,22 @@
       <td>113*6</td>
       <td>87.5%</td><!-- 593/678-->
       <td>4153/3620 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash">MiMo-V2-Flash</a></td>
+	  <td>309B</td>
+	  <td>Q3_K_XL</td>
+      <td>113*1</td>
+      <td>85.0%</td> <!-- 96/113 -->
+      <td>6839/3735 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/MiniMaxAI/MiniMax-M2">MiniMax M2</a></td>
+	  <td>229B</td>
+	  <td>Q4_K_XL</td>
+      <td>113*3</td>
+      <td>85.6%</td> <!-- 290/339 -->
+      <td>7203/4496 tokens</td>
     </tr>
 	<tr>
       <td><a href="https://huggingface.co/mistralai/Ministral-3-8B-Reasoning-2512">Ministral-3-8B-Reasoning-2512</a></td>
@@ -746,6 +762,82 @@ Batch final 3: 43317
 </p>
 <p>
 	I may test this model more in other areas in the future, but cannot immediately comment on if any other areas have suffered as a result of this training.
+</p>
+<h3>MiniMax M2</h3>
+<p>
+	What particularly caught my eye here was the <a href="https://huggingface.co/unsloth/MiniMax-M2-GGUF">IQ2_XXS quantization</a> of the full model (~74 GB), contrasted with the <a href="https://huggingface.co/bartowski/cerebras_MiniMax-M2-REAP-139B-A10B-GGUF">IQ4_XS quantization</a> (~74.5 GB) of a 40% REAP by Cerebras.
+	Parlor puzzling is hardly a comprehensive evaluation of a model, but I was curious to see which one would perform better: either configuration should be fast on a 4x3090 system, or a little slower on something like a 5090+64 GB RAM.
+	Going for Q4+ on the full 229B model is much harder to manage, with the model weights alone taking up 130+ GB.
+</p>
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+	  <th>Parameters</th>
+	  <th>Quantization</th>
+      <th>Parlors Puzzled</th>
+      <th>Score (% correct)</th>
+      <th>Avg/Median Response length</th>
+    </tr>
+  </thead>
+  <tbody>
+	<tr>
+      <td><a href="https://huggingface.co/MiniMaxAI/MiniMax-M2">MiniMax M2</a></td>
+	  <td>229B</td>
+	  <td>IQ2_XXS</td>
+      <td>113*5</td>
+      <td>72.0%</td> <!-- 407/565 -->
+      <td>9454/5178 tokens</td>
+    </tr>
+	<tr>
+      <td></td>
+	  <td></td>
+	  <td>Q2_K_XL</td>
+      <td>113*4</td>
+      <td>75.0%</td> <!-- 339/452 -->
+      <td>8053/4641 tokens</td>
+    </tr>
+	<tr>
+      <td></td>
+	  <td></td>
+	  <td>Q4_K_XL</td>
+      <td>113*3</td>
+      <td>85.6%</td> <!-- 290/339 -->
+      <td>7203/4496 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/cerebras/MiniMax-M2-REAP-139B-A10B">MiniMax M2 (40% REAP)</a></td>
+	  <td>139B</td>
+	  <td>IQ4_XS</td>
+      <td>113*5</td>
+      <td>88.3%</td> <!-- 499/565 -->
+      <td>7398/4510 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/cerebras/MiniMax-M2-REAP-172B-A10B">MiniMax M2 (25% REAP)</a></td>
+	  <td>172B</td>
+	  <td>Q3_K_XL</td>
+      <td>113*5</td>
+      <td>85.3%</td> <!-- 482/565 -->
+      <td>8235/5393 tokens</td>
+    </tr>
+	</tbody>
+</table>
+<p>
+	All configurations tested were relatively prone to get stuck in an infinite reasoning loop, causing many of their errors.
+</p>
+<p>
+	Unfortunately, even the full Q4 model was not very good at these puzzles.
+	This was relatively surprising given its high "intelligence index" score (which tends to heavily favor math/reasoning-type models) and its overall focus on being a reasoning/STEM model.
+	Its relatively low active parameter count (10B) also is not a satisfactory explanation: on the extreme end of the size scale, MiniMax's parlor score is right between Nanbeige4 (3B total params) and Qwen3-4B-Thinking (4B total params).
+	If we were to set aside all the times it hit the token limit, its score on the remaining questions is a bit better (~91%), but that's still not an excellent score and applying the same standard to Ministral-3-14B would give it a score of ~94%.
+</p>
+<p>
+	Somehow, the 40% REAP version (Q4) scored slightly better than the regular Q4.
+	The 25% (Q3) REAP was also competitive with the full Q4, making them look like a decent option vs the standard IQ2_XXS or Q2_K_XL quants.
+</p>
+<p>
+	I may try experimenting with this model more in the future (or its 2.1 update), as the low active parameter count make even the proper Q4 run at a decent speed off of RAM, but for now, I can't tell you exactly why the scores are as listed.
 </p>
 
 <h3>Mistral Small/Magistral/Ministral</h3>
