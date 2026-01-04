@@ -44,7 +44,7 @@
         <div class="article-container">
             <header class="article-header">
                 <h1>Reasoning LLMs vs the Parlor Puzzle</h1>
-                <div class="meta">By BigStupidJellyfish | 2025-November-02 | Updated 2025-December-29</div>
+                <div class="meta">By BigStupidJellyfish | 2025-November-02 | Updated 2026-January-04</div>
             </header>
 <div class="article-content">
 
@@ -195,6 +195,14 @@
       <td>113*3</td>
       <td>79.9%</td> <!-- 271 -->
       <td>6193/3773 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-70B">DeepSeek-R1-Distill-Llama-70B</a></td>
+	  <td>70B</td>
+	  <td>Q4_K_M</td>
+      <td>113*3</td>
+      <td>70.8%</td> <!-- 240/339 -->
+      <td>3934/3477 tokens</td>
     </tr>
 	<tr>
       <td><a href="https://huggingface.co/baidu/ERNIE-4.5-21B-A3B-Thinking">ERNIE-4.5-21B-A3B-Thinking</a></td>
@@ -349,6 +357,14 @@
       <td>7203/4496 tokens</td>
     </tr>
 	<tr>
+      <td><a href="https://huggingface.co/MiniMaxAI/MiniMax-M2.1">MiniMax M2.1</a></td>
+	  <td>229B</td>
+	  <td>Q4_K_XL</td>
+      <td>113*2</td>
+      <td>90.7%</td> <!-- 205/226 -->
+      <td>5985/3702 tokens</td>
+    </tr>
+	<tr>
       <td><a href="https://huggingface.co/mistralai/Ministral-3-8B-Reasoning-2512">Ministral-3-8B-Reasoning-2512</a></td>
 	  <td>8B</td>
 	  <td>Q8_0</td>
@@ -451,6 +467,14 @@
       <td>113*3</td>
       <td>34.5%</td> <!-- 117/339 -->
       <td>9720/4364 tokens</td> <!-- Lots of timeouts. Responses were relatively short if not going to the token limit (see median length), score was ~50% for all non-timeout cases. -->
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/upstage/Solar-Open-100B">Solar Open</a></td>
+	  <td>100B</td>
+	  <td>Q4_K_M</td>
+      <td>113*4</td>
+      <td>87.2%</td> <!-- 394/452 -->
+      <td>6186/4039 tokens</td>
     </tr>
 	<tr>
       <td><a href="https://huggingface.co/arcee-ai/Trinity-Mini">Trinity Mini</a></td>
@@ -821,6 +845,14 @@ Batch final 3: 43317
       <td>85.3%</td> <!-- 482/565 -->
       <td>8235/5393 tokens</td>
     </tr>
+	<tr>
+      <td><a href="https://huggingface.co/MiniMaxAI/MiniMax-M2.1">MiniMax M2.1</a></td>
+	  <td>229B</td>
+	  <td>Q4_K_XL</td>
+      <td>113*2</td>
+      <td>90.7%</td> <!-- 205/226 -->
+      <td>5985/3702 tokens</td>
+    </tr>
 	</tbody>
 </table>
 <p>
@@ -837,7 +869,8 @@ Batch final 3: 43317
 	The 25% (Q3) REAP was also competitive with the full Q4, making them look like a decent option vs the standard IQ2_XXS or Q2_K_XL quants.
 </p>
 <p>
-	I may try experimenting with this model more in the future (or its 2.1 update), as the low active parameter count make even the proper Q4 run at a decent speed off of RAM, but for now, I can't tell you exactly why the scores are as listed.
+	I may try experimenting with this model more in the future, as the low active parameter count make even the proper Q4 run at a decent speed off of RAM, but for now, I can't tell you exactly why the scores are as listed.
+	The 2.1 update seems reasonable, bringing its score into a more respectable region while also using fewer tokens.
 </p>
 
 <h3>Mistral Small/Magistral/Ministral</h3>
@@ -1183,6 +1216,11 @@ The statement matching this statement is on a completely true box."
 	It's not included on the tables/charts as I don't consider it a legitimate model.
 </p>
 <p>
+	For another example with a different base, this <a href="https://huggingface.co/DavidAU/Llama3.3-8B-Instruct-Thinking-Claude-4.5-Opus-High-Reasoning">Llama3.3 8B finetune with "Claude 4.5 Opus High Reasoning" data</a> was even worse: ~25% score after letting it run each question 5 times.
+	Completely incompetent.
+	Though the poor "example" prompts on that page should also have warned you that something's up.
+</p>
+<p>
 	Qwen3-Next: my impressions so far are that GLM-4.5-Air has a bit of an edge for instruct/general capabilities, and GPT-OSS-120B has an advantage in reasoning tasks.
 	That said, it's relatively competitive with both despite the size disadvantage.
 	Its knowledge cutoff seems better than most models I've tested so far, which can be very nice.
@@ -1190,10 +1228,23 @@ The statement matching this statement is on a completely true box."
 <span class="anchor" id="conclusion"></span>
 <h2>Conclusion and notes<sup><small><a href="#conclusion">&#35;</a></small></sup></h2>
 <p>
-	This class of puzzle, overall, seemed not too hard for most reasoning models.
+	In a way, this class of puzzle seemed not too hard for most reasoning models.
 	Random guessing should score around 33%, while even the 4-billion parameter Qwen thinking model did reasonably with scores around 90-92%.
-	There is still much room for improvement.
-	The best models made about half as many errors, with scores around 95-97%, but even that is lacking if viewed from a consistency angle.
+	<!-- There is still much room for improvement. -->
+	The best models made about half as many errors, with scores around 95-97%.
+	However, even these scores are not particularly impressive compared to human performance.
+</p>
+<p>
+	These parlor puzzles are a small subcomponent of Blue Prince.
+	The game is intended for a relatively general audience, and these parlor puzzles are meant to be solvable by most such players without exerting tremendous effort.
+	It would be a bad gameplay experience, after all, if you regularly faced a 30-minute diversion on a maddeningly complex puzzle that wasn't even relevant in the grand scheme of the game's mysteries.
+	Solutions are also typically easy for a human to verify: incorrect answers tend to produce at least some kind of blatantly impossible configuration.
+	LLMs were less successful with identifying these issues.
+</p>
+<p>
+	So, I would argue our score expectation for a "properly intelligent" solver should be more in the range of 100%.
+	None of these models are there, at least for now.
+	If you have time to think it through, I recommend doing so and not asking ChatGPT to play the game for you.
 </p>
 <p>
 	I intend to keep this updated as new reasoning models release.
@@ -1204,10 +1255,6 @@ The statement matching this statement is on a completely true box."
 	Brute force tactics were common, and necessarily true/false boxes were regularly revisited.
 	Of course, you could argue that how intelligent the reasoning trace appears is irrelevant: if the final answer is correct, that's all that really matters (and is all I graded on).
 	Although, seeing the circles these models sometimes spun in, I would still hope for future developments to improve reasoning token efficiency.
-</p>
-<p>
-	I believe a reasonably intelligent human, giving each problem careful consideration, can score about 100% on the Parlor Puzzles.
-	So, if you have time to think it through, I recommend doing so and not asking ChatGPT to play the game for you.
 </p>
 <p>
 	Some statements gave models more trouble than others, on average.
