@@ -44,7 +44,7 @@
         <div class="article-container">
             <header class="article-header">
                 <h1>Reasoning LLMs vs the Parlor Puzzle</h1>
-                <div class="meta">By BigStupidJellyfish | 2025-November-02 | Updated 2026-January-04</div>
+                <div class="meta">By BigStupidJellyfish | 2025-November-02 | Updated 2026-January-09</div>
             </header>
 <div class="article-content">
 
@@ -244,6 +244,14 @@
       <td>92.6%</td> <!-- 315/339 -->
       <td>6120/4500 tokens</td>
     </tr>
+	<tr>
+      <td><a href="https://huggingface.co/tiiuae/Falcon-H1R-7B">Falcon-H1R</a></td>
+	  <td>7B</td>
+	  <td>Q8_0</td>
+      <td>113*3</td>
+      <td>91.2%</td> <!-- 309/339 -->
+      <td>7060/4459 tokens</td>
+    </tr>
 	<!-- <tr>
       <td><a href="https://huggingface.co/TheDrummer/Gemma-3-R1-12B-v1">Gemma3 R1</a></td>
 	  <td>12B</td>
@@ -379,6 +387,14 @@
       <td>113*5</td>
       <td>44.8%</td> <!-- 253/565 -->
       <td>19800/24000 tokens</td> <!-- You read that right. It timed out more than half the time. -->
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/miromind-ai/MiroThinker-v1.5-30B">MiroThinker-v1.5</a></td>
+	  <td>30B</td>
+	  <td>Q8_0</td>
+      <td>113*5</td>
+      <td>50.4%</td> <!-- 285/565 -->
+      <td>14589/15371 tokens</td>
     </tr>
 	<tr>
       <td><a href="https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506">Mistral-Small-3.2-24B-Instruct-2506</a> (non-thinking reference)</td>
@@ -872,7 +888,13 @@ Batch final 3: 43317
 	I may try experimenting with this model more in the future, as the low active parameter count make even the proper Q4 run at a decent speed off of RAM, but for now, I can't tell you exactly why the scores are as listed.
 	The 2.1 update seems reasonable, bringing its score into a more respectable region while also using fewer tokens.
 </p>
-
+<h3>MiroThinker</h3>
+<p>
+	This model is based off Qwen 30B/235B to act as a search agent.
+	I only tested the 30B version.
+	Solving parlor puzzles (without websearch) thus will not be a very useful test of its capabilities in that domain.
+	So, while I would not want to use this score to judge the model's value overall, I still found it interesting to compare performance here vs the base model.
+</p>
 <h3>Mistral Small/Magistral/Ministral</h3>
 <p>
 	Mistral Small is quite good!
@@ -1159,6 +1181,14 @@ The statement matching this statement is on a completely true box."
 	<tr>
       <td><a href="https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Thinking">Qwen3-Next-80B-A3B</a></td>
 	  <td>80B</td>
+	  <td>Q6_K_XL</td>
+      <td>113*5</td>
+	  <td>93.5%</td> <!-- 528/565 -->
+      <td>6744/5472 tokens</td>
+    </tr>
+	<tr>
+      <td></td>
+	  <td></td>
 	  <td>Q8_0</td>
       <td>113*3</td>
 	  <td>93.2%</td> <!-- 316/339 -->
