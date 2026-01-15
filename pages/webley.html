@@ -67,6 +67,19 @@
 	}
 </script>
 <script>
+function hideAll() {
+  var x = document.getElementsByClassName("dollbox");
+  for (var i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+  }
+  // Remove active class from buttons
+  var current = document.getElementsByClassName("active");
+  if (current.length > 0) {
+    current[0].className = current[0].className.replace(" active", "");
+  }
+}
+</script>
+<script>
 function calculate() {
 	var rof1 = parseInt(document.getElementById("rof1").value),
 		rof2 = parseInt(document.getElementById("rof2").value),
@@ -269,6 +282,7 @@ function calculate() {
 <button class="btn" onclick="filterSelection('rex')"> Rex Zero</button>
 <button class="btn" onclick="filterSelection('liu')"> Liu</button>
 <button class="btn" onclick="filterSelection('m200')"> M200</button>
+<button class="btn" onclick="hideAll()">Collapse</button>
 </div>
 <div class="dollbox p22">
 <h3>P22</h3>

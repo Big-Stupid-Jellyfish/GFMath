@@ -436,6 +436,14 @@ footer a:hover {
     border-color: var(--accent);
 }
 
+/* Dollbox visibility */
+.dollbox {
+    display: none;
+}
+.dollbox.show {
+    display: block;
+}
+
 /* Gallery Grid */
 .gallery-grid {
     display: grid;
