@@ -603,18 +603,8 @@
 	It barely does better than random guessing, and was much worse than even the 1.7B Qwen on this task.
 	Its responses were well-formatted English, so I doubt sampler settings could account for the discrepancy.
 	I also have <a href="llm-quants#temp">yet to see</a> evidence of temperature being a crucial factor.
-	<!-- To show how far off it is, here's one example final answer, after reasoning for ~4k tokens: -->
-</p>
-<!-- <blockquote>
-<p>
-	The only way to satisfy the conditions is by assuming the white box contains the prize. Its statement “THE OTHER TWO BOXES CONTAIN GEMS.” is true, while the other two boxes’ statements are false. This fits the requirement of at least one true and one false statement.
 </p>
 <p>
-\( \boxed{WHITE} \)
-</p>
-</blockquote>
-<p>
-	The blue box in this case asserted that all three boxes contain gems, obviously also false. The black box asserted that it contained gems, which must then be the sole true statement. -->
 	One response helpfully explained "Assuming the Blue box is telling the truth, then the Black box contains gems.[...]Thus the prize is in the Blue box."
 	In one of the easiest puzzles, we have an even more local contradiction: "White box’s false claim “THIS BOX IS EMPTY” confirms it is not the prize container."
 </p>
@@ -623,6 +613,7 @@
 	How insightful.
 	(I'd expect most points earned in that range come from LLM judge errors.)
 </p>
+
 <h3>Apriel</h3>
 <p>
 	1.5 did well overall, especially for its size.
@@ -642,12 +633,14 @@
 	The <a href="https://huggingface.co/ServiceNow-AI/Apriel-1.6-15b-Thinker">1.6 update</a> scored even better: 97.0%.
 	Its reasoning formatting was still irritating, to the point of making me not want to try using this model for other tasks, and it came up with more "unique" (bad) ways of displaying its answer than most models.
 </p>
+
 <h3>Cydonia R1</h3>
 <p>
 	To be clear, this model seems to be a fine-tune of a non-reasoning model, adding reasoning with a focus on improving role-play performance.
 	I included it in this test because I was curious if that added thinking would still improve performance on other subjects.
 	It showed some improvement from Mistral Small, but was not on the level of Magistral.
 </p>
+
 <h3>EXAONE</h3>
 <p>
 	The 1.2B version was a bit worse than Qwen3-1.7B, but it's also a bit smaller than the Qwen model.
@@ -658,9 +651,10 @@
 	I can't claim any detectable difference/dumbing down yet.
 </p>
 <p>
-	The newer 236B K-EXAONE model was quite disappointing (testsed at IQ4_XS).
+	The newer 236B K-EXAONE model was quite disappointing (tested at IQ4_XS).
 	It scored lower than the older 32B versions, had notable timeout issues, and scored similarly to 24-32B models on my non-reasoning knowledge test (those results not shown here).
 </p>
+
 <h3>**Gemini-2.5-Pro & Gemini 3</h3>
 <p>
 	Take these results with a grain of salt!
@@ -682,6 +676,7 @@
 	Gemini 3 (Thinking) only scored marginally better (93.8% over 92.9%), and was still worse than GPT-OSS-120B with the same batch size (94.7%).
 	As these are only based on a single run of the 113 puzzles, we can't reach overly strong conclusions, but it's a relatively disappointing score given the presumed size of these models.
 </p>
+
 <h3>GLM</h3>
 <p>
 	<!-- I have really been liking GLM 4.6. -->
@@ -703,6 +698,7 @@
 	This model's chain-of-thought is hidden, so I can't truly verify if it "cheated" by using python/websearch/other tools to solve some problems.
 	This is also why I can only offer average thinking time as a response length metric.
 </p>
+
 <h3>GPT-OSS</h3>
 <p>
 	The reasoning effort setting gives us a whole bunch of configurations, so I've copied over its best result and included the rest here:
@@ -778,27 +774,16 @@
   </tbody>
 </table>
 <p>
-	<!-- These models took some fiddling to get them to pay attention to the reasoning levels. -->
 	GPT-OSS-20B actually performed (by 1 question) worse on "high" than on "medium."
 	This could largely be attributed to the token limit: "medium" timed out ~3 times, while "high" timed out ~10 times.
 	As the limit was a rather generous 24000 tokens and these puzzles are not <em>that</em> complicated, fundamentally, I'm not sure how much adding more tokens would help.
 	The 120B model's high setting performed much better with a 97%, and is one of the best performances.
 </p>
-<!-- <p>
-	"Medium" was not too impressive compared to the 20B version, only really improving in terms of token efficiency.
-	At least the "high" reasoning effort really did perform, making ~25% less errors than the next-best offline model.
-</p> -->
 <p>
 	It's also notably a better score than the GPT-5-Thinking-Mini model, which is limited to ~10 messages every few hours without paying.
 	The OSS models lack certain features (image recognition) and would need setup for others (tool integration), but are surprisingly competitive for this sort of task.
 	Just make sure it's set to high, and make sure it's actually listening to that setting.
 </p>
-<!-- <p>
-	These models seemed more likely than others to give "ambiguous"/"cannot be determined" answers.
-	On one hand, fake confidence can be quite harmful.
-	On the other, as each puzzle should have one unique solution, coming up with an "ambiguous" situation is a good sign you made an error in your reasoning, and you should backtrack and try something else until you can resolve the gems to a single box.
-	I'll at least credit the 120B for being good at this logical reasoning puzzle (on high reasoning effort).
-</p> -->
 <p>
 	**In connection with the Gemini-2.5-Pro batched test, I ran a set on GPT-OSS-120B, to get a sense for just how cruel asking a model to solve ten of these in one go is.
 	In this case, I loaded the model with max context and removed any response length limit. Reasoning: high, of course.
@@ -827,6 +812,7 @@ Batch 10: 35839
 Batch 11: 74074 // 377112
 Batch final 3: 43317
 -->
+
 <h3>INTELLECT-3</h3>
 <p>
 	This is a modification of GLM-4.5-Air, apparently oriented towards math/coding/reasoning.
@@ -838,6 +824,7 @@ Batch final 3: 43317
 <p>
 	I may test this model more in other areas in the future, but cannot immediately comment on if any other areas have suffered as a result of this training.
 </p>
+
 <h3>MiniMax M2</h3>
 <p>
 	What particularly caught my eye here was the <a href="https://huggingface.co/unsloth/MiniMax-M2-GGUF">IQ2_XXS quantization</a> of the full model (~74 GB), contrasted with the <a href="https://huggingface.co/bartowski/cerebras_MiniMax-M2-REAP-139B-A10B-GGUF">IQ4_XS quantization</a> (~74.5 GB) of a 40% REAP by Cerebras.
@@ -923,6 +910,7 @@ Batch final 3: 43317
 	I may try experimenting with this model more in the future, as the low active parameter count make even the proper Q4 run at a decent speed off of RAM, but for now, I can't tell you exactly why the scores are as listed.
 	The 2.1 update seems reasonable, bringing its score into a more respectable region while also using fewer tokens.
 </p>
+
 <h3>MiroThinker</h3>
 <p>
 	This model is based off Qwen 30B/235B to act as a search agent.
@@ -930,6 +918,7 @@ Batch final 3: 43317
 	Solving parlor puzzles (without websearch) thus will not be a very useful test of its capabilities in that domain.
 	So, while I would not want to use this score to judge the model's value overall, I still found it interesting to compare performance here vs the base model.
 </p>
+
 <h3>Mistral Small/Magistral/Ministral</h3>
 <p>
 	Mistral Small is quite good!
@@ -955,6 +944,7 @@ Batch final 3: 43317
 	I tried several tweaks (llama.cpp versions, temperature, flags, system prompt) with no substantial changes to these bad behaviors.
 	Some uncapped test generations took over 40k tokens.
 </p>
+
 <h3>Nvidia models</h3>
 <p>
 	Nvidia has a whole bunch of models, especially code/math reasoning ones.
@@ -1095,6 +1085,7 @@ Batch final 3: 43317
 	The Nemotron Cascade model was most impressive: low token usage, decent score, and only 14B parameters.
 	Its formatting was consistent, and never timed out.
 </p>
+
 <h3>Seed OSS 36B</h3>
 <p>
 	Very nice!
@@ -1124,6 +1115,7 @@ The statement matching this statement is on a completely true box."
 <p>
 	Its score on my non-thinking/fact-based benchmark was about typical for its size.
 </p>
+
 <h3>Qwen3 models</h3>
 <p>
 	There's a lot of these, so I've moved them to this table (keeping a few of the notable ones duplicated above).
@@ -1290,6 +1282,7 @@ The statement matching this statement is on a completely true box."
 	That said, it's relatively competitive with both despite the size disadvantage.
 	Its knowledge cutoff seems better than most models I've tested so far, which can be very nice.
 </p>
+
 <span class="anchor" id="conclusion"></span>
 <h2>Conclusion and notes<sup><small><a href="#conclusion">&#35;</a></small></sup></h2>
 <p>
