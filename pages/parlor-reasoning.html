@@ -44,7 +44,7 @@
         <div class="article-container">
             <header class="article-header">
                 <h1>Reasoning LLMs vs the Parlor Puzzle</h1>
-                <div class="meta">By BigStupidJellyfish | 2025-November-02 | Updated 2026-February-11</div>
+                <div class="meta">By BigStupidJellyfish | 2025-November-02 | Updated 2026-February-17</div>
             </header>
 <div class="article-content">
 
@@ -395,6 +395,14 @@
       <td>113*2</td>
       <td>90.7%</td> <!-- 205/226 -->
       <td>5985/3702 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/MiniMaxAI/MiniMax-M2.5">MiniMax M2.5</a></td>
+	  <td>229B</td>
+	  <td>Q4_K_XL</td>
+      <td>113*2</td>
+      <td>92.9%</td> <!-- 210/226 -->
+      <td>6533/4312 tokens</td>
     </tr>
 	<tr>
       <td><a href="https://huggingface.co/mistralai/Ministral-3-8B-Reasoning-2512">Ministral-3-8B-Reasoning-2512</a></td>
@@ -908,6 +916,14 @@ Batch final 3: 43317
       <td>90.7%</td> <!-- 205/226 -->
       <td>5985/3702 tokens</td>
     </tr>
+	<tr>
+      <td><a href="https://huggingface.co/MiniMaxAI/MiniMax-M2.5">MiniMax M2.5</a></td>
+	  <td>229B</td>
+	  <td>Q4_K_XL</td>
+      <td>113*2</td>
+      <td>92.9%</td> <!-- 210/226 -->
+      <td>6533/4312 tokens</td>
+    </tr>
 	</tbody>
 </table>
 <p>
@@ -926,6 +942,10 @@ Batch final 3: 43317
 <p>
 	I may try experimenting with this model more in the future, as the low active parameter count make even the proper Q4 run at a decent speed off of RAM, but for now, I can't tell you exactly why the scores are as listed.
 	The 2.1 update seems reasonable, bringing its score into a more respectable region while also using fewer tokens.
+</p>
+<p>
+	Released in February 2026, MiniMax M2.5 looks to be a reasonable improvement.
+	It scores slightly better than 2/2.1, but its token usage is somewhere in between them.
 </p>
 
 <h3>MiroThinker</h3>
