@@ -44,7 +44,7 @@
         <div class="article-container">
             <header class="article-header">
                 <h1>Reasoning LLMs vs the Parlor Puzzle</h1>
-                <div class="meta">By BigStupidJellyfish | 2025-November-02 | Updated 2026-February-17</div>
+                <div class="meta">By BigStupidJellyfish | 2025-November-02 | Updated 2026-February-26</div>
             </header>
 <div class="article-content">
 
@@ -485,12 +485,12 @@
       <td>6922/5997 tokens</td>
     </tr>
 	<tr>
-      <td><a href="https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Thinking">Qwen3-Next-80B-A3B</a></td>
-	  <td>80B</td>
-	  <td>Q8_0</td>
-      <td>113*3</td>
-	  <td>93.2%</td> <!-- 316/339 -->
-      <td>6781/5523 tokens</td>
+      <td><a href="https://huggingface.co/Qwen/Qwen3.5-122B-A10B">Qwen3.5-122B-A10B</a></td>
+	  <td>122B</td>
+	  <td>Q4_K_XL</td>
+      <td>113*5</td>
+	  <td>95.2%</td> <!-- 538/565 -->
+      <td>6084/5424 tokens</td>
     </tr>
 	<tr>
       <td><a href="https://huggingface.co/inclusionAI/Ring-flash-2.0">Ring-Flash-2.0</a></td>
@@ -927,7 +927,7 @@ Batch final 3: 43317
 	</tbody>
 </table>
 <p>
-	All configurations tested were relatively prone to get stuck in an infinite reasoning loop, causing many of their errors.
+	All configurations of the base (M2) model tested were relatively prone to get stuck in an infinite reasoning loop, causing many of their errors.
 </p>
 <p>
 	Unfortunately, even the full Q4 model was not very good at these puzzles.
@@ -1259,6 +1259,30 @@ The statement matching this statement is on a completely true box."
       <td>6781/5523 tokens</td>
     </tr>
 	<tr>
+      <td><a href="https://huggingface.co/Qwen/Qwen3.5-27B">Qwen3.5-27B</a></td>
+	  <td>27B</td>
+	  <td>Q8_0</td>
+      <td>113*5</td>
+	  <td>95.8%</td> <!-- 541/565 -->
+      <td>6470/5849 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/Qwen/Qwen3.5-35B-A3B">Qwen3.5-35B-A3B</a></td>
+	  <td>35B</td>
+	  <td>Q8_0</td>
+      <td>113*5</td>
+	  <td>94.2%</td> <!-- 532/565 -->
+      <td>6569/5571 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/Qwen/Qwen3.5-122B-A10B">Qwen3.5-122B-A10B</a></td>
+	  <td>122B</td>
+	  <td>Q4_K_XL</td>
+      <td>113*5</td>
+	  <td>95.2%</td> <!-- 538/565 -->
+      <td>6084/5424 tokens</td>
+    </tr>
+		<tr>
       <td><a href="https://huggingface.co/Qwen/QwQ-32B">QwQ-32B</a></td>
 	  <td>32B</td>
 	  <td>Q8_0</td>
