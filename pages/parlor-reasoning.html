@@ -496,10 +496,10 @@
 	<tr>
       <td><a href="https://huggingface.co/Qwen/Qwen3.5-122B-A10B">Qwen3.5-122B-A10B</a></td>
 	  <td>122B</td>
-	  <td>Q4_K_XL</td>
+	  <td>Q4_K_M</td>
       <td>113*5</td>
-	  <td>95.2%</td> <!-- 538/565 -->
-      <td>6084/5424 tokens</td>
+	  <td>97.2%</td> <!-- 549/565 -->
+      <td>5397/4855 tokens</td>
     </tr>
 	<tr>
       <td><a href="https://huggingface.co/inclusionAI/Ring-flash-2.0">Ring-Flash-2.0</a></td>
@@ -1145,7 +1145,7 @@ Batch final 3: 43317
 <h3>Qwen3 models</h3>
 <p>
 	There's a lot of these, so I've moved them to this table (keeping a few of the notable ones duplicated above).
-	Qwen3-235B-A22B-Thinking-2507 is the current best, with a score of 96.5%, though only based on two passes.
+	Qwen3-122B-A10B is the current best, with a score of 97.2%.
 </p>
 <table>
   <thead>
@@ -1250,6 +1250,14 @@ Batch final 3: 43317
 	<tr>
       <td><a href="https://huggingface.co/Qwen/Qwen3.5-27B">Qwen3.5-27B</a></td>
 	  <td>27B</td>
+	  <td>Q4_K_M</td>
+      <td>113*5</td>
+	  <td>94.9%</td> <!-- 536/565 -->
+      <td>6503/5882 tokens</td>
+    </tr>
+	<tr>
+      <td></td>
+	  <td></td>
 	  <td>Q8_0</td>
       <td>113*5</td>
 	  <td>95.8%</td> <!-- 541/565 -->
@@ -1327,7 +1335,7 @@ Batch final 3: 43317
 </p> -->
 <p>
 	Qwen3.5: they do quite nicely here, beating all previous Qwen models short of the 235B-A22B.
-	Token consumption is normal.
+	Token consumption was about normal; these models had almost no looping issues.
 	Curiously, <a href="https://huggingface.co/AesSedai/Qwen3.5-122B-A10B-GGUF">this Q4_K_M</a> of the 122B-A10B scored noticeably higher than the <a href="https://huggingface.co/unsloth/Qwen3.5-122B-A10B-GGUF">unsloth Q4_K_XL</a>, and set a new record on the test by 0.2%.
 </p>
 <h3>Distills</h3>
