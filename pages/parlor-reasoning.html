@@ -44,7 +44,7 @@
         <div class="article-container">
             <header class="article-header">
                 <h1>Reasoning LLMs vs the Parlor Puzzle</h1>
-                <div class="meta">By BigStupidJellyfish | 2025-November-02 | Updated 2026-February-27</div>
+                <div class="meta">By BigStupidJellyfish | 2025-November-02 | Updated 2026-March-06</div>
             </header>
 <div class="article-content">
 
@@ -189,6 +189,14 @@
       <td>97.0%</td>
       <td>4793/2975 tokens</td>
     </tr>
+	<!-- <tr>
+      <td><a href="https://huggingface.co/CohereLabs/command-a-reasoning-08-2025">Command A Reasoning 08 2025</a></td>
+	  <td>111B</td>
+	  <td>Q4_K_M</td>
+      <td>113*</td>
+      <td>%</td>
+      <td>/ tokens</td>
+    </tr> -->
 	<tr>
       <td><a href="https://huggingface.co/TheDrummer/Cydonia-R1-24B-v4.1">Cydonia R1 (v4f)</a></td>
 	  <td>24B</td>
@@ -1247,6 +1255,38 @@ Batch final 3: 43317
 	  <td>93.2%</td> <!-- 316/339 -->
       <td>6781/5523 tokens</td>
     </tr>
+	<!-- <tr>
+      <td><a href="https://huggingface.co/Qwen/Qwen3.5-0.8B">Qwen3.5-0.8B</a></td>
+	  <td>0.8B</td>
+	  <td>BF16</td>
+      <td>113*5</td>
+	  <td>%</td>
+      <td>/ tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/Qwen/Qwen3.5-2B">Qwen3.5-2B</a></td>
+	  <td>2B</td>
+	  <td>BF16</td>
+      <td>113*5</td>
+	  <td>%</td>
+      <td>/ tokens</td>
+    </tr> -->
+	<tr>
+      <td><a href="https://huggingface.co/Qwen/Qwen3.5-4B">Qwen3.5-4B</a></td>
+	  <td>4B</td>
+	  <td>BF16</td>
+      <td>113*10</td>
+	  <td>68.1%</td>
+      <td>10380/7644 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/Qwen/Qwen3.5-9B">Qwen3.5-9B</a></td>
+	  <td>9B</td>
+	  <td>BF16</td>
+      <td>113*5</td>
+	  <td>94.2%</td> <!-- 532/565 -->
+      <td>8241/7424 tokens</td>
+    </tr>
 	<tr>
       <td><a href="https://huggingface.co/Qwen/Qwen3.5-27B">Qwen3.5-27B</a></td>
 	  <td>27B</td>
@@ -1284,8 +1324,8 @@ Batch final 3: 43317
 	  <td></td>
 	  <td>Q4_K_XL</td>
       <td>113*5</td>
-	  <td>95.2%</td> <!-- 538/565 -->
-      <td>6084/5424 tokens</td>
+	  <td>95.6%</td> <!-- 540/565 -->
+      <td>5401/4954 tokens</td>
     </tr>
 		<tr>
       <td><a href="https://huggingface.co/Qwen/QwQ-32B">QwQ-32B</a></td>
@@ -1334,9 +1374,12 @@ Batch final 3: 43317
 	Its knowledge cutoff seems better than most models I've tested so far, which can be very nice.
 </p> -->
 <p>
-	Qwen3.5: they do quite nicely here, beating all previous Qwen models short of the 235B-A22B.
+	Qwen3.5: the larger models do quite nicely here, beating all previous Qwen models short of the 235B-A22B.
 	Token consumption was about normal; these models had almost no looping issues.
-	Curiously, <a href="https://huggingface.co/AesSedai/Qwen3.5-122B-A10B-GGUF">this Q4_K_M</a> of the 122B-A10B scored noticeably higher than the <a href="https://huggingface.co/unsloth/Qwen3.5-122B-A10B-GGUF">unsloth Q4_K_XL</a>, and set a new record on the test by 0.2%.
+	Curiously, <a href="https://huggingface.co/AesSedai/Qwen3.5-122B-A10B-GGUF">this Q4_K_M</a> of the 122B-A10B scored moderately higher than the <a href="https://huggingface.co/unsloth/Qwen3.5-122B-A10B-GGUF">(updated) unsloth Q4_K_XL</a>, and set a new record on the test by 0.2%.
+	The 9B gets itself on the pareto frontier for size efficiency, but this strength drops off with the even smaller models: the 4B regresses significantly compared to their 2507 version, with a ~68% score.
+	Even if you ignore cases where it got stuck in a loop, the 3.5 4B scored only ~83% on that subset.
+	Adjusting the model's presence penalty may move the numbers around a little, but not nearly enough to catch up.
 </p>
 <h3>Distills</h3>
 <p>
