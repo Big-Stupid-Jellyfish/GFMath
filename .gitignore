@@ -1,4 +1,5 @@
 _site
+.env
 .bundle
 .sass-cache
 Gemfile.lock
@@ -6,3 +7,11 @@ Gemfile.lock
 .swp
 img/
 images/rifles/
+*.md
+!README.md
+*.min.css
+*.min.js
+*~
+*.backup
+*.tmp
+*.log
