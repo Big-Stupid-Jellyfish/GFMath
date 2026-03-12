@@ -44,7 +44,7 @@
         <div class="article-container">
             <header class="article-header">
                 <h1>Reasoning LLMs vs the Parlor Puzzle</h1>
-                <div class="meta">By BigStupidJellyfish | 2025-November-02 | Updated 2026-March-06</div>
+                <div class="meta">By BigStupidJellyfish | 2025-November-02 | Updated 2026-March-11</div>
             </header>
 <div class="article-content">
 
@@ -470,6 +470,22 @@
       <td>14657/13630 tokens</td>
     </tr>
 	<tr>
+      <td><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16">Nemotron 3 Nano</a></td>
+	  <td>30B</td>
+	  <td>BF16</td>
+      <td>113*10</td>
+      <td>90.8%</td> <!-- 1026/1130 -->
+      <td>6253/3803 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/unsloth/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4">Nemotron 3 Super</a></td>
+	  <td>120B</td>
+	  <td>NVFP4</td>
+      <td>113*5</td>
+      <td>95.9%</td> <!-- 542/565 -->
+      <td>3372/1988 tokens</td>
+    </tr>
+	<tr>
       <td><a href="https://huggingface.co/allenai/Olmo-3-7B-Think">Olmo-3-7B-Think</a></td>
 	  <td>7B</td>
 	  <td>Q8_0</td>
@@ -598,7 +614,7 @@
 <p>
 	Setting aside model size, we can also take a look at performance with respect to verbosity.
 	Ideally, we'd want a model in the top left: high accuracy, few tokens to get there.
-	GPT-OSS-120B most clearly occupies that spot.
+	GPT-OSS-120B most clearly occupies that spot, alongside Nemotron 3 Super.
 </p>
 <center><div class="figure">
 	<img src="images/parlor-reasoning/named_scatter_efficiency.png" width="100%"/>
@@ -1096,6 +1112,22 @@ Batch final 3: 43317
       <td>90.8%</td> <!-- 1026/1130 -->
       <td>6253/3803 tokens</td>
     </tr>
+		<tr>
+      <td><a href="https://huggingface.co/unsloth/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4">Nemotron 3 Super</a></td>
+	  <td>120B</td>
+	  <td>NVFP4</td>
+      <td>113*5</td>
+      <td>95.9%</td> <!-- 542/565 -->
+      <td>3372/1988 tokens</td>
+    </tr>
+	<!-- <tr>
+      <td><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16">Nemotron 3 Super</a></td>
+	  <td>120B</td>
+	  <td>Q4_K_M</td>
+      <td>113*5</td>
+      <td>%</td>
+      <td>/ tokens</td>
+    </tr> -->
 	<tr>
       <td><a href="https://huggingface.co/nvidia/OpenReasoning-Nemotron-1.5B">OpenReasoning-Nemotron-1.5B</a></td>
 	  <td>1.5B</td>
@@ -1136,8 +1168,11 @@ Batch final 3: 43317
 	As seems to be typical, going above Q4 had no clear benefit.
 </p>
 <p>
-	The Nemotron Cascade model was most impressive: low token usage, decent score, and only 14B parameters.
+	The Nemotron Cascade models were impressive: low token usage, decent score, and only 8/14B parameters.
 	Its formatting was consistent, and never timed out.
+</p>
+<p>
+	The newer Nemotron 3 Super does quite well, with a strong score and very low token usage (as far as reasoning models go, at least).
 </p>
 
 <h3>Seed OSS 36B</h3>
@@ -1381,6 +1416,10 @@ Batch final 3: 43317
 	Even if you ignore cases where it got stuck in a loop, the 3.5 4B scored only ~83% on that subset.
 	Adjusting the model's presence penalty may move the numbers around a little, but not nearly enough to catch up.
 </p>
+<p>
+	Giving the 122B-A10B model 10 questions at a time, it scored 89% with 1630 average tokens per problem.
+	Apparently, its reasoning "effort" doesn't scale up as well as GPT-OSS-120B's did.
+</p>
 <h3>Distills</h3>
 <p>
 	I also tested <a href="https://huggingface.co/Liontix/Qwen3-4B-Thinking-2507-Gemini-2.5-Pro-Distill">this "Gemini 2.5 Pro distill" of Qwen3-4B</a>.
@@ -1394,6 +1433,12 @@ Batch final 3: 43317
 	For another example with a different base, this <a href="https://huggingface.co/DavidAU/Llama3.3-8B-Instruct-Thinking-Claude-4.5-Opus-High-Reasoning">Llama3.3 8B finetune with "Claude 4.5 Opus High Reasoning" data</a> was even worse: ~25% score after letting it run each question 5 times.
 	Completely incompetent.
 	Though the poor "example" prompts on that page should also have warned you that something's up.
+</p>
+<p>
+	<a href="https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled-GGUF">This "Claude 4.6 Opus"</a> distill of a stronger base (Qwen3.5 27B), while not as catastrophic as the above cases, still manages to significantly damage the original model's capabilities.
+	It scored 198/339, or 58.4%.
+	Impressive, really, figuring out a way to make Qwen3.5 27B worse than Qwen3 1.7B (at least on this test).
+	I still don't understand how anyone could fall for these; everything about the model's description points towards it being untrustworthy.
 </p>
 <span class="anchor" id="conclusion"></span>
 <h2>Conclusion and notes<sup><small><a href="#conclusion">&#35;</a></small></sup></h2>
@@ -1443,6 +1488,8 @@ Batch final 3: 43317
 <p>
 	I slightly adjusted one parlor puzzle which, under a certain set of assumptions, would be ambiguous.
 	All responses used a basic automatic detection followed by manual review to ensure all scores are correct.
+	Almost all models were tested using llama.cpp.
+	NVFP4 models were ran using vLLM.
 </p>
 <p>
 	Ultimately, you should consider playing <a href="https://store.steampowered.com/app/1569580/Blue_Prince/">Blue Prince</a>.
