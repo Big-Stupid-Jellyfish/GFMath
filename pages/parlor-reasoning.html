@@ -44,7 +44,7 @@
         <div class="article-container">
             <header class="article-header">
                 <h1>Reasoning LLMs vs the Parlor Puzzle</h1>
-                <div class="meta">By BigStupidJellyfish | 2025-November-02 | Updated 2026-April-05</div>
+                <div class="meta">By BigStupidJellyfish | 2025-November-02 | Updated 2026-June-13</div>
             </header>
 <div class="article-content">
 
@@ -431,6 +431,14 @@
       <td>113*5</td>
       <td>50.4%</td> <!-- 285/565 -->
       <td>14589/15371 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/mistralai/Mistral-Medium-3.5-128B">Mistral-Medium-3.5-128B</a></td>
+	  <td>128B</td>
+	  <td>Q4_K_M</td>
+      <td>113*5</td>
+      <td>90.4%</td> <!-- 511/565 -->
+      <td>7305/5382 tokens</td>
     </tr>
 	<tr>
       <td><a href="https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506">Mistral-Small-3.2-24B-Instruct-2506</a> (non-thinking reference)</td>
@@ -1107,6 +1115,14 @@ Batch final 3: 43317
       <td>90.0%</td> <!-- 305/339 -->
       <td>6558/5511 tokens</td>
     </tr>
+	<!-- <tr>
+      <td><a href="https://huggingface.co/nvidia/gpt-oss-puzzle-88B">GPT-OSS-Puzzle</a> (high)</td>
+	  <td>88B</td>
+	  <td>MXFP4</td>
+      <td>113*6</td>
+      <td>%</td>
+      <td>/ tokens</td>
+    </tr> -->
 	<tr>
       <td><a href="https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1_5">Llama-3.3-Nemotron-Super-49B-v1.5</a></td>
 	  <td>49B</td>
@@ -1195,7 +1211,7 @@ Batch final 3: 43317
       <td>90.8%</td> <!-- 1026/1130 -->
       <td>6253/3803 tokens</td>
     </tr>
-		<tr>
+	<tr>
       <td><a href="https://huggingface.co/unsloth/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4">Nemotron 3 Super</a></td>
 	  <td>120B</td>
 	  <td>NVFP4</td>
@@ -1448,7 +1464,15 @@ Batch final 3: 43317
 	  <td>95.6%</td> <!-- 540/565 -->
       <td>5401/4954 tokens</td>
     </tr>
-		<tr>
+	<tr>
+      <td><a href="https://huggingface.co/Qwen/Qwen3.6-35B-A3B">Qwen3.6-35B-A3B</a></td>
+	  <td>35B</td>
+	  <td>Q8_0</td>
+      <td>113*5</td>
+	  <td>93.3%</td> <!-- 527/565 -->
+      <td>4789/4083 tokens</td>
+    </tr>
+	<tr>
       <td><a href="https://huggingface.co/Qwen/QwQ-32B">QwQ-32B</a></td>
 	  <td>32B</td>
 	  <td>Q8_0</td>
