@@ -233,12 +233,20 @@
       <td>6120/4500 tokens</td>
     </tr>
 	<tr>
-      <td><a href="https://huggingface.co/LGAI-EXAONE/K-EXAONE-236B-A23B">K-EXAONE-236B-A23B </a></td>
+      <td><a href="https://huggingface.co/LGAI-EXAONE/K-EXAONE-236B-A23B">K-EXAONE-236B-A23B</a></td>
 	  <td>236B</td>
 	  <td>IQ4_XS</td>
       <td>113*1</td>
       <td>90.3%</td> <!-- 102/113 -->
       <td>11994/10442 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B">EXAONE-4.5-33B</a></td>
+	  <td>33B</td>
+	  <td>Q8_0</td>
+      <td>113*3</td>
+      <td>47.8%</td> <!-- 162/339 -->
+      <td>14568/24000 tokens</td>
     </tr>
 	<tr>
       <td><a href="https://huggingface.co/tiiuae/Falcon-H1R-7B">Falcon-H1R</a></td>
@@ -479,6 +487,14 @@
       <td>113*5</td>
       <td>95.9%</td> <!-- 542/565 -->
       <td>3372/1988 tokens</td>
+    </tr>
+	<tr>
+      <td><a href="https://huggingface.co/CohereLabs/North-Mini-Code-1.0">North Mini Code 1.0</a></td>
+	  <td>30B</td>
+	  <td>Q8_0</td>
+      <td>113*10</td>
+      <td>91.2%</td> <!-- 1030/1130 -->
+      <td>3603/2176 tokens</td>
     </tr>
 	<tr>
       <td><a href="https://huggingface.co/allenai/Olmo-3-7B-Think">Olmo-3-7B-Think</a></td>
@@ -722,6 +738,8 @@
 <p>
 	The newer 236B K-EXAONE model was quite disappointing (tested at IQ4_XS).
 	It scored lower than the older 32B versions, had notable timeout issues, and scored similarly to 24-32B models on my non-reasoning knowledge test (those results not shown here).
+	Their 4.5 version (33B) was even worse, constantly looping and scoring worse than their older 1.2B model!
+	(Not necessarily significantly worse, but it <em>should not</em> be in the same ballpark.)
 </p>
 
 <h3>**Gemini-2.5-Pro & Gemini 3</h3>
