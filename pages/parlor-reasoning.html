@@ -108,7 +108,7 @@
 <h2>Language Model Testing<sup><small><a href="#llm-puzzles">&#35;</a></small></sup></h2>
 <p>
 	I've generally been experimenting with language models lately, with <a href="deep-research">mixed</a> <a href="llm-quants">feelings</a>.
-	I have not done this while playing the game (that'd be cheating!) but I wrote down each Parlor Puzzle I encountered after coming up with the idea and started testing a number of "reasoning" language models with the various configurations to see if they'd be able to figure it out as well.
+	I have not done this while playing the game (that'd be cheating!), but I wrote down each Parlor Puzzle I encountered after coming up with the idea and started testing a number of "reasoning" language models with the various configurations to see if they'd be able to figure it out as well.
 	I ended up liking this test too much to leave it there, with just a few scattered manual tests on a small subset of the questions.
 	So, I found a set of (likely) all the parlor puzzles in the game and hacked together something to test models on it properly.
 </p>
@@ -818,7 +818,7 @@
   </tbody>
 </table>
 <p>
-	Even the smallest model was quite stable, with no timeouts (max response of 8042 tokens) and consistent answer formatting.
+	Even the smallest model was quite stable, with no timeouts (longest response of 8042/24k tokens) and consistent answer formatting.
 	While the E2/4B scores were nothing to write home about, the larger models more than impress: Gemma 4 31B takes the crown as the highest-scoring model, beating Qwen3.5-122B-A10B by about a full percentage point!
 	I found this particularly impressive considering its reasoning traces are among the shortest of my tested models.
 	As a dense model, it may not generate at the crazy speeds some A3B model might, but its overall response time may not actually be particularly slower.
@@ -1603,7 +1603,7 @@ Batch final 3: 43317
 	I slightly adjusted one parlor puzzle which, under a certain set of assumptions, would be ambiguous.
 	All responses used a basic automatic detection method followed by manual review to ensure all scores are correct.
 	Almost all models were tested using llama.cpp.
-	NVFP4 models were ran using vLLM.
+	NVFP4 models were run using vLLM.
 </p>
 <p>
 	Ultimately, you should consider playing <a href="https://store.steampowered.com/app/1569580/Blue_Prince/">Blue Prince</a>.
